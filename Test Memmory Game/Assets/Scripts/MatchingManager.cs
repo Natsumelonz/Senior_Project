@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class MatchingManager : MonoBehaviour
 {
     public Sprite carded;
     public Sprite card;

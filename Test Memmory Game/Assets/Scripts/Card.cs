@@ -29,8 +29,8 @@ public class Card : MonoBehaviour
 
     public void setupGraphics()
     {
-        _card = _manager.GetComponent<GameManager>().getCard();
-        _carded = _manager.GetComponent<GameManager>().getCarded();
+        _card = _manager.GetComponent<MatchingManager>().getCard();
+        _carded = _manager.GetComponent<MatchingManager>().getCarded();
 
         clickCard();
     }
