@@ -12,7 +12,7 @@ public class MenuBehaviour : MonoBehaviour
             default:
                 break;
             case (0):
-                SceneManager.LoadScene("Game");
+                SceneManager.LoadScene("GameMatching");
                 break;
             case (1):
                 Application.Quit();

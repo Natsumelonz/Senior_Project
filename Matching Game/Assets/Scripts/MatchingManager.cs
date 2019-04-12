@@ -11,12 +11,19 @@ public class MatchingManager : MonoBehaviour
     public GameObject[] cards;
     public GameObject[] cards2;
     public GameObject[] cards1;
-    public Text point;
+    public Text pointText;
+    public Text timeText;
 
+    private float _timeLimit;
     private bool _init = false;
     private int _point = 0;
+    private int _correctWord;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        StartCoroutine(TimeLimit());
+    }
+
     void Update()
     {
         if (!_init)
@@ -28,6 +35,9 @@ public class MatchingManager : MonoBehaviour
         {
             checkCards();
         }
+
+        point = Mathf.Lerp(point, _point, Time.deltaTime * 5);
+        pointText.text = Mathf.RoundToInt(point).ToString();
     }
 
 
@@ -122,6 +132,7 @@ public class MatchingManager : MonoBehaviour
         }
     }
 
+    private float point;
     //Method เทียบค่าของปุ่มที่กดทั้ง 2 ปุ่ม
     void cardComparison(List<int> t)
     {
@@ -131,12 +142,15 @@ public class MatchingManager : MonoBehaviour
         if (cards2[t[0]].GetComponent<Card>().cardValue == cards2[t[1]].GetComponent<Card>().cardValue)
         {
             x = 2;
-            _point++;
-            point.text = "Point : " + _point;
-            if (_point == 12)
+            _correctWord++;
+            _point += Mathf.RoundToInt(_timeLimit);
+            //point = Mathf.Lerp(point, _point, Time.deltaTime * 5);
+            //pointText.text = Mathf.RoundToInt(point).ToString();
+            if (_correctWord == 12)
             {
                 SceneManager.LoadScene("MainMenu");
             }
+            StartCoroutine(TimeLimit());
         }
 
         for (int i = 0; i < t.Count; i++)
@@ -144,5 +158,25 @@ public class MatchingManager : MonoBehaviour
             cards2[t[i]].GetComponent<Card>().state = x;
             cards2[t[i]].GetComponent<Card>().falseCheck();
         }
+    }
+
+    IEnumerator TimeLimit()
+    {
+        _timeLimit = 15.0f;
+        timeText.text = Mathf.RoundToInt(_timeLimit).ToString();
+
+        int correct = _correctWord;
+
+        yield return new WaitForSeconds(1f);
+        while (_timeLimit > 0)
+        {
+            if (correct != _correctWord) { yield break; }
+
+            _timeLimit -= Time.deltaTime;
+            timeText.text = Mathf.RoundToInt(_timeLimit).ToString();
+            yield return null;
+        }
+
+        //result.textTotalScore.text = result.totalScore.ToString();
     }
 }
