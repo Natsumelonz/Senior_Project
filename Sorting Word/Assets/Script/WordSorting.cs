@@ -11,6 +11,20 @@ public class Result
     [Header("REF UI")]
     public Text textTime;
     public Text textTotalScore;
+
+    [Header("REF RESULT SCREEN")]
+    public GameObject summaryCanvas;
+    public Text textSummaryScore;
+    public Text textInfo;
+
+    public void ShowSummary()
+    {
+        textSummaryScore.text = totalScore.ToString();
+        textInfo.text = "You finished " + WordSorting.main.countWords.ToString() + " words";
+
+        summaryCanvas.SetActive(true);
+    }
+    
 }
 
 
@@ -62,12 +76,17 @@ public class WordSorting : MonoBehaviour
     //เรียกclass word เก็บเป็น size Array แล้วเด้งไปคลาส word ก่อน
     public Word[] words;
 
+    //ใช้นับคำที่ผู้เล่นตอบถูก
+    [Space(10)]
+    public int countWords = 0;
+
     [Space(15)]
     public Result result;
 
     [Header("UI REFERENCE")]
-
+    public GameObject wordCanvas;
     public CharObject prefab;
+
     //ไว้เก็บbutton ที่clone มา
     public Transform container;
     public float space;
@@ -95,6 +114,8 @@ public class WordSorting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //ทำการปิดหน้า summary ทุกครั้งตอนเริ่มเกม
+        result.summaryCanvas.SetActive(false);
         ShowSorting(currentWord);
         result.textTotalScore.text = result.totalScore.ToString();
     }
@@ -149,10 +170,18 @@ public class WordSorting : MonoBehaviour
             Destroy(child.gameObject);
         }
         //ถ้า index มากกว่าคำที่มีทั้งหมดใน array
+        //show หน้า summary
         if(index > words.Length - 1)
         {
-            Debug.LogError("index out of range, please enter range between 0-" 
-                + (words.Length - 1).ToString());
+            //ถ้าคำหมดแล้วให้แสดงหน้า summaryScoreเลย
+            result.ShowSummary();
+
+            //ปิดหน้าเกมด้วย
+            wordCanvas.SetActive(false);
+
+            //Debug.LogError("index out of range, please enter range between 0-" 
+            // + (words.Length - 1).ToString());
+
             return;
         }
         //เก็บตัวอักษรที่เอาไป sort ใน function getString 
@@ -161,6 +190,7 @@ public class WordSorting : MonoBehaviour
         {
             //Clone Button ออกมาตามจำนวนอักษรที่มีในคำ
             CharObject clone = Instantiate(prefab.gameObject).GetComponent<CharObject>();
+
             //เป็นการเอาbutton ที่clone มาไปเก็บอยู่ใน container
             clone.transform.SetParent(container);
 
@@ -231,17 +261,21 @@ public class WordSorting : MonoBehaviour
         {
             word += charObject.character;
         }
-        //ถ้าเกิดว่าเวลาในคำปัจจุบันหมดลงให้ข้ามไปก่อน
+
+        //ถ้าเกิดว่าเวลาในคำปัจจุบันหมดลงให้แสดงหน้า summary เลย
         if(timeLimit <= 0)
         {
-            currentWord++;
-            ShowSorting(currentWord);
-            yield break;
+            result.ShowSummary();
+            wordCanvas.SetActive(false);
         }
+
         //ถ้าคำปัจจุบันเรียงถูกต้องแล้วให้แสดงคำต่อไปสำหรับให้ผู้เล่นเรียงคำให้ถูกต้อง
         if (word == words[currentWord].word)
         {
             currentWord++;
+
+            //ถ้าถูกให้นับคำเพิ่มไป
+            countWords++;
             
             //เอาคะแนนมาใส่ใน text ได้เลย เก็บคะแนนในแต่ละคำ
             result.totalScore += Mathf.RoundToInt(timeLimit);
