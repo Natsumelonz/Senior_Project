@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using UnityEngine;
+using Proyecto26;
 
 public class MatchingManager : MonoBehaviour
 {
@@ -57,10 +58,9 @@ public class MatchingManager : MonoBehaviour
                 choice = Random.Range(0, cards.Length);
                 test = !(cards[choice].GetComponent<Card>().initialized);
             }
-            cards[choice].GetComponentInChildren<Text>().text = i.ToString();
-            cards[choice].GetComponent<Card>().cardValue = i;
-            cards[choice].GetComponent<Card>().initialized = true;
-
+                cards[choice].GetComponentInChildren<Text>().text = i.ToString();
+                cards[choice].GetComponent<Card>().cardValue = i;
+                cards[choice].GetComponent<Card>().initialized = true;
         }
 
         //สุ่มปุ่มฝั่งขวา
@@ -73,9 +73,9 @@ public class MatchingManager : MonoBehaviour
                 choice = Random.Range(0, cards1.Length);
                 test = !(cards1[choice].GetComponent<Card>().initialized);
             }
-            cards1[choice].GetComponentInChildren<Text>().text = i.ToString();
-            cards1[choice].GetComponent<Card>().cardValue = i;
-            cards1[choice].GetComponent<Card>().initialized = true;
+                cards1[choice].GetComponentInChildren<Text>().text = i.ToString();
+                cards1[choice].GetComponent<Card>().cardValue = i;
+                cards1[choice].GetComponent<Card>().initialized = true;
 
         }
 
