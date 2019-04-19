@@ -138,7 +138,7 @@ public class WordSorting : MonoBehaviour
         {
             return;
         }
-        float center = (charObjects.Count - 1) / 2;
+        float center = (charObjects.Count - 1f) / 2;
         for (int i = 0; i < charObjects.Count; i++)
         {
             charObjects[i].rectTransform.anchoredPosition 
