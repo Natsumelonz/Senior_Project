@@ -20,9 +20,16 @@ public class MatchingManager : MonoBehaviour
     private int _point = 0;
     private int _correctWord;
 
+    public List<string> wordsList = new List<string>();
+    public List<string> wordsList2 = new List<string>();
+    public string[] wordTest = new string[46];
+    public string[] wordTest2 = new string[46];
+
     private void Start()
     {
         StartCoroutine(TimeLimit());
+
+        RadWord();
     }
 
     void Update()
@@ -41,6 +48,20 @@ public class MatchingManager : MonoBehaviour
         pointText.text = Mathf.RoundToInt(point).ToString();
     }
 
+    private int wordIndex;
+    void RadWord()
+    {
+        for (int i = 0; i < wordTest.Length; i++)
+        {
+            wordIndex = Random.Range(0, 46);
+            if (!wordsList.Contains(wordTest[wordIndex]))
+            {
+                wordsList.Add(wordTest[wordIndex]);
+                wordsList2.Add(wordTest2[wordIndex]);
+            }
+        }
+
+    }
 
     //สุ่มค่าให้ปุ่ม กับกำหนด Text
     void initializeCard()
@@ -58,9 +79,10 @@ public class MatchingManager : MonoBehaviour
                 choice = Random.Range(0, cards.Length);
                 test = !(cards[choice].GetComponent<Card>().initialized);
             }
-                cards[choice].GetComponentInChildren<Text>().text = i.ToString();
-                cards[choice].GetComponent<Card>().cardValue = i;
-                cards[choice].GetComponent<Card>().initialized = true;
+            cards[choice].GetComponentInChildren<Text>().text = wordsList[i].ToString(); ;//i.ToString();
+            cards[choice].GetComponent<Card>().cardValue = i;
+            cards[choice].GetComponent<Card>().initialized = true;
+
         }
 
         //สุ่มปุ่มฝั่งขวา
@@ -73,9 +95,9 @@ public class MatchingManager : MonoBehaviour
                 choice = Random.Range(0, cards1.Length);
                 test = !(cards1[choice].GetComponent<Card>().initialized);
             }
-                cards1[choice].GetComponentInChildren<Text>().text = i.ToString();
-                cards1[choice].GetComponent<Card>().cardValue = i;
-                cards1[choice].GetComponent<Card>().initialized = true;
+            cards1[choice].GetComponentInChildren<Text>().text = wordsList2[i].ToString();//i.ToString();
+            cards1[choice].GetComponent<Card>().cardValue = i;
+            cards1[choice].GetComponent<Card>().initialized = true;
 
         }
 

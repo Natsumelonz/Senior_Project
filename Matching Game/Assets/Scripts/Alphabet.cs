@@ -13,6 +13,6 @@ public class Alphabet
     public override string ToString()
     {
         return JsonUtility.ToJson(this, true);
-    }
+    }   
     
 }
