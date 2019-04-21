@@ -18,6 +18,9 @@ public class MatchingManager : MonoBehaviour
     public List<string> wordsListRJ = new List<string>();
     public string[] wordTest = new string[46];
     public string[] wordTest2 = new string[46];
+    public Text textSummaryScore;
+    public Text textInfo;
+    public GameObject summaryCanvas;
 
     //ARRAY ที่เทสดึงมาจาก DB
     public string[] alphabetJP = new string[46];
@@ -36,7 +39,7 @@ public class MatchingManager : MonoBehaviour
     {
         StartCoroutine(TimeLimit());
 
-
+        summaryCanvas.SetActive(false);
     }
 
     void Update()
@@ -45,10 +48,12 @@ public class MatchingManager : MonoBehaviour
         {
             PullWords();
         }
+
         if (_initDB)
         {
             RadWord();
         }
+
         if (!_init && _initDB && _initRAD)
         {
             initializeCard();
@@ -57,6 +62,11 @@ public class MatchingManager : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             checkCards();
+        }
+
+        if (_timeLimit <= 0)
+        {
+            ShowSummary();
         }
 
         _pointShow = Mathf.Lerp(_pointShow, _point, Time.deltaTime * 5);
@@ -201,7 +211,7 @@ public class MatchingManager : MonoBehaviour
             //pointText.text = Mathf.RoundToInt(point).ToString();
             if (_correctWord == 12)
             {
-                SceneManager.LoadScene("MainMenu");
+                ShowSummary();
             }
             StartCoroutine(TimeLimit());
         }
@@ -211,6 +221,27 @@ public class MatchingManager : MonoBehaviour
             cards2[t[i]].GetComponent<Card>().state = x;
             cards2[t[i]].GetComponent<Card>().falseCheck();
         }
+    }
+
+    void ShowSummary()
+    {
+        textSummaryScore.text = _point.ToString();
+        textInfo.text = "You finished " + _correctWord + " pairs";
+
+        summaryCanvas.SetActive(true);
+    }
+
+    public void Replay()
+    {
+        SceneManager.LoadScene("GameMatching");
+    }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void Back()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     IEnumerator TimeLimit()
