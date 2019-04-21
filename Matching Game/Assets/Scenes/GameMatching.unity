@@ -289,7 +289,8 @@ MonoBehaviour:
   - {fileID: 356485479}
   pointText: {fileID: 34211732}
   timeText: {fileID: 1641416054}
-  wordsList: []
+  wordsListJP: []
+  wordsListRJ: []
   wordTest:
   - "\u3042"
   - "\u3044"
@@ -384,6 +385,100 @@ MonoBehaviour:
   - Wa
   - Wo
   - N
+  alphabetJP:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  alphabetRomanji:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
 --- !u!1 &34211730
 GameObject:
   m_ObjectHideFlags: 0

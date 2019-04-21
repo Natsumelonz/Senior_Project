@@ -14,14 +14,8 @@ public class MatchingManager : MonoBehaviour
     public GameObject[] cards1;
     public Text pointText;
     public Text timeText;
-
-    private float _timeLimit;
-    private bool _init = false;
-    private int _point = 0;
-    private int _correctWord;
-
-    public List<string> wordsList = new List<string>();
-    public List<string> wordsList2 = new List<string>();
+    public List<string> wordsListJP = new List<string>();
+    public List<string> wordsListRJ = new List<string>();
     public string[] wordTest = new string[46];
     public string[] wordTest2 = new string[46];
 
@@ -29,16 +23,33 @@ public class MatchingManager : MonoBehaviour
     public string[] alphabetJP = new string[46];
     public string[] alphabetRomanji = new string[46];
 
+    private float _timeLimit;
+    private bool _init = false;
+    private bool _initDB = false;
+    private bool _initRAD = false;
+    private int _point = 0;
+    private int _correctWord;
+    private int _wordIndex;
+    private float _pointShow;
+
     private void Start()
     {
         StartCoroutine(TimeLimit());
 
-        RadWord();
+
     }
 
     void Update()
     {
-        if (!_init)
+        if (!_initDB)
+        {
+            PullWords();
+        }
+        if (_initDB)
+        {
+            RadWord();
+        }
+        if (!_init && _initDB && _initRAD)
         {
             initializeCard();
         }
@@ -48,14 +59,12 @@ public class MatchingManager : MonoBehaviour
             checkCards();
         }
 
-        point = Mathf.Lerp(point, _point, Time.deltaTime * 5);
-        pointText.text = Mathf.RoundToInt(point).ToString();
+        _pointShow = Mathf.Lerp(_pointShow, _point, Time.deltaTime * 5);
+        pointText.text = Mathf.RoundToInt(_pointShow).ToString();
     }
 
-    private int wordIndex;
-    void RadWord()
-    {   
-
+    void PullWords()
+    {
         //ดึงมาจาก DB เอามาเก็บไว้ใน ARRAY สองตัวที่แอดมา 
         RestClient.GetArray<Alphabet>("https://it59-28yomimasu.firebaseio.com/Alphabet.json").Then(response =>
         {
@@ -65,18 +74,25 @@ public class MatchingManager : MonoBehaviour
                 alphabetRomanji[i] = response[i].alphabetname_romanji;
             }
         });
+        if (alphabetRomanji[45] == "n")
+        {
+            _initDB = true;
+        }
+    }
 
-        for (int i = 0; i < alphabetJP.Length; i++)
-        {   
-            
-            wordIndex = Random.Range(0, 46);
-            if (!wordsList.Contains(wordsList[wordIndex]))
-            {   
-                wordsList.Add(wordTest[wordIndex]);
-                wordsList2.Add(wordTest2[wordIndex]);
+    void RadWord()
+    {
+        for (int i = 0; i <= 46; i++)
+        {
+
+            _wordIndex = Random.Range(0, 12);
+            if (!wordsListJP.Contains(alphabetJP[_wordIndex]))
+            {
+                wordsListJP.Add(alphabetJP[_wordIndex]);
+                wordsListRJ.Add(alphabetRomanji[_wordIndex]);
             }
         }
-
+        _initRAD = true;
     }
 
     //สุ่มค่าให้ปุ่ม กับกำหนด Text
@@ -95,7 +111,7 @@ public class MatchingManager : MonoBehaviour
                 choice = Random.Range(0, cards.Length);
                 test = !(cards[choice].GetComponent<Card>().initialized);
             }
-            cards[choice].GetComponentInChildren<Text>().text = wordsList[i].ToString(); ;//i.ToString();
+            cards[choice].GetComponentInChildren<Text>().text = wordsListJP[i].ToString(); ;//i.ToString();
             cards[choice].GetComponent<Card>().cardValue = i;
             cards[choice].GetComponent<Card>().initialized = true;
 
@@ -111,7 +127,7 @@ public class MatchingManager : MonoBehaviour
                 choice = Random.Range(0, cards1.Length);
                 test = !(cards1[choice].GetComponent<Card>().initialized);
             }
-            cards1[choice].GetComponentInChildren<Text>().text = wordsList2[i].ToString();//i.ToString();
+            cards1[choice].GetComponentInChildren<Text>().text = wordsListRJ[i].ToString();//i.ToString();
             cards1[choice].GetComponent<Card>().cardValue = i;
             cards1[choice].GetComponent<Card>().initialized = true;
 
@@ -170,7 +186,6 @@ public class MatchingManager : MonoBehaviour
         }
     }
 
-    private float point;
     //Method เทียบค่าของปุ่มที่กดทั้ง 2 ปุ่ม
     void cardComparison(List<int> t)
     {
