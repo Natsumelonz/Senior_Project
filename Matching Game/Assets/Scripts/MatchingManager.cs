@@ -25,6 +25,10 @@ public class MatchingManager : MonoBehaviour
     public string[] wordTest = new string[46];
     public string[] wordTest2 = new string[46];
 
+    //ARRAY ที่เทสดึงมาจาก DB
+    public string[] alphabetJP = new string[46];
+    public string[] alphabetRomanji = new string[46];
+
     private void Start()
     {
         StartCoroutine(TimeLimit());
@@ -50,12 +54,24 @@ public class MatchingManager : MonoBehaviour
 
     private int wordIndex;
     void RadWord()
-    {
-        for (int i = 0; i < wordTest.Length; i++)
+    {   
+
+        //ดึงมาจาก DB เอามาเก็บไว้ใน ARRAY สองตัวที่แอดมา 
+        RestClient.GetArray<Alphabet>("https://it59-28yomimasu.firebaseio.com/Alphabet.json").Then(response =>
         {
-            wordIndex = Random.Range(0, 46);
-            if (!wordsList.Contains(wordTest[wordIndex]))
+            for (int i = 0; i <= 45; i++)
             {
+                alphabetJP[i] = response[i].alphabetname_JP;
+                alphabetRomanji[i] = response[i].alphabetname_romanji;
+            }
+        });
+
+        for (int i = 0; i < alphabetJP.Length; i++)
+        {   
+            
+            wordIndex = Random.Range(0, 46);
+            if (!wordsList.Contains(wordsList[wordIndex]))
+            {   
                 wordsList.Add(wordTest[wordIndex]);
                 wordsList2.Add(wordTest2[wordIndex]);
             }
