@@ -16,8 +16,8 @@ public class MatchingManager : MonoBehaviour
     public Text timeText;
     public List<string> wordsListJP = new List<string>();
     public List<string> wordsListRJ = new List<string>();
-    public string[] wordTest = new string[46];
-    public string[] wordTest2 = new string[46];
+    //public string[] wordTest = new string[46];
+    //public string[] wordTest2 = new string[46];
     public Text textSummaryScore;
     public Text textInfo;
     public GameObject summaryCanvas;
@@ -71,6 +71,8 @@ public class MatchingManager : MonoBehaviour
 
         _pointShow = Mathf.Lerp(_pointShow, _point, Time.deltaTime * 5);
         pointText.text = Mathf.RoundToInt(_pointShow).ToString();
+
+
     }
 
     void PullWords()
@@ -92,17 +94,22 @@ public class MatchingManager : MonoBehaviour
 
     void RadWord()
     {
-        for (int i = 0; i <= 46; i++)
+        //for (int i = 0; i <= 12; i++)
+        //{
+        while (wordsListJP.Count < 12)
         {
-
-            _wordIndex = Random.Range(0, 12);
+            _wordIndex = Random.Range(0, 46);
             if (!wordsListJP.Contains(alphabetJP[_wordIndex]))
             {
                 wordsListJP.Add(alphabetJP[_wordIndex]);
                 wordsListRJ.Add(alphabetRomanji[_wordIndex]);
             }
         }
-        _initRAD = true;
+        //}
+        if (wordsListJP.Count == 12)
+        {
+            _initRAD = true;
+        }
     }
 
     //สุ่มค่าให้ปุ่ม กับกำหนด Text
@@ -205,10 +212,9 @@ public class MatchingManager : MonoBehaviour
         if (cards2[t[0]].GetComponent<Card>().cardValue == cards2[t[1]].GetComponent<Card>().cardValue)
         {
             x = 2;
+
             _correctWord++;
             _point += Mathf.RoundToInt(_timeLimit);
-            //point = Mathf.Lerp(point, _point, Time.deltaTime * 5);
-            //pointText.text = Mathf.RoundToInt(point).ToString();
             if (_correctWord == 12)
             {
                 ShowSummary();

@@ -86,7 +86,7 @@ public class Card : MonoBehaviour
 
     IEnumerator pause()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         if(_state == 0)
         {
             GetComponent<Image>().sprite = _card;
