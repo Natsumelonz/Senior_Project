@@ -7,30 +7,34 @@ using Proyecto26;
 
 public class MatchingManager : MonoBehaviour
 {
+    [Header("Words")]
+    public List<string> wordsListJP = new List<string>();
+    public List<string> wordsListRJ = new List<string>();
+    public string[] alphabetJP = new string[46];
+    public string[] alphabetRomanji = new string[46];
+
+    [Header("Sprite")]
     public Sprite carded;
     public Sprite card;
+
+    [Header("Button")]
     public GameObject[] cards;
     public GameObject[] cards2;
     public GameObject[] cards1;
+
+    [Header("Text")]
     public Text pointText;
     public Text timeText;
-    public List<string> wordsListJP = new List<string>();
-    public List<string> wordsListRJ = new List<string>();
-    //public string[] wordTest = new string[46];
-    //public string[] wordTest2 = new string[46];
     public Text textSummaryScore;
     public Text textInfo;
     public GameObject summaryCanvas;
 
-    //ARRAY ที่เทสดึงมาจาก DB
-    public string[] alphabetJP = new string[46];
-    public string[] alphabetRomanji = new string[46];
-
+    private int _point = 0;
+    private int level = 1;
     private float _timeLimit;
     private bool _init = false;
     private bool _initDB = false;
     private bool _initRAD = false;
-    private int _point = 0;
     private int _correctWord;
     private int _wordIndex;
     private float _pointShow;
@@ -38,7 +42,6 @@ public class MatchingManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(TimeLimit());
-
         summaryCanvas.SetActive(false);
     }
 
@@ -94,8 +97,7 @@ public class MatchingManager : MonoBehaviour
 
     void RadWord()
     {
-        //for (int i = 0; i <= 12; i++)
-        //{
+
         while (wordsListJP.Count < 12)
         {
             _wordIndex = Random.Range(0, 46);
@@ -105,7 +107,7 @@ public class MatchingManager : MonoBehaviour
                 wordsListRJ.Add(alphabetRomanji[_wordIndex]);
             }
         }
-        //}
+
         if (wordsListJP.Count == 12)
         {
             _initRAD = true;
@@ -115,9 +117,6 @@ public class MatchingManager : MonoBehaviour
     //สุ่มค่าให้ปุ่ม กับกำหนด Text
     void initializeCard()
     {
-        //for (int id = 0; id < 2; id++)
-        //{
-
         //สุ่มปุ่มฝั่งซ้าย
         for (int i = 0; i < 12; i++)
         {
@@ -149,8 +148,6 @@ public class MatchingManager : MonoBehaviour
             cards1[choice].GetComponent<Card>().initialized = true;
 
         }
-
-        //}
 
         //เรียก Method ให้กดหนด Sprite ให้ปุ่ม ฝั่งซ้าย
         foreach (GameObject c in cards)
@@ -217,7 +214,9 @@ public class MatchingManager : MonoBehaviour
             _point += Mathf.RoundToInt(_timeLimit);
             if (_correctWord == 12)
             {
-                ShowSummary();
+                level++;
+                SceneManager.LoadScene("GameMatching");
+                //ShowSummary();
             }
             StartCoroutine(TimeLimit());
         }
@@ -226,6 +225,19 @@ public class MatchingManager : MonoBehaviour
         {
             cards2[t[i]].GetComponent<Card>().state = x;
             cards2[t[i]].GetComponent<Card>().falseCheck();
+        }
+    }
+
+    void OnDisable()
+    {
+        PlayerPrefs.SetInt("point", _point);
+    }
+
+    private void OnEnable()
+    {
+        if (level > 1)
+        {
+            _point = PlayerPrefs.GetInt("point");
         }
     }
 
