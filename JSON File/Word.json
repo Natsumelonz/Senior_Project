@@ -1,0 +1,121 @@
+[ {
+  "word_id" : 1,
+  "wordname_JP" : "あひる",
+  "wordname_romanji" : "ahiru",
+  "word_meaning" : "Duck",
+  "word_syllable" : 3
+}, {
+  "word_id" : 2,
+  "wordname_JP" : "ゆき",
+  "wordname_romanji" : "yuki",
+  "word_meaning" : "Snow",
+  "syllable_number" : 2
+}, {
+  "word_id" : 3,
+  "wordname_JP" : "ゆめ",
+  "wordname_romanji" : "yume",
+  "word_meaning" : "Dream",
+  "syllable_number" : 2
+}, {
+  "word_id" : 4,
+  "wordname_JP" : "コンピューター",
+  "wordname_romanji" : "konpyūtā",
+  "word_meaning" : "Computer",
+  "syllable_number" : 6
+}, {
+  "word_id" : 5,
+  "wordname_JP" : "エレベーター",
+  "wordname_romanji" : "erebētā",
+  "word_meaning" : "Elevator",
+  "syllable_number" : 6
+}, {
+  "word_id" : 6,
+  "wordname_JP" : "アイスクリーム",
+  "wordname_romanji" : "aisukurīmu",
+  "word_meaning" : "Ice-Cream",
+  "syllable_number" : 6
+}, {
+  "word_id" : 7,
+  "wordname_JP" : "コーヒー",
+  "wordname_romanji" : "kōhī",
+  "word_meaning" : "Coffee",
+  "syllable_number" : 4
+}, {
+  "word_id" : 8,
+  "wordname_JP" : "やさい",
+  "wordname_romanji" : "yasai",
+  "word_meaning" : "Vegetable",
+  "syllable_number" : 3
+}, {
+  "word_id" : 9,
+  "wordname_JP" : "おちゃ",
+  "wordname_romanji" : "ocha",
+  "word_meaning" : "Tea",
+  "syllable_number" : 2
+}, {
+  "word_id" : 10,
+  "wordname_JP" : "のみもの",
+  "wordname_romanji" : "nomimono",
+  "word_meaning" : "Beverage",
+  "syllable_number" : 4
+}, {
+  "word_id" : 11,
+  "wordname_JP" : "せんせい",
+  "wordname_romanji" : "sensei",
+  "word_meaning" : "Teacher",
+  "syllable_number" : 4
+}, {
+  "word_id" : 12,
+  "wordname_JP" : "がくせい",
+  "wordname_romanji" : "gakusei",
+  "word_meaning" : "Student",
+  "syllable_number" : 4
+}, {
+  "word_id" : 13,
+  "wordname_JP" : "かさ",
+  "wordname_romanji" : "kasa",
+  "word_meaning" : "Umbrella",
+  "syllable_number" : 2
+}, {
+  "word_id" : 14,
+  "wordname_JP" : "くるま",
+  "wordname_romanji" : "kuruma",
+  "word_meaning" : "Car",
+  "syllable_number" : 3
+}, {
+  "word_id" : 15,
+  "wordname_JP" : "スーパー",
+  "wordname_romanji" : "sūpā",
+  "word_meaning" : "Supermarket",
+  "syllable_number" : 4
+}, {
+  "word_id" : 16,
+  "wordname_JP" : "コピー",
+  "wordname_romanji" : "kopī",
+  "word_meaning" : "Copy",
+  "syllable_number" : 3
+}, {
+  "word_id" : 17,
+  "wordname_JP" : "わたし",
+  "wordname_romanji" : "watashi",
+  "word_meaning" : "I",
+  "syllable_number" : 3
+}, {
+  "word_id" : 18,
+  "wordname_JP" : "いしゃ",
+  "wordname_romanji" : "isha",
+  "word_meaning" : "Doctor",
+  "syllable_number" : 2
+}, {
+  "word_id" : 19,
+  "wordname_JP" : "びょういん",
+  "wordname_romanji" : "byouin",
+  "word_meaning" : "Hospital",
+  "syllable_number" : 4
+}, {
+  "word_id" : 20,
+  "wordname_JP" : "てがみ",
+  "wordname_romanji" : "tegami",
+  "word_meaning" : "Letter",
+  "syllable_number" : 3
+}  ]

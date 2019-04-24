@@ -1,0 +1,899 @@
+{
+  "Alphabet" : [ {
+    "alphabet_id" : 1,
+    "alphabetname_JP" : "あ",
+    "alphabetname_romanji" : "a"
+  }, {
+    "alphabet_id" : 2,
+    "alphabetname_JP" : "い",
+    "alphabetname_romanji" : "i"
+  }, {
+    "alphabet_id" : 3,
+    "alphabetname_JP" : "う",
+    "alphabetname_romanji" : "u"
+  }, {
+    "alphabet_id" : 4,
+    "alphabetname_JP" : "え",
+    "alphabetname_romanji" : "e"
+  }, {
+    "alphabet_id" : 5,
+    "alphabetname_JP" : "お",
+    "alphabetname_romanji" : "o"
+  }, {
+    "alphabet_id" : 6,
+    "alphabetname_JP" : "か",
+    "alphabetname_romanji" : "ka"
+  }, {
+    "alphabet_id" : 7,
+    "alphabetname_JP" : "き",
+    "alphabetname_romanji" : "ki"
+  }, {
+    "alphabet_id" : 8,
+    "alphabetname_JP" : "く",
+    "alphabetname_romanji" : "ku"
+  }, {
+    "alphabet_id" : 9,
+    "alphabetname_JP" : "け",
+    "alphabetname_romanji" : "ke"
+  }, {
+    "alphabet_id" : 10,
+    "alphabetname_JP" : "こ",
+    "alphabetname_romanji" : "ko"
+  }, {
+    "alphabet_id" : 11,
+    "alphabetname_JP" : "さ",
+    "alphabetname_romanji" : "sa"
+  }, {
+    "alphabet_id" : 12,
+    "alphabetname_JP" : "し",
+    "alphabetname_romanji" : "shi"
+  }, {
+    "alphabet_id" : 13,
+    "alphabetname_JP" : "す",
+    "alphabetname_romanji" : "su"
+  }, {
+    "alphabet_id" : 14,
+    "alphabetname_JP" : "せ",
+    "alphabetname_romanji" : "se"
+  }, {
+    "alphabet_id" : 15,
+    "alphabetname_JP" : "そ",
+    "alphabetname_romanji" : "so"
+  }, {
+    "alphabet_id" : 16,
+    "alphabetname_JP" : "た",
+    "alphabetname_romanji" : "ta"
+  }, {
+    "alphabet_id" : 17,
+    "alphabetname_JP" : "ち",
+    "alphabetname_romanji" : "chi"
+  }, {
+    "alphabet_id" : 18,
+    "alphabetname_JP" : "つ",
+    "alphabetname_romanji" : "tsu"
+  }, {
+    "alphabet_id" : 19,
+    "alphabetname_JP" : "て",
+    "alphabetname_romanji" : "te"
+  }, {
+    "alphabet_id" : 20,
+    "alphabetname_JP" : "と",
+    "alphabetname_romanji" : "to"
+  }, {
+    "alphabet_id" : 21,
+    "alphabetname_JP" : "な",
+    "alphabetname_romanji" : "na"
+  }, {
+    "alphabet_id" : 22,
+    "alphabetname_JP" : "に",
+    "alphabetname_romanji" : "ni"
+  }, {
+    "alphabet_id" : 23,
+    "alphabetname_JP" : "ぬ",
+    "alphabetname_romanji" : "nu"
+  }, {
+    "alphabet_id" : 24,
+    "alphabetname_JP" : "ね",
+    "alphabetname_romanji" : "ne"
+  }, {
+    "alphabet_id" : 25,
+    "alphabetname_JP" : "の",
+    "alphabetname_romanji" : "no"
+  }, {
+    "alphabet_id" : 26,
+    "alphabetname_JP" : "は",
+    "alphabetname_romanji" : "ha"
+  }, {
+    "alphabet_id" : 27,
+    "alphabetname_JP" : "ひ",
+    "alphabetname_romanji" : "hi"
+  }, {
+    "alphabet_id" : 28,
+    "alphabetname_JP" : "ふ",
+    "alphabetname_romanji" : "fu"
+  }, {
+    "alphabet_id" : 29,
+    "alphabetname_JP" : "へ",
+    "alphabetname_romanji" : "he"
+  }, {
+    "alphabet_id" : 30,
+    "alphabetname_JP" : "ほ",
+    "alphabetname_romanji" : "ho"
+  }, {
+    "alphabet_id" : 31,
+    "alphabetname_JP" : "ま",
+    "alphabetname_romanji" : "ma"
+  }, {
+    "alphabet_id" : 32,
+    "alphabetname_JP" : "み",
+    "alphabetname_romanji" : "mi"
+  }, {
+    "alphabet_id" : 33,
+    "alphabetname_JP" : "む",
+    "alphabetname_romanji" : "mu"
+  }, {
+    "alphabet_id" : 34,
+    "alphabetname_JP" : "め",
+    "alphabetname_romanji" : "me"
+  }, {
+    "alphabet_id" : 35,
+    "alphabetname_JP" : "も",
+    "alphabetname_romanji" : "mo"
+  }, {
+    "alphabet_id" : 36,
+    "alphabetname_JP" : "や",
+    "alphabetname_romanji" : "ya"
+  }, {
+    "alphabet_id" : 37,
+    "alphabetname_JP" : "ゆ",
+    "alphabetname_romanji" : "yu"
+  }, {
+    "alphabet_id" : 38,
+    "alphabetname_JP" : "よ",
+    "alphabetname_romanji" : "yo"
+  }, {
+    "alphabet_id" : 39,
+    "alphabetname_JP" : "ら",
+    "alphabetname_romanji" : "ra"
+  }, {
+    "alphabet_id" : 40,
+    "alphabetname_JP" : "り",
+    "alphabetname_romanji" : "ri"
+  }, {
+    "alphabet_id" : 41,
+    "alphabetname_JP" : "る",
+    "alphabetname_romanji" : "ru"
+  }, {
+    "alphabet_id" : 42,
+    "alphabetname_JP" : "れ",
+    "alphabetname_romanji" : "re"
+  }, {
+    "alphabet_id" : 43,
+    "alphabetname_JP" : "ろ",
+    "alphabetname_romanji" : "ro"
+  }, {
+    "alphabet_id" : 44,
+    "alphabetname_JP" : "わ",
+    "alphabetname_romanji" : "wa"
+  }, {
+    "alphabet_id" : 45,
+    "alphabetname_JP" : "を",
+    "alphabetname_romanji" : "wo"
+  }, {
+    "alphabet_id" : 46,
+    "alphabetname_JP" : "ん",
+    "alphabetname_romanji" : "n"
+  }, {
+    "alphabet_id" : 47,
+    "alphabetname_JP" : "が",
+    "alphabetname_romanji" : "ga"
+  }, {
+    "alphabet_id" : 48,
+    "alphabetname_JP" : "ぎ",
+    "alphabetname_romanji" : "gi"
+  }, {
+    "alphabet_id" : 49,
+    "alphabetname_JP" : "ぐ",
+    "alphabetname_romanji" : "gu"
+  }, {
+    "alphabet_id" : 50,
+    "alphabetname_JP" : "げ",
+    "alphabetname_romanji" : "ge"
+  }, {
+    "alphabet_id" : 51,
+    "alphabetname_JP" : "ご",
+    "alphabetname_romanji" : "go"
+  }, {
+    "alphabet_id" : 52,
+    "alphabetname_JP" : "ざ",
+    "alphabetname_romanji" : "za"
+  }, {
+    "alphabet_id" : 53,
+    "alphabetname_JP" : "じ",
+    "alphabetname_romanji" : "ji"
+  }, {
+    "alphabet_id" : 54,
+    "alphabetname_JP" : "ず",
+    "alphabetname_romanji" : "zu"
+  }, {
+    "alphabet_id" : 55,
+    "alphabetname_JP" : "ぜ",
+    "alphabetname_romanji" : "ze"
+  }, {
+    "alphabet_id" : 56,
+    "alphabetname_JP" : "ぞ",
+    "alphabetname_romanji" : "zo"
+  }, {
+    "alphabet_id" : 57,
+    "alphabetname_JP" : "だ",
+    "alphabetname_romanji" : "da"
+  }, {
+    "alphabet_id" : 58,
+    "alphabetname_JP" : "ぢ",
+    "alphabetname_romanji" : "ji"
+  }, {
+    "alphabet_id" : 59,
+    "alphabetname_JP" : "づ",
+    "alphabetname_romanji00" : "zu"
+  }, {
+    "alphabet_id" : 60,
+    "alphabetname_JP" : "で",
+    "alphabetname_romanji" : "de"
+  }, {
+    "alphabet_id" : 61,
+    "alphabetname_JP" : "ど",
+    "alphabetname_romanji" : "do"
+  }, {
+    "alphabet_id" : 62,
+    "alphabetname_JP" : "ば",
+    "alphabetname_romanji" : "ba"
+  }, {
+    "alphabet_id" : 63,
+    "alphabetname_JP" : "び",
+    "alphabetname_romanji" : "bi"
+  }, {
+    "alphabet_id" : 64,
+    "alphabetname_JP" : "ぶ",
+    "alphabetname_romanji" : "bu"
+  }, {
+    "alphabet_id" : 65,
+    "alphabetname_JP" : "べ",
+    "alphabetname_romanji" : "be"
+  }, {
+    "alphabet_id" : 66,
+    "alphabetname_JP" : "ぼ",
+    "alphabetname_romanji" : "bo"
+  }, {
+    "alphabet_id" : 67,
+    "alphabetname_JP" : "ぱ",
+    "alphabetname_romanji" : "pa"
+  }, {
+    "alphabet_id" : 68,
+    "alphabetname_JP" : "ぴ",
+    "alphabetname_romanji" : "pi"
+  }, {
+    "alphabet_id" : 69,
+    "alphabetname_JP" : "ぷ",
+    "alphabetname_romanji" : "pu"
+  }, {
+    "alphabet_id" : 70,
+    "alphabetname_JP" : "ぺ",
+    "alphabetname_romanji" : "pe"
+  }, {
+    "alphabet_id" : 71,
+    "alphabetname_JP" : "ぽ",
+    "alphabetname_romanji" : "po"
+  }, {
+    "alphabet_id" : 72,
+    "alphabetname_JP" : "きゃ",
+    "alphabetname_romanji" : "kya"
+  }, {
+    "alphabet_id" : 73,
+    "alphabetname_JP" : "きゅ",
+    "alphabetname_romanji" : "kyu"
+  }, {
+    "alphabet_id" : 74,
+    "alphabetname_JP" : "きょ",
+    "alphabetname_romanji" : "kyo"
+  }, {
+    "alphabet_id" : 75,
+    "alphabetname_JP" : "ぎゃ",
+    "alphabetname_romanji" : "gya"
+  }, {
+    "alphabet_id" : 76,
+    "alphabetname_JP" : "ぎゅ",
+    "alphabetname_romanji" : "gyu"
+  }, {
+    "alphabet_id" : 77,
+    "alphabetname_JP" : "ぎょ",
+    "alphabetname_romanji" : "gyo"
+  }, {
+    "alphabet_id" : 78,
+    "alphabetname_JP" : "しゃ",
+    "alphabetname_romanji" : "sha"
+  }, {
+    "alphabet_id" : 79,
+    "alphabetname_JP" : "しゅ",
+    "alphabetname_romanji" : "shu"
+  }, {
+    "alphabet_id" : 80,
+    "alphabetname_JP" : "しょ",
+    "alphabetname_romanji" : "sho"
+  }, {
+    "alphabet_id" : 81,
+    "alphabetname_JP" : "じゃ",
+    "alphabetname_romanji" : "ja"
+  }, {
+    "alphabet_id" : 82,
+    "alphabetname_JP" : "じゅ",
+    "alphabetname_romanji" : "ju"
+  }, {
+    "alphabet_id" : 83,
+    "alphabetname_JP" : "じょ",
+    "alphabetname_romanji" : "jo"
+  }, {
+    "alphabet_id" : 84,
+    "alphabetname_JP" : "ちゃ",
+    "alphabetname_romanji" : "cha"
+  }, {
+    "alphabet_id" : 85,
+    "alphabetname_JP" : "ちゅ",
+    "alphabetname_romanji" : "chu"
+  }, {
+    "alphabet_id" : 86,
+    "alphabetname_JP" : "ちょ",
+    "alphabetname_romanji" : "cho"
+  }, {
+    "alphabet_id" : 87,
+    "alphabetname_JP" : "にゃ",
+    "alphabetname_romanji" : "nya"
+  }, {
+    "alphabet_id" : 88,
+    "alphabetname_JP" : "にゅ",
+    "alphabetname_romanji" : "nyu"
+  }, {
+    "alphabet_id" : 89,
+    "alphabetname_JP" : "にょ",
+    "alphabetname_romanji" : "nyo"
+  }, {
+    "alphabet_id" : 90,
+    "alphabetname_JP" : "ひゃ",
+    "alphabetname_romanji" : "hya"
+  }, {
+    "alphabet_id" : 91,
+    "alphabetname_JP" : "ひゅ",
+    "alphabetname_romanji" : "hyu"
+  }, {
+    "alphabet_id" : 92,
+    "alphabetname_JP" : "ひょ",
+    "alphabetname_romanji" : "hyo"
+  }, {
+    "alphabet_id" : 93,
+    "alphabetname_JP" : "びゃ",
+    "alphabetname_romanji" : "bya"
+  }, {
+    "alphabet_id" : 94,
+    "alphabetname_JP" : "びゅ",
+    "alphabetname_romanji" : "byu"
+  }, {
+    "alphabet_id" : 95,
+    "alphabetname_JP" : "びょ",
+    "alphabetname_romanji" : "byo"
+  }, {
+    "alphabet_id" : 96,
+    "alphabetname_JP" : "ぴゃ",
+    "alphabetname_romanji" : "pya"
+  }, {
+    "alphabet_id" : 97,
+    "alphabetname_JP" : "ぴゅ",
+    "alphabetname_romanji" : "pyu"
+  }, {
+    "alphabet_id" : 98,
+    "alphabetname_JP" : "ぴょ",
+    "alphabetname_romanji" : "pyo"
+  }, {
+    "alphabet_id" : 99,
+    "alphabetname_JP" : "みゃ",
+    "alphabetname_romanji" : "mya"
+  }, {
+    "alphabet_id" : 100,
+    "alphabetname_JP" : "みゅ",
+    "alphabetname_romanji" : "myu"
+  }, {
+    "alphabet_id" : 101,
+    "alphabetname_JP" : "みょ",
+    "alphabetname_romanji" : "myo"
+  }, {
+    "alphabet_id" : 102,
+    "alphabetname_JP" : "りゃ",
+    "alphabetname_romanji" : "rya"
+  }, {
+    "alphabet_id" : 103,
+    "alphabetname_JP" : "りゅ",
+    "alphabetname_romanji" : "ryu"
+  }, {
+    "alphabet_id" : 104,
+    "alphabetname_JP" : "りょ",
+    "alphabetname_romanji" : "ryo"
+  }, {
+    "alphabet_id" : 105,
+    "alphabetname_JP" : "ア",
+    "alphabetname_romanji" : "a"
+  }, {
+    "alphabet_id" : 106,
+    "alphabetname_JP" : "イ",
+    "alphabetname_romanji" : "i"
+  }, {
+    "alphabet_id" : 107,
+    "alphabetname_JP" : "ウ",
+    "alphabetname_romanji" : "u"
+  }, {
+    "alphabet_id" : 108,
+    "alphabetname_JP" : "エ",
+    "alphabetname_romanji" : "e"
+  }, {
+    "alphabet_id" : 109,
+    "alphabetname_JP" : "オ",
+    "alphabetname_romanji" : "o"
+  }, {
+    "alphabet_id" : 110,
+    "alphabetname_JP" : "カ",
+    "alphabetname_romanji" : "ka"
+  }, {
+    "alphabet_id" : 111,
+    "alphabetname_JP" : "キ",
+    "alphabetname_romanji" : "ki"
+  }, {
+    "alphabet_id" : 112,
+    "alphabetname_JP" : "ク",
+    "alphabetname_romanji" : "ku"
+  }, {
+    "alphabet_id" : 113,
+    "alphabetname_JP" : "ケ",
+    "alphabetname_romanji" : "ke"
+  }, {
+    "alphabet_id" : 114,
+    "alphabetname_JP" : "コ",
+    "alphabetname_romanji" : "ko"
+  }, {
+    "alphabet_id" : 115,
+    "alphabetname_JP" : "サ",
+    "alphabetname_romanji" : "sa"
+  }, {
+    "alphabet_id" : 116,
+    "alphabetname_JP" : "シ",
+    "alphabetname_romanji" : "shi"
+  }, {
+    "alphabet_id" : 117,
+    "alphabetname_JP" : "ス",
+    "alphabetname_romanji" : "su"
+  }, {
+    "alphabet_id" : 118,
+    "alphabetname_JP" : "セ",
+    "alphabetname_romanji" : "se"
+  }, {
+    "alphabet_id" : 119,
+    "alphabetname_JP" : "ソ",
+    "alphabetname_romanji" : "so"
+  }, {
+    "alphabet_id" : 120,
+    "alphabetname_JP" : "タ",
+    "alphabetname_romanji" : "ta"
+  }, {
+    "alphabet_id" : 121,
+    "alphabetname_JP" : "チ",
+    "alphabetname_romanji" : "chi"
+  }, {
+    "alphabet_id" : 122,
+    "alphabetname_JP" : "ツ",
+    "alphabetname_romanji" : "tsu"
+  }, {
+    "alphabet_id" : 123,
+    "alphabetname_JP" : "テ",
+    "alphabetname_romanji" : "te"
+  }, {
+    "alphabet_id" : 124,
+    "alphabetname_JP" : "ト",
+    "alphabetname_romanji" : "to"
+  }, {
+    "alphabet_id" : 125,
+    "alphabetname_JP" : "ナ",
+    "alphabetname_romanji" : "na"
+  }, {
+    "alphabet_id" : 126,
+    "alphabetname_JP" : "ニ",
+    "alphabetname_romanji" : "ni"
+  }, {
+    "alphabet_id" : 127,
+    "alphabetname_JP" : "ヌ",
+    "alphabetname_romanji" : "nu"
+  }, {
+    "alphabet_id" : 128,
+    "alphabetname_JP" : "ネ",
+    "alphabetname_romanji" : "ne"
+  }, {
+    "alphabet_id" : 129,
+    "alphabetname_JP" : "ノ",
+    "alphabetname_romanji" : "no"
+  }, {
+    "alphabet_id" : 130,
+    "alphabetname_JP" : "ハ",
+    "alphabetname_romanji" : "ha"
+  }, {
+    "alphabet_id" : 131,
+    "alphabetname_JP" : "ヒ",
+    "alphabetname_romanji" : "hi"
+  }, {
+    "alphabet_id" : 132,
+    "alphabetname_JP" : "フ",
+    "alphabetname_romanji" : "fu"
+  }, {
+    "alphabet_id" : 133,
+    "alphabetname_JP" : "ヘ",
+    "alphabetname_romanji" : "he"
+  }, {
+    "alphabet_id" : 134,
+    "alphabetname_JP" : "ホ",
+    "alphabetname_romanji" : "ho"
+  }, {
+    "alphabet_id" : 135,
+    "alphabetname_JP" : "マ",
+    "alphabetname_romanji" : "ma"
+  }, {
+    "alphabet_id" : 136,
+    "alphabetname_JP" : "ミ",
+    "alphabetname_romanji" : "mi"
+  }, {
+    "alphabet_id" : 137,
+    "alphabetname_JP" : "ム",
+    "alphabetname_romanji" : "mu"
+  }, {
+    "alphabet_id" : 138,
+    "alphabetname_JP" : "メ",
+    "alphabetname_romanji" : "me"
+  }, {
+    "alphabet_id" : 139,
+    "alphabetname_JP" : "モ",
+    "alphabetname_romanji" : "mo"
+  }, {
+    "alphabet_id" : 140,
+    "alphabetname_JP" : "ヤ",
+    "alphabetname_romanji" : "ya"
+  }, {
+    "alphabet_id" : 141,
+    "alphabetname_JP" : "ユ",
+    "alphabetname_romanji" : "yu"
+  }, {
+    "alphabet_id" : 142,
+    "alphabetname_JP" : "ヨ",
+    "alphabetname_romanji" : "yo"
+  }, {
+    "alphabet_id" : 143,
+    "alphabetname_JP" : "ラ",
+    "alphabetname_romanji" : "ra"
+  }, {
+    "alphabet_id" : 144,
+    "alphabetname_JP" : "リ",
+    "alphabetname_romanji" : "ri"
+  }, {
+    "alphabet_id" : 145,
+    "alphabetname_JP" : "ル",
+    "alphabetname_romanji" : "ru"
+  }, {
+    "alphabet_id" : 146,
+    "alphabetname_JP" : "レ",
+    "alphabetname_romanji" : "re"
+  }, {
+    "alphabet_id" : 147,
+    "alphabetname_JP" : "ロ",
+    "alphabetname_romanji" : "ro"
+  }, {
+    "alphabet_id" : 148,
+    "alphabetname_JP" : "ワ",
+    "alphabetname_romanji" : "wa"
+  }, {
+    "alphabet_id" : 149,
+    "alphabetname_JP" : "ヲ",
+    "alphabetname_romanji" : "wo"
+  }, {
+    "alphabet_id" : 150,
+    "alphabetname_JP" : "ン",
+    "alphabetname_romanji" : "n"
+  }, {
+    "alphabet_id" : 151,
+    "alphabetname_JP" : "ガ",
+    "alphabetname_romanji" : "ga"
+  }, {
+    "alphabet_id" : 152,
+    "alphabetname_JP" : "ギ",
+    "alphabetname_romanji" : "gi"
+  }, {
+    "alphabet_id" : 153,
+    "alphabetname_JP" : "グ",
+    "alphabetname_romanji" : "gu"
+  }, {
+    "alphabet_id" : 154,
+    "alphabetname_JP" : "ゲ",
+    "alphabetname_romanji" : "ge"
+  }, {
+    "alphabet_id" : 155,
+    "alphabetname_JP" : "ゴ",
+    "alphabetname_romanji" : "go"
+  }, {
+    "alphabet_id" : 156,
+    "alphabetname_JP" : "ザ",
+    "alphabetname_romanji" : "za"
+  }, {
+    "alphabet_id" : 157,
+    "alphabetname_JP" : "ジ",
+    "alphabetname_romanji" : "ji"
+  }, {
+    "alphabet_id" : 158,
+    "alphabetname_JP" : "ズ",
+    "alphabetname_romanji" : "zu"
+  }, {
+    "alphabet_id" : 159,
+    "alphabetname_JP" : "ゼ",
+    "alphabetname_romanji" : "ze"
+  }, {
+    "alphabet_id" : 160,
+    "alphabetname_JP" : "ゾ",
+    "alphabetname_romanji" : "zo"
+  }, {
+    "alphabet_id" : 161,
+    "alphabetname_JP" : "ダ",
+    "alphabetname_romanji" : "da"
+  }, {
+    "alphabet_id" : 162,
+    "alphabetname_JP" : "ヂ",
+    "alphabetname_romanji" : "ji"
+  }, {
+    "alphabet_id" : 163,
+    "alphabetname_JP" : "ヅ",
+    "alphabetname_romanji00" : "zu"
+  }, {
+    "alphabet_id" : 164,
+    "alphabetname_JP" : "デ",
+    "alphabetname_romanji" : "de"
+  }, {
+    "alphabet_id" : 165,
+    "alphabetname_JP" : "ド",
+    "alphabetname_romanji" : "do"
+  }, {
+    "alphabet_id" : 166,
+    "alphabetname_JP" : "バ",
+    "alphabetname_romanji" : "ba"
+  }, {
+    "alphabet_id" : 167,
+    "alphabetname_JP" : "ビ",
+    "alphabetname_romanji" : "bi"
+  }, {
+    "alphabet_id" : 168,
+    "alphabetname_JP" : "ブ",
+    "alphabetname_romanji" : "bu"
+  }, {
+    "alphabet_id" : 169,
+    "alphabetname_JP" : "ベ",
+    "alphabetname_romanji" : "be"
+  }, {
+    "alphabet_id" : 170,
+    "alphabetname_JP" : "ボ",
+    "alphabetname_romanji" : "bo"
+  }, {
+    "alphabet_id" : 171,
+    "alphabetname_JP" : "パ",
+    "alphabetname_romanji" : "pa"
+  }, {
+    "alphabet_id" : 172,
+    "alphabetname_JP" : "ピ",
+    "alphabetname_romanji" : "pi"
+  }, {
+    "alphabet_id" : 173,
+    "alphabetname_JP" : "プ",
+    "alphabetname_romanji" : "pu"
+  }, {
+    "alphabet_id" : 174,
+    "alphabetname_JP" : "ペ",
+    "alphabetname_romanji" : "pe"
+  }, {
+    "alphabet_id" : 175,
+    "alphabetname_JP" : "ポ",
+    "alphabetname_romanji" : "po"
+  }, {
+    "alphabet_id" : 176,
+    "alphabetname_JP" : "キャ",
+    "alphabetname_romanji" : "kya"
+  }, {
+    "alphabet_id" : 177,
+    "alphabetname_JP" : "キュ",
+    "alphabetname_romanji" : "kyu"
+  }, {
+    "alphabet_id" : 178,
+    "alphabetname_JP" : "キョ",
+    "alphabetname_romanji" : "kyo"
+  }, {
+    "alphabet_id" : 179,
+    "alphabetname_JP" : "ギャ",
+    "alphabetname_romanji" : "gya"
+  }, {
+    "alphabet_id" : 180,
+    "alphabetname_JP" : "ギュ",
+    "alphabetname_romanji" : "gyu"
+  }, {
+    "alphabet_id" : 181,
+    "alphabetname_JP" : "ギョ",
+    "alphabetname_romanji" : "gyo"
+  }, {
+    "alphabet_id" : 182,
+    "alphabetname_JP" : "シャ",
+    "alphabetname_romanji" : "sha"
+  }, {
+    "alphabet_id" : 183,
+    "alphabetname_JP" : "シュ",
+    "alphabetname_romanji" : "shu"
+  }, {
+    "alphabet_id" : 184,
+    "alphabetname_JP" : "ショ",
+    "alphabetname_romanji" : "sho"
+  }, {
+    "alphabet_id" : 185,
+    "alphabetname_JP" : "ジャ",
+    "alphabetname_romanji" : "ja"
+  }, {
+    "alphabet_id" : 186,
+    "alphabetname_JP" : "ジュ",
+    "alphabetname_romanji" : "ju"
+  }, {
+    "alphabet_id" : 187,
+    "alphabetname_JP" : "ジョ",
+    "alphabetname_romanji" : "jo"
+  }, {
+    "alphabet_id" : 188,
+    "alphabetname_JP" : "チャ",
+    "alphabetname_romanji" : "cha"
+  }, {
+    "alphabet_id" : 189,
+    "alphabetname_JP" : "チュ",
+    "alphabetname_romanji" : "chu"
+  }, {
+    "alphabet_id" : 190,
+    "alphabetname_JP" : "チョ",
+    "alphabetname_romanji" : "cho"
+  }, {
+    "alphabet_id" : 191,
+    "alphabetname_JP" : "ニャ",
+    "alphabetname_romanji" : "nya"
+  }, {
+    "alphabet_id" : 192,
+    "alphabetname_JP" : "ニュ",
+    "alphabetname_romanji" : "nyu"
+  }, {
+    "alphabet_id" : 193,
+    "alphabetname_JP" : "ニョ",
+    "alphabetname_romanji" : "nyo"
+  }, {
+    "alphabet_id" : 194,
+    "alphabetname_JP" : "ヒャ",
+    "alphabetname_romanji" : "hya"
+  }, {
+    "alphabet_id" : 195,
+    "alphabetname_JP" : "ヒュ",
+    "alphabetname_romanji" : "hyu"
+  }, {
+    "alphabet_id" : 196,
+    "alphabetname_JP" : "ヒョ",
+    "alphabetname_romanji" : "hyo"
+  }, {
+    "alphabet_id" : 197,
+    "alphabetname_JP" : "ビャ",
+    "alphabetname_romanji" : "bya"
+  }, {
+    "alphabet_id" : 198,
+    "alphabetname_JP" : "ビュ",
+    "alphabetname_romanji" : "byu"
+  }, {
+    "alphabet_id" : 199,
+    "alphabetname_JP" : "ビョ",
+    "alphabetname_romanji" : "byo"
+  }, {
+    "alphabet_id" : 200,
+    "alphabetname_JP" : "ピャ",
+    "alphabetname_romanji" : "pya"
+  }, {
+    "alphabet_id" : 201,
+    "alphabetname_JP" : "ピュ",
+    "alphabetname_romanji" : "pyu"
+  }, {
+    "alphabet_id" : 202,
+    "alphabetname_JP" : "ピョ",
+    "alphabetname_romanji" : "pyo"
+  }, {
+    "alphabet_id" : 203,
+    "alphabetname_JP" : "ミャ",
+    "alphabetname_romanji" : "mya"
+  }, {
+    "alphabet_id" : 204,
+    "alphabetname_JP" : "ミュ",
+    "alphabetname_romanji" : "myu"
+  }, {
+    "alphabet_id" : 205,
+    "alphabetname_JP" : "ミョ",
+    "alphabetname_romanji" : "myo"
+  }, {
+    "alphabet_id" : 206,
+    "alphabetname_JP" : "リャ",
+    "alphabetname_romanji" : "rya"
+  }, {
+    "alphabet_id" : 207,
+    "alphabetname_JP" : "リュ",
+    "alphabetname_romanji" : "ryu"
+  }, {
+    "alphabet_id" : 208,
+    "alphabetname_JP" : "リョ",
+    "alphabetname_romanji" : "ryo"
+  }, {
+    "alphabet_id" : 209,
+    "alphabetname_JP" : "ファ",
+    "alphabetname_romanji" : "fa"
+  }, {
+    "alphabet_id" : 210,
+    "alphabetname_JP" : "ウィ",
+    "alphabetname_romanji" : "wi"
+  }, {
+    "alphabet_id" : 211,
+    "alphabetname_JP" : "ティ",
+    "alphabetname_romanji" : "ti"
+  }, {
+    "alphabet_id" : 212,
+    "alphabetname_JP" : "ディ",
+    "alphabetname_romanji" : "di"
+  }, {
+    "alphabet_id" : 213,
+    "alphabetname_JP" : "トゥ",
+    "alphabetname_romanji" : "tu"
+  }, {
+    "alphabet_id" : 214,
+    "alphabetname_JP" : "ドゥ",
+    "alphabetname_romanji" : "du"
+  }, {
+    "alphabet_id" : 215,
+    "alphabetname_JP" : "ウェ",
+    "alphabetname_romanji" : "we"
+  }, {
+    "alphabet_id" : 216,
+    "alphabetname_JP" : "シェ",
+    "alphabetname_romanji" : "she"
+  }, {
+    "alphabet_id" : 217,
+    "alphabetname_JP" : "ジェ",
+    "alphabetname_romanji" : "je"
+  }, {
+    "alphabet_id" : 218,
+    "alphabetname_JP" : "チェ",
+    "alphabetname_romanji" : "che"
+  }, {
+    "alphabet_id" : 219,
+    "alphabetname_JP" : "フェ",
+    "alphabetname_romanji" : "fe"
+  }, {
+    "alphabet_id" : 220,
+    "alphabetname_JP" : "ウォ",
+    "alphabetname_romanji" : "wo"
+  }, {
+    "alphabet_id" : 221,
+    "alphabetname_JP" : "フォ",
+    "alphabetname_romanji" : "fo"
+  }, {
+    "alphabet_id" : 222,
+    "alphabetname_JP" : "チュ",
+    "alphabetname_romanji" : "tyu"
+  }, {
+    "alphabet_id" : 223,
+    "alphabetname_JP" : "ヂュ",
+    "alphabetname_romanji" : "dyu"
+  }, {
+    "alphabet_id" : 224,
+    "alphabetname_JP" : "フュ",
+    "alphabetname_romanji" : "fyu"
+  } ]
+}
