@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Proyecto26;
 
 [System.Serializable]
 public class Result
@@ -24,7 +25,7 @@ public class Result
 
         summaryCanvas.SetActive(true);
     }
-    
+
 }
 
 
@@ -38,7 +39,7 @@ public class Word
 
     //[Space(15)]
     //public float timeLimit = 15;
-    
+
     public string GetString()
     {
         //ถ้า desiredRandom ไม่เป็นค่าว่าง ให้มันreturn ตัวมันออกมา คือget ค่ามันมา
@@ -49,12 +50,12 @@ public class Word
         //เก็บ word เข้าไปแสดง
         string result = word;
 
-        while(result == word)
+        while (result == word)
         {
             result = "";
             //เก็บคำไว้ใน list เพื่อจะเอามาสุ่มตัวอักษร
             List<char> characters = new List<char>(word.ToCharArray());
-            while(characters.Count > 0)
+            while (characters.Count > 0)
             {
                 //ไว้สำหรับแรนด้อมตัวอักษรในคำ ก่อนที่จะทำการเรียง
                 int indexChar = Random.Range(0, characters.Count - 1);
@@ -74,7 +75,7 @@ public class Word
 public class WordSorting : MonoBehaviour
 {
     //เรียกclass word เก็บเป็น size Array แล้วเด้งไปคลาส word ก่อน
-    public Word[] words;
+    public List<Word> words;
 
     //ใช้นับคำที่ผู้เล่นตอบถูก
     [Space(10)]
@@ -98,16 +99,25 @@ public class WordSorting : MonoBehaviour
     CharObject firstSelected;
 
     public int currentWord;
-    
+
     //อันนี้กำหนดให้เป็นคลาสหลัก
     public static WordSorting main;
+
+    public List<string> word_JP;
+    public List<string> word_RJ;
+    public List<string> word_meaning;
+    public List<int> wrod_syl;
 
     //ใช้ทำเอฟเฟคupdate
     private float totalScore;
 
+    private bool _init = false;
+    private bool _initDB = false;
+    private bool _initRAD = false;
+
     void Awake()
     {
-        main = this;    
+        main = this;
     }
 
 
@@ -118,6 +128,8 @@ public class WordSorting : MonoBehaviour
         result.summaryCanvas.SetActive(false);
         ShowSorting(currentWord);
         result.textTotalScore.text = result.totalScore.ToString();
+
+        //PullWords();
     }
 
     // Update is called once per frame
@@ -128,6 +140,54 @@ public class WordSorting : MonoBehaviour
         //ทำเอฟเฟคตอนนับคะแนน
         totalScore = Mathf.Lerp(totalScore, result.totalScore, Time.deltaTime * 5);
         result.textTotalScore.text = Mathf.RoundToInt(totalScore).ToString();
+
+        if (!_initDB)
+        {
+            PullWords();
+        }
+
+        if (_initDB)
+        {
+            for (int i = 0; i < word_JP.Count; i++)
+            {
+                words[i].word = word_RJ[i];
+            }
+            _initRAD = true;
+        }
+
+    }
+
+    void RadWord()
+    {
+        // Random.
+
+        //       if (wordsListJP.Count == 12)
+        //     {
+        //       _initRAD = true;
+        // }
+    }
+
+    void PullWords()
+    {
+        int test = 0;
+
+        if (test == word_JP.Count)
+        {
+            _initDB = true; Debug.Log("_initDB: " + _initDB);
+        }
+
+        //ดึงมาจาก DB เอามาเก็บไว้ใน ARRAY สองตัวที่แอดมา 
+        RestClient.GetArray<RetreiveWord>("https://it59-28yomimasu.firebaseio.com/Word.json").Then(response =>
+        {
+            test = response.Length; Debug.Log("Response: " + response.Length);
+            for (int i = 0; i <= response.Length; i++)
+            {
+                word_JP.Add(response[i].wordname_JP); //Debug.Log(word_JP[i]);
+                word_RJ.Add(response[i].wordname_romanji);
+                word_meaning.Add(response[i].word_meaning);
+                wrod_syl.Add(response[i].word_syllable);
+            }
+        });
     }
 
     void RepositionObject()
@@ -141,7 +201,7 @@ public class WordSorting : MonoBehaviour
         float center = (charObjects.Count - 1f) / 2;
         for (int i = 0; i < charObjects.Count; i++)
         {
-            charObjects[i].rectTransform.anchoredPosition 
+            charObjects[i].rectTransform.anchoredPosition
                 = Vector2.Lerp(charObjects[i].rectTransform.anchoredPosition,
                  new Vector2((i - center) * space, 0), lerpSpeed * Time.deltaTime);
             charObjects[i].index = i;
@@ -154,14 +214,14 @@ public class WordSorting : MonoBehaviour
     /// </summary>
     public void ShowSorting()
     {
-        ShowSorting(Random.Range(0, words.Length - 1));
+        ShowSorting(Random.Range(0, words.Count - 1));
     }
 
     /// <summary>
     /// Show word from collection with desired index
     /// </summary>
     /// <param name="index">index of the element</param>
-    public void ShowSorting (int index)
+    public void ShowSorting(int index)
     {
         //แสดงตามindex 
         charObjects.Clear();
@@ -171,7 +231,7 @@ public class WordSorting : MonoBehaviour
         }
         //ถ้า index มากกว่าคำที่มีทั้งหมดใน array
         //show หน้า summary
-        if(index > words.Length - 1)
+        if (index > words.Count - 1)
         {
             //ถ้าคำหมดแล้วให้แสดงหน้า summaryScoreเลย
             result.ShowSummary();
@@ -203,7 +263,7 @@ public class WordSorting : MonoBehaviour
         StartCoroutine(TimeLimit());
     }
 
-    public void Swap(int indexA,int indexB)
+    public void Swap(int indexA, int indexB)
     {
         CharObject tmpA = charObjects[indexA];
 
@@ -217,7 +277,7 @@ public class WordSorting : MonoBehaviour
     }
 
     //ทำการเลือกปุ่ม
-    public void Select (CharObject charObject)
+    public void Select(CharObject charObject)
     {
         if (firstSelected)
         {
@@ -228,7 +288,7 @@ public class WordSorting : MonoBehaviour
 
             firstSelected.Select();
             charObject.Select();
-              
+
         }
         else
         {
@@ -263,7 +323,7 @@ public class WordSorting : MonoBehaviour
         }
 
         //ถ้าเกิดว่าเวลาในคำปัจจุบันหมดลงให้แสดงหน้า summary เลย
-        if(timeLimit <= 0)
+        if (timeLimit <= 0)
         {
             result.ShowSummary();
             wordCanvas.SetActive(false);
@@ -276,7 +336,7 @@ public class WordSorting : MonoBehaviour
 
             //ถ้าถูกให้นับคำเพิ่มไป
             countWords++;
-            
+
             //เอาคะแนนมาใส่ใน text ได้เลย เก็บคะแนนในแต่ละคำ
             result.totalScore += Mathf.RoundToInt(timeLimit);
             result.textTotalScore.text = result.totalScore.ToString();
@@ -305,7 +365,7 @@ public class WordSorting : MonoBehaviour
         while (timeLimit > 0)
         {
             //break ไม่ให้เวลามันวนloop แล้ว timelimit มันทวีคูณความเร็วในการนับเวลา
-            if(myWord != currentWord) { yield break; }
+            if (myWord != currentWord) { yield break; }
 
             //นับเวลาถอยหลัง
             timeLimit -= Time.deltaTime;

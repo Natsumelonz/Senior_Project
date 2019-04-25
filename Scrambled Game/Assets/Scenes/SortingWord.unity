@@ -545,15 +545,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   words:
-  - word: CAT
+  - word: ahiru
     desiredRandom: 
-  - word: HOUSE
+  - word: just
     desiredRandom: 
-  - word: MONEY
+  - word: test
     desiredRandom: 
-  - word: LOVE
+  - word: what
     desiredRandom: 
-  - word: ONEPIECE
+  - word: come
+    desiredRandom: 
+  - word: come
+    desiredRandom: 
+  - word: come
+    desiredRandom: 
+  - word: come
+    desiredRandom: 
+  - word: come
+    desiredRandom: 
+  - word: come
+    desiredRandom: 
+  - word: come
+    desiredRandom: 
+  - word: come
+    desiredRandom: 
+  - word: come
+    desiredRandom: 
+  - word: come
+    desiredRandom: 
+  - word: come
+    desiredRandom: 
+  - word: come
+    desiredRandom: 
+  - word: come
+    desiredRandom: 
+  - word: come
+    desiredRandom: 
+  - word: come
+    desiredRandom: 
+  - word: come
     desiredRandom: 
   countWords: 0
   result:
@@ -569,6 +599,10 @@ MonoBehaviour:
   space: 100
   lerpSpeed: 5
   currentWord: 0
+  word_JP: []
+  word_RJ: []
+  word_meaning: []
+  wrod_syl: 
 --- !u!4 &253312528
 Transform:
   m_ObjectHideFlags: 0

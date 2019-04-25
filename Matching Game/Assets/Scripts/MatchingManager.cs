@@ -19,8 +19,8 @@ public class MatchingManager : MonoBehaviour
 
     [Header("Button")]
     public GameObject[] cards;
-    public GameObject[] cards2;
     public GameObject[] cards1;
+    public GameObject[] cards2;
 
     [Header("Text")]
     public Text pointText;
@@ -41,6 +41,7 @@ public class MatchingManager : MonoBehaviour
 
     private void Start()
     {
+
         StartCoroutine(TimeLimit());
         summaryCanvas.SetActive(false);
     }
@@ -215,6 +216,11 @@ public class MatchingManager : MonoBehaviour
             if (_correctWord == 12)
             {
                 level++;
+                for (int i = 0; i < cards2.Length; i++)
+                {
+                    cards2[i].GetComponent<Card>().state = 0;
+                    Debug.Log(cards2[i].GetComponent<Card>().state);
+                }
                 SceneManager.LoadScene("GameMatching");
                 //ShowSummary();
             }
