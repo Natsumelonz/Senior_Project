@@ -12,6 +12,8 @@ public class Result
     [Header("REF UI")]
     public Text textTime;
     public Text textTotalScore;
+    public Text textJapan;
+    public Text textMean;
 
     [Header("REF RESULT SCREEN")]
     public GameObject summaryCanvas;
@@ -128,8 +130,6 @@ public class WordSorting : MonoBehaviour
         result.summaryCanvas.SetActive(false);
         ShowSorting(currentWord);
         result.textTotalScore.text = result.totalScore.ToString();
-
-        //PullWords();
     }
 
     // Update is called once per frame
@@ -140,7 +140,6 @@ public class WordSorting : MonoBehaviour
         //ทำเอฟเฟคตอนนับคะแนน
         totalScore = Mathf.Lerp(totalScore, result.totalScore, Time.deltaTime * 5);
         result.textTotalScore.text = Mathf.RoundToInt(totalScore).ToString();
-
         if (!_initDB)
         {
             PullWords();
@@ -154,9 +153,32 @@ public class WordSorting : MonoBehaviour
             }
             _initRAD = true;
         }
+        result.textJapan.text = word_JP[currentWord].ToString();
+        result.textMean.text = word_meaning[currentWord].ToString();
 
     }
+    void PullWords()
+        {
+            int test = 0;
 
+            if (test == word_JP.Count)
+            {
+                _initDB = true; Debug.Log("_initDB: " + _initDB);
+            }
+
+            //ดึงมาจาก DB เอามาเก็บไว้ใน ARRAY สองตัวที่แอดมา 
+            RestClient.GetArray<RetreiveWord>("https://it59-28yomimasu.firebaseio.com/Word.json").Then(response =>
+            {
+                test = response.Length; Debug.Log("Response: " + response.Length);
+                for (int i = 0; i <= response.Length; i++)
+                {
+                    word_JP.Add(response[i].wordname_JP); //Debug.Log(word_JP[i]);
+                    word_RJ.Add(response[i].wordname_romanji);
+                    word_meaning.Add(response[i].word_meaning);
+                    wrod_syl.Add(response[i].word_syllable);
+                }
+            });
+        }
     void RadWord()
     {
         // Random.
@@ -167,28 +189,7 @@ public class WordSorting : MonoBehaviour
         // }
     }
 
-    void PullWords()
-    {
-        int test = 0;
-
-        if (test == word_JP.Count)
-        {
-            _initDB = true; Debug.Log("_initDB: " + _initDB);
-        }
-
-        //ดึงมาจาก DB เอามาเก็บไว้ใน ARRAY สองตัวที่แอดมา 
-        RestClient.GetArray<RetreiveWord>("https://it59-28yomimasu.firebaseio.com/Word.json").Then(response =>
-        {
-            test = response.Length; Debug.Log("Response: " + response.Length);
-            for (int i = 0; i <= response.Length; i++)
-            {
-                word_JP.Add(response[i].wordname_JP); //Debug.Log(word_JP[i]);
-                word_RJ.Add(response[i].wordname_romanji);
-                word_meaning.Add(response[i].word_meaning);
-                wrod_syl.Add(response[i].word_syllable);
-            }
-        });
-    }
+    
 
     void RepositionObject()
     {
