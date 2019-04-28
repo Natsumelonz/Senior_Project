@@ -728,7 +728,7 @@ MonoBehaviour:
     desiredRandom: 
   - word: yume
     desiredRandom: 
-  - word: yume
+  - word: cat
     desiredRandom: 
   countWords: 0
   result:
@@ -746,7 +746,7 @@ MonoBehaviour:
   space: 100
   lerpSpeed: 5
   currentWord: 0
-  wordIndex: 0
+  numIndexList: 
   word_JP: []
   word_RJ: []
   word_meaning: []

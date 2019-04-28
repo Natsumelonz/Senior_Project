@@ -101,7 +101,7 @@ public class WordSorting : MonoBehaviour
     CharObject firstSelected;
 
     public int currentWord;
-    public int wordIndex;
+    public List<int> numIndexList = new List<int>();
 
     //อันนี้กำหนดให้เป็นคลาสหลัก
     public static WordSorting main;
@@ -113,11 +113,11 @@ public class WordSorting : MonoBehaviour
 
     //ใช้ทำเอฟเฟคupdate
     private float totalScore;
-
+    private int wordIndex = 0;
+    private int index = 0;
     private bool _init = false;
     private bool _initDB = false;
     private bool _initRAD = false;
-    private bool _initSHOW = false;
 
     void Awake()
     {
@@ -128,9 +128,21 @@ public class WordSorting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PullWords();
+        StartCoroutine(RadWord(0.8f));
+
+        while (numIndexList.Count != 20)
+        {
+            wordIndex = Random.Range(0, 20);
+            if (!numIndexList.Contains(wordIndex))
+                numIndexList.Add(wordIndex);
+
+        }
+
+
         //ทำการปิดหน้า summary ทุกครั้งตอนเริ่มเกม
         result.summaryCanvas.SetActive(false);
-        wordIndex = Random.Range(0, 20);
+
         //ShowSorting(wordIndex);
         result.textTotalScore.text = result.totalScore.ToString();
     }
@@ -138,66 +150,56 @@ public class WordSorting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!_initDB)
+        if (!_init && _initDB && _initRAD && words[index].word != null)
         {
-            PullWords();
-        }
-
-        if (_initDB && !_initRAD)
-        {
-            for (int i = 0; i < word_JP.Count; i++)
-            {
-                words[i].word = word_RJ[i];
-            }
-            _initRAD = true;
-        }
-        if (!_initSHOW && _initDB && _initRAD && words[wordIndex].word != null)
-        {
-            ShowSorting(wordIndex);
-            _initSHOW = true;
+            ShowSorting(index);
+            _init = true;
         }
         RepositionObject();
 
         //ทำเอฟเฟคตอนนับคะแนน
         totalScore = Mathf.Lerp(totalScore, result.totalScore, Time.deltaTime * 5);
-        result.textTotalScore.text = Mathf.RoundToInt(totalScore).ToString();              
-        result.textJapan.text = word_JP[wordIndex].ToString();
-        result.textMean.text = word_meaning[wordIndex].ToString();
+        result.textTotalScore.text = Mathf.RoundToInt(totalScore).ToString();
+
 
     }
     void PullWords()
-        {
-            int test = 0;
-
-            if (test == word_JP.Count)
-            {
-                _initDB = true; Debug.Log("_initDB: " + _initDB);
-            }
-
-            //ดึงมาจาก DB เอามาเก็บไว้ใน ARRAY สองตัวที่แอดมา 
-            RestClient.GetArray<RetreiveWord>("https://it59-28yomimasu.firebaseio.com/Word.json").Then(response =>
-            {
-                test = response.Length; Debug.Log("Response: " + response.Length);
-                for (int i = 0; i <= response.Length; i++)
-                {
-                    word_JP.Add(response[i].wordname_JP); 
-                    word_RJ.Add(response[i].wordname_romanji);Debug.Log(word_RJ[i]); Debug.Log(word_RJ.Count);
-                    word_meaning.Add(response[i].word_meaning);
-                    wrod_syl.Add(response[i].word_syllable);
-                }
-            });
-        }
-    void RadWord()
     {
-        // Random.
+        int test = 0;
+        if (word_JP.Count == test)
+        {
+            _initDB = true; //Debug.Log("_initDB: " + _initDB);
+        }
 
-        //       if (wordsListJP.Count == 12)
-        //     {
-        //       _initRAD = true;
-        // }
+        //ดึงมาจาก DB เอามาเก็บไว้ใน ARRAY สองตัวที่แอดมา 
+        RestClient.GetArray<RetreiveWord>("https://it59-28yomimasu.firebaseio.com/Word.json").Then(response =>
+        {
+            test = response.Length;
+            for (int i = 0; i <= response.Length; i++)
+            {
+                word_JP.Add(response[i].wordname_JP);
+                word_RJ.Add(response[i].wordname_romanji); //Debug.Log(word_RJ[i]); Debug.Log(word_RJ.Count);
+                word_meaning.Add(response[i].word_meaning);
+                wrod_syl.Add(response[i].word_syllable);
+
+            }
+        });
+
     }
 
-    
+    IEnumerator RadWord(float time)
+    {
+        yield return new WaitForSeconds(time);
+        for (int i = 0; i < 20; i++)
+        {
+            words[i].word = word_RJ[numIndexList[i]];
+        }
+
+        if (!_initRAD)
+        {
+            _initRAD = true;
+        }
+    }
 
     void RepositionObject()
     {
@@ -232,6 +234,11 @@ public class WordSorting : MonoBehaviour
     /// <param name="index">index of the element</param>
     public void ShowSorting(int index)
     {
+        for (int i = 0; i <= numIndexList.Count; i++)
+        {
+            result.textJapan.text = word_JP[numIndexList[currentWord]].ToString();
+            result.textMean.text = word_meaning[numIndexList[currentWord]].ToString();
+        }
         //แสดงตามindex 
         charObjects.Clear();
         foreach (Transform child in container)
@@ -339,15 +346,16 @@ public class WordSorting : MonoBehaviour
         }
 
         //ถ้าคำปัจจุบันเรียงถูกต้องแล้วให้แสดงคำต่อไปสำหรับให้ผู้เล่นเรียงคำให้ถูกต้อง
-        if (word == words[wordIndex].word) //if(word == word[currentword].word
+        if (word == words[currentWord].word) //if(word == word[currentword].word
         {
             //currentWord++; //ห้ามซ้ำคำเดิม แต่มีโอกาสซ้ำคำที่ผ่านมาแล้ว
             //แก้ตรงนี้ไป
-            currentWord = Random.Range(0, 20);
-            if(currentWord == wordIndex)
-            {
-                currentWord = Random.Range(0, 20);
-            }
+            //currentWord = index;
+            //if (currentWord == index)
+            //{
+            //    currentWord = Random.Range(0, 20);
+            //}
+            currentWord++;
             //แก้ถึงตรงนี้
 
             //ถ้าถูกให้นับคำเพิ่มไป
@@ -378,6 +386,7 @@ public class WordSorting : MonoBehaviour
         int myWord = currentWord;
 
         yield return new WaitForSeconds(1f);
+
         while (timeLimit > 0)
         {
             //break ไม่ให้เวลามันวนloop แล้ว timelimit มันทวีคูณความเร็วในการนับเวลา
@@ -394,5 +403,6 @@ public class WordSorting : MonoBehaviour
         CheckWord();
 
     }
+
 
 }
