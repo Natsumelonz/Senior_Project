@@ -690,45 +690,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   words:
-  - word: ahiru
+  - word: ayugi
     desiredRandom: 
-  - word: just
+  - word: cat
     desiredRandom: 
-  - word: test
+  - word: dog
     desiredRandom: 
-  - word: what
+  - word: love
     desiredRandom: 
-  - word: come
+  - word: yume
     desiredRandom: 
-  - word: come
+  - word: yume
     desiredRandom: 
-  - word: come
+  - word: yume
     desiredRandom: 
-  - word: come
+  - word: yume
     desiredRandom: 
-  - word: come
+  - word: yume
     desiredRandom: 
-  - word: come
+  - word: yume
     desiredRandom: 
-  - word: come
+  - word: yume
     desiredRandom: 
-  - word: come
+  - word: yume
     desiredRandom: 
-  - word: come
+  - word: yume
     desiredRandom: 
-  - word: come
+  - word: yume
     desiredRandom: 
-  - word: come
+  - word: yume
     desiredRandom: 
-  - word: come
+  - word: yume
     desiredRandom: 
-  - word: come
+  - word: yume
     desiredRandom: 
-  - word: come
+  - word: yume
     desiredRandom: 
-  - word: come
+  - word: yume
     desiredRandom: 
-  - word: come
+  - word: yume
     desiredRandom: 
   countWords: 0
   result:
@@ -746,6 +746,7 @@ MonoBehaviour:
   space: 100
   lerpSpeed: 5
   currentWord: 0
+  wordIndex: 0
   word_JP: []
   word_RJ: []
   word_meaning: []

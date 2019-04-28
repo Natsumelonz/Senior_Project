@@ -101,6 +101,7 @@ public class WordSorting : MonoBehaviour
     CharObject firstSelected;
 
     public int currentWord;
+    public int wordIndex;
 
     //อันนี้กำหนดให้เป็นคลาสหลัก
     public static WordSorting main;
@@ -116,6 +117,7 @@ public class WordSorting : MonoBehaviour
     private bool _init = false;
     private bool _initDB = false;
     private bool _initRAD = false;
+    private bool _initSHOW = false;
 
     void Awake()
     {
@@ -128,24 +130,20 @@ public class WordSorting : MonoBehaviour
     {
         //ทำการปิดหน้า summary ทุกครั้งตอนเริ่มเกม
         result.summaryCanvas.SetActive(false);
-        ShowSorting(currentWord);
+        wordIndex = Random.Range(0, 20);
+        //ShowSorting(wordIndex);
         result.textTotalScore.text = result.totalScore.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        RepositionObject();
-
-        //ทำเอฟเฟคตอนนับคะแนน
-        totalScore = Mathf.Lerp(totalScore, result.totalScore, Time.deltaTime * 5);
-        result.textTotalScore.text = Mathf.RoundToInt(totalScore).ToString();
         if (!_initDB)
         {
             PullWords();
         }
 
-        if (_initDB)
+        if (_initDB && !_initRAD)
         {
             for (int i = 0; i < word_JP.Count; i++)
             {
@@ -153,8 +151,18 @@ public class WordSorting : MonoBehaviour
             }
             _initRAD = true;
         }
-        result.textJapan.text = word_JP[currentWord].ToString();
-        result.textMean.text = word_meaning[currentWord].ToString();
+        if (!_initSHOW && _initDB && _initRAD && words[wordIndex].word != null)
+        {
+            ShowSorting(wordIndex);
+            _initSHOW = true;
+        }
+        RepositionObject();
+
+        //ทำเอฟเฟคตอนนับคะแนน
+        totalScore = Mathf.Lerp(totalScore, result.totalScore, Time.deltaTime * 5);
+        result.textTotalScore.text = Mathf.RoundToInt(totalScore).ToString();              
+        result.textJapan.text = word_JP[wordIndex].ToString();
+        result.textMean.text = word_meaning[wordIndex].ToString();
 
     }
     void PullWords()
@@ -172,8 +180,8 @@ public class WordSorting : MonoBehaviour
                 test = response.Length; Debug.Log("Response: " + response.Length);
                 for (int i = 0; i <= response.Length; i++)
                 {
-                    word_JP.Add(response[i].wordname_JP); //Debug.Log(word_JP[i]);
-                    word_RJ.Add(response[i].wordname_romanji);
+                    word_JP.Add(response[i].wordname_JP); 
+                    word_RJ.Add(response[i].wordname_romanji);Debug.Log(word_RJ[i]); Debug.Log(word_RJ.Count);
                     word_meaning.Add(response[i].word_meaning);
                     wrod_syl.Add(response[i].word_syllable);
                 }
@@ -258,7 +266,7 @@ public class WordSorting : MonoBehaviour
             charObjects.Add(clone.Init(c));
         }
 
-        currentWord = index;
+        //currentWord = index;
 
         //ทุกครั้งที่มีคำใหม่ก็นับเวลาเท่าเดิมที่ 15 วิ
         StartCoroutine(TimeLimit());
@@ -331,9 +339,16 @@ public class WordSorting : MonoBehaviour
         }
 
         //ถ้าคำปัจจุบันเรียงถูกต้องแล้วให้แสดงคำต่อไปสำหรับให้ผู้เล่นเรียงคำให้ถูกต้อง
-        if (word == words[currentWord].word)
+        if (word == words[wordIndex].word) //if(word == word[currentword].word
         {
-            currentWord++;
+            //currentWord++; //ห้ามซ้ำคำเดิม แต่มีโอกาสซ้ำคำที่ผ่านมาแล้ว
+            //แก้ตรงนี้ไป
+            currentWord = Random.Range(0, 20);
+            if(currentWord == wordIndex)
+            {
+                currentWord = Random.Range(0, 20);
+            }
+            //แก้ถึงตรงนี้
 
             //ถ้าถูกให้นับคำเพิ่มไป
             countWords++;
