@@ -39,9 +39,6 @@ public class Word
     [Header("Leave empty if you want randomized")]
     public string desiredRandom;
 
-    //[Space(15)]
-    //public float timeLimit = 15;
-
     public string GetString()
     {
         //ถ้า desiredRandom ไม่เป็นค่าว่าง ให้มันreturn ตัวมันออกมา คือget ค่ามันมา
@@ -129,7 +126,7 @@ public class WordSorting : MonoBehaviour
     void Start()
     {
         PullWords();
-        StartCoroutine(RadWord(0.8f));
+        StartCoroutine(RadWord(1.5f));
 
         while (numIndexList.Count != 20)
         {
@@ -168,7 +165,7 @@ public class WordSorting : MonoBehaviour
         int test = 0;
         if (word_JP.Count == test)
         {
-            _initDB = true; //Debug.Log("_initDB: " + _initDB);
+            _initDB = true;
         }
 
         //ดึงมาจาก DB เอามาเก็บไว้ใน ARRAY สองตัวที่แอดมา 
@@ -178,7 +175,7 @@ public class WordSorting : MonoBehaviour
             for (int i = 0; i <= response.Length; i++)
             {
                 word_JP.Add(response[i].wordname_JP);
-                word_RJ.Add(response[i].wordname_romanji); //Debug.Log(word_RJ[i]); Debug.Log(word_RJ.Count);
+                word_RJ.Add(response[i].wordname_romanji); 
                 word_meaning.Add(response[i].word_meaning);
                 wrod_syl.Add(response[i].word_syllable);
 
@@ -255,9 +252,6 @@ public class WordSorting : MonoBehaviour
             //ปิดหน้าเกมด้วย
             wordCanvas.SetActive(false);
 
-            //Debug.LogError("index out of range, please enter range between 0-" 
-            // + (words.Length - 1).ToString());
-
             return;
         }
         //เก็บตัวอักษรที่เอาไป sort ใน function getString 
@@ -272,8 +266,6 @@ public class WordSorting : MonoBehaviour
 
             charObjects.Add(clone.Init(c));
         }
-
-        //currentWord = index;
 
         //ทุกครั้งที่มีคำใหม่ก็นับเวลาเท่าเดิมที่ 15 วิ
         StartCoroutine(TimeLimit());
@@ -299,8 +291,6 @@ public class WordSorting : MonoBehaviour
         {
             //แล้วเอามาสลับ
             Swap(firstSelected.index, charObject.index);
-
-            //Unselect
 
             firstSelected.Select();
             charObject.Select();
@@ -346,17 +336,9 @@ public class WordSorting : MonoBehaviour
         }
 
         //ถ้าคำปัจจุบันเรียงถูกต้องแล้วให้แสดงคำต่อไปสำหรับให้ผู้เล่นเรียงคำให้ถูกต้อง
-        if (word == words[currentWord].word) //if(word == word[currentword].word
+        if (word == words[currentWord].word)
         {
-            //currentWord++; //ห้ามซ้ำคำเดิม แต่มีโอกาสซ้ำคำที่ผ่านมาแล้ว
-            //แก้ตรงนี้ไป
-            //currentWord = index;
-            //if (currentWord == index)
-            //{
-            //    currentWord = Random.Range(0, 20);
-            //}
             currentWord++;
-            //แก้ถึงตรงนี้
 
             //ถ้าถูกให้นับคำเพิ่มไป
             countWords++;
@@ -364,9 +346,6 @@ public class WordSorting : MonoBehaviour
             //เอาคะแนนมาใส่ใน text ได้เลย เก็บคะแนนในแต่ละคำ
             result.totalScore += Mathf.RoundToInt(timeLimit);
             result.textTotalScore.text = result.totalScore.ToString();
-
-            //ไม่ให้มันเร่งการลบเวลา
-            //StopCoroutine(TimeLimit());
 
             ShowSorting(currentWord);
 
@@ -378,7 +357,6 @@ public class WordSorting : MonoBehaviour
     {
         timeLimit = 15.0f;
         //อันนี้เขียนสำหรับกำหนดค่าในแต่ละคำ
-        //timeLimit = words[currentWord].timeLimit;
 
         //ทุกครั้งที่เรียก Timelimit จะแสดงเวลา15วิได้เร็วกว่ารอมันเข้า while 
         result.textTime.text = Mathf.RoundToInt(timeLimit).ToString();
