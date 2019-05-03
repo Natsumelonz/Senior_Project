@@ -231,17 +231,6 @@ public class WordSorting : MonoBehaviour
     /// <param name="index">index of the element</param>
     public void ShowSorting(int index)
     {
-        for (int i = 0; i <= numIndexList.Count; i++)
-        {
-            result.textJapan.text = word_JP[numIndexList[currentWord]].ToString();
-            result.textMean.text = word_meaning[numIndexList[currentWord]].ToString();
-        }
-        //แสดงตามindex 
-        charObjects.Clear();
-        foreach (Transform child in container)
-        {
-            Destroy(child.gameObject);
-        }
         //ถ้า index มากกว่าคำที่มีทั้งหมดใน array
         //show หน้า summary
         if (index > words.Count - 1)
@@ -254,6 +243,19 @@ public class WordSorting : MonoBehaviour
 
             return;
         }
+
+        if(currentWord <= numIndexList.Count)
+        { 
+            result.textJapan.text = word_JP[numIndexList[currentWord]].ToString();
+            result.textMean.text = word_meaning[numIndexList[currentWord]].ToString();
+        }
+        //แสดงตามindex 
+        charObjects.Clear();
+        foreach (Transform child in container)
+        {
+            Destroy(child.gameObject);
+        }
+        
         //เก็บตัวอักษรที่เอาไป sort ใน function getString 
         char[] chars = words[index].GetString().ToCharArray();
         foreach (char c in chars)
