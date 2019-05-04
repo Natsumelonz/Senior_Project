@@ -30,20 +30,27 @@ public class MatchingManager : MonoBehaviour
     public GameObject summaryCanvas;
 
     private int _point = 0;
-    private int level = 1;
+    private int level;
     private float _timeLimit;
     private bool _init = false;
     private bool _initDB = false;
     private bool _initRAD = false;
-    private int _correctWord;
+    private int _correctWord = 0;
     private int _wordIndex;
     private float _pointShow;
 
     private void Start()
     {
-
         StartCoroutine(TimeLimit());
         summaryCanvas.SetActive(false);
+
+        for (int i = 0; i < cards2.Length; i++)
+        {
+            cards2[i].GetComponent<Card>().initialized = false;
+            cards2[i].GetComponent<Card>().state = 0;
+        }
+
+        level = 1;
     }
 
     void Update()
@@ -166,6 +173,7 @@ public class MatchingManager : MonoBehaviour
         if (!_init)
         {
             _init = true;
+
         }
 
     }
@@ -213,16 +221,10 @@ public class MatchingManager : MonoBehaviour
 
             _correctWord++;
             _point += Mathf.RoundToInt(_timeLimit);
-            if (_correctWord == 12)
+            //Debug.Log("Correct Word: " + _correctWord);
+            if (_correctWord % 12 == 0)
             {
-                level++;
-                for (int i = 0; i < cards2.Length; i++)
-                {
-                    cards2[i].GetComponent<Card>().state = 0;
-                    Debug.Log(cards2[i].GetComponent<Card>().state);
-                }
-                SceneManager.LoadScene("GameMatching");
-                //ShowSummary();
+                StartCoroutine(Next(1f));
             }
             StartCoroutine(TimeLimit());
         }
@@ -237,13 +239,21 @@ public class MatchingManager : MonoBehaviour
     void OnDisable()
     {
         PlayerPrefs.SetInt("point", _point);
+        PlayerPrefs.SetInt("level", level);
+        PlayerPrefs.SetInt("correctword", _correctWord);
     }
 
     private void OnEnable()
     {
+        if (_correctWord == 0)
+        {
+            level = PlayerPrefs.GetInt("level");
+        }
+
         if (level > 1)
         {
             _point = PlayerPrefs.GetInt("point");
+            _correctWord = PlayerPrefs.GetInt("correctword");
         }
     }
 
@@ -255,16 +265,26 @@ public class MatchingManager : MonoBehaviour
         summaryCanvas.SetActive(true);
     }
 
+    public IEnumerator Next(float Time)
+    {
+        yield return new WaitForSeconds(Time);
+        level++; Debug.Log("Level: " + level);
+        SceneManager.LoadScene("GameMatching");
+    }
+
     public void Replay()
     {
+        level = 1;
         SceneManager.LoadScene("GameMatching");
     }
     public void MainMenu()
     {
+        level = 1;
         SceneManager.LoadScene("MainMenu");
     }
     public void Back()
     {
+        level = 1;
         SceneManager.LoadScene("MainMenu");
     }
 
