@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Proyecto26;
 
@@ -382,6 +383,19 @@ public class WordSorting : MonoBehaviour
         result.textTotalScore.text = result.totalScore.ToString();
         CheckWord();
 
+    }
+
+    public void Replay()
+    {
+        SceneManager.LoadScene("SortingWord");
+    }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void Back()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
 
