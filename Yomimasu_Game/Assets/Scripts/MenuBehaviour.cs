@@ -12,10 +12,13 @@ public class MenuBehaviour : MonoBehaviour
             default:
                 break;
             case (0):
-                SceneManager.LoadScene("GameMatching");
+                Application.Quit();                
                 break;
             case (1):
-                Application.Quit();
+                SceneManager.LoadScene("GameMatching");
+                break;
+            case (2):
+                SceneManager.LoadScene("SortingWord");
                 break;
         }
     }
