@@ -1,17 +1,23 @@
 ﻿using System.Collections;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Proyecto26;
+
+[System.Serializable]
+public class Alphabets
+{
+    public List<string> alphabetJP = new List<string>();
+    public List<string> alphabetRomanji = new List<string>();
+}
 
 public class MatchingManager : MonoBehaviour
 {
-    [Header("Words")]
-    public List<string> wordsListJP = new List<string>();
-    public List<string> wordsListRJ = new List<string>();
-    public string[] alphabetJP = new string[46];
-    public string[] alphabetRomanji = new string[46];
+    [Header("Alphabets")]
+    public Alphabets alphabet;
+    public List<string> alphabetListJP = new List<string>();
+    public List<string> alphabetListRJ = new List<string>();
 
     [Header("Sprite")]
     public Sprite carded;
@@ -30,10 +36,10 @@ public class MatchingManager : MonoBehaviour
     public GameObject summaryCanvas;
 
     private int _point = 0;
-    private int level;
+    private int level = 1;
     private float _timeLimit = 15f;
     private bool _init = false;
-    private bool _initDB = false;
+    //private bool _initDB = false;
     private bool _initRAD = false;
     private int _correctWord = 0;
     private int _wordIndex;
@@ -41,7 +47,9 @@ public class MatchingManager : MonoBehaviour
 
     private void Start()
     {
-        
+        PullWords(); Debug.Log("Hello DB");
+        StartCoroutine(RadWord(1.5f));
+
         summaryCanvas.SetActive(false);
 
         for (int i = 0; i < cards2.Length; i++)
@@ -50,22 +58,22 @@ public class MatchingManager : MonoBehaviour
             cards2[i].GetComponent<Card>().state = 0;
         }
 
-        level = 1;
     }
 
     void Update()
     {
-        if (!_initDB)
-        {
-            PullWords();
-        }
+        //if (!_initDB && alphabetJP.Count == 0 && alphabetJP.Count <= 46)
+        //{
+        //    PullWords(); Debug.Log("Hello DB");
+        //}
 
-        if (_initDB)
-        {
-            RadWord();
-        }
+        //if (_initDB && !_initRAD)
+        //{
+        //    RadWord();
+        //}
 
-        if (!_init && _initDB && _initRAD)
+        //if (!_init && _initDB && _initRAD)
+        if (!_init && _initRAD)
         {
             initializeCard();
         }
@@ -82,8 +90,6 @@ public class MatchingManager : MonoBehaviour
 
         _pointShow = Mathf.Lerp(_pointShow, _point, Time.deltaTime * 5);
         pointText.text = Mathf.RoundToInt(_pointShow).ToString();
-
-
     }
 
     void PullWords()
@@ -93,30 +99,30 @@ public class MatchingManager : MonoBehaviour
         {
             for (int i = 0; i <= 45; i++)
             {
-                alphabetJP[i] = response[i].alphabetname_JP;
-                alphabetRomanji[i] = response[i].alphabetname_romanji;
+                alphabet.alphabetJP.Add(response[i].alphabetname_JP);
+                alphabet.alphabetRomanji.Add(response[i].alphabetname_romanji);
             }
         });
-        if (alphabetRomanji[45] == "n")
-        {
-            _initDB = true;
-        }
+        //if (alphabetRomanji.Count == 46)
+        //{
+        //    _initDB = true;
+        //}
     }
 
-    void RadWord()
+    IEnumerator RadWord(float Time)
     {
-
-        while (wordsListJP.Count < 12)
+        yield return new WaitForSeconds(Time);
+        while (alphabetListJP.Count < 12)
         {
             _wordIndex = Random.Range(0, 46);
-            if (!wordsListJP.Contains(alphabetJP[_wordIndex]))
+            if (!alphabetListJP.Contains(alphabet.alphabetJP[_wordIndex]))
             {
-                wordsListJP.Add(alphabetJP[_wordIndex]);
-                wordsListRJ.Add(alphabetRomanji[_wordIndex]);
+                alphabetListJP.Add(alphabet.alphabetJP[_wordIndex]);
+                alphabetListRJ.Add(alphabet.alphabetRomanji[_wordIndex]);
             }
         }
 
-        if (wordsListJP.Count == 12)
+        if (alphabetListJP.Count == 12)
         {
             _initRAD = true;
         }
@@ -135,7 +141,7 @@ public class MatchingManager : MonoBehaviour
                 choice = Random.Range(0, cards.Length);
                 test = !(cards[choice].GetComponent<Card>().initialized);
             }
-            cards[choice].GetComponentInChildren<Text>().text = wordsListJP[i].ToString(); ;//i.ToString();
+            cards[choice].GetComponentInChildren<Text>().text = alphabetListJP[i].ToString(); ;//i.ToString();
             cards[choice].GetComponent<Card>().cardValue = i;
             cards[choice].GetComponent<Card>().initialized = true;
 
@@ -151,7 +157,7 @@ public class MatchingManager : MonoBehaviour
                 choice = Random.Range(0, cards1.Length);
                 test = !(cards1[choice].GetComponent<Card>().initialized);
             }
-            cards1[choice].GetComponentInChildren<Text>().text = wordsListRJ[i].ToString();//i.ToString();
+            cards1[choice].GetComponentInChildren<Text>().text = alphabetListRJ[i].ToString();//i.ToString();
             cards1[choice].GetComponent<Card>().cardValue = i;
             cards1[choice].GetComponent<Card>().initialized = true;
 
@@ -221,7 +227,7 @@ public class MatchingManager : MonoBehaviour
 
             _correctWord++;
             _point += Mathf.RoundToInt(_timeLimit);
-            //Debug.Log("Correct Word: " + _correctWord);
+            Debug.Log("Correct Word: " + _correctWord);
             if (_correctWord % 12 == 0)
             {
                 StartCoroutine(Next(1f));
@@ -245,10 +251,10 @@ public class MatchingManager : MonoBehaviour
 
     private void OnEnable()
     {
-        if (_correctWord == 0)
-        {
-            level = PlayerPrefs.GetInt("level");
-        }
+        //if (_correctWord == 0)
+        //{
+        level = PlayerPrefs.GetInt("level");
+        //}
 
         if (level > 1)
         {
@@ -259,6 +265,11 @@ public class MatchingManager : MonoBehaviour
 
     void ShowSummary()
     {
+        foreach (GameObject item in cards2)
+        {
+            item.GetComponent<Button>().interactable = false;
+        }
+
         textSummaryScore.text = _point.ToString();
         textInfo.text = "You finished " + _correctWord + " pairs";
 

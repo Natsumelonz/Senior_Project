@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class MenuBehaviour : MonoBehaviour
 {
-    public void TriggerMenuBehaviour (int i)
+    public void TriggerMenuBehaviour(int i)
     {
         switch (i)
         {
             default:
                 break;
             case (0):
-                Application.Quit();                
+                Application.Quit();
                 break;
             case (1):
                 SceneManager.LoadScene("GameMatching");
@@ -22,4 +22,10 @@ public class MenuBehaviour : MonoBehaviour
                 break;
         }
     }
+
+    void OnDisable()
+    {
+        PlayerPrefs.SetInt("level", 1);
+    }
+
 }
