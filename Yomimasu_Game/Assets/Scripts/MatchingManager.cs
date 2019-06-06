@@ -24,17 +24,18 @@ public class MatchingManager : MonoBehaviour
     public Sprite card;
 
     [Header("Button")]
-    public GameObject[] cards;
-    public GameObject[] cards1;
-    public GameObject[] cards2;
+    public GameObject[] buttoneLeft;
+    public GameObject[] buttoneRight;
+    public GameObject[] allButton;
 
     [Header("Text")]
     public Text pointText;
     public Text timeText;
     public Text textSummaryScore;
     public Text textInfo;
+    public Text ScorePop;
     public GameObject summaryCanvas;
-
+    
     private int _point = 0;
     private int level = 1;
     private float _timeLimit = 15f;
@@ -48,14 +49,14 @@ public class MatchingManager : MonoBehaviour
     private void Start()
     {
         PullWords(); Debug.Log("Hello DB");
-        StartCoroutine(RadWord(1.5f));
+        StartCoroutine(RadWord(3f));
 
         summaryCanvas.SetActive(false);
 
-        for (int i = 0; i < cards2.Length; i++)
+        for (int i = 0; i < allButton.Length; i++)
         {
-            cards2[i].GetComponent<Card>().initialized = false;
-            cards2[i].GetComponent<Card>().state = 0;
+            allButton[i].GetComponent<Card>().initialized = false;
+            allButton[i].GetComponent<Card>().state = 0;
         }
 
     }
@@ -138,12 +139,12 @@ public class MatchingManager : MonoBehaviour
             int choice = 0;
             while (!test)
             {
-                choice = Random.Range(0, cards.Length);
-                test = !(cards[choice].GetComponent<Card>().initialized);
+                choice = Random.Range(0, buttoneLeft.Length);
+                test = !(buttoneLeft[choice].GetComponent<Card>().initialized);
             }
-            cards[choice].GetComponentInChildren<Text>().text = alphabetListJP[i].ToString(); ;//i.ToString();
-            cards[choice].GetComponent<Card>().cardValue = i;
-            cards[choice].GetComponent<Card>().initialized = true;
+            buttoneLeft[choice].GetComponentInChildren<Text>().text = alphabetListJP[i].ToString(); ;//i.ToString();
+            buttoneLeft[choice].GetComponent<Card>().cardValue = i;
+            buttoneLeft[choice].GetComponent<Card>().initialized = true;
 
         }
 
@@ -154,23 +155,17 @@ public class MatchingManager : MonoBehaviour
             int choice = 0;
             while (!test)
             {
-                choice = Random.Range(0, cards1.Length);
-                test = !(cards1[choice].GetComponent<Card>().initialized);
+                choice = Random.Range(0, buttoneRight.Length);
+                test = !(buttoneRight[choice].GetComponent<Card>().initialized);
             }
-            cards1[choice].GetComponentInChildren<Text>().text = alphabetListRJ[i].ToString();//i.ToString();
-            cards1[choice].GetComponent<Card>().cardValue = i;
-            cards1[choice].GetComponent<Card>().initialized = true;
+            buttoneRight[choice].GetComponentInChildren<Text>().text = alphabetListRJ[i].ToString();//i.ToString();
+            buttoneRight[choice].GetComponent<Card>().cardValue = i;
+            buttoneRight[choice].GetComponent<Card>().initialized = true;
 
         }
 
         //เรียก Method ให้กดหนด Sprite ให้ปุ่ม ฝั่งซ้าย
-        foreach (GameObject c in cards)
-        {
-            c.GetComponent<Card>().setupGraphics();
-        }
-
-        //เรียก Method ให้กดหนด Sprite ให้ปุ่ม ฝั่งขวา
-        foreach (GameObject c in cards1)
+        foreach (GameObject c in allButton)
         {
             c.GetComponent<Card>().setupGraphics();
         }
@@ -201,9 +196,9 @@ public class MatchingManager : MonoBehaviour
     {
         List<int> t = new List<int>();
 
-        for (int i = 0; i < cards2.Length; i++)
+        for (int i = 0; i < allButton.Length; i++)
         {
-            if (cards2[i].GetComponent<Card>().state == 1)
+            if (allButton[i].GetComponent<Card>().state == 1)
             {
                 t.Add(i);
             }
@@ -221,7 +216,7 @@ public class MatchingManager : MonoBehaviour
         Card.DO_NOT = true;
 
         int x = 0;
-        if (cards2[t[0]].GetComponent<Card>().cardValue == cards2[t[1]].GetComponent<Card>().cardValue)
+        if (allButton[t[0]].GetComponent<Card>().cardValue == allButton[t[1]].GetComponent<Card>().cardValue)
         {
             x = 2;
 
@@ -233,12 +228,17 @@ public class MatchingManager : MonoBehaviour
                 StartCoroutine(Next(1f));
             }
             StartCoroutine(TimeLimit());
+            StartCoroutine(Scored("Correct!!", 2));
+            for (int i = 0; i < t.Count; i++)
+            {
+                allButton[t[i]].GetComponent<Button>().interactable = false;
+            }
         }
 
         for (int i = 0; i < t.Count; i++)
         {
-            cards2[t[i]].GetComponent<Card>().state = x;
-            cards2[t[i]].GetComponent<Card>().falseCheck();
+            allButton[t[i]].GetComponent<Card>().state = x;
+            allButton[t[i]].GetComponent<Card>().falseCheck();
         }
     }
 
@@ -265,7 +265,7 @@ public class MatchingManager : MonoBehaviour
 
     void ShowSummary()
     {
-        foreach (GameObject item in cards2)
+        foreach (GameObject item in allButton)
         {
             item.GetComponent<Button>().interactable = false;
         }
@@ -317,5 +317,13 @@ public class MatchingManager : MonoBehaviour
         }
 
         //result.textTotalScore.text = result.totalScore.ToString();
+    }
+
+    IEnumerator Scored(string message, float delay)
+    {
+        ScorePop.text = message;
+        ScorePop.enabled = true;
+        yield return new WaitForSeconds(delay);
+        ScorePop.enabled = false;
     }
 }
