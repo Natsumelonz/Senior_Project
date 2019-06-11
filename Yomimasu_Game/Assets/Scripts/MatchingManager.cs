@@ -6,16 +6,9 @@ using UnityEngine.UI;
 using Proyecto26;
 
 [System.Serializable]
-public class Alphabets
-{
-    public List<string> alphabetJP = new List<string>();
-    public List<string> alphabetRomanji = new List<string>();
-}
-
 public class MatchingManager : MonoBehaviour
 {
     [Header("Alphabets")]
-    public Alphabets alphabet;
     public List<string> alphabetListJP = new List<string>();
     public List<string> alphabetListRJ = new List<string>();
 
@@ -35,7 +28,7 @@ public class MatchingManager : MonoBehaviour
     public Text textInfo;
     public Text ScorePop;
     public GameObject summaryCanvas;
-    
+
     private int _point = 0;
     private int level = 1;
     private float _timeLimit = 15f;
@@ -48,8 +41,7 @@ public class MatchingManager : MonoBehaviour
 
     private void Start()
     {
-        PullWords(); Debug.Log("Hello DB");
-        StartCoroutine(RadWord(3f));
+        StartCoroutine(RadWord(0f));
 
         summaryCanvas.SetActive(false);
 
@@ -63,17 +55,6 @@ public class MatchingManager : MonoBehaviour
 
     void Update()
     {
-        //if (!_initDB && alphabetJP.Count == 0 && alphabetJP.Count <= 46)
-        //{
-        //    PullWords(); Debug.Log("Hello DB");
-        //}
-
-        //if (_initDB && !_initRAD)
-        //{
-        //    RadWord();
-        //}
-
-        //if (!_init && _initDB && _initRAD)
         if (!_init && _initRAD)
         {
             initializeCard();
@@ -93,33 +74,18 @@ public class MatchingManager : MonoBehaviour
         pointText.text = Mathf.RoundToInt(_pointShow).ToString();
     }
 
-    void PullWords()
-    {
-        //ดึงมาจาก DB เอามาเก็บไว้ใน ARRAY สองตัวที่แอดมา 
-        RestClient.GetArray<Alphabet>("https://it59-28yomimasu.firebaseio.com/Alphabet.json").Then(response =>
-        {
-            for (int i = 0; i <= 45; i++)
-            {
-                alphabet.alphabetJP.Add(response[i].alphabetname_JP);
-                alphabet.alphabetRomanji.Add(response[i].alphabetname_romanji);
-            }
-        });
-        //if (alphabetRomanji.Count == 46)
-        //{
-        //    _initDB = true;
-        //}
-    }
-
     IEnumerator RadWord(float Time)
     {
         yield return new WaitForSeconds(Time);
         while (alphabetListJP.Count < 12)
         {
             _wordIndex = Random.Range(0, 46);
-            if (!alphabetListJP.Contains(alphabet.alphabetJP[_wordIndex]))
+            if (!alphabetListJP.Contains(MenuBehaviour.alphabets[_wordIndex].alphabetname_JP))
             {
-                alphabetListJP.Add(alphabet.alphabetJP[_wordIndex]);
-                alphabetListRJ.Add(alphabet.alphabetRomanji[_wordIndex]);
+                //alphabetListJP.Add(alphabet.alphabetJP[_wordIndex]);
+                alphabetListJP.Add(MenuBehaviour.alphabets[_wordIndex].alphabetname_JP);
+                //alphabetListRJ.Add(alphabet.alphabetRomanji[_wordIndex]);
+                alphabetListRJ.Add(MenuBehaviour.alphabets[_wordIndex].alphabetname_romanji);
             }
         }
 
