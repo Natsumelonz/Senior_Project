@@ -36,12 +36,12 @@ public class MatchingManager : MonoBehaviour
     //private bool _initDB = false;
     private bool _initRAD = false;
     private int _correctWord = 0;
-    private int _wordIndex;
+    private int _wordIndex = 0;
     private float _pointShow;
 
     private void Start()
     {
-        StartCoroutine(RadWord(0f));
+        StartCoroutine(RadWord(0f, level));
 
         summaryCanvas.SetActive(false);
 
@@ -57,7 +57,7 @@ public class MatchingManager : MonoBehaviour
     {
         if (!_init && _initRAD)
         {
-            initializeCard();
+            InitializeCard();
         }
 
         if (Input.GetMouseButtonUp(0))
@@ -74,31 +74,67 @@ public class MatchingManager : MonoBehaviour
         pointText.text = Mathf.RoundToInt(_pointShow).ToString();
     }
 
-    IEnumerator RadWord(float Time)
+    IEnumerator RadWord(float Time, int level)
     {
         yield return new WaitForSeconds(Time);
-        while (alphabetListJP.Count < 12)
+
+        if (level < 6)
         {
-            _wordIndex = Random.Range(0, 46);
-            if (!alphabetListJP.Contains(MenuBehaviour.alphabets[_wordIndex].alphabetname_JP))
+            while (alphabetListJP.Count < 12)
             {
-                //alphabetListJP.Add(alphabet.alphabetJP[_wordIndex]);
-                alphabetListJP.Add(MenuBehaviour.alphabets[_wordIndex].alphabetname_JP);
-                //alphabetListRJ.Add(alphabet.alphabetRomanji[_wordIndex]);
-                alphabetListRJ.Add(MenuBehaviour.alphabets[_wordIndex].alphabetname_romanji);
+                _wordIndex = Random.Range(0, 46);
+                if (!alphabetListJP.Contains(MenuBehaviour.alphabets[_wordIndex].alphabetname_JP))
+                {
+                    alphabetListJP.Add(MenuBehaviour.alphabets[_wordIndex].alphabetname_JP); 
+                    alphabetListRJ.Add(MenuBehaviour.alphabets[_wordIndex].alphabetname_romanji);
+                }
+            }            
+        }
+        else if (level < 11)
+        {
+            while (alphabetListJP.Count < 12)
+            {
+                _wordIndex = Random.Range(46, 104);
+                if (!alphabetListJP.Contains(MenuBehaviour.alphabets[_wordIndex].alphabetname_JP))
+                {
+                    alphabetListJP.Add(MenuBehaviour.alphabets[_wordIndex].alphabetname_JP);
+                    alphabetListRJ.Add(MenuBehaviour.alphabets[_wordIndex].alphabetname_romanji);
+                }
             }
         }
+        else{
+            while (alphabetListJP.Count < 12)
+            {
+                _wordIndex = Random.Range(0, 104);
+                if (!alphabetListJP.Contains(MenuBehaviour.alphabets[_wordIndex].alphabetname_JP))
+                {
+                    alphabetListJP.Add(MenuBehaviour.alphabets[_wordIndex].alphabetname_JP);
+                    alphabetListRJ.Add(MenuBehaviour.alphabets[_wordIndex].alphabetname_romanji);
+                }
+            }
+        }
+
+        //foreach (string item in alphabetListJP)
+        //{
+        //    Debug.Log(item);
+        //}
+        //foreach (string item in alphabetListRJ)
+        //{
+        //    Debug.Log(item);
+        //}
 
         if (alphabetListJP.Count == 12)
         {
             _initRAD = true;
         }
+
     }
 
     //สุ่มค่าให้ปุ่ม กับกำหนด Text
-    void initializeCard()
+    void InitializeCard()
     {
         //สุ่มปุ่มฝั่งซ้าย
+
         for (int i = 0; i < 12; i++)
         {
             bool test = false;
@@ -194,7 +230,7 @@ public class MatchingManager : MonoBehaviour
                 StartCoroutine(Next(1f));
             }
             StartCoroutine(TimeLimit());
-            StartCoroutine(Scored("Correct!!", 2));
+            StartCoroutine(Scored("Correct!!", 1.5f));
             for (int i = 0; i < t.Count; i++)
             {
                 allButton[t[i]].GetComponent<Button>().interactable = false;
@@ -240,6 +276,12 @@ public class MatchingManager : MonoBehaviour
         textInfo.text = "You finished " + _correctWord + " pairs";
 
         summaryCanvas.SetActive(true);
+    }
+
+    public void Skip()
+    {
+        level++; Debug.Log("Level: " + level);
+        SceneManager.LoadScene("GameMatching");
     }
 
     public IEnumerator Next(float Time)
