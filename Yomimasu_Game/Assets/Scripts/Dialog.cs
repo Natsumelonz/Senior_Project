@@ -11,10 +11,12 @@ public class Dialog : MonoBehaviour
     public float typingSpeed;
 
     public GameObject continueButton;
+    public GameObject dialogBox;
 
     //สร้างมาเพื่อให้ textDisplays ค่อยๆแสดงประโยคที่มีในarrayออกมา โดยใช้ typingSpeedเป็นตัวหน่วงเวลา
     IEnumerator Type()
     {
+        dialogBox.SetActive(true);
         foreach(char letter in sentences[index].ToCharArray())
         {
             textDisplays.text += letter;
@@ -44,6 +46,7 @@ public class Dialog : MonoBehaviour
         {
             textDisplays.text = "";
             continueButton.SetActive(false);
+            dialogBox.SetActive(false);
         }
     }
 
