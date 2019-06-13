@@ -18,6 +18,10 @@ public class Card : MonoBehaviour
 
     private Sprite _card;
     private Sprite _carded;
+    private Animator anim;
+    private int highlightedHash = Animator.StringToHash("Highlighted");
+    private int disabledHash = Animator.StringToHash("Disabled");
+    private int normalHash = Animator.StringToHash("Normal");
 
     private GameObject _manager;
 
@@ -25,6 +29,7 @@ public class Card : MonoBehaviour
     {
         _state = 1;
         _manager = GameObject.FindGameObjectWithTag("Manager");
+        anim = GetComponent<Animator>();
     }
 
     public void setupGraphics()
@@ -40,7 +45,8 @@ public class Card : MonoBehaviour
         if(_state == 0)
         {
             _state = 1;
-        }else if(_state == 1)
+        }
+        else if(_state == 1)
         {
             _state = 0;
         }
@@ -48,10 +54,12 @@ public class Card : MonoBehaviour
         if (_state == 0 && !DO_NOT)
         {
             GetComponent<Image>().sprite = _card;
+            anim.SetTrigger(normalHash);
         }
         else if (_state == 1 && !DO_NOT)
         {
-            GetComponent<Image>().sprite = _carded;          
+            GetComponent<Image>().sprite = _carded;
+            anim.SetTrigger(highlightedHash);
         }
     }
 
@@ -90,7 +98,9 @@ public class Card : MonoBehaviour
         if(_state == 0)
         {
             GetComponent<Image>().sprite = _card;
-        }else if(_state == 1)
+            anim.SetTrigger(normalHash);
+        }
+        else if(_state == 1)
         {
             GetComponent<Image>().sprite = _carded;
         }

@@ -6,29 +6,37 @@ using UnityEngine.UI;
 using Proyecto26;
 
 [System.Serializable]
-public class MatchingManager : MonoBehaviour
+public class UIObject
 {
-    [Header("Alphabets")]
-    public List<string> alphabetListJP = new List<string>();
-    public List<string> alphabetListRJ = new List<string>();
-
-    [Header("Sprite")]
-    public Sprite carded;
-    public Sprite card;
-
-    [Header("Button")]
-    public GameObject[] buttoneLeft;
-    public GameObject[] buttoneRight;
-    public GameObject[] allButton;
-
     [Header("Text")]
     public Text pointText;
     public Text timeText;
     public Text textSummaryScore;
     public Text textInfo;
     public Text ScorePop;
+    public Text LevelText;
     public GameObject summaryCanvas;
+    [Header("Button")]
+    public GameObject[] buttoneLeft;
+    public GameObject[] buttoneRight;
+    public GameObject[] allButton;
+}
 
+[System.Serializable]
+public class MatchingManager : MonoBehaviour
+{
+    [Header("UIObject")]
+    public UIObject uiObject = new UIObject();
+
+    [Header("Alphabets")]
+    public List<string> alphabetListJP = new List<string>();
+    public List<string> alphabetListRJ = new List<string>();
+
+    [Header("Sprite")]
+    public Sprite carded;
+    public Sprite card;    
+
+    [Header("Private Attribute")]
     private int _point = 0;
     private int level = 1;
     private float _timeLimit = 15f;
@@ -38,17 +46,20 @@ public class MatchingManager : MonoBehaviour
     private int _correctWord = 0;
     private int _wordIndex = 0;
     private float _pointShow;
+    private int disabledHash = Animator.StringToHash("Disabled");
+    private int normalHash = Animator.StringToHash("Normal");
 
     private void Start()
     {
         StartCoroutine(RadWord(0f, level));
+        uiObject.LevelText.text = level.ToString();
 
-        summaryCanvas.SetActive(false);
+        uiObject.summaryCanvas.SetActive(false);
 
-        for (int i = 0; i < allButton.Length; i++)
+        for (int i = 0; i < uiObject.allButton.Length; i++)
         {
-            allButton[i].GetComponent<Card>().initialized = false;
-            allButton[i].GetComponent<Card>().state = 0;
+            uiObject.allButton[i].GetComponent<Card>().initialized = false;
+            uiObject.allButton[i].GetComponent<Card>().state = 0;
         }
 
     }
@@ -71,7 +82,7 @@ public class MatchingManager : MonoBehaviour
         }
 
         _pointShow = Mathf.Lerp(_pointShow, _point, Time.deltaTime * 5);
-        pointText.text = Mathf.RoundToInt(_pointShow).ToString();
+        uiObject.pointText.text = Mathf.RoundToInt(_pointShow).ToString();
     }
 
     IEnumerator RadWord(float Time, int level)
@@ -83,33 +94,34 @@ public class MatchingManager : MonoBehaviour
             while (alphabetListJP.Count < 12)
             {
                 _wordIndex = Random.Range(0, 46);
-                if (!alphabetListJP.Contains(MenuBehaviour.alphabets[_wordIndex].alphabetname_JP))
+                if (!alphabetListJP.Contains(AlpabetManagement.alphabets[_wordIndex].alphabetname_JP))
                 {
-                    alphabetListJP.Add(MenuBehaviour.alphabets[_wordIndex].alphabetname_JP); 
-                    alphabetListRJ.Add(MenuBehaviour.alphabets[_wordIndex].alphabetname_romanji);
+                    alphabetListJP.Add(AlpabetManagement.alphabets[_wordIndex].alphabetname_JP);
+                    alphabetListRJ.Add(AlpabetManagement.alphabets[_wordIndex].alphabetname_romanji);
                 }
-            }            
+            }
         }
         else if (level < 11)
         {
             while (alphabetListJP.Count < 12)
             {
                 _wordIndex = Random.Range(46, 104);
-                if (!alphabetListJP.Contains(MenuBehaviour.alphabets[_wordIndex].alphabetname_JP))
+                if (!alphabetListJP.Contains(AlpabetManagement.alphabets[_wordIndex].alphabetname_JP))
                 {
-                    alphabetListJP.Add(MenuBehaviour.alphabets[_wordIndex].alphabetname_JP);
-                    alphabetListRJ.Add(MenuBehaviour.alphabets[_wordIndex].alphabetname_romanji);
+                    alphabetListJP.Add(AlpabetManagement.alphabets[_wordIndex].alphabetname_JP);
+                    alphabetListRJ.Add(AlpabetManagement.alphabets[_wordIndex].alphabetname_romanji);
                 }
             }
         }
-        else{
+        else
+        {
             while (alphabetListJP.Count < 12)
             {
                 _wordIndex = Random.Range(0, 104);
-                if (!alphabetListJP.Contains(MenuBehaviour.alphabets[_wordIndex].alphabetname_JP))
+                if (!alphabetListJP.Contains(AlpabetManagement.alphabets[_wordIndex].alphabetname_JP))
                 {
-                    alphabetListJP.Add(MenuBehaviour.alphabets[_wordIndex].alphabetname_JP);
-                    alphabetListRJ.Add(MenuBehaviour.alphabets[_wordIndex].alphabetname_romanji);
+                    alphabetListJP.Add(AlpabetManagement.alphabets[_wordIndex].alphabetname_JP);
+                    alphabetListRJ.Add(AlpabetManagement.alphabets[_wordIndex].alphabetname_romanji);
                 }
             }
         }
@@ -141,12 +153,12 @@ public class MatchingManager : MonoBehaviour
             int choice = 0;
             while (!test)
             {
-                choice = Random.Range(0, buttoneLeft.Length);
-                test = !(buttoneLeft[choice].GetComponent<Card>().initialized);
+                choice = Random.Range(0, uiObject.buttoneLeft.Length);
+                test = !(uiObject.buttoneLeft[choice].GetComponent<Card>().initialized);
             }
-            buttoneLeft[choice].GetComponentInChildren<Text>().text = alphabetListJP[i].ToString(); ;//i.ToString();
-            buttoneLeft[choice].GetComponent<Card>().cardValue = i;
-            buttoneLeft[choice].GetComponent<Card>().initialized = true;
+            uiObject.buttoneLeft[choice].GetComponentInChildren<Text>().text = alphabetListJP[i].ToString(); ;//i.ToString();
+            uiObject.buttoneLeft[choice].GetComponent<Card>().cardValue = i;
+            uiObject.buttoneLeft[choice].GetComponent<Card>().initialized = true;
 
         }
 
@@ -157,17 +169,17 @@ public class MatchingManager : MonoBehaviour
             int choice = 0;
             while (!test)
             {
-                choice = Random.Range(0, buttoneRight.Length);
-                test = !(buttoneRight[choice].GetComponent<Card>().initialized);
+                choice = Random.Range(0, uiObject.buttoneRight.Length);
+                test = !(uiObject.buttoneRight[choice].GetComponent<Card>().initialized);
             }
-            buttoneRight[choice].GetComponentInChildren<Text>().text = alphabetListRJ[i].ToString();//i.ToString();
-            buttoneRight[choice].GetComponent<Card>().cardValue = i;
-            buttoneRight[choice].GetComponent<Card>().initialized = true;
+            uiObject.buttoneRight[choice].GetComponentInChildren<Text>().text = alphabetListRJ[i].ToString();//i.ToString();
+            uiObject.buttoneRight[choice].GetComponent<Card>().cardValue = i;
+            uiObject.buttoneRight[choice].GetComponent<Card>().initialized = true;
 
         }
 
         //เรียก Method ให้กดหนด Sprite ให้ปุ่ม ฝั่งซ้าย
-        foreach (GameObject c in allButton)
+        foreach (GameObject c in uiObject.allButton)
         {
             c.GetComponent<Card>().setupGraphics();
         }
@@ -198,9 +210,9 @@ public class MatchingManager : MonoBehaviour
     {
         List<int> t = new List<int>();
 
-        for (int i = 0; i < allButton.Length; i++)
+        for (int i = 0; i < uiObject.allButton.Length; i++)
         {
-            if (allButton[i].GetComponent<Card>().state == 1)
+            if (uiObject.allButton[i].GetComponent<Card>().state == 1)
             {
                 t.Add(i);
             }
@@ -218,7 +230,7 @@ public class MatchingManager : MonoBehaviour
         Card.DO_NOT = true;
 
         int x = 0;
-        if (allButton[t[0]].GetComponent<Card>().cardValue == allButton[t[1]].GetComponent<Card>().cardValue)
+        if (uiObject.allButton[t[0]].GetComponent<Card>().cardValue == uiObject.allButton[t[1]].GetComponent<Card>().cardValue)
         {
             x = 2;
 
@@ -233,14 +245,15 @@ public class MatchingManager : MonoBehaviour
             StartCoroutine(Scored("Correct!!", 1.5f));
             for (int i = 0; i < t.Count; i++)
             {
-                allButton[t[i]].GetComponent<Button>().interactable = false;
+                uiObject.allButton[t[i]].GetComponent<Button>().interactable = false;
+                uiObject.allButton[t[i]].GetComponent<Animator>().SetTrigger(disabledHash);
             }
         }
 
         for (int i = 0; i < t.Count; i++)
         {
-            allButton[t[i]].GetComponent<Card>().state = x;
-            allButton[t[i]].GetComponent<Card>().falseCheck();
+            uiObject.allButton[t[i]].GetComponent<Card>().state = x;
+            uiObject.allButton[t[i]].GetComponent<Card>().falseCheck();
         }
     }
 
@@ -267,15 +280,15 @@ public class MatchingManager : MonoBehaviour
 
     void ShowSummary()
     {
-        foreach (GameObject item in allButton)
+        foreach (GameObject item in uiObject.allButton)
         {
             item.GetComponent<Button>().interactable = false;
         }
 
-        textSummaryScore.text = _point.ToString();
-        textInfo.text = "You finished " + _correctWord + " pairs";
+        uiObject.textSummaryScore.text = _point.ToString();
+        uiObject.textInfo.text = "You finished " + _correctWord + " pairs";
 
-        summaryCanvas.SetActive(true);
+        uiObject.summaryCanvas.SetActive(true);
     }
 
     public void Skip()
@@ -310,7 +323,7 @@ public class MatchingManager : MonoBehaviour
     IEnumerator TimeLimit()
     {
         _timeLimit = 15.0f;
-        timeText.text = Mathf.RoundToInt(_timeLimit).ToString();
+        uiObject.timeText.text = Mathf.RoundToInt(_timeLimit).ToString();
 
         int correct = _correctWord;
 
@@ -320,7 +333,7 @@ public class MatchingManager : MonoBehaviour
             if (correct != _correctWord) { yield break; }
 
             _timeLimit -= Time.deltaTime;
-            timeText.text = Mathf.RoundToInt(_timeLimit).ToString();
+            uiObject.timeText.text = Mathf.RoundToInt(_timeLimit).ToString();
             yield return null;
         }
 
@@ -329,9 +342,9 @@ public class MatchingManager : MonoBehaviour
 
     IEnumerator Scored(string message, float delay)
     {
-        ScorePop.text = message;
-        ScorePop.enabled = true;
+        uiObject.ScorePop.text = message;
+        uiObject.ScorePop.enabled = true;
         yield return new WaitForSeconds(delay);
-        ScorePop.enabled = false;
+        uiObject.ScorePop.enabled = false;
     }
 }
