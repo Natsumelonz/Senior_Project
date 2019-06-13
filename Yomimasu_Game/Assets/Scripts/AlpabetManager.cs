@@ -19,11 +19,11 @@ public class Alphabet
 }
 
 [Serializable]
-public class AlpabetManagement
+public class AlpabetManager
 {
     public static List<Alphabet> alphabets = new List<Alphabet>();
 
-    public void PullWords()
+    public void PullAlphabets()
     {
         //ดึงมาจาก DB เอามาเก็บไว้ใน ARRAY สองตัวที่แอดมา 
         RestClient.GetArray<Alphabet>("https://it59-28yomimasu.firebaseio.com/Alphabet.json").Then(response =>

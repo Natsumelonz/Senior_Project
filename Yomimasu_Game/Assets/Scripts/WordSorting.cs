@@ -104,17 +104,11 @@ public class WordSorting : MonoBehaviour
     //อันนี้กำหนดให้เป็นคลาสหลัก
     public static WordSorting main;
 
-    public List<string> word_JP;
-    public List<string> word_RJ;
-    public List<string> word_meaning;
-    public List<int> wrod_syl;
-
     //ใช้ทำเอฟเฟคupdate
     private float totalScore;
     private int wordIndex = 0;
     private int index = 0;
     private bool _init = false;
-    private bool _initDB = false;
     private bool _initRAD = false;
 
     void Awake()
@@ -126,8 +120,7 @@ public class WordSorting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PullWords();
-        StartCoroutine(RadWord(1.5f));
+        StartCoroutine(RadWord(0f));
 
         while (numIndexList.Count != 20)
         {
@@ -148,7 +141,7 @@ public class WordSorting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!_init && _initDB && _initRAD && words[index].word != null)
+        if (!_init && _initRAD && words[index].word != null)
         {
             ShowSorting(index);
             _init = true;
@@ -160,37 +153,14 @@ public class WordSorting : MonoBehaviour
         result.textTotalScore.text = Mathf.RoundToInt(totalScore).ToString();
 
 
-    }
-    void PullWords()
-    {
-        int test = 0;
-        if (word_JP.Count == test)
-        {
-            _initDB = true;
-        }
-
-        //ดึงมาจาก DB เอามาเก็บไว้ใน ARRAY สองตัวที่แอดมา 
-        RestClient.GetArray<RetreiveWord>("https://it59-28yomimasu.firebaseio.com/Word.json").Then(response =>
-        {
-            test = response.Length;
-            for (int i = 0; i <= response.Length; i++)
-            {
-                word_JP.Add(response[i].wordname_JP);
-                word_RJ.Add(response[i].wordname_romanji); 
-                word_meaning.Add(response[i].word_meaning);
-                wrod_syl.Add(response[i].word_syllable);
-
-            }
-        });
-
-    }
+    }    
 
     IEnumerator RadWord(float time)
     {
         yield return new WaitForSeconds(time);
         for (int i = 0; i < 20; i++)
         {
-            words[i].word = word_RJ[numIndexList[i]];
+            words[i].word = WordManager.words[numIndexList[i]].wordname_romanji;
         }
 
         if (!_initRAD)
@@ -247,8 +217,8 @@ public class WordSorting : MonoBehaviour
 
         if(currentWord <= numIndexList.Count)
         { 
-            result.textJapan.text = word_JP[numIndexList[currentWord]].ToString();
-            result.textMean.text = word_meaning[numIndexList[currentWord]].ToString();
+            result.textJapan.text = WordManager.words[numIndexList[currentWord]].wordname_JP.ToString();
+            result.textMean.text = WordManager.words[numIndexList[currentWord]].word_meaning.ToString();
         }
         //แสดงตามindex 
         charObjects.Clear();
