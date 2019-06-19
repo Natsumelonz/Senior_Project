@@ -34,7 +34,7 @@ public class MatchingManager : MonoBehaviour
 
     [Header("Sprite")]
     public Sprite carded;
-    public Sprite card;    
+    public Sprite card;
 
     [Header("Private Attribute")]
     private int _point = 0;
@@ -47,7 +47,6 @@ public class MatchingManager : MonoBehaviour
     private int _wordIndex = 0;
     private float _pointShow;
     private int disabledHash = Animator.StringToHash("Disabled");
-    private int normalHash = Animator.StringToHash("Normal");
 
     private void Start()
     {
@@ -56,10 +55,10 @@ public class MatchingManager : MonoBehaviour
 
         uiObject.summaryCanvas.SetActive(false);
 
-        for (int i = 0; i < uiObject.allButton.Length; i++)
+        foreach (GameObject c in uiObject.allButton)
         {
-            uiObject.allButton[i].GetComponent<Card>().initialized = false;
-            uiObject.allButton[i].GetComponent<Card>().state = 0;
+            c.GetComponent<Card>().initialized = false;
+            c.GetComponent<Card>().state = 0;
         }
 
     }
