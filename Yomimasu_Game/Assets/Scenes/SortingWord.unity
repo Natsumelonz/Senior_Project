@@ -801,10 +801,6 @@ MonoBehaviour:
   lerpSpeed: 5
   currentWord: 0
   numIndexList: 
-  word_JP: []
-  word_RJ: []
-  word_meaning: []
-  wrod_syl: 
 --- !u!4 &253312528
 Transform:
   m_ObjectHideFlags: 0
@@ -1540,7 +1536,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 44db9b0cc384e794e92b0e360faee74a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7989b27a2b93010439a390c58524d5e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
