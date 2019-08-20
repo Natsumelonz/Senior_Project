@@ -14,6 +14,8 @@ public class Dialog : MonoBehaviour
     public float typingSpeed;
     public GameObject continueButton;
     public GameObject dialogBox;
+    public GameObject teacherPic;
+    public GameObject nameDisplay;
     public Text speaker;
     public Text textDisplays;
     
@@ -40,13 +42,15 @@ public class Dialog : MonoBehaviour
             index++;
             textDisplays.text = "";
             StartCoroutine(Type());
-            speaker.text = DialogManager.dialog[index].script_role;
+            speaker.text = DialogManager.dialog[index].script_role;            
         }
         else
         {
             textDisplays.text = "";
             continueButton.SetActive(false);
             dialogBox.SetActive(false);
+            nameDisplay.SetActive(false);
+            teacherPic.SetActive(false);
         }
     }
 
@@ -54,6 +58,7 @@ public class Dialog : MonoBehaviour
     IEnumerator Type()
     {
         dialogBox.SetActive(true);
+        nameDisplay.SetActive(true);
         foreach (char letter in sentences[index].ToCharArray())
         {
             textDisplays.text += letter;
@@ -68,6 +73,16 @@ public class Dialog : MonoBehaviour
         if (textDisplays.text == sentences[index])
         {
             continueButton.SetActive(true);
+        }
+
+        if (DialogManager.dialog[index].script_role == "Teacher")
+        {
+            teacherPic.SetActive(true);
+        }
+        else
+        {
+
+            teacherPic.SetActive(false);
         }
     }
 }
