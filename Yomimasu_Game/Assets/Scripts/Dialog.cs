@@ -2,6 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
+using Proyecto26;
+
+[Serializable]
+public class RetrieveDialog
+{
+    public string script_id;
+    public string script_role;
+    public string script_desc;
+
+    public override string ToString()
+    {
+        return JsonUtility.ToJson(this, true);
+    }
+}
 
 public class Dialog : MonoBehaviour
 {
@@ -9,7 +24,7 @@ public class Dialog : MonoBehaviour
     public string[] sentences;
     private int index;
     public float typingSpeed;
-
+    public static List<RetreiveDialog> dialog = new List<RetreiveDialog>();
     public GameObject continueButton;
     public GameObject dialogBox;
 
@@ -36,18 +51,29 @@ public class Dialog : MonoBehaviour
         //ปิดปุ่มContinue
         continueButton.SetActive(false);
         //ถ้าindexประโยคยังไม่หมดทำต่อ
-        if (index < sentences.Length - 1)
+        RestClient.GetArray<RetreiveDialog>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter1/Scripts.json").Then(response =>
         {
-            index++;
-            textDisplays.text = "";
-            StartCoroutine(Type());
-        }
-        else
-        {
-            textDisplays.text = "";
-            continueButton.SetActive(false);
-            dialogBox.SetActive(false);
-        }
+            for (int i = 0; i <= response.Length; i++)
+            {
+                dialog.Add(response[i]);
+                Debug.Log(response[i]);
+                
+            }
+
+            if (index < response.Length - 1)
+            {
+                index++;
+                textDisplays.text = "";
+                StartCoroutine(Type());
+            }
+            else
+            {
+                textDisplays.text = "";
+                continueButton.SetActive(false);
+                dialogBox.SetActive(false);
+
+            }
+        });
     }
 
     // Update is called once per frame

@@ -296,12 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textDisplays: {fileID: 970395218}
-  sentences:
-  - 'Nut : Hey! why are you here?'
-  - 'Mild : Because, I''m hungry.'
-  - 'Nut : Oh! You can eat this Berger'
-  - 'Mild : Thx.'
-  - 'Nut : No Problem'
+  sentences: []
   typingSpeed: 0.02
   continueButton: {fileID: 1051028827}
   dialogBox: {fileID: 802753586}
