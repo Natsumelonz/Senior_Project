@@ -30,9 +30,9 @@ public class WordManager
             for (int i = 0; i <= response.Length; i++)
             {
                 words.Add(response[i]);
-                Debug.Log(i);
-                Debug.Log(words[i].wordname_JP);
-                Debug.Log(words[i].wordname_romanji);
+                //Debug.Log(i);
+                //Debug.Log(words[i].wordname_JP);
+                //Debug.Log(words[i].wordname_romanji);
             }
         });
 

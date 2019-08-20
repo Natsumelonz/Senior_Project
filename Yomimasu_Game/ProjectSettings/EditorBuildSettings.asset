@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SortingWord.unity
     guid: fbf25cc6efca60b4483c45b38ee433a2
+  - enabled: 1
+    path: Assets/Scenes/Dialog.unity
+    guid: 4254cdb0634f1104b87b43696792d2dc
   m_configObjects: {}

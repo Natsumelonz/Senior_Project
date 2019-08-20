@@ -8,6 +8,7 @@ public class MenuBehaviour : MonoBehaviour
 {
     AlpabetManager alpabetManagement = new AlpabetManager();
     WordManager wordManager = new WordManager();
+    DialogManager dialogManager = new DialogManager();
     void OnDisable()
     {
         PlayerPrefs.SetInt("level", 1);
@@ -17,6 +18,7 @@ public class MenuBehaviour : MonoBehaviour
     {
         alpabetManagement.PullAlphabets();
         wordManager.PullWords();
+        dialogManager.PullDialog();
     }
 
     private void Update()
@@ -38,6 +40,9 @@ public class MenuBehaviour : MonoBehaviour
                 break;
             case (2):
                 SceneManager.LoadScene("SortingWord");
+                break;
+            case (3):
+                SceneManager.LoadScene("Dialog");
                 break;
         }
     }
