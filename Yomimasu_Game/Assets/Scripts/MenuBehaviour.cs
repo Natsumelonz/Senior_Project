@@ -42,7 +42,7 @@ public class MenuBehaviour : MonoBehaviour
                 SceneManager.LoadScene("SortingWord");
                 break;
             case (3):
-                SceneManager.LoadScene("Dialog");
+                SceneManager.LoadScene("Chapter");
                 break;
         }
     }
