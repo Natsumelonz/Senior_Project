@@ -49,6 +49,11 @@ public class Chapter_1 : MonoBehaviour
     {
         //ปิดปุ่มContinue
         continueButton.SetActive(false);
+        charObjectOfChapter.Clear();
+        foreach (Transform child in container)
+        {
+            Destroy(child.gameObject);
+        }
         //ถ้าindexประโยคยังไม่หมดทำต่อ       
 
         if (index < sentences.Count - 1)
@@ -83,6 +88,7 @@ public class Chapter_1 : MonoBehaviour
             textDisplays.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
+        CloneChoice();
     }
 
     void RepositionObject()
@@ -92,12 +98,12 @@ public class Chapter_1 : MonoBehaviour
         {
             return;
         }
-        float center = (charObjectOfChapter.Count - 1f) / 2;
+        float center = (charObjectOfChapter.Count + 2.5f) / 2;
         for (int i = 0; i < charObjectOfChapter.Count; i++)
         {
             charObjectOfChapter[i].rectTransform.anchoredPosition
                 = Vector2.Lerp(charObjectOfChapter[i].rectTransform.anchoredPosition,
-                 new Vector2((i - center) * space, 0), lerpSpeed * Time.deltaTime);
+                 new Vector2(0 , (center - i) * space), lerpSpeed * Time.deltaTime);
             charObjectOfChapter[i].index = i;
         }
     }
@@ -108,11 +114,11 @@ public class Chapter_1 : MonoBehaviour
 
     void CloneChoice()
     {
-        charObjectOfChapter.Clear();
+        /*charObjectOfChapter.Clear();
         foreach (Transform child in container)
         {
             Destroy(child.gameObject);
-        }
+        }*/
 
         string[] sentence = sentences[index].ToString().Split();
         foreach (string s in sentence)
@@ -142,7 +148,6 @@ public class Chapter_1 : MonoBehaviour
         if (textDisplays.text == sentences[index])
         {
             continueButton.SetActive(true);
-            CloneChoice();
             RepositionObject();
         }
 
