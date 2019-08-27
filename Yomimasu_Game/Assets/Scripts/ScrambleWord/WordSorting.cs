@@ -37,20 +37,18 @@ public class Word
 {
     //มีคำอะไรบ้างเก็บเป็น array
     public string word;
-    [Header("Leave empty if you want randomized")]
-    public string desiredRandom;
 
     public string GetString()
     {
         //ถ้า desiredRandom ไม่เป็นค่าว่าง ให้มันreturn ตัวมันออกมา คือget ค่ามันมา
-        if (!string.IsNullOrEmpty(desiredRandom))
-        {
-            return desiredRandom;
-        }
+        //if (!string.IsNullOrEmpty(desiredRandom))
+        //{
+        //    return desiredRandom;
+        //}
         //เก็บ word เข้าไปแสดง
         string result = word;
 
-        while (result == word)
+        while (result.Equals(word))
         {
             result = "";
             //เก็บคำไว้ใน list เพื่อจะเอามาสุ่มตัวอักษร
@@ -130,7 +128,6 @@ public class WordSorting : MonoBehaviour
 
         }
 
-
         //ทำการปิดหน้า summary ทุกครั้งตอนเริ่มเกม
         result.summaryCanvas.SetActive(false);
 
@@ -151,14 +148,12 @@ public class WordSorting : MonoBehaviour
         //ทำเอฟเฟคตอนนับคะแนน
         totalScore = Mathf.Lerp(totalScore, result.totalScore, Time.deltaTime * 5);
         result.textTotalScore.text = Mathf.RoundToInt(totalScore).ToString();
-
-
-    }    
+    }
 
     IEnumerator RadWord(float time)
     {
         yield return new WaitForSeconds(time);
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 20 - 1; i++)
         {
             //words[i].word = WordManager.words[numIndexList[i]].wordname_romanji;
             words[i].word = WordManager.words[numIndexList[i]].wordname_JP;
@@ -216,7 +211,7 @@ public class WordSorting : MonoBehaviour
             return;
         }
 
-        if(currentWord <= numIndexList.Count)
+        if (currentWord <= numIndexList.Count)
         {
             //result.textJapan.text = WordManager.words[numIndexList[currentWord]].wordname_JP.ToString();
             result.textJapan.text = WordManager.words[numIndexList[currentWord]].wordname_romanji.ToString();
@@ -228,7 +223,7 @@ public class WordSorting : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
-        
+
         //เก็บตัวอักษรที่เอาไป sort ใน function getString 
         char[] chars = words[index].GetString().ToCharArray();
         foreach (char c in chars)
@@ -311,7 +306,7 @@ public class WordSorting : MonoBehaviour
         }
 
         //ถ้าคำปัจจุบันเรียงถูกต้องแล้วให้แสดงคำต่อไปสำหรับให้ผู้เล่นเรียงคำให้ถูกต้อง
-        if (word == words[currentWord].word)
+        if (word.Equals(words[currentWord].word))
         {
             currentWord++;
 

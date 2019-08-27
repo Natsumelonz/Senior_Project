@@ -44,6 +44,24 @@ public class MenuBehaviour : MonoBehaviour
             case (3):
                 SceneManager.LoadScene("Chapter");
                 break;
+            case (4):
+                SceneManager.LoadScene("AnotherChapter");
+                break;
+            case (5):
+                SceneManager.LoadScene("Chapter_1");
+                break;
+            case (6):
+                SceneManager.LoadScene("Chapter_2");
+                break;
+            case (7):
+                SceneManager.LoadScene("Chapter_3");
+                break;
+            case (8):
+                SceneManager.LoadScene("Chapter_4");
+                break;
+            case (9):
+                SceneManager.LoadScene("Chapter_5");
+                break;
         }
     }
 }

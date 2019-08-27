@@ -15,7 +15,7 @@ public class Words
 
     public override string ToString()
     {
-        return JsonUtility.ToJson(this,true);
+        return JsonUtility.ToJson(this, true);
     }
 }
 
