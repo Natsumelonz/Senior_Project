@@ -10,6 +10,7 @@ public class RetrieveDialog
     public string script_id;
     public string script_role;
     public string script_desc;
+    public bool script_event;
 
     public override string ToString()
     {
@@ -27,7 +28,7 @@ public class DialogManager
             for (int i = 0; i <= response.Length; i++)
             {
                 dialog.Add(response[i]);
-                //Debug.Log(dialog[i].script_id + " " + dialog[i].script_role + ": " + dialog[i].script_desc);
+                //Debug.Log(dialog[i].script_id + " | " + dialog[i].script_role + " | " + dialog[i].script_desc + " | " + dialog[i].script_event);
             }
         });
 

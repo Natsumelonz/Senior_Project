@@ -16,7 +16,9 @@ public class Chapter_1 : MonoBehaviour
     public GameObject dialogBox;
     public GameObject teacherPic;
     public GameObject nameDisplay;
-    public Text _event;
+    public GameObject event_image;
+    public Sprite sprite_path;
+    public Text event_text;
     public Text speaker;
     public Text textDisplays;
 
@@ -56,11 +58,13 @@ public class Chapter_1 : MonoBehaviour
         }
         //ถ้าindexประโยคยังไม่หมดทำต่อ       
 
+        event_image.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+
         if (index < sentences.Count - 1)
         {
             index++;
             textDisplays.text = "";
-            _event.text = "";
+            event_text.text = "";
             StartCoroutine(Type());
             speaker.text = DialogManager.dialog[index].script_role;
             //if (DialogManager.dialog[index].script_event == "1")
@@ -88,7 +92,56 @@ public class Chapter_1 : MonoBehaviour
             textDisplays.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
-        CloneChoice();
+        if (DialogManager.dialog[index].script_event == true)
+        {
+            switch (DialogManager.dialog[index].script_id)
+            {
+                default:
+                    break;
+                case ("ch1_013"):
+                    event_text.text = "ひらがな";
+                    //sprite_path = Resources.Load<Sprite>("Hiragana/a");
+                    //event_image.GetComponent<Image>().sprite = sprite_path;
+                    break;
+                case ("ch1_014"):
+                    event_text.text = "カタカナ";
+                    break;
+                case ("ch1_015"):
+                    event_text.text = "漢字";
+                    break;
+                case ("ch1_019"):
+                    sprite_path = Resources.Load<Sprite>("hiragana_chart");
+                    EventImageCall();
+                    break;
+                case ("ch1_020"):
+                    sprite_path = Resources.Load<Sprite>("dictionary");
+                    EventImageCall();
+                    break;
+                case ("ch1_025"):
+                    event_text.text = "あ";
+                    break;
+                case ("ch1_026"):
+                    event_text.text = "い";
+                    break;
+                case ("ch1_027"):
+                    event_text.text = "う";
+                    break;
+                case ("ch1_028"):
+                    event_text.text = "え";
+                    break;
+                case ("ch1_029"):
+                    event_text.text = "お";
+                    break;
+            }
+        }
+        //CloneChoice();
+    }
+
+    void EventImageCall()
+    {
+        event_image.GetComponent<Image>().sprite = sprite_path;
+        event_image.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+        event_image.GetComponent<Image>().preserveAspect = true;
     }
 
     void RepositionObject()
@@ -98,7 +151,7 @@ public class Chapter_1 : MonoBehaviour
         {
             return;
         }
-        float center = (charObjectOfChapter.Count + 2.5f) / 2;
+        float center = (charObjectOfChapter.Count + 1f) / 2;
         for (int i = 0; i < charObjectOfChapter.Count; i++)
         {
             charObjectOfChapter[i].rectTransform.anchoredPosition
