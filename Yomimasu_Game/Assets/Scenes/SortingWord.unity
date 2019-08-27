@@ -2032,7 +2032,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Japan
+  m_Text: Romanji
 --- !u!222 &1281025775
 CanvasRenderer:
   m_ObjectHideFlags: 0
