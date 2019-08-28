@@ -29,7 +29,8 @@ public class Chapter_1 : MonoBehaviour
     public Transform container;
     public float space;
     public float lerpSpeed = 5;
-    List<CharObjectOfChapter> charObjectOfChapter = new List<CharObjectOfChapter>();
+    public GameObject pauseTab;
+    public List<CharObjectOfChapter> charObjectOfChapter = new List<CharObjectOfChapter>();
 
     CharObjectOfChapter firstSelected;
 
@@ -44,7 +45,28 @@ public class Chapter_1 : MonoBehaviour
             sentences.Add(item.script_desc);
         }
         speaker.text = DialogManager.dialog[index].script_role;
-        StartCoroutine(Type());        
+        StartCoroutine(Type());
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //ถ้าคำที่แสดง แสดงจนครบประโยคแล้วถึงกดไปต่อได้
+        if (textDisplays.text == sentences[index])
+        {
+            continueButton.SetActive(true);
+            RepositionObject();
+        }
+
+        if (DialogManager.dialog[index].script_role == "Teacher")
+        {
+            teacherPic.SetActive(true);
+        }
+        else
+        {
+
+            teacherPic.SetActive(false);
+        }
     }
 
     public void NextSentence()
@@ -156,7 +178,7 @@ public class Chapter_1 : MonoBehaviour
         {
             charObjectOfChapter[i].rectTransform.anchoredPosition
                 = Vector2.Lerp(charObjectOfChapter[i].rectTransform.anchoredPosition,
-                 new Vector2(0 , (center - i) * space), lerpSpeed * Time.deltaTime);
+                 new Vector2(0, (center - i) * space), lerpSpeed * Time.deltaTime);
             charObjectOfChapter[i].index = i;
         }
     }
@@ -181,6 +203,7 @@ public class Chapter_1 : MonoBehaviour
             charObjectOfChapter.Add(clone.Init(s));
         }
     }
+
     public void Select(CharObjectOfChapter charObjectOfChapter)
     {
         if (firstSelected)
@@ -194,25 +217,34 @@ public class Chapter_1 : MonoBehaviour
             firstSelected = charObjectOfChapter;
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-        //ถ้าคำที่แสดง แสดงจนครบประโยคแล้วถึงกดไปต่อได้
-        if (textDisplays.text == sentences[index])
-        {
-            continueButton.SetActive(true);
-            RepositionObject();
-        }
 
-        if (DialogManager.dialog[index].script_role == "Teacher")
+    public void PauseButton()
+    {
+        if (Time.timeScale == 1)
         {
-            teacherPic.SetActive(true);
+            Time.timeScale = 0;
+            pauseTab.SetActive(true);
         }
         else
         {
-
-            teacherPic.SetActive(false);
+            Time.timeScale = 1;
+            pauseTab.SetActive(false);
         }
-   
+    }
+
+    public void PauseMenu(int i)
+    {
+        Time.timeScale = 1;
+        switch (i)
+        {
+            default:
+                break;
+            case (0):
+                SceneManager.LoadScene("MainMenu");
+                break;
+            case (1):
+                SceneManager.LoadScene("Chapter");
+                break;
+        }
     }
 }

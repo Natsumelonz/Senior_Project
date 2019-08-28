@@ -20,6 +20,7 @@ public class UIObject
     public GameObject[] buttoneLeft;
     public GameObject[] buttoneRight;
     public GameObject[] allButton;
+    public GameObject pauseTab;
 }
 
 [System.Serializable]
@@ -345,5 +346,35 @@ public class MatchingManager : MonoBehaviour
         uiObject.ScorePop.enabled = true;
         yield return new WaitForSeconds(delay);
         uiObject.ScorePop.enabled = false;
+    }
+
+    public void PauseButton()
+    {
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+            uiObject.pauseTab.SetActive(true);
+        }
+        else
+        {
+            Time.timeScale = 1;
+            uiObject.pauseTab.SetActive(false);
+        }
+    }
+
+    public void PauseMenu(int i)
+    {
+        Time.timeScale = 1;
+        switch (i)
+        {
+            default:
+                break;
+            case (0):
+                SceneManager.LoadScene("MainMenu");
+                break;
+            case (1):
+                SceneManager.LoadScene("Chapter");
+                break;
+        }
     }
 }

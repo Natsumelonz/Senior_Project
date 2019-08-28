@@ -6,9 +6,11 @@ using Proyecto26;
 
 public class MenuBehaviour : MonoBehaviour
 {
-    AlpabetManager alpabetManagement = new AlpabetManager();
-    WordManager wordManager = new WordManager();
-    DialogManager dialogManager = new DialogManager();
+    public AlpabetManager alpabetManagement = new AlpabetManager();
+    public WordManager wordManager = new WordManager();
+    public DialogManager dialogManager = new DialogManager();
+    public static bool init = false;
+
     void OnDisable()
     {
         PlayerPrefs.SetInt("level", 1);
@@ -16,9 +18,14 @@ public class MenuBehaviour : MonoBehaviour
 
     private void Start()
     {
-        alpabetManagement.PullAlphabets();
-        wordManager.PullWords();
-        dialogManager.PullDialog();
+        if (init == false)
+        {
+            alpabetManagement.PullAlphabets();
+            wordManager.PullWords();
+            dialogManager.PullDialog();
+
+            init = true;
+        }
     }
 
     private void Update()
