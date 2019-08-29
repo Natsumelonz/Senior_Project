@@ -155,8 +155,8 @@ public class WordSorting : MonoBehaviour
         yield return new WaitForSeconds(time);
         for (int i = 0; i < 20 - 1; i++)
         {
-            //words[i].word = WordManager.words[numIndexList[i]].wordname_romanji;
-            words[i].word = WordManager.words[numIndexList[i]].wordname_JP;
+            words[i].word = WordManager.words[numIndexList[i]].wordname_romanji;
+            //words[i].word = WordManager.words[numIndexList[i]].wordname_JP;
         }
 
         if (!_initRAD)
@@ -213,8 +213,8 @@ public class WordSorting : MonoBehaviour
 
         if (currentWord <= numIndexList.Count)
         {
-            //result.textJapan.text = WordManager.words[numIndexList[currentWord]].wordname_JP.ToString();
-            result.textJapan.text = WordManager.words[numIndexList[currentWord]].wordname_romanji.ToString();
+            result.textJapan.text = WordManager.words[numIndexList[currentWord]].wordname_JP.ToString();
+            //result.textJapan.text = WordManager.words[numIndexList[currentWord]].wordname_romanji.ToString();
             result.textMean.text = WordManager.words[numIndexList[currentWord]].word_meaning.ToString();
         }
         //แสดงตามindex 
