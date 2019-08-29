@@ -198,12 +198,6 @@ public class Chapter_1 : MonoBehaviour
 
     void CloneChoice(int qIndex)
     {
-        /*charObjectOfChapter.Clear();
-        foreach (Transform child in container)
-        {
-            Destroy(child.gameObject);
-        }*/
-
         foreach (string s in QuestionManager.question[qIndex].question_choice)
         {
             CharObjectOfChapter clone = Instantiate(prefab.gameObject).GetComponent<CharObjectOfChapter>();
