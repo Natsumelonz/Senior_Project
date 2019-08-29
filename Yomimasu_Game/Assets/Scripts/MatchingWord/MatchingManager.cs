@@ -304,22 +304,6 @@ public class MatchingManager : MonoBehaviour
         SceneManager.LoadScene("GameMatching");
     }
 
-    public void Replay()
-    {
-        level = 1;
-        SceneManager.LoadScene("GameMatching");
-    }
-    public void MainMenu()
-    {
-        level = 1;
-        SceneManager.LoadScene("MainMenu");
-    }
-    public void Back()
-    {
-        level = 1;
-        SceneManager.LoadScene("MainMenu");
-    }
-
     IEnumerator TimeLimit()
     {
         _timeLimit = 15.0f;
@@ -370,10 +354,12 @@ public class MatchingManager : MonoBehaviour
             default:
                 break;
             case (0):
+                level = 1;
                 SceneManager.LoadScene("MainMenu");
                 break;
             case (1):
-                SceneManager.LoadScene("Chapter");
+                level = 1;
+                SceneManager.LoadScene("GameMatching");
                 break;
         }
     }

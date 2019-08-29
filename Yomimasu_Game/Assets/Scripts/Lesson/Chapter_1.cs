@@ -11,12 +11,14 @@ public class Chapter_1 : MonoBehaviour
 {
     public List<string> sentences = new List<string>();
     private int index;
+    private int qindex = 0;
     public float typingSpeed;
     public GameObject continueButton;
     public GameObject dialogBox;
     public GameObject teacherPic;
     public GameObject nameDisplay;
     public GameObject event_image;
+    public Text skip;
     public Sprite sprite_path;
     public Text event_text;
     public Text speaker;
@@ -161,8 +163,24 @@ public class Chapter_1 : MonoBehaviour
                     event_text.text = "お";
                     break;
                 case ("ch1_023"):
+                    qindex = 0;
                     event_text.text = "い";
-                    CloneChoice(0);
+                    CloneChoice();
+                    break;
+                case ("ch1_024"):
+                    qindex = 1;
+                    event_text.text = "e";
+                    CloneChoice();
+                    break;
+                case ("ch1_025"):
+                    qindex = 2;
+                    event_text.text = "お";
+                    CloneChoice();
+                    break;
+                case ("ch1_026"):
+                    qindex = 3;
+                    event_text.text = "うえ";
+                    CloneChoice();
                     break;
             }
         }
@@ -196,27 +214,26 @@ public class Chapter_1 : MonoBehaviour
         main = this;
     }
 
-    void CloneChoice(int qIndex)
+    void CloneChoice()
     {
-        foreach (string s in QuestionManager.question[qIndex].question_choice)
+        foreach (string s in QuestionManager.question[qindex].question_choice)
         {
             CharObjectOfChapter clone = Instantiate(prefab.gameObject).GetComponent<CharObjectOfChapter>();
             clone.transform.SetParent(container);
             charObjectOfChapter.Add(clone.Init(s));
-        }
+        }       
     }
 
-    public void Select(CharObjectOfChapter charObjectOfChapter)
+    public void CheckAnswer(CharObjectOfChapter charObjectOfChapter)
     {
-        if (firstSelected)
+        if (charObjectOfChapter.sentence == QuestionManager.question[qindex].correct_answer)
         {
-            firstSelected.Select();
-            charObjectOfChapter.Select();
-
+            NextSentence();
         }
         else
         {
-            firstSelected = charObjectOfChapter;
+            index--;
+            NextSentence();
         }
     }
 
@@ -248,5 +265,11 @@ public class Chapter_1 : MonoBehaviour
                 SceneManager.LoadScene("Chapter");
                 break;
         }
+    }
+    
+    public void Skip()
+    {
+        index = Int32.Parse(skip.text);
+        NextSentence();
     }
 }

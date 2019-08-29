@@ -15,8 +15,6 @@ public class CharObjectOfChapter : MonoBehaviour
     public Color normalColor;
     public Color selectedColor;
 
-    bool isSelected = false;
-
 
     public CharObjectOfChapter Init(string c)
     {
@@ -28,9 +26,7 @@ public class CharObjectOfChapter : MonoBehaviour
 
     public void Select()
     {
-        isSelected = !isSelected;
-        image.color = isSelected ? selectedColor : normalColor;
-
+        Chapter_1.main.CheckAnswer(this);
     }
     // Start is called before the first frame update 
     void Start()

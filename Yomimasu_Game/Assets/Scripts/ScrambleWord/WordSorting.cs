@@ -84,6 +84,7 @@ public class WordSorting : MonoBehaviour
 
     [Header("UI REFERENCE")]
     public GameObject wordCanvas;
+    public GameObject pauseTab;
     public CharObject prefab;
 
     //ไว้เก็บbutton ที่clone มา
@@ -351,19 +352,34 @@ public class WordSorting : MonoBehaviour
         CheckWord();
 
     }
-
-    public void Replay()
+    
+    public void PauseButton()
     {
-        SceneManager.LoadScene("SortingWord");
-    }
-    public void MainMenu()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
-    public void Back()
-    {
-        SceneManager.LoadScene("MainMenu");
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+            pauseTab.SetActive(true);
+        }
+        else
+        {
+            Time.timeScale = 1;
+            pauseTab.SetActive(false);
+        }
     }
 
-
+    public void PauseMenu(int i)
+    {
+        Time.timeScale = 1;
+        switch (i)
+        {
+            default:
+                break;
+            case (0):
+                SceneManager.LoadScene("MainMenu");
+                break;
+            case (1):
+                SceneManager.LoadScene("SortingWord");
+                break;
+        }
+    }
 }

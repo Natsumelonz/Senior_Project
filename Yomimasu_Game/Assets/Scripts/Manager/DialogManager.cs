@@ -54,16 +54,16 @@ public class QuestionManager
     public static List<RetrieveQuestion> question = new List<RetrieveQuestion>();
     public void PullQuestion()
     {
-        RestClient.GetArray<RetrieveQuestion>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter1/Question.json").Then(response =>
+        RestClient.GetArray<RetrieveQuestion>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter1/Questions.json").Then(response =>
         {
             for (int i = 0; i <= response.Length; i++)
             {
                 question.Add(response[i]);
-                Debug.Log(question[i].correct_answer + " | " + question[i].script_id);
-                foreach (string item in question[i].question_choice)
-                {
-                    Debug.Log(item);
-                }                
+                //Debug.Log(question[i].correct_answer + " | " + question[i].script_id);
+                //foreach (string item in question[i].question_choice)
+                //{
+                //    Debug.Log(item);
+                //}                
             }
         });
 
