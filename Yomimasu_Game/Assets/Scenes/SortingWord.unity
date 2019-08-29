@@ -777,7 +777,7 @@ MonoBehaviour:
     textSummaryScore: {fileID: 1235075212}
     textInfo: {fileID: 2110157288}
   wordCanvas: {fileID: 243444679}
-  pauseTab: {fileID: 0}
+  pauseTab: {fileID: 735223546}
   prefab: {fileID: 347991104}
   container: {fileID: 314953194}
   space: 100
@@ -2880,7 +2880,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 758a642d5e2cd25428f5bbae22025275, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d4ac5d8f38427274c8b0b785e5a98408, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
