@@ -9,6 +9,7 @@ public class MenuBehaviour : MonoBehaviour
     public AlpabetManager alpabetManagement = new AlpabetManager();
     public WordManager wordManager = new WordManager();
     public DialogManager dialogManager = new DialogManager();
+    public QuestionManager questionManager = new QuestionManager();
     public static bool init = false;
 
     void OnDisable()
@@ -23,6 +24,7 @@ public class MenuBehaviour : MonoBehaviour
             alpabetManagement.PullAlphabets();
             wordManager.PullWords();
             dialogManager.PullDialog();
+            questionManager.PullQuestion();
 
             init = true;
         }

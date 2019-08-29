@@ -18,6 +18,19 @@ public class RetrieveDialog
     }
 }
 
+[Serializable]
+public class RetrieveQuestion
+{
+    public string correct_answer;
+    public List<string> question_choice;
+    public string script_id;
+
+    public override string ToString()
+    {
+        return JsonUtility.ToJson(this, true);
+    }
+}
+
 public class DialogManager
 {
     public static List<RetrieveDialog> dialog = new List<RetrieveDialog>();
@@ -33,5 +46,27 @@ public class DialogManager
         });
 
         Debug.Log("Initial Dialog Complete!");
+    }
+}
+
+public class QuestionManager
+{
+    public static List<RetrieveQuestion> question = new List<RetrieveQuestion>();
+    public void PullQuestion()
+    {
+        RestClient.GetArray<RetrieveQuestion>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter1/Question.json").Then(response =>
+        {
+            for (int i = 0; i <= response.Length; i++)
+            {
+                question.Add(response[i]);
+                Debug.Log(question[i].correct_answer + " | " + question[i].script_id);
+                foreach (string item in question[i].question_choice)
+                {
+                    Debug.Log(item);
+                }                
+            }
+        });
+
+        Debug.Log("Initial Question Complete!");
     }
 }

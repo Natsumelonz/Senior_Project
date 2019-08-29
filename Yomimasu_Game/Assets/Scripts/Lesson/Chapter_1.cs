@@ -114,49 +114,58 @@ public class Chapter_1 : MonoBehaviour
             textDisplays.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
+        EventCheck();
+        //CloneChoice();
+    }
+
+    void EventCheck()
+    {
         if (DialogManager.dialog[index].script_event == true)
         {
             switch (DialogManager.dialog[index].script_id)
             {
                 default:
                     break;
-                case ("ch1_013"):
+                case ("ch1_005"):
                     event_text.text = "ひらがな";
                     //sprite_path = Resources.Load<Sprite>("Hiragana/a");
                     //event_image.GetComponent<Image>().sprite = sprite_path;
                     break;
-                case ("ch1_014"):
+                case ("ch1_006"):
                     event_text.text = "カタカナ";
                     break;
-                case ("ch1_015"):
+                case ("ch1_007"):
                     event_text.text = "漢字";
                     break;
-                case ("ch1_019"):
+                case ("ch1_011"):
                     sprite_path = Resources.Load<Sprite>("hiragana_chart");
                     EventImageCall();
                     break;
-                case ("ch1_020"):
+                case ("ch1_012"):
                     sprite_path = Resources.Load<Sprite>("dictionary");
                     EventImageCall();
                     break;
-                case ("ch1_025"):
+                case ("ch1_017"):
                     event_text.text = "あ";
                     break;
-                case ("ch1_026"):
+                case ("ch1_018"):
                     event_text.text = "い";
                     break;
-                case ("ch1_027"):
+                case ("ch1_019"):
                     event_text.text = "う";
                     break;
-                case ("ch1_028"):
+                case ("ch1_020"):
                     event_text.text = "え";
                     break;
-                case ("ch1_029"):
+                case ("ch1_021"):
                     event_text.text = "お";
+                    break;
+                case ("ch1_023"):
+                    event_text.text = "い";
+                    CloneChoice(0);
                     break;
             }
         }
-        //CloneChoice();
     }
 
     void EventImageCall()
@@ -187,7 +196,7 @@ public class Chapter_1 : MonoBehaviour
         main = this;
     }
 
-    void CloneChoice()
+    void CloneChoice(int qIndex)
     {
         /*charObjectOfChapter.Clear();
         foreach (Transform child in container)
@@ -195,8 +204,7 @@ public class Chapter_1 : MonoBehaviour
             Destroy(child.gameObject);
         }*/
 
-        string[] sentence = sentences[index].ToString().Split();
-        foreach (string s in sentence)
+        foreach (string s in QuestionManager.question[qIndex].question_choice)
         {
             CharObjectOfChapter clone = Instantiate(prefab.gameObject).GetComponent<CharObjectOfChapter>();
             clone.transform.SetParent(container);
