@@ -11,7 +11,7 @@ public class Chapter_1 : MonoBehaviour
 {
     public List<string> sentences = new List<string>();
     private int index;
-    private int qindex = 0;
+    private int qindex;
     public float typingSpeed;
     public GameObject continueButton;
     public GameObject dialogBox;
@@ -53,12 +53,7 @@ public class Chapter_1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //ถ้าคำที่แสดง แสดงจนครบประโยคแล้วถึงกดไปต่อได้
-        if (textDisplays.text == sentences[index])
-        {
-            continueButton.SetActive(true);
-            RepositionObject();
-        }
+        RepositionObject();
 
         if (DialogManager.dialog[index].script_role == "Teacher")
         {
@@ -66,7 +61,6 @@ public class Chapter_1 : MonoBehaviour
         }
         else
         {
-
             teacherPic.SetActive(false);
         }
     }
@@ -98,11 +92,13 @@ public class Chapter_1 : MonoBehaviour
         }
         else
         {
+            event_text.text = "End Chapter 1";
             textDisplays.text = "";
             continueButton.SetActive(false);
             dialogBox.SetActive(false);
             nameDisplay.SetActive(false);
             teacherPic.SetActive(false);
+            SceneManager.LoadScene("Chapter");
         }
     }
 
@@ -116,8 +112,14 @@ public class Chapter_1 : MonoBehaviour
             textDisplays.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
+
+        //ถ้าคำที่แสดง แสดงจนครบประโยคแล้วถึงกดไปต่อได้
+        if (textDisplays.text == sentences[index])
+        {
+            continueButton.SetActive(true);
+        }
+
         EventCheck();
-        //CloneChoice();
     }
 
     void EventCheck()
@@ -130,8 +132,6 @@ public class Chapter_1 : MonoBehaviour
                     break;
                 case ("ch1_005"):
                     event_text.text = "ひらがな";
-                    //sprite_path = Resources.Load<Sprite>("Hiragana/a");
-                    //event_image.GetComponent<Image>().sprite = sprite_path;
                     break;
                 case ("ch1_006"):
                     event_text.text = "カタカナ";
@@ -148,39 +148,205 @@ public class Chapter_1 : MonoBehaviour
                     EventImageCall();
                     break;
                 case ("ch1_017"):
-                    event_text.text = "あ";
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1,1);
                     break;
                 case ("ch1_018"):
-                    event_text.text = "い";
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_019"):
-                    event_text.text = "う";
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_020"):
-                    event_text.text = "え";
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_021"):
-                    event_text.text = "お";
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_023"):
+                    continueButton.SetActive(false);
                     qindex = 0;
                     event_text.text = "い";
                     CloneChoice();
                     break;
                 case ("ch1_024"):
+                    continueButton.SetActive(false);
                     qindex = 1;
                     event_text.text = "e";
                     CloneChoice();
                     break;
                 case ("ch1_025"):
+                    continueButton.SetActive(false);
                     qindex = 2;
                     event_text.text = "お";
                     CloneChoice();
                     break;
                 case ("ch1_026"):
+                    continueButton.SetActive(false);
                     qindex = 3;
                     event_text.text = "うえ";
                     CloneChoice();
+                    break;
+                case ("ch1_027"):
+                    event_text.text = "あいうえお";
+                    break;
+                case ("ch1_033"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_034"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_035"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_036"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_037"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_042"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_043"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_044"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_045"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_046"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_047"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_048"):
+                    continueButton.SetActive(false);
+                    qindex = 4;
+                    event_text.text = "き";
+                    CloneChoice();
+                    break;
+                case ("ch1_049"):
+                    continueButton.SetActive(false);
+                    qindex = 5;
+                    event_text.text = "し";
+                    CloneChoice();
+                    break;
+                case ("ch1_050"):
+                    continueButton.SetActive(false);
+                    qindex = 6;
+                    event_text.text = "「ko」";
+                    CloneChoice();
+                    break;
+                case ("ch1_051"):
+                    continueButton.SetActive(false);
+                    qindex = 7;
+                    event_text.text = "「sushi」";
+                    CloneChoice();
+                    break;
+                case ("ch1_052"):
+                    continueButton.SetActive(false);
+                    qindex = 8;
+                    event_text.text = "「かさ」";
+                    CloneChoice();
+                    break;
+                case ("ch1_053"):
+                    event_text.text = "かきくけこ\nさしすせそ";
+                    break;
+                case ("ch1_061"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_062"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_064"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_066"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_067"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_071"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_072"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_073"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_074"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_075"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_079"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_080"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_081"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_082"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_083"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_087"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_088"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_089"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_090"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_091"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_095"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_096"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_097"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_101"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_102"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_103"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_104"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_105"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_109"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_110"):
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
+                    break;
+                case ("ch1_111"):
+                    event_text.text = "ん";
                     break;
             }
         }
