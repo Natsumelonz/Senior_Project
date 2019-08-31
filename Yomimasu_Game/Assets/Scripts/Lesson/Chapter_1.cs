@@ -148,7 +148,7 @@ public class Chapter_1 : MonoBehaviour
                     EventImageCall();
                     break;
                 case ("ch1_017"):
-                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1,1);
+                    event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_018"):
                     event_text.text = DialogManager.dialog[index].script_desc.Substring(1, 1);
@@ -387,19 +387,39 @@ public class Chapter_1 : MonoBehaviour
             CharObjectOfChapter clone = Instantiate(prefab.gameObject).GetComponent<CharObjectOfChapter>();
             clone.transform.SetParent(container);
             charObjectOfChapter.Add(clone.Init(s));
-        }       
+        }
     }
 
-    public void CheckAnswer(CharObjectOfChapter charObjectOfChapter)
+    public void CheckAnswer(CharObjectOfChapter charObjectOfChapters)
     {
-        if (charObjectOfChapter.sentence == QuestionManager.question[qindex].correct_answer)
+        if (charObjectOfChapters.sentence == QuestionManager.question[qindex].correct_answer)
         {
-            NextSentence();
+            charObjectOfChapter.Clear();
+            foreach (Transform child in container)
+            {
+                Destroy(child.gameObject);
+            }
+            event_image.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+
+            textDisplays.text = "Very good!";
+            event_text.text = "";
+            speaker.text = DialogManager.dialog[index].script_role;
+            continueButton.SetActive(true);
         }
         else
         {
+            charObjectOfChapter.Clear();
+            foreach (Transform child in container)
+            {
+                Destroy(child.gameObject);
+            }
+            event_image.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+
+            textDisplays.text = "Wrong! try again.";
+            event_text.text = "";
+            speaker.text = DialogManager.dialog[index].script_role;
             index--;
-            NextSentence();
+            continueButton.SetActive(true);
         }
     }
 
@@ -432,7 +452,7 @@ public class Chapter_1 : MonoBehaviour
                 break;
         }
     }
-    
+
     public void Skip()
     {
         index = Int32.Parse(skip.text);
