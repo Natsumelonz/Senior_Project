@@ -24,9 +24,19 @@ public class CharObjectOfChapter : MonoBehaviour
         return this;
     }
 
-    public void Select()
+    public void Select(int i)
     {
-        Chapter_1.main.CheckAnswer(this);
+        switch (i)
+        {
+            default:
+                break;
+            case (1):
+                Chapter_1.main.CheckAnswer(this);
+                break;
+            case (2):
+                Chapter_2.main.CheckAnswer(this);
+                break;
+        }
     }
     // Start is called before the first frame update 
     void Start()

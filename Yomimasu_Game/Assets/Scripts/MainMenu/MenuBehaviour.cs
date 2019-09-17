@@ -23,8 +23,10 @@ public class MenuBehaviour : MonoBehaviour
         {
             alpabetManagement.PullAlphabets();
             wordManager.PullWords();
-            dialogManager.PullDialog();
-            questionManager.PullQuestion();
+            dialogManager.PullDialogCH1();
+            dialogManager.PullDialogCH2();
+            questionManager.PullQuestionCH1();
+            questionManager.PullQuestionCH2();
 
             init = true;
         }
