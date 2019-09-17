@@ -1223,7 +1223,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.861084, y: 146.73999}
+  m_AnchoredPosition: {x: 0.861084, y: 125.93}
   m_SizeDelta: {x: -577.1, y: -376.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &789398417
@@ -1896,8 +1896,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.861084, y: 146.73999}
-  m_SizeDelta: {x: -579.1, y: -376.37}
+  m_AnchoredPosition: {x: 0.861084, y: 125.92001}
+  m_SizeDelta: {x: -579.1, y: -376.37003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1334004793
 CanvasRenderer:
@@ -2165,7 +2165,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: -0.15881348}
+  m_AnchoredPosition: {x: 0, y: -0.15881348}
   m_SizeDelta: {x: 0, y: 0.31769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1522105555
@@ -2212,7 +2212,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1397406449}
-        m_MethodName: NextSentence
+        m_MethodName: NextSentenceB
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2305,7 +2305,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00018310547, y: -0.00018310547}
+  m_AnchoredPosition: {x: -0.00024414062, y: -0.00018310547}
   m_SizeDelta: {x: -0.5, y: 0.27001953}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1801823928

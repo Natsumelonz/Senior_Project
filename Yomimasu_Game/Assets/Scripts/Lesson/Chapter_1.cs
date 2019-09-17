@@ -9,6 +9,7 @@ using Proyecto26;
 
 public class Chapter_1 : MonoBehaviour
 {
+    private GameObject Manager;
     public List<string> sentences = new List<string>();
     private int index;
     private int qindex;
@@ -41,6 +42,7 @@ public class Chapter_1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Manager = GameObject.Find("Preload").gameObject;
         //เรียกใช้แสดงประโยค
         foreach (RetrieveDialog item in DialogManager.dialog_ch1)
         {
@@ -65,7 +67,7 @@ public class Chapter_1 : MonoBehaviour
         }
     }
 
-    public void NextSentence()
+    public IEnumerator NextSentence()
     {
         //ปิดปุ่มContinue
         continueButton.SetActive(false);
@@ -98,6 +100,14 @@ public class Chapter_1 : MonoBehaviour
             dialogBox.SetActive(false);
             nameDisplay.SetActive(false);
             teacherPic.SetActive(false);
+
+            if (Manager.GetComponent<UserManager>().user.LastCh < 1)
+            {
+                Manager.GetComponent<UserManager>().user.LastCh = 1;
+                Manager.GetComponent<UserManager>().Save();
+            }
+
+            yield return new WaitForSeconds(1);
             SceneManager.LoadScene("Chapter");
         }
     }
@@ -140,11 +150,11 @@ public class Chapter_1 : MonoBehaviour
                     event_text.text = "漢字";
                     break;
                 case ("ch1_011"):
-                    sprite_path = Resources.Load<Sprite>("hiragana_chart");
+                    sprite_path = Resources.Load<Sprite>("Ch01/hiragana_chart");
                     EventImageCall();
                     break;
                 case ("ch1_012"):
-                    sprite_path = Resources.Load<Sprite>("dictionary");
+                    sprite_path = Resources.Load<Sprite>("Ch01/dictionary");
                     EventImageCall();
                     break;
                 case ("ch1_017"):
@@ -455,7 +465,12 @@ public class Chapter_1 : MonoBehaviour
 
     public void Skip()
     {
-        index = Int32.Parse(skip.text);
-        NextSentence();
+        index = Int32.Parse(skip.text) - 1;
+        StartCoroutine(NextSentence());
+    }
+
+    public void NextSentenceB()
+    {
+        StartCoroutine(NextSentence());
     }
 }

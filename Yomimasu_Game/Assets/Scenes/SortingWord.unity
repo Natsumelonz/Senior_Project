@@ -778,6 +778,7 @@ MonoBehaviour:
     textTotalScore: {fileID: 585286205}
     textJapan: {fileID: 1281025774}
     textMean: {fileID: 23020987}
+    scorePause: {fileID: 941860185}
     summaryCanvas: {fileID: 1378837530}
     textSummaryScore: {fileID: 1235075212}
     textInfo: {fileID: 2110157288}

@@ -15,6 +15,7 @@ public class UIObject
     public Text textInfo;
     public Text ScorePop;
     public Text LevelText;
+    public Text scorePause;
     public GameObject summaryCanvas;
     [Header("Button")]
     public GameObject[] buttoneLeft;
@@ -48,10 +49,12 @@ public class MatchingManager : MonoBehaviour
     private int _wordIndex = 0;
     private float _pointShow;
     private int disabledHash = Animator.StringToHash("Disabled");
+    private GameObject Manager;
 
     private void Start()
     {
         StartCoroutine(RadWord(0f, level));
+        Manager = GameObject.Find("Preload").gameObject;
         uiObject.LevelText.text = level.ToString();
 
         uiObject.summaryCanvas.SetActive(false);
@@ -338,6 +341,7 @@ public class MatchingManager : MonoBehaviour
         {
             Time.timeScale = 0;
             uiObject.pauseTab.SetActive(true);
+            uiObject.scorePause.text = _point.ToString();
         }
         else
         {
@@ -355,10 +359,24 @@ public class MatchingManager : MonoBehaviour
                 break;
             case (0):
                 level = 1;
+
+                if (Manager.GetComponent<UserManager>().user.Score1 < _point)
+                {
+                    Manager.GetComponent<UserManager>().user.Score1 = _point;
+                }
+
+                Manager.GetComponent<UserManager>().Save();
                 SceneManager.LoadScene("MainMenu");
                 break;
             case (1):
                 level = 1;
+
+                if (Manager.GetComponent<UserManager>().user.Score1 < _point)
+                {
+                    Manager.GetComponent<UserManager>().user.Score1 = _point;
+                }
+
+                Manager.GetComponent<UserManager>().Save();
                 SceneManager.LoadScene("GameMatching");
                 break;
         }

@@ -9,6 +9,7 @@ using Proyecto26;
 
 public class Chapter_2 : MonoBehaviour
 {
+    private GameObject Manager;
     public List<string> sentences = new List<string>();
     private int index;
     private int qindex;
@@ -41,6 +42,7 @@ public class Chapter_2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Manager = GameObject.Find("Preload").gameObject;
         //เรียกใช้แสดงประโยค
         foreach (RetrieveDialog item in DialogManager.dialog_ch2)
         {
@@ -65,7 +67,7 @@ public class Chapter_2 : MonoBehaviour
         }
     }
 
-    public void NextSentence()
+    public IEnumerator NextSentence()
     {
         //ปิดปุ่มContinue
         continueButton.SetActive(false);
@@ -98,6 +100,14 @@ public class Chapter_2 : MonoBehaviour
             dialogBox.SetActive(false);
             nameDisplay.SetActive(false);
             teacherPic.SetActive(false);
+
+            if (Manager.GetComponent<UserManager>().user.LastCh < 2)
+            {
+                Manager.GetComponent<UserManager>().user.LastCh = 2;
+                Manager.GetComponent<UserManager>().Save(); ;
+            }
+
+            yield return new WaitForSeconds(1);
             SceneManager.LoadScene("Chapter");
         }
     }
@@ -128,7 +138,106 @@ public class Chapter_2 : MonoBehaviour
         {
             switch (DialogManager.dialog_ch2[index].script_id)
             {
-               
+                default:
+                    break;
+                case ("ch2_004"):
+                    event_text.text = "がぎぐげご\nGaGiGuGeGo\nガギグゲゴ";
+                    break;
+                case ("ch2_005"):
+                    event_text.text = "もっと\nMotto";
+                    break;
+                case ("ch2_006"):
+                    event_text.text = "ああ いい うう\nā ī ū\nアー イー ウー";
+                    break;
+                case ("ch2_007"):
+                    event_text.text = "きゃ きゅ きょ\nKya Kyu Kyo\nキャ キュ キョ";
+                    break;
+                case ("ch2_008"):
+                    event_text.text = "が\nand\nかっと";
+                    break;
+                case ("ch2_010"):
+                    sprite_path = Resources.Load<Sprite>("Ch02/tenten");
+                    EventImageCall();
+                    break;
+                case ("ch2_014"):
+                    event_text.text = "「か」　ka\n→\n「が」　ga";
+                    break;
+                case ("ch2_015"):
+                    event_text.text = "「き」　ki\n→\n「ぎ」　gi";
+                    break;
+                case ("ch2_016"):
+                    event_text.text = "「く」　ku\n→\n「ぐ」　gu";
+                    break;
+                case ("ch2_017"):
+                    event_text.text = "「け」　ke\n→\n「げ」　ge";
+                    break;
+                case ("ch2_018"):
+                    event_text.text = "「こ」　ko\n→\n「ご」　go";
+                    break;
+                case ("ch2_020"):
+                    event_text.text = "「さ」　sa\n→\n「ざ」　za";
+                    break;
+                case ("ch2_021"):
+                    event_text.text = "「し」　shi\n→\n「じ」　ji";
+                    break;
+                case ("ch2_022"):
+                    event_text.text = "「す」　su\n→\n「ず」　zu";
+                    break;
+                case ("ch2_023"):
+                    event_text.text = "「せ」　se\n→\n「ぜ」　ze";
+                    break;
+                case ("ch2_024"):
+                    event_text.text = "「そ」　so\n→\n「ぞ」　zo";
+                    break;
+                case ("ch2_026"):
+                    event_text.text = "「た」　ta\n→\n「だ」　da";
+                    break;
+                case ("ch2_027"):
+                    event_text.text = "「ち」　chi\n→\n「ぢ」　ji";
+                    break;
+                case ("ch2_028"):
+                    event_text.text = "「つ」　tsu\n→\n「づ」　zu";
+                    break;
+                case ("ch2_029"):
+                    event_text.text = "「て」　te\n→\n「で」　de";
+                    break;
+                case ("ch2_030"):
+                    event_text.text = "「と」　to\n→\n「ど」　do";
+                    break;
+                case ("ch2_032"):
+                    event_text.text = "「は」　ha\n→\n「ば」　ba";
+                    break;
+                case ("ch2_033"):
+                    event_text.text = "「ひ」　hi\n→\n「び」　bi";
+                    break;
+                case ("ch2_034"):
+                    event_text.text = "「ふ」　fu\n→\n「ぶ」　bu";
+                    break;
+                case ("ch2_035"):
+                    event_text.text = "「へ」　he\n→\n「べ」　be";
+                    break;
+                case ("ch2_036"):
+                    event_text.text = "「ほ」　ho\n→\n「ぼ」　bo";
+                    break;
+                case ("ch2_038"):
+                    sprite_path = Resources.Load<Sprite>("Ch02/maru");
+                    EventImageCall();
+                    break;
+                case ("ch2_041"):
+                    event_text.text = "「は」　ha\n→\n「ぱ」　pa";
+                    break;
+                case ("ch2_042"):
+                    event_text.text = "「ひ」　hi\n→\n「ぴ」　pi";
+                    break;
+                case ("ch2_043"):
+                    event_text.text = "「ふ」　fu\n→\n「ぷ」　pu";
+                    break;
+                case ("ch2_044"):
+                    event_text.text = "「へ」　he\n→\n「ぺ」　pe";
+                    break;
+                case ("ch2_045"):
+                    event_text.text = "「ほ」　ho\n→\n「ぽ」　po";
+                    break;
             }
         }
     }
@@ -236,7 +345,12 @@ public class Chapter_2 : MonoBehaviour
 
     public void Skip()
     {
-        index = Int32.Parse(skip.text);
-        NextSentence();
+        index = Int32.Parse(skip.text) - 1;
+        StartCoroutine(NextSentence());
+    }
+
+    public void NextSentenceB()
+    {
+        StartCoroutine(NextSentence());
     }
 }

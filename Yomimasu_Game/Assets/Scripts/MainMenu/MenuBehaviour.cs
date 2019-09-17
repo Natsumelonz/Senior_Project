@@ -6,11 +6,8 @@ using Proyecto26;
 
 public class MenuBehaviour : MonoBehaviour
 {
-    public AlpabetManager alpabetManagement = new AlpabetManager();
-    public WordManager wordManager = new WordManager();
-    public DialogManager dialogManager = new DialogManager();
-    public QuestionManager questionManager = new QuestionManager();
-    public static bool init = false;
+    private GameObject Manager;
+    public GameObject Panel;
 
     void OnDisable()
     {
@@ -19,22 +16,17 @@ public class MenuBehaviour : MonoBehaviour
 
     private void Start()
     {
-        if (init == false)
-        {
-            alpabetManagement.PullAlphabets();
-            wordManager.PullWords();
-            dialogManager.PullDialogCH1();
-            dialogManager.PullDialogCH2();
-            questionManager.PullQuestionCH1();
-            questionManager.PullQuestionCH2();
+        Manager = GameObject.Find("Preload").gameObject;
 
-            init = true;
-        }
+        //Manager.GetComponent<UserManager>().user.Name = "MildSadZ";
+        //Manager.GetComponent<UserManager>().Save();
+
+        //Debug.Log(Manager.GetComponent<UserManager>().user.Name);
     }
 
-    private void Update()
+    public void ClosePanel()
     {
-
+        Panel.SetActive(false);
     }
 
     public void TriggerMenuBehaviour(int i)
@@ -56,22 +48,60 @@ public class MenuBehaviour : MonoBehaviour
                 SceneManager.LoadScene("Chapter");
                 break;
             case (4):
-                SceneManager.LoadScene("AnotherChapter");
+                if (Manager.GetComponent<UserManager>().user.LastCh < 5)
+                {
+                    Panel.SetActive(true);
+                }
+                else
+                {
+                    SceneManager.LoadScene("AnotherChapter");
+                }
                 break;
             case (5):
                 SceneManager.LoadScene("Chapter_1");
                 break;
             case (6):
-                SceneManager.LoadScene("Chapter_2");
+                if (Manager.GetComponent<UserManager>().user.LastCh < 2)
+                {
+                    Panel.SetActive(true);
+                }
+                else
+                {
+                    SceneManager.LoadScene("Chapter_2");
+                }
                 break;
             case (7):
-                SceneManager.LoadScene("Chapter_3");
+                if (Manager.GetComponent<UserManager>().user.LastCh < 3)
+                {
+                    Panel.SetActive(true);
+                }
+                else
+                {
+                    SceneManager.LoadScene("Chapter_3");
+                }
                 break;
             case (8):
-                SceneManager.LoadScene("Chapter_4");
+                if (Manager.GetComponent<UserManager>().user.LastCh < 4)
+                {
+                    Panel.SetActive(true);
+                }
+                else
+                {
+                    SceneManager.LoadScene("Chapter_4");
+                }
                 break;
             case (9):
-                SceneManager.LoadScene("Chapter_5");
+                if (Manager.GetComponent<UserManager>().user.LastCh < 5)
+                {
+                    Panel.SetActive(true);
+                }
+                else
+                {
+                    SceneManager.LoadScene("Chapter_5");
+                }
+                break;
+            case (10):
+                SceneManager.LoadScene("MainMenu");
                 break;
         }
     }

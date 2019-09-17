@@ -15,6 +15,7 @@ public class Result
     public Text textTotalScore;
     public Text textJapan;
     public Text textMean;
+    public Text scorePause;
 
     [Header("REF RESULT SCREEN")]
     public GameObject summaryCanvas;
@@ -110,6 +111,8 @@ public class WordSorting : MonoBehaviour
     private bool _init = false;
     private bool _initRAD = false;
 
+    private GameObject Manager;
+
     void Awake()
     {
         main = this;
@@ -120,6 +123,7 @@ public class WordSorting : MonoBehaviour
     void Start()
     {
         StartCoroutine(RadWord(0f));
+        Manager = GameObject.Find("Preload").gameObject;
 
         while (numIndexList.Count != 20)
         {
@@ -359,6 +363,7 @@ public class WordSorting : MonoBehaviour
         {
             Time.timeScale = 0;
             pauseTab.SetActive(true);
+            result.scorePause.text = result.totalScore.ToString();
         }
         else
         {
@@ -375,9 +380,21 @@ public class WordSorting : MonoBehaviour
             default:
                 break;
             case (0):
+                if (Manager.GetComponent<UserManager>().user.Score2 < totalScore)
+                {
+                    Manager.GetComponent<UserManager>().user.Score2 = (int)totalScore;
+                }
+
+                Manager.GetComponent<UserManager>().Save();
                 SceneManager.LoadScene("MainMenu");
                 break;
             case (1):
+                if (Manager.GetComponent<UserManager>().user.Score2 < totalScore)
+                {
+                    Manager.GetComponent<UserManager>().user.Score2 = (int)totalScore;
+                }
+
+                Manager.GetComponent<UserManager>().Save();
                 SceneManager.LoadScene("SortingWord");
                 break;
         }
