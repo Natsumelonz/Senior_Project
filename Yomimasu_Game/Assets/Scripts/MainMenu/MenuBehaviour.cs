@@ -44,7 +44,7 @@ public class MenuBehaviour : MonoBehaviour
             default:
                 break;
             case (0):
-                Application.Quit();
+                SceneManager.LoadScene("Leaderboard");
                 break;
             case (1):
                 SceneManager.LoadScene("GameMatching");
