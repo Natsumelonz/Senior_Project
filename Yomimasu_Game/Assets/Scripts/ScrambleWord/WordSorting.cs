@@ -112,6 +112,7 @@ public class WordSorting : MonoBehaviour
     private bool _initRAD = false;
 
     private GameObject Manager;
+    private WordManager wordManager;
 
     void Awake()
     {
@@ -123,7 +124,8 @@ public class WordSorting : MonoBehaviour
     void Start()
     {
         StartCoroutine(RadWord(0f));
-        Manager = GameObject.Find("Preload").gameObject;
+        Manager = GameObject.Find("GameData").gameObject;
+        wordManager = Manager.GetComponent<WordManager>();
 
         while (numIndexList.Count != 20)
         {
@@ -160,7 +162,7 @@ public class WordSorting : MonoBehaviour
         yield return new WaitForSeconds(time);
         for (int i = 0; i < 20 - 1; i++)
         {
-            words[i].word = WordManager.words[numIndexList[i]].wordname_romanji;
+            words[i].word = wordManager.words[numIndexList[i]].wordname_romanji;
             //words[i].word = WordManager.words[numIndexList[i]].wordname_JP;
         }
 
@@ -218,9 +220,9 @@ public class WordSorting : MonoBehaviour
 
         if (currentWord <= numIndexList.Count)
         {
-            result.textJapan.text = WordManager.words[numIndexList[currentWord]].wordname_JP.ToString();
+            result.textJapan.text = wordManager.words[numIndexList[currentWord]].wordname_JP.ToString();
             //result.textJapan.text = WordManager.words[numIndexList[currentWord]].wordname_romanji.ToString();
-            result.textMean.text = WordManager.words[numIndexList[currentWord]].word_meaning.ToString();
+            result.textMean.text = wordManager.words[numIndexList[currentWord]].word_meaning.ToString();
         }
         //แสดงตามindex 
         charObjects.Clear();

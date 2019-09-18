@@ -16,7 +16,7 @@ public class MenuBehaviour : MonoBehaviour
 
     private void Start()
     {
-        Manager = GameObject.Find("Preload").gameObject;
+        Manager = GameObject.Find("GameData").gameObject;
 
         //Manager.GetComponent<UserManager>().user.Name = "MildSadZ";
         //Manager.GetComponent<UserManager>().Save();

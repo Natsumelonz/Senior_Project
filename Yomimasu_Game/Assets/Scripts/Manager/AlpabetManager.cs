@@ -19,9 +19,17 @@ public class Alphabet
 }
 
 [Serializable]
-public class AlpabetManager
+public class AlpabetManager : MonoBehaviour
 {
-    public static List<Alphabet> alphabets = new List<Alphabet>();
+    public static AlpabetManager Instance { set; get; }
+    public List<Alphabet> alphabets = new List<Alphabet>();
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+        Instance = this;
+        PullAlphabets();
+    }
 
     public void PullAlphabets()
     {

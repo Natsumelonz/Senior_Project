@@ -31,11 +31,23 @@ public class RetrieveQuestion
     }
 }
 
-public class DialogManager
+public class DialogManager : MonoBehaviour
 {
-    public static List<RetrieveDialog> dialog_ch1 = new List<RetrieveDialog>();
-    public static List<RetrieveDialog> dialog_ch2 = new List<RetrieveDialog>();
-    public void PullDialogCH1()
+    public static DialogManager Instance { set; get; }
+    public List<RetrieveDialog> dialog_ch1 = new List<RetrieveDialog>();
+    public List<RetrieveDialog> dialog_ch2 = new List<RetrieveDialog>();
+    public List<RetrieveQuestion> question_ch1 = new List<RetrieveQuestion>();
+    public List<RetrieveQuestion> question_ch2 = new List<RetrieveQuestion>();
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+        Instance = this;
+        PullDialog();
+        PullQuestion();
+    }
+
+    public void PullDialog()
     {
         RestClient.GetArray<RetrieveDialog>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter1/Scripts.json").Then(response =>
         {
@@ -47,10 +59,7 @@ public class DialogManager
         });
 
         Debug.Log("Initial Dialog Ch1 Complete!");
-    }
 
-    public void PullDialogCH2()
-    {
         RestClient.GetArray<RetrieveDialog>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter2/Scripts.json").Then(response =>
         {
             for (int i = 0; i <= response.Length; i++)
@@ -62,13 +71,9 @@ public class DialogManager
 
         Debug.Log("Initial Dialog Ch2 Complete!");
     }
-}
 
-public class QuestionManager
-{
-    public static List<RetrieveQuestion> question_ch1 = new List<RetrieveQuestion>();
-    public static List<RetrieveQuestion> question_ch2 = new List<RetrieveQuestion>();
-    public void PullQuestionCH1()
+
+    public void PullQuestion()
     {
         RestClient.GetArray<RetrieveQuestion>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter1/Questions.json").Then(response =>
         {
@@ -84,10 +89,7 @@ public class QuestionManager
         });
 
         Debug.Log("Initial Question Ch1 Complete!");
-    }
 
-    public void PullQuestionCH2()
-    {
         RestClient.GetArray<RetrieveQuestion>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter2/Questions.json").Then(response =>
         {
             for (int i = 0; i <= response.Length; i++)

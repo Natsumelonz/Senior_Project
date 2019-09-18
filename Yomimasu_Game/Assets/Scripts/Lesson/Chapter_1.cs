@@ -24,6 +24,7 @@ public class Chapter_1 : MonoBehaviour
     public Text event_text;
     public Text speaker;
     public Text textDisplays;
+    public DialogManager dialog;
 
     public GameObject ChapterCanvas;
     public CharObjectOfChapter prefab;
@@ -42,13 +43,14 @@ public class Chapter_1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Manager = GameObject.Find("Preload").gameObject;
+        Manager = GameObject.Find("GameData").gameObject;
+        dialog = Manager.GetComponent<DialogManager>();
         //เรียกใช้แสดงประโยค
-        foreach (RetrieveDialog item in DialogManager.dialog_ch1)
+        foreach (RetrieveDialog item in dialog.dialog_ch1)
         {
             sentences.Add(item.script_desc);
         }
-        speaker.text = DialogManager.dialog_ch1[index].script_role;
+        speaker.text = dialog.dialog_ch1[index].script_role;
         StartCoroutine(Type());
     }
 
@@ -57,7 +59,7 @@ public class Chapter_1 : MonoBehaviour
     {
         RepositionObject();
 
-        if (DialogManager.dialog_ch1[index].script_role == "Teacher")
+        if (dialog.dialog_ch1[index].script_role == "Teacher")
         {
             teacherPic.SetActive(true);
         }
@@ -86,10 +88,10 @@ public class Chapter_1 : MonoBehaviour
             textDisplays.text = "";
             event_text.text = "";
             StartCoroutine(Type());
-            speaker.text = DialogManager.dialog_ch1[index].script_role;
-            //if (DialogManager.dialog_ch1[index].script_event == "1")
+            speaker.text = dialog.dialog_ch1[index].script_role;
+            //if (dialog.dialog_ch1[index].script_event == "1")
             //{
-            //    _event.text = DialogManager.dialog_ch1[index].script_desc;
+            //    _event.text = dialog.dialog_ch1[index].script_desc;
             //}
         }
         else
@@ -134,9 +136,9 @@ public class Chapter_1 : MonoBehaviour
 
     void EventCheck()
     {
-        if (DialogManager.dialog_ch1[index].script_event == true)
+        if (dialog.dialog_ch1[index].script_event == true)
         {
-            switch (DialogManager.dialog_ch1[index].script_id)
+            switch (dialog.dialog_ch1[index].script_id)
             {
                 default:
                     break;
@@ -158,19 +160,19 @@ public class Chapter_1 : MonoBehaviour
                     EventImageCall();
                     break;
                 case ("ch1_017"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_018"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_019"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_020"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_021"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_023"):
                     continueButton.SetActive(false);
@@ -200,37 +202,37 @@ public class Chapter_1 : MonoBehaviour
                     event_text.text = "あいうえお";
                     break;
                 case ("ch1_033"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_034"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_035"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_036"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_037"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_042"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_043"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_044"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_045"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_046"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_047"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_048"):
                     continueButton.SetActive(false);
@@ -266,94 +268,94 @@ public class Chapter_1 : MonoBehaviour
                     event_text.text = "かきくけこ\nさしすせそ";
                     break;
                 case ("ch1_061"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_062"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_064"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_066"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_067"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_071"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_072"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_073"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_074"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_075"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_079"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_080"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_081"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_082"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_083"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_087"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_088"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_089"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_090"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_091"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_095"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_096"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_097"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_101"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_102"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_103"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_104"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_105"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_109"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_110"):
-                    event_text.text = DialogManager.dialog_ch1[index].script_desc.Substring(1, 1);
+                    event_text.text = dialog.dialog_ch1[index].script_desc.Substring(1, 1);
                     break;
                 case ("ch1_111"):
                     event_text.text = "ん";
@@ -392,7 +394,7 @@ public class Chapter_1 : MonoBehaviour
 
     void CloneChoice()
     {
-        foreach (string s in QuestionManager.question_ch1[qindex].question_choice)
+        foreach (string s in dialog.question_ch1[qindex].question_choice)
         {
             CharObjectOfChapter clone = Instantiate(prefab.gameObject).GetComponent<CharObjectOfChapter>();
             clone.transform.SetParent(container);
@@ -402,7 +404,7 @@ public class Chapter_1 : MonoBehaviour
 
     public void CheckAnswer(CharObjectOfChapter charObjectOfChapters)
     {
-        if (charObjectOfChapters.sentence == QuestionManager.question_ch1[qindex].correct_answer)
+        if (charObjectOfChapters.sentence == dialog.question_ch1[qindex].correct_answer)
         {
             charObjectOfChapter.Clear();
             foreach (Transform child in container)
@@ -413,7 +415,7 @@ public class Chapter_1 : MonoBehaviour
 
             textDisplays.text = "Very good!";
             event_text.text = "";
-            speaker.text = DialogManager.dialog_ch1[index].script_role;
+            speaker.text = dialog.dialog_ch1[index].script_role;
             continueButton.SetActive(true);
         }
         else
@@ -427,7 +429,7 @@ public class Chapter_1 : MonoBehaviour
 
             textDisplays.text = "Wrong! try again.";
             event_text.text = "";
-            speaker.text = DialogManager.dialog_ch1[index].script_role;
+            speaker.text = dialog.dialog_ch1[index].script_role;
             index--;
             continueButton.SetActive(true);
         }

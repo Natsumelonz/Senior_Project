@@ -247,7 +247,7 @@ MonoBehaviour:
     textInfo: {fileID: 51793517}
     ScorePop: {fileID: 1442624584}
     LevelText: {fileID: 1459983281}
-    ScorePause: {fileID: 842445723}
+    scorePause: {fileID: 842445723}
     summaryCanvas: {fileID: 2033785122}
     buttoneLeft:
     - {fileID: 41922067}

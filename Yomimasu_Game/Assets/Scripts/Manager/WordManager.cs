@@ -19,9 +19,17 @@ public class Words
     }
 }
 
-public class WordManager
+public class WordManager : MonoBehaviour
 {
-    public static List<Words> words = new List<Words>();
+    public static WordManager Instance { set; get; }
+    public List<Words> words = new List<Words>();
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+        Instance = this;
+        PullWords();
+    }
+
     public void PullWords()
     {
         //ดึงมาจาก DB เอามาเก็บไว้ใน ARRAY สองตัวที่แอดมา 

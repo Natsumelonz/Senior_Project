@@ -24,6 +24,7 @@ public class Chapter_2 : MonoBehaviour
     public Text event_text;
     public Text speaker;
     public Text textDisplays;
+    public DialogManager dialog;
 
     public GameObject ChapterCanvas;
     public CharObjectOfChapter prefab;
@@ -42,13 +43,14 @@ public class Chapter_2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Manager = GameObject.Find("Preload").gameObject;
+        Manager = GameObject.Find("GameData").gameObject;
+        dialog = Manager.GetComponent<DialogManager>();
         //เรียกใช้แสดงประโยค
-        foreach (RetrieveDialog item in DialogManager.dialog_ch2)
+        foreach (RetrieveDialog item in dialog.dialog_ch2)
         {
             sentences.Add(item.script_desc);
         }
-        speaker.text = DialogManager.dialog_ch2[index].script_role;
+        speaker.text = dialog.dialog_ch2[index].script_role;
         StartCoroutine(Type());
     }
 
@@ -57,7 +59,7 @@ public class Chapter_2 : MonoBehaviour
     {
         RepositionObject();
 
-        if (DialogManager.dialog_ch2[index].script_role == "Teacher")
+        if (dialog.dialog_ch2[index].script_role == "Teacher")
         {
             teacherPic.SetActive(true);
         }
@@ -86,10 +88,10 @@ public class Chapter_2 : MonoBehaviour
             textDisplays.text = "";
             event_text.text = "";
             StartCoroutine(Type());
-            speaker.text = DialogManager.dialog_ch2[index].script_role;
-            //if (DialogManager.dialog_ch2[index].script_event == "1")
+            speaker.text = dialog.dialog_ch2[index].script_role;
+            //if (dialog.dialog_ch2[index].script_event == "1")
             //{
-            //    _event.text = DialogManager.dialog_ch2[index].script_desc;
+            //    _event.text = dialog.dialog_ch2[index].script_desc;
             //}
         }
         else
@@ -134,9 +136,9 @@ public class Chapter_2 : MonoBehaviour
 
     void EventCheck()
     {
-        if (DialogManager.dialog_ch2[index].script_event == true)
+        if (dialog.dialog_ch2[index].script_event == true)
         {
-            switch (DialogManager.dialog_ch2[index].script_id)
+            switch (dialog.dialog_ch2[index].script_id)
             {
                 default:
                     break;
@@ -272,7 +274,7 @@ public class Chapter_2 : MonoBehaviour
 
     void CloneChoice()
     {
-        foreach (string s in QuestionManager.question_ch2[qindex].question_choice)
+        foreach (string s in dialog.question_ch2[qindex].question_choice)
         {
             CharObjectOfChapter clone = Instantiate(prefab.gameObject).GetComponent<CharObjectOfChapter>();
             clone.transform.SetParent(container);
@@ -282,7 +284,7 @@ public class Chapter_2 : MonoBehaviour
 
     public void CheckAnswer(CharObjectOfChapter charObjectOfChapters)
     {
-        if (charObjectOfChapters.sentence == QuestionManager.question_ch2[qindex].correct_answer)
+        if (charObjectOfChapters.sentence == dialog.question_ch2[qindex].correct_answer)
         {
             charObjectOfChapter.Clear();
             foreach (Transform child in container)
@@ -293,7 +295,7 @@ public class Chapter_2 : MonoBehaviour
 
             textDisplays.text = "Very good!";
             event_text.text = "";
-            speaker.text = DialogManager.dialog_ch2[index].script_role;
+            speaker.text = dialog.dialog_ch2[index].script_role;
             continueButton.SetActive(true);
         }
         else
@@ -307,7 +309,7 @@ public class Chapter_2 : MonoBehaviour
 
             textDisplays.text = "Wrong! try again.";
             event_text.text = "";
-            speaker.text = DialogManager.dialog_ch2[index].script_role;
+            speaker.text = dialog.dialog_ch2[index].script_role;
             index--;
             continueButton.SetActive(true);
         }

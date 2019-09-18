@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Proyecto26;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public class User
@@ -19,6 +21,8 @@ public class UserManager : MonoBehaviour
 {
     public static UserManager Instance { set; get; }
     public User user;
+    //public GameObject panel;
+    //public Text inputName;
 
     private void Awake()
     {
@@ -41,14 +45,20 @@ public class UserManager : MonoBehaviour
         if (PlayerPrefs.HasKey("save"))
         {
             user = Helper.Desrialize<User>(PlayerPrefs.GetString("save"));
+            SceneManager.LoadScene("MainMenu");
 
             Debug.Log("Load Complete!");
         }
         else
         {
-            user = new User();
-            Save();
+            New();
+
             Debug.Log("No user found, create new one!");
         }
+    }
+
+    public void New()
+    {
+        //user.Name = inputName.text;
     }
 }

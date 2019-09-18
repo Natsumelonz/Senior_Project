@@ -54,7 +54,7 @@ public class MatchingManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(RadWord(0f, level));
-        Manager = GameObject.Find("Preload").gameObject;
+        Manager = GameObject.Find("GameData").gameObject;
         uiObject.LevelText.text = level.ToString();
 
         uiObject.summaryCanvas.SetActive(false);
@@ -97,10 +97,10 @@ public class MatchingManager : MonoBehaviour
             while (alphabetListJP.Count < 12)
             {
                 _wordIndex = Random.Range(0, 46);
-                if (!alphabetListJP.Contains(AlpabetManager.alphabets[_wordIndex].alphabetname_JP))
+                if (!alphabetListJP.Contains(Manager.GetComponent<AlpabetManager>().alphabets[_wordIndex].alphabetname_JP))
                 {
-                    alphabetListJP.Add(AlpabetManager.alphabets[_wordIndex].alphabetname_JP);
-                    alphabetListRJ.Add(AlpabetManager.alphabets[_wordIndex].alphabetname_romanji);
+                    alphabetListJP.Add(Manager.GetComponent<AlpabetManager>().alphabets[_wordIndex].alphabetname_JP);
+                    alphabetListRJ.Add(Manager.GetComponent<AlpabetManager>().alphabets[_wordIndex].alphabetname_romanji);
                 }
             }
         }
@@ -109,10 +109,10 @@ public class MatchingManager : MonoBehaviour
             while (alphabetListJP.Count < 12)
             {
                 _wordIndex = Random.Range(46, 104);
-                if (!alphabetListJP.Contains(AlpabetManager.alphabets[_wordIndex].alphabetname_JP))
+                if (!alphabetListJP.Contains(Manager.GetComponent<AlpabetManager>().alphabets[_wordIndex].alphabetname_JP))
                 {
-                    alphabetListJP.Add(AlpabetManager.alphabets[_wordIndex].alphabetname_JP);
-                    alphabetListRJ.Add(AlpabetManager.alphabets[_wordIndex].alphabetname_romanji);
+                    alphabetListJP.Add(Manager.GetComponent<AlpabetManager>().alphabets[_wordIndex].alphabetname_JP);
+                    alphabetListRJ.Add(Manager.GetComponent<AlpabetManager>().alphabets[_wordIndex].alphabetname_romanji);
                 }
             }
         }
@@ -121,10 +121,10 @@ public class MatchingManager : MonoBehaviour
             while (alphabetListJP.Count < 12)
             {
                 _wordIndex = Random.Range(0, 104);
-                if (!alphabetListJP.Contains(AlpabetManager.alphabets[_wordIndex].alphabetname_JP))
+                if (!alphabetListJP.Contains(Manager.GetComponent<AlpabetManager>().alphabets[_wordIndex].alphabetname_JP))
                 {
-                    alphabetListJP.Add(AlpabetManager.alphabets[_wordIndex].alphabetname_JP);
-                    alphabetListRJ.Add(AlpabetManager.alphabets[_wordIndex].alphabetname_romanji);
+                    alphabetListJP.Add(Manager.GetComponent<AlpabetManager>().alphabets[_wordIndex].alphabetname_JP);
+                    alphabetListRJ.Add(Manager.GetComponent<AlpabetManager>().alphabets[_wordIndex].alphabetname_romanji);
                 }
             }
         }
