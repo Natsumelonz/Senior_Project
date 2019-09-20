@@ -46,7 +46,7 @@ public class MenuBehaviour : MonoBehaviour
                 SceneManager.LoadScene("Chapter");
                 break;
             case (4):
-                if (Manager.GetComponent<UserManager>().user.LastCh < 5)
+                if (Manager.GetComponent<UserManager>().user.LastCh < 4)
                 {
                     Panel.SetActive(true);
                 }
@@ -59,7 +59,7 @@ public class MenuBehaviour : MonoBehaviour
                 SceneManager.LoadScene("Chapter_1");
                 break;
             case (6):
-                if (Manager.GetComponent<UserManager>().user.LastCh < 2)
+                if (Manager.GetComponent<UserManager>().user.LastCh < 1)
                 {
                     Panel.SetActive(true);
                 }
@@ -69,7 +69,7 @@ public class MenuBehaviour : MonoBehaviour
                 }
                 break;
             case (7):
-                if (Manager.GetComponent<UserManager>().user.LastCh < 3)
+                if (Manager.GetComponent<UserManager>().user.LastCh < 2)
                 {
                     Panel.SetActive(true);
                 }
@@ -79,7 +79,7 @@ public class MenuBehaviour : MonoBehaviour
                 }
                 break;
             case (8):
-                if (Manager.GetComponent<UserManager>().user.LastCh < 4)
+                if (Manager.GetComponent<UserManager>().user.LastCh < 3)
                 {
                     Panel.SetActive(true);
                 }
@@ -89,7 +89,7 @@ public class MenuBehaviour : MonoBehaviour
                 }
                 break;
             case (9):
-                if (Manager.GetComponent<UserManager>().user.LastCh < 5)
+                if (Manager.GetComponent<UserManager>().user.LastCh < 4)
                 {
                     Panel.SetActive(true);
                 }
