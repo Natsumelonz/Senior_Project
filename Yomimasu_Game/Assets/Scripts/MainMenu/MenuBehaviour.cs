@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using Proyecto26;
+using UnityEngine.UI;
 
 public class MenuBehaviour : MonoBehaviour
 {
     private GameObject Manager;
     public GameObject Panel;
+    public Text playerName;
 
     void OnDisable()
     {
@@ -17,11 +19,7 @@ public class MenuBehaviour : MonoBehaviour
     private void Start()
     {
         Manager = GameObject.Find("GameData").gameObject;
-
-        //Manager.GetComponent<UserManager>().user.Name = "MildSadZ";
-        //Manager.GetComponent<UserManager>().Save();
-
-        //Debug.Log(Manager.GetComponent<UserManager>().user.Name);
+        playerName.text = Manager.GetComponent<UserManager>().user.Name;
     }
 
     public void ClosePanel()

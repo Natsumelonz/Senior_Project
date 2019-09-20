@@ -21,8 +21,8 @@ public class UserManager : MonoBehaviour
 {
     public static UserManager Instance { set; get; }
     public User user;
-    //public GameObject panel;
-    //public Text inputName;
+    public GameObject panel;
+    public Text inputName;
 
     private void Awake()
     {
@@ -35,9 +35,10 @@ public class UserManager : MonoBehaviour
 
     public void Save()
     {
-        PlayerPrefs.SetString("save", Helper.Serialize<User>(user));
+        PlayerPrefs.SetString("save", Helper.Serialize<User>(user));        
 
         Debug.Log("Save Complete!");
+        Load();
     }
 
     public void Load()
@@ -51,7 +52,7 @@ public class UserManager : MonoBehaviour
         }
         else
         {
-            New();
+            panel.SetActive(true);
 
             Debug.Log("No user found, create new one!");
         }
@@ -59,6 +60,8 @@ public class UserManager : MonoBehaviour
 
     public void New()
     {
-        //user.Name = inputName.text;
+        user.Name = inputName.text;
+
+        Debug.Log("Create new save name: " + user.Name);
     }
 }
