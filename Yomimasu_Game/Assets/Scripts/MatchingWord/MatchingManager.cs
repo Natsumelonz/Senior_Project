@@ -303,7 +303,7 @@ public class MatchingManager : MonoBehaviour
     public IEnumerator Next(float Time)
     {
         yield return new WaitForSeconds(Time);
-        level++; Debug.Log("Level: " + level);
+        level++; //Debug.Log("Level: " + level);
         SceneManager.LoadScene("GameMatching");
     }
 
