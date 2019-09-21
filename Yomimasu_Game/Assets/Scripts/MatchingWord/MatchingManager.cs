@@ -366,6 +366,7 @@ public class MatchingManager : MonoBehaviour
                 }
 
                 Manager.GetComponent<UserManager>().Save();
+                HighScores.AddNewHighscore1(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score1);
                 SceneManager.LoadScene("MainMenu");
                 break;
             case (1):
@@ -377,6 +378,7 @@ public class MatchingManager : MonoBehaviour
                 }
 
                 Manager.GetComponent<UserManager>().Save();
+                HighScores.AddNewHighscore1(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score1);
                 SceneManager.LoadScene("GameMatching");
                 break;
         }

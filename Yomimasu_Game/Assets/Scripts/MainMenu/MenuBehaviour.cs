@@ -32,6 +32,7 @@ public class MenuBehaviour : MonoBehaviour
         switch (i)
         {
             default:
+                Application.Quit();
                 break;
             case (0):
                 SceneManager.LoadScene("Leaderboard");
@@ -100,6 +101,9 @@ public class MenuBehaviour : MonoBehaviour
                 break;
             case (10):
                 SceneManager.LoadScene("MainMenu");
+                break;
+            case (11):
+                SceneManager.LoadScene("GameMenu");
                 break;
         }
     }

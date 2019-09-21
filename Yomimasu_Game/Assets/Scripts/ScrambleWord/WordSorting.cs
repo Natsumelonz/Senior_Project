@@ -389,6 +389,7 @@ public class WordSorting : MonoBehaviour
                 }
 
                 Manager.GetComponent<UserManager>().Save();
+                HighScores.AddNewHighscore2(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score2);
                 SceneManager.LoadScene("MainMenu");
                 break;
             case (1):
@@ -398,6 +399,7 @@ public class WordSorting : MonoBehaviour
                 }
 
                 Manager.GetComponent<UserManager>().Save();
+                HighScores.AddNewHighscore2(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score2);
                 SceneManager.LoadScene("SortingWord");
                 break;
         }
