@@ -398,6 +398,7 @@ public class Chapter_1 : MonoBehaviour
         {
             CharObjectOfChapter clone = Instantiate(prefab.gameObject).GetComponent<CharObjectOfChapter>();
             clone.transform.SetParent(container);
+            clone.transform.localScale = new Vector3(1, 1, 1);
             charObjectOfChapter.Add(clone.Init(s));
         }
     }

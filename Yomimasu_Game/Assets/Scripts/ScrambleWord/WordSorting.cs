@@ -240,6 +240,7 @@ public class WordSorting : MonoBehaviour
 
             //เป็นการเอาbutton ที่clone มาไปเก็บอยู่ใน container
             clone.transform.SetParent(container);
+            clone.transform.localScale = new Vector3(1, 1, 1);
 
             charObjects.Add(clone.Init(c));
         }

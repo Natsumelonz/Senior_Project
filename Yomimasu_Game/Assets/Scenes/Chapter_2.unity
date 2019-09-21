@@ -949,8 +949,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -158.8999, y: 10.900024}
-  m_SizeDelta: {x: 149.8, y: 145.7}
+  m_AnchoredPosition: {x: -187, y: 20}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &667143668
 MonoBehaviour:
@@ -1300,7 +1300,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 12.599976, y: -0.39990234}
-  m_SizeDelta: {x: 429.17, y: 99.49}
+  m_SizeDelta: {x: 320, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &925921833
 MonoBehaviour:
@@ -1994,6 +1994,7 @@ MonoBehaviour:
   event_text: {fileID: 1334004794}
   speaker: {fileID: 1958223443}
   textDisplays: {fileID: 633890871}
+  dialog: {fileID: 0}
   ChapterCanvas: {fileID: 267061668}
   prefab: {fileID: 925921833}
   container: {fileID: 667143667}
