@@ -15,6 +15,8 @@ public class User
     public int Score2;
     public int[] Post = new int[10];
     public int[] Pre = new int[10];
+    public bool[] PassPre = new bool[10];
+    public bool[] PassPost = new bool[10];
 }
 
 public class UserManager : MonoBehaviour

@@ -57,7 +57,15 @@ public class MenuBehaviour : MonoBehaviour
                 }
                 break;
             case (5):
-                SceneManager.LoadScene("Chapter_1");
+                if (!Manager.GetComponent<UserManager>().user.PassPre[0])
+                {
+                    TestCh1.pre = true;
+                    SceneManager.LoadScene("TestCh1");
+                }
+                else
+                {
+                    SceneManager.LoadScene("Chapter_1");
+                }
                 break;
             case (6):
                 if (Manager.GetComponent<UserManager>().user.LastCh < 1)

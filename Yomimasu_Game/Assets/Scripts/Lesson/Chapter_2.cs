@@ -24,7 +24,7 @@ public class Chapter_2 : MonoBehaviour
     public Text event_text;
     public Text speaker;
     public Text textDisplays;
-    public DialogManager dialog;
+    public ChapterManager dialog;
 
     public GameObject ChapterCanvas;
     public CharObjectOfChapter prefab;
@@ -44,7 +44,7 @@ public class Chapter_2 : MonoBehaviour
     void Start()
     {
         Manager = GameObject.Find("GameData").gameObject;
-        dialog = Manager.GetComponent<DialogManager>();
+        dialog = Manager.GetComponent<ChapterManager>();
         //เรียกใช้แสดงประโยค
         foreach (RetrieveDialog item in dialog.dialog_ch2)
         {

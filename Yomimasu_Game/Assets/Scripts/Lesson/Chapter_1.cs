@@ -24,7 +24,7 @@ public class Chapter_1 : MonoBehaviour
     public Text event_text;
     public Text speaker;
     public Text textDisplays;
-    public DialogManager dialog;
+    public ChapterManager dialog;
 
     public GameObject ChapterCanvas;
     public CharObjectOfChapter prefab;
@@ -44,7 +44,7 @@ public class Chapter_1 : MonoBehaviour
     void Start()
     {
         Manager = GameObject.Find("GameData").gameObject;
-        dialog = Manager.GetComponent<DialogManager>();
+        dialog = Manager.GetComponent<ChapterManager>();
         //เรียกใช้แสดงประโยค
         foreach (RetrieveDialog item in dialog.dialog_ch1)
         {
@@ -109,8 +109,15 @@ public class Chapter_1 : MonoBehaviour
                 Manager.GetComponent<UserManager>().Save();
             }
 
-            yield return new WaitForSeconds(1);
-            SceneManager.LoadScene("Chapter");
+            yield return new WaitForSeconds(3);
+            if (!Manager.GetComponent<UserManager>().user.PassPost[0])
+            {
+                SceneManager.LoadScene("TestCh1");
+            }
+            else
+            {
+                SceneManager.LoadScene("Chapter");
+            }
         }
     }
 

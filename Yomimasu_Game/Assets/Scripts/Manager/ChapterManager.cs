@@ -31,9 +31,9 @@ public class RetrieveQuestion
     }
 }
 
-public class DialogManager : MonoBehaviour
+public class ChapterManager : MonoBehaviour
 {
-    public static DialogManager Instance { set; get; }
+    public static ChapterManager Instance { set; get; }
     public List<RetrieveDialog> dialog_ch1 = new List<RetrieveDialog>();
     public List<RetrieveDialog> dialog_ch2 = new List<RetrieveDialog>();
     public List<RetrieveQuestion> question_ch1 = new List<RetrieveQuestion>();
