@@ -402,6 +402,16 @@ public class WordSorting : MonoBehaviour
                 HighScores.AddNewHighscore2(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score2);
                 SceneManager.LoadScene("SortingWord");
                 break;
+            case (2):
+                if (Manager.GetComponent<UserManager>().user.Score2 < totalScore)
+                {
+                    Manager.GetComponent<UserManager>().user.Score2 = (int)totalScore;
+                }
+
+                Manager.GetComponent<UserManager>().Save();
+                HighScores.AddNewHighscore2(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score2);
+                SceneManager.LoadScene("GameMenu");
+                break;
         }
     }
 }

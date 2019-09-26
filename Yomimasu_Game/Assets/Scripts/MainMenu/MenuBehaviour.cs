@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class MenuBehaviour : MonoBehaviour
 {
     private GameObject Manager;
+    private GameObject Audio;
     public GameObject Panel;
     public Text playerName;
 
@@ -19,7 +20,20 @@ public class MenuBehaviour : MonoBehaviour
     private void Start()
     {
         Manager = GameObject.Find("GameData").gameObject;
+        Audio = GameObject.Find("AudioManager").gameObject;
         playerName.text = Manager.GetComponent<UserManager>().user.Name;
+    }
+
+    public void Mute()
+    {
+        if (Audio.GetComponent<AudioSource>().mute)
+        {
+            Audio.GetComponent<AudioSource>().mute = false;
+        }
+        else
+        {
+            Audio.GetComponent<AudioSource>().mute = true;
+        }        
     }
 
     public void ClosePanel()

@@ -27,6 +27,9 @@ public class UIObject
 [System.Serializable]
 public class MatchingManager : MonoBehaviour
 {
+    public AudioClip effectClip;
+    public AudioSource effectAudio;
+
     [Header("UIObject")]
     public UIObject uiObject = new UIObject();
 
@@ -53,6 +56,7 @@ public class MatchingManager : MonoBehaviour
 
     private void Start()
     {
+        effectAudio.clip = effectClip;
         StartCoroutine(RadWord(0f, level));
         Manager = GameObject.Find("GameData").gameObject;
         uiObject.LevelText.text = level.ToString();
@@ -331,7 +335,9 @@ public class MatchingManager : MonoBehaviour
     {
         uiObject.ScorePop.text = message;
         uiObject.ScorePop.enabled = true;
+        effectAudio.Play();
         yield return new WaitForSeconds(delay);
+        effectAudio.Stop();
         uiObject.ScorePop.enabled = false;
     }
 
@@ -380,6 +386,18 @@ public class MatchingManager : MonoBehaviour
                 Manager.GetComponent<UserManager>().Save();
                 HighScores.AddNewHighscore1(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score1);
                 SceneManager.LoadScene("GameMatching");
+                break;
+            case (2):
+                level = 1;
+
+                if (Manager.GetComponent<UserManager>().user.Score1 < _point)
+                {
+                    Manager.GetComponent<UserManager>().user.Score1 = _point;
+                }
+
+                Manager.GetComponent<UserManager>().Save();
+                HighScores.AddNewHighscore1(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score1);
+                SceneManager.LoadScene("GameMenu");
                 break;
         }
     }
