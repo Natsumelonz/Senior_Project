@@ -53,12 +53,16 @@ public class MatchingManager : MonoBehaviour
     private float _pointShow;
     private int disabledHash = Animator.StringToHash("Disabled");
     private GameObject Manager;
+    private GameObject Audio;
+    private GameObject Effect;
 
     private void Start()
     {
+        Manager = GameObject.Find("GameData").gameObject;
+        Audio = GameObject.Find("AudioManager").gameObject;
+        Effect = GameObject.Find("EffectManager").gameObject;
         effectAudio.clip = effectClip;
         StartCoroutine(RadWord(0f, level));
-        Manager = GameObject.Find("GameData").gameObject;
         uiObject.LevelText.text = level.ToString();
 
         uiObject.summaryCanvas.SetActive(false);
@@ -337,12 +341,12 @@ public class MatchingManager : MonoBehaviour
         uiObject.ScorePop.enabled = true;
         effectAudio.Play();
         yield return new WaitForSeconds(delay);
-        effectAudio.Stop();
         uiObject.ScorePop.enabled = false;
     }
 
     public void PauseButton()
     {
+        Effect.GetComponent<AudioSource>().Play();
         if (Time.timeScale == 1)
         {
             Time.timeScale = 0;
@@ -373,6 +377,7 @@ public class MatchingManager : MonoBehaviour
 
                 Manager.GetComponent<UserManager>().Save();
                 HighScores.AddNewHighscore1(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score1);
+                Effect.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("MainMenu");
                 break;
             case (1):
@@ -385,6 +390,7 @@ public class MatchingManager : MonoBehaviour
 
                 Manager.GetComponent<UserManager>().Save();
                 HighScores.AddNewHighscore1(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score1);
+                Effect.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("GameMatching");
                 break;
             case (2):
@@ -397,6 +403,8 @@ public class MatchingManager : MonoBehaviour
 
                 Manager.GetComponent<UserManager>().Save();
                 HighScores.AddNewHighscore1(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score1);
+                Effect.GetComponent<AudioSource>().Play();
+                Audio.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("GameMenu");
                 break;
         }

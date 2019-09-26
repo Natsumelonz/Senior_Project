@@ -5,8 +5,8 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { set; get; }
-    public AudioClip audioClip;
-    public AudioSource mainMenuAudio;
+    public AudioClip BGM;
+    public AudioSource BGMSource;
 
     private void Awake()
     {
@@ -16,12 +16,8 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        mainMenuAudio.clip = audioClip;
-        mainMenuAudio.Play();
-    }
-
-    void Update()
-    {
-        
+        BGMSource.clip = BGM;
+        BGMSource.Play();
+        BGMSource.loop = true;
     }
 }

@@ -18,7 +18,6 @@ public class TestCh1 : MonoBehaviour
     public List<RetrieveTest> test = new List<RetrieveTest>();
     public List<AnswerChoice> answerChoice = new List<AnswerChoice>();
     public static TestCh1 main;
-    public static bool pre;
 
     private void Start()
     {
@@ -31,7 +30,7 @@ public class TestCh1 : MonoBehaviour
 
     private void Update()
     {
-        if (pre)
+        if (!Manager.GetComponent<UserManager>().user.PassPre[0])
         {
             score.text = "Your score: " + Manager.GetComponent<UserManager>().user.Pre[0];
         }
@@ -58,7 +57,7 @@ public class TestCh1 : MonoBehaviour
         }
         else
         {
-            if (pre)
+            if (!Manager.GetComponent<UserManager>().user.PassPre[0])
             {
                 Manager.GetComponent<UserManager>().user.PassPre[0] = true;
                 Manager.GetComponent<UserManager>().Save();
@@ -77,7 +76,7 @@ public class TestCh1 : MonoBehaviour
     {
         if (ac.index == test[tIndex].test_answer)
         {
-            if (pre)
+            if (!Manager.GetComponent<UserManager>().user.PassPre[0])
             {
                 Manager.GetComponent<UserManager>().user.Pre[0] += 1;
             }

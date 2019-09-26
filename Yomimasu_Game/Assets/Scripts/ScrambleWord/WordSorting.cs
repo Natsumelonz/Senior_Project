@@ -100,6 +100,8 @@ public class WordSorting : MonoBehaviour
 
     public int currentWord;
     public List<int> numIndexList = new List<int>();
+    public AudioClip effectClip;
+    public AudioSource effectAudio;
 
     //อันนี้กำหนดให้เป็นคลาสหลัก
     public static WordSorting main;
@@ -112,7 +114,9 @@ public class WordSorting : MonoBehaviour
     private bool _initRAD = false;
 
     private GameObject Manager;
+    private GameObject Audio;
     private WordManager wordManager;
+    private GameObject Effect;
 
     void Awake()
     {
@@ -123,8 +127,11 @@ public class WordSorting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        effectAudio.clip = effectClip;
         StartCoroutine(RadWord(0f));
         Manager = GameObject.Find("GameData").gameObject;
+        Audio = GameObject.Find("AudioManager").gameObject;
+        Effect = GameObject.Find("EffectManager").gameObject;
         wordManager = Manager.GetComponent<WordManager>();
 
         while (numIndexList.Count != 20)
@@ -324,6 +331,7 @@ public class WordSorting : MonoBehaviour
             //เอาคะแนนมาใส่ใน text ได้เลย เก็บคะแนนในแต่ละคำ
             result.totalScore += Mathf.RoundToInt(timeLimit);
             result.textTotalScore.text = result.totalScore.ToString();
+            effectAudio.Play();
 
             ShowSorting(currentWord);
 
@@ -362,6 +370,7 @@ public class WordSorting : MonoBehaviour
     
     public void PauseButton()
     {
+        Effect.GetComponent<AudioSource>().Play();
         if (Time.timeScale == 1)
         {
             Time.timeScale = 0;
@@ -390,6 +399,8 @@ public class WordSorting : MonoBehaviour
 
                 Manager.GetComponent<UserManager>().Save();
                 HighScores.AddNewHighscore2(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score2);
+                Effect.GetComponent<AudioSource>().Play();
+                Audio.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("MainMenu");
                 break;
             case (1):
@@ -400,6 +411,7 @@ public class WordSorting : MonoBehaviour
 
                 Manager.GetComponent<UserManager>().Save();
                 HighScores.AddNewHighscore2(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score2);
+                Effect.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("SortingWord");
                 break;
             case (2):
@@ -410,6 +422,8 @@ public class WordSorting : MonoBehaviour
 
                 Manager.GetComponent<UserManager>().Save();
                 HighScores.AddNewHighscore2(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score2);
+                Effect.GetComponent<AudioSource>().Play();
+                Audio.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("GameMenu");
                 break;
         }
