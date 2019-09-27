@@ -24,6 +24,8 @@ public class MenuBehaviour : MonoBehaviour
         Audio = GameObject.Find("AudioManager").gameObject;
         Effect = GameObject.Find("EffectManager").gameObject;
         playerName.text = Manager.GetComponent<UserManager>().user.Name;
+
+        Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;
     }
 
     public void Mute()
@@ -57,16 +59,21 @@ public class MenuBehaviour : MonoBehaviour
             case (2):
                 Effect.GetComponent<AudioSource>().Play();
                 Audio.GetComponent<AudioSource>().Stop();
+
+                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMatching;
+                Audio.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("GameMatching");
                 break;
             case (3):
                 Effect.GetComponent<AudioSource>().Play();
                 Audio.GetComponent<AudioSource>().Stop();
+
+                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMScramble;
+                Audio.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("SortingWord");
                 break;            
             case (4):
                 Effect.GetComponent<AudioSource>().Play();
-                Audio.GetComponent<AudioSource>().Stop();
                 SceneManager.LoadScene("Chapter");
                 break;          
             case (5):

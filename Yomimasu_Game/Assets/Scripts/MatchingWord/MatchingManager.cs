@@ -62,6 +62,7 @@ public class MatchingManager : MonoBehaviour
         Audio = GameObject.Find("AudioManager").gameObject;
         Effect = GameObject.Find("EffectManager").gameObject;
         effectAudio.clip = effectClip;
+
         StartCoroutine(RadWord(0f, level));
         uiObject.LevelText.text = level.ToString();
 
@@ -363,47 +364,61 @@ public class MatchingManager : MonoBehaviour
     public void PauseMenu(int i)
     {
         Time.timeScale = 1;
+
+        void SaveGame()
+        {
+            level = 1;
+
+            if (Manager.GetComponent<UserManager>().user.Score1 < _point)
+            {
+                Manager.GetComponent<UserManager>().user.Score1 = _point;
+            }
+
+            if (Manager.GetComponent<UserManager>().user.LastScore1.Count < 10)
+            {
+                Manager.GetComponent<UserManager>().user.LastScore1.Add(_point);
+            }
+            else
+            {
+                int y;
+                for (int x = 0; x < Manager.GetComponent<UserManager>().user.LastScore1.Count; x++)
+                {
+                    if (x < 9)
+                    {
+                        Manager.GetComponent<UserManager>().user.LastScore1[x] = Manager.GetComponent<UserManager>().user.LastScore1[x + 1];
+                    }
+                    else
+                    {
+                        Manager.GetComponent<UserManager>().user.LastScore1[x] = _point;
+                    }                    
+                }
+            }
+
+             Manager.GetComponent<UserManager>().Save();
+            HighScores.AddNewHighscore1(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score1);
+            Effect.GetComponent<AudioSource>().Play();
+        }
+
         switch (i)
         {
             default:
                 break;
             case (0):
-                level = 1;
+                SaveGame();
 
-                if (Manager.GetComponent<UserManager>().user.Score1 < _point)
-                {
-                    Manager.GetComponent<UserManager>().user.Score1 = _point;
-                }
-
-                Manager.GetComponent<UserManager>().Save();
-                HighScores.AddNewHighscore1(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score1);
-                Effect.GetComponent<AudioSource>().Play();
+                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;
+                Audio.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("MainMenu");
                 break;
             case (1):
-                level = 1;
+                SaveGame();
 
-                if (Manager.GetComponent<UserManager>().user.Score1 < _point)
-                {
-                    Manager.GetComponent<UserManager>().user.Score1 = _point;
-                }
-
-                Manager.GetComponent<UserManager>().Save();
-                HighScores.AddNewHighscore1(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score1);
-                Effect.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("GameMatching");
                 break;
             case (2):
-                level = 1;
+                SaveGame();
 
-                if (Manager.GetComponent<UserManager>().user.Score1 < _point)
-                {
-                    Manager.GetComponent<UserManager>().user.Score1 = _point;
-                }
-
-                Manager.GetComponent<UserManager>().Save();
-                HighScores.AddNewHighscore1(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score1);
-                Effect.GetComponent<AudioSource>().Play();
+                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;
                 Audio.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("GameMenu");
                 break;

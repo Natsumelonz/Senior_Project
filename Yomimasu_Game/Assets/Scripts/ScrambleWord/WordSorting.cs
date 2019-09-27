@@ -127,11 +127,12 @@ public class WordSorting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        effectAudio.clip = effectClip;
         StartCoroutine(RadWord(0f));
         Manager = GameObject.Find("GameData").gameObject;
         Audio = GameObject.Find("AudioManager").gameObject;
         Effect = GameObject.Find("EffectManager").gameObject;
+        effectAudio.clip = effectClip;
+
         wordManager = Manager.GetComponent<WordManager>();
 
         while (numIndexList.Count != 20)
@@ -387,42 +388,58 @@ public class WordSorting : MonoBehaviour
     public void PauseMenu(int i)
     {
         Time.timeScale = 1;
+
+        void SaveGame()
+        {
+            if (Manager.GetComponent<UserManager>().user.Score2 < (totalScore))
+            {
+                Manager.GetComponent<UserManager>().user.Score2 = (int)totalScore;
+            }
+            if (Manager.GetComponent<UserManager>().user.LastScore2.Count < 10)
+            {
+                Manager.GetComponent<UserManager>().user.LastScore2.Add((int)totalScore);
+            }
+            else
+            {
+                int y;
+                for (int x = 0; x < Manager.GetComponent<UserManager>().user.LastScore2.Count; x++)
+                {
+                    if (x < 9)
+                    {
+                        Manager.GetComponent<UserManager>().user.LastScore2[x] = Manager.GetComponent<UserManager>().user.LastScore2[x + 1];
+                    }
+                    else
+                    {
+                        Manager.GetComponent<UserManager>().user.LastScore2[x] = (int)totalScore;
+                    }
+                }
+            }
+
+            Manager.GetComponent<UserManager>().Save();
+            HighScores.AddNewHighscore2(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score2);
+            Effect.GetComponent<AudioSource>().Play();
+        }
+
         switch (i)
         {
             default:
                 break;
             case (0):
-                if (Manager.GetComponent<UserManager>().user.Score2 < totalScore)
-                {
-                    Manager.GetComponent<UserManager>().user.Score2 = (int)totalScore;
-                }
+                SaveGame();
 
-                Manager.GetComponent<UserManager>().Save();
-                HighScores.AddNewHighscore2(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score2);
-                Effect.GetComponent<AudioSource>().Play();
+                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;
                 Audio.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("MainMenu");
                 break;
             case (1):
-                if (Manager.GetComponent<UserManager>().user.Score2 < totalScore)
-                {
-                    Manager.GetComponent<UserManager>().user.Score2 = (int)totalScore;
-                }
+                SaveGame();
 
-                Manager.GetComponent<UserManager>().Save();
-                HighScores.AddNewHighscore2(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score2);
-                Effect.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("SortingWord");
                 break;
             case (2):
-                if (Manager.GetComponent<UserManager>().user.Score2 < totalScore)
-                {
-                    Manager.GetComponent<UserManager>().user.Score2 = (int)totalScore;
-                }
+                SaveGame();
 
-                Manager.GetComponent<UserManager>().Save();
-                HighScores.AddNewHighscore2(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score2);
-                Effect.GetComponent<AudioSource>().Play();
+                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;
                 Audio.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("GameMenu");
                 break;

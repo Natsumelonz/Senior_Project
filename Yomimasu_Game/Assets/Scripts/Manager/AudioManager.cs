@@ -5,7 +5,12 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { set; get; }
-    public AudioClip BGM;
+    public AudioClip BGMMainMenu;
+    public AudioClip BGMChapterSelect;
+    public AudioClip BGMMatching;
+    public AudioClip BGMScramble;
+    public AudioClip BGMCh1;
+    public AudioClip BGMCh2;
     public AudioSource BGMSource;
 
     private void Awake()
@@ -16,7 +21,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        BGMSource.clip = BGM;
+        BGMSource.clip = BGMMainMenu;
         BGMSource.Play();
         BGMSource.loop = true;
     }

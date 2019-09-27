@@ -17,6 +17,8 @@ public class User
     public int[] Pre = new int[10];
     public bool[] PassPre = new bool[10];
     public bool[] PassPost = new bool[10];
+    public List<int> LastScore1 = new List<int>();
+    public List<int> LastScore2 = new List<int>();
 }
 
 public class UserManager : MonoBehaviour

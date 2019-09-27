@@ -5,7 +5,7 @@ using UnityEngine;
 public class EffectManager : MonoBehaviour
 {    public static EffectManager Instance { set; get; }
     public AudioClip Click;
-    public AudioSource ClickSource;
+    public AudioSource EffectSource;
 
     private void Awake()
     {
@@ -15,6 +15,6 @@ public class EffectManager : MonoBehaviour
 
     void Start()
     {
-        ClickSource.clip = Click;
+        EffectSource.clip = Click;
     }
 }

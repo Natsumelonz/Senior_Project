@@ -58,6 +58,8 @@ public class InfoManager : MonoBehaviour
         Manager.GetComponent<UserManager>().user.Post = new int[10];
         Manager.GetComponent<UserManager>().user.PassPre = new bool[10];
         Manager.GetComponent<UserManager>().user.PassPost = new bool[10];
+        Manager.GetComponent<UserManager>().user.LastScore1 = new List<int>();
+        Manager.GetComponent<UserManager>().user.LastScore2 = new List<int>();
         Manager.GetComponent<UserManager>().Save();
         Manager.GetComponent<UserManager>().Load();
 

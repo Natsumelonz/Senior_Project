@@ -20,10 +20,14 @@ public class ChapterBehaviour : MonoBehaviour
         Manager = GameObject.Find("GameData").gameObject;
         Audio = GameObject.Find("AudioManager").gameObject;
         Effect = GameObject.Find("EffectManager").gameObject;
+
+        Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMChapterSelect;
+        Audio.GetComponent<AudioSource>().Play();
     }
 
     public void ClosePanel()
     {
+        Effect.GetComponent<AudioSource>().Play();
         Panel.SetActive(false);
     }
 
@@ -33,11 +37,14 @@ public class ChapterBehaviour : MonoBehaviour
         {
             default:
                 Effect.GetComponent<AudioSource>().Play();
+                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;
                 Audio.GetComponent<AudioSource>().Play();
+
                 SceneManager.LoadScene("MainMenu");
                 break;
             case (0):
                 Effect.GetComponent<AudioSource>().Play();
+
                 if (Manager.GetComponent<UserManager>().user.LastCh < 4)
                 {
                     Panel.SetActive(true);
@@ -49,6 +56,7 @@ public class ChapterBehaviour : MonoBehaviour
                 break;
             case (1):
                 Effect.GetComponent<AudioSource>().Play();
+
                 if (!Manager.GetComponent<UserManager>().user.PassPre[0])
                 {
                     SceneManager.LoadScene("TestCh1");
@@ -60,6 +68,7 @@ public class ChapterBehaviour : MonoBehaviour
                 break;
             case (2):
                 Effect.GetComponent<AudioSource>().Play();
+
                 if (Manager.GetComponent<UserManager>().user.LastCh < 1)
                 {
                     Panel.SetActive(true);
@@ -71,6 +80,7 @@ public class ChapterBehaviour : MonoBehaviour
                 break;
             case (3):
                 Effect.GetComponent<AudioSource>().Play();
+
                 if (Manager.GetComponent<UserManager>().user.LastCh < 2)
                 {
                     Panel.SetActive(true);
@@ -82,6 +92,7 @@ public class ChapterBehaviour : MonoBehaviour
                 break;
             case (4):
                 Effect.GetComponent<AudioSource>().Play();
+
                 if (Manager.GetComponent<UserManager>().user.LastCh < 3)
                 {
                     Panel.SetActive(true);
@@ -93,6 +104,7 @@ public class ChapterBehaviour : MonoBehaviour
                 break;
             case (5):
                 Effect.GetComponent<AudioSource>().Play();
+
                 if (Manager.GetComponent<UserManager>().user.LastCh < 4)
                 {
                     Panel.SetActive(true);

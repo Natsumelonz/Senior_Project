@@ -3,7 +3,14 @@ guid: b59f7aeae5747f3488b72f19cfba63ab
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - BGMMainMenu: {instanceID: 0}
+  - BGMChapterSelect: {instanceID: 0}
+  - BGMMatching: {instanceID: 0}
+  - BGMScramble: {instanceID: 0}
+  - BGMCh1: {instanceID: 0}
+  - BGMCh2: {instanceID: 0}
+  - BGMSource: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
