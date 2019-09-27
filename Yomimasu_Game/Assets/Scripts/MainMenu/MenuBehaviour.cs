@@ -46,6 +46,7 @@ public class MenuBehaviour : MonoBehaviour
         {
             default:
                 Effect.GetComponent<AudioSource>().Play();
+                Manager.GetComponent<UserManager>().Save();
                 Application.Quit();
                 break;
             case (0):

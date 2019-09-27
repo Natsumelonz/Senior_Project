@@ -39,7 +39,9 @@ public class UserManager : MonoBehaviour
 
     public void Save()
     {
-        PlayerPrefs.SetString("save", Helper.Serialize<User>(user));        
+        PlayerPrefs.SetString("save", Helper.Serialize<User>(user));
+
+        RestClient.Put("https://it59-28yomimasu.firebaseio.com/User/" + user.Name + ".json", user);
 
         Debug.Log("Save Complete!");
         Load();
