@@ -10,6 +10,8 @@ using Proyecto26;
 public class Chapter_2 : MonoBehaviour
 {
     private GameObject Manager;
+    private GameObject Audio;
+    private GameObject Effect;
     public List<string> sentences = new List<string>();
     private int index;
     private int qindex;
@@ -40,10 +42,16 @@ public class Chapter_2 : MonoBehaviour
 
     public static Chapter_2 main;
 
+    public AudioClip correctClip;
+    public AudioClip wrongClip;
+    public AudioSource effectSource;
+
     // Start is called before the first frame update
     void Start()
     {
         Manager = GameObject.Find("GameData").gameObject;
+        Audio = GameObject.Find("AudioManager").gameObject;
+        Effect = GameObject.Find("EffectManager").gameObject;
         dialog = Manager.GetComponent<ChapterManager>();
         //เรียกใช้แสดงประโยค
         foreach (RetrieveDialog item in dialog.dialog_ch2)
@@ -109,7 +117,8 @@ public class Chapter_2 : MonoBehaviour
                 Manager.GetComponent<UserManager>().Save(); ;
             }
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(3);
+
             SceneManager.LoadScene("Chapter");
         }
     }
@@ -294,6 +303,7 @@ public class Chapter_2 : MonoBehaviour
             }
             event_image.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
 
+            effectSource.PlayOneShot(correctClip);
             textDisplays.text = "Very good!";
             event_text.text = "";
             speaker.text = dialog.dialog_ch2[index].script_role;
@@ -308,6 +318,7 @@ public class Chapter_2 : MonoBehaviour
             }
             event_image.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
 
+            effectSource.PlayOneShot(wrongClip);
             textDisplays.text = "Wrong! try again.";
             event_text.text = "";
             speaker.text = dialog.dialog_ch2[index].script_role;
@@ -318,6 +329,7 @@ public class Chapter_2 : MonoBehaviour
 
     public void PauseButton()
     {
+        Effect.GetComponent<AudioSource>().Play();
         if (Time.timeScale == 1)
         {
             Time.timeScale = 0;

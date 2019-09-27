@@ -30,6 +30,7 @@ public class MenuBehaviour : MonoBehaviour
 
     public void Mute()
     {
+        Effect.GetComponent<AudioSource>().Play();
         if (Audio.GetComponent<AudioSource>().mute)
         {
             Audio.GetComponent<AudioSource>().mute = false;

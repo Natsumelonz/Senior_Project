@@ -59,10 +59,14 @@ public class ChapterBehaviour : MonoBehaviour
 
                 if (!Manager.GetComponent<UserManager>().user.PassPre[0])
                 {
+                    Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh1;
+                    Audio.GetComponent<AudioSource>().Play();
                     SceneManager.LoadScene("TestCh1");
                 }
                 else
                 {
+                    Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh1;
+                    Audio.GetComponent<AudioSource>().Play();
                     SceneManager.LoadScene("Chapter_1");
                 }
                 break;
@@ -75,6 +79,8 @@ public class ChapterBehaviour : MonoBehaviour
                 }
                 else
                 {
+                    Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh2;
+                    Audio.GetComponent<AudioSource>().Play();
                     SceneManager.LoadScene("Chapter_2");
                 }
                 break;

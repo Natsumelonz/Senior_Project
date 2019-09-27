@@ -11,11 +11,14 @@ public class DisplayHighScores : MonoBehaviour
     public GameObject scoreS;
     HighScores highscoreManager;
     private GameObject Manager;
+    private GameObject Effect;
 
     // Start is called before the first frame update
     void Start()
     {
         Manager = GameObject.Find("GameData").gameObject;
+        Effect = GameObject.Find("EffectManager").gameObject;
+
         for (int i = 0; i < highscoreText1.Length; i++)
         {
             highscoreText1[i].text = i + 1 + ". Fetching...";
@@ -55,6 +58,7 @@ public class DisplayHighScores : MonoBehaviour
 
     public void SelectScore(int i)
     {
+        Effect.GetComponent<AudioSource>().Play();
         switch (i)
         {
             default:
