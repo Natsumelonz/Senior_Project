@@ -12,6 +12,7 @@ public class MenuBehaviour : MonoBehaviour
     private GameObject Effect;
 
     public Text playerName;
+    public GameObject quitPanel;
 
     void OnDisable()
     {
@@ -28,6 +29,14 @@ public class MenuBehaviour : MonoBehaviour
         Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     public void Mute()
     {
         Effect.GetComponent<AudioSource>().Play();
@@ -38,8 +47,8 @@ public class MenuBehaviour : MonoBehaviour
         else
         {
             Audio.GetComponent<AudioSource>().mute = true;
-        }        
-    }    
+        }
+    }
 
     public void TriggerMenuBehaviour(int i)
     {
@@ -48,6 +57,7 @@ public class MenuBehaviour : MonoBehaviour
             default:
                 Effect.GetComponent<AudioSource>().Play();
                 Manager.GetComponent<UserManager>().Save();
+
                 Application.Quit();
                 break;
             case (0):
@@ -73,11 +83,11 @@ public class MenuBehaviour : MonoBehaviour
                 Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMScramble;
                 Audio.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("SortingWord");
-                break;            
+                break;
             case (4):
                 Effect.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("Chapter");
-                break;          
+                break;
             case (5):
                 Effect.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("GameMenu");

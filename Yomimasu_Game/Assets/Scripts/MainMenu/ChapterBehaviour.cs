@@ -56,37 +56,35 @@ public class ChapterBehaviour : MonoBehaviour
                 break;
             case (1):
                 Effect.GetComponent<AudioSource>().Play();
+                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh1;
+                Audio.GetComponent<AudioSource>().Play();
+                ChapterScene.dialogThis = Manager.GetComponent<ChapterManager>().dialog_ch1;
+                ChapterScene.questionThis = Manager.GetComponent<ChapterManager>().question_ch1;
+                ChapterScene.tindex = 0;
 
                 if (!Manager.GetComponent<UserManager>().user.PassPre[0])
                 {
-                    Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh1;
-                    Audio.GetComponent<AudioSource>().Play();
                     SceneManager.LoadScene("TestCh1");
                 }
                 else
-                {
-                    Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh1;
-                    Audio.GetComponent<AudioSource>().Play();
-
-                    ChapterScene.dialogThis = Manager.GetComponent<ChapterManager>().dialog_ch1;
-                    ChapterScene.questionThis = Manager.GetComponent<ChapterManager>().question_ch1;
+                {                    
                     SceneManager.LoadScene("ChapterScene");
                 }
                 break;
             case (2):
                 Effect.GetComponent<AudioSource>().Play();
+                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh2;
+                Audio.GetComponent<AudioSource>().Play();
+                ChapterScene.dialogThis = Manager.GetComponent<ChapterManager>().dialog_ch2;
+                ChapterScene.questionThis = Manager.GetComponent<ChapterManager>().question_ch2;
+                ChapterScene.tindex = 1;
 
                 if (Manager.GetComponent<UserManager>().user.LastCh < 1)
                 {
                     Panel.SetActive(true);
                 }
                 else
-                {
-                    Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh2;
-                    Audio.GetComponent<AudioSource>().Play();
-
-                    ChapterScene.dialogThis = Manager.GetComponent<ChapterManager>().dialog_ch2;
-                    ChapterScene.questionThis = Manager.GetComponent<ChapterManager>().question_ch2;
+                {              
                     SceneManager.LoadScene("ChapterScene");
                 }
                 break;

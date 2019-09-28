@@ -61,7 +61,7 @@ public class TestCh1 : MonoBehaviour
             {
                 Manager.GetComponent<UserManager>().user.PassPre[0] = true;
                 Manager.GetComponent<UserManager>().Save();
-                SceneManager.LoadScene("Chapter_1");
+                SceneManager.LoadScene("ChapterScene");
             }
             else
             {

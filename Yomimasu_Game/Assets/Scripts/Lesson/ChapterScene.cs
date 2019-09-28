@@ -43,6 +43,7 @@ public class ChapterScene : MonoBehaviour
     public static ChapterScene main;
     public static List<RetrieveDialog> dialogThis;
     public static List<RetrieveQuestion> questionThis;
+    public static int tindex;
 
     public AudioClip correctClip;
     public AudioClip wrongClip;
@@ -115,7 +116,7 @@ public class ChapterScene : MonoBehaviour
                 Manager.GetComponent<UserManager>().Save();
             }
 
-            if (!Manager.GetComponent<UserManager>().user.PassPost[0])
+            if (!Manager.GetComponent<UserManager>().user.PassPost[tindex])
             {
                 SceneManager.LoadScene("TestCh1");
             }

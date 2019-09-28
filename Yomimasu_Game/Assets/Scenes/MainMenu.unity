@@ -1604,6 +1604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: {fileID: 1690650097}
+  quitPanel: {fileID: 0}
 --- !u!4 &1659978162
 Transform:
   m_ObjectHideFlags: 0
