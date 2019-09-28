@@ -109,9 +109,9 @@ public class HighScores : MonoBehaviour
             int score = int.Parse(entryInfo[1]);
             highscoresList1[i] = new Highscore(username, score);
 
-            print(highscoresList1[i].username + ": " + highscoresList1[i].score);
+            //print(highscoresList1[i].username + ": " + highscoresList1[i].score);
         }
-        print(highscoresList1.Length);
+        //print(highscoresList1.Length);
     }
     void FormatHighscores2(string textStream)
     {
@@ -124,9 +124,9 @@ public class HighScores : MonoBehaviour
             int score = int.Parse(entryInfo[1]);
             highscoresList2[i] = new Highscore(username, score);
 
-            print(highscoresList2[i].username + ": " + highscoresList2[i].score);
+            //print(highscoresList2[i].username + ": " + highscoresList2[i].score);
         }
-        print(highscoresList2.Length);
+        //print(highscoresList2.Length);
     }
 }
 

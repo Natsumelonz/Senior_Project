@@ -394,7 +394,7 @@ public class MatchingManager : MonoBehaviour
                 }
             }
 
-             Manager.GetComponent<UserManager>().Save();
+            Manager.GetComponent<UserManager>().Save();
             HighScores.AddNewHighscore1(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score1);
             Effect.GetComponent<AudioSource>().Play();
         }

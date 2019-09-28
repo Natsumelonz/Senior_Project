@@ -77,7 +77,7 @@ public class Chapter_1 : MonoBehaviour
         }
     }
 
-    public IEnumerator NextSentence()
+    public void NextSentence()
     {
         //ปิดปุ่มContinue
         continueButton.SetActive(false);
@@ -116,8 +116,6 @@ public class Chapter_1 : MonoBehaviour
                 Manager.GetComponent<UserManager>().user.LastCh = 1;
                 Manager.GetComponent<UserManager>().Save();
             }
-
-            yield return new WaitForSeconds(3);
 
             if (!Manager.GetComponent<UserManager>().user.PassPost[0])
             {
@@ -490,11 +488,6 @@ public class Chapter_1 : MonoBehaviour
     public void Skip()
     {
         index = Int32.Parse(skip.text) - 1;
-        StartCoroutine(NextSentence());
-    }
-
-    public void NextSentenceB()
-    {
-        StartCoroutine(NextSentence());
+        NextSentence();
     }
 }

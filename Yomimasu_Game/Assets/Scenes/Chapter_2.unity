@@ -2002,6 +2002,9 @@ MonoBehaviour:
   lerpSpeed: 5
   pauseTab: {fileID: 1536576699}
   charObjectOfChapter: []
+  correctClip: {fileID: 0}
+  wrongClip: {fileID: 0}
+  effectSource: {fileID: 0}
 --- !u!1 &1485685982
 GameObject:
   m_ObjectHideFlags: 0
@@ -2213,7 +2216,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1397406449}
-        m_MethodName: NextSentenceB
+        m_MethodName: NextSentence
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
