@@ -401,7 +401,6 @@ public class WordSorting : MonoBehaviour
             }
             else
             {
-                int y;
                 for (int x = 0; x < Manager.GetComponent<UserManager>().user.LastScore2.Count; x++)
                 {
                     if (x < 9)
@@ -416,7 +415,9 @@ public class WordSorting : MonoBehaviour
             }
 
             Manager.GetComponent<UserManager>().Save();
-            HighScores.AddNewHighscore2(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score2);
+            Manager.GetComponent<LeaderBoardManager>().userScore2.Name = Manager.GetComponent<UserManager>().user.Name;
+            Manager.GetComponent<LeaderBoardManager>().userScore2.Score = Manager.GetComponent<UserManager>().user.Score2;
+            Manager.GetComponent<LeaderBoardManager>().PutLeaderBoard2();
             Effect.GetComponent<AudioSource>().Play();
         }
 

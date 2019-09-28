@@ -18,7 +18,7 @@ public class InfoManager : MonoBehaviour
     public Text score2;
     public List<Text> preScore;
     public List<Text> postScore;
-    
+
 
     private void Start()
     {
@@ -33,12 +33,12 @@ public class InfoManager : MonoBehaviour
 
         for (int i = 0; i < Manager.GetComponent<UserManager>().user.Pre.Length; i++)
         {
-            preScore[i].text = "Ch." + (i+1) + ": " + Manager.GetComponent<UserManager>().user.Pre[i] + " pt.";
+            preScore[i].text = "Ch." + (i + 1) + ": " + Manager.GetComponent<UserManager>().user.Pre[i] + " pt.";
         }
 
         for (int i = 0; i < Manager.GetComponent<UserManager>().user.Post.Length; i++)
         {
-            postScore[i].text = "Ch." + (i+1) + ": " + Manager.GetComponent<UserManager>().user.Post[i] + " pt.";
+            postScore[i].text = "Ch." + (i + 1) + ": " + Manager.GetComponent<UserManager>().user.Post[i] + " pt.";
         }
     }
 

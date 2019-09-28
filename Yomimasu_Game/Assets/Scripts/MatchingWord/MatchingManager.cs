@@ -380,7 +380,6 @@ public class MatchingManager : MonoBehaviour
             }
             else
             {
-                int y;
                 for (int x = 0; x < Manager.GetComponent<UserManager>().user.LastScore1.Count; x++)
                 {
                     if (x < 9)
@@ -395,7 +394,9 @@ public class MatchingManager : MonoBehaviour
             }
 
             Manager.GetComponent<UserManager>().Save();
-            HighScores.AddNewHighscore1(Manager.GetComponent<UserManager>().user.Name, Manager.GetComponent<UserManager>().user.Score1);
+            Manager.GetComponent<LeaderBoardManager>().userScore1.Name = Manager.GetComponent<UserManager>().user.Name;
+            Manager.GetComponent<LeaderBoardManager>().userScore1.Score = Manager.GetComponent<UserManager>().user.Score1;
+            Manager.GetComponent<LeaderBoardManager>().PutLeaderBoard1();
             Effect.GetComponent<AudioSource>().Play();
         }
 
