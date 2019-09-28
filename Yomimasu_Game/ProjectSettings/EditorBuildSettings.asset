@@ -27,11 +27,8 @@ EditorBuildSettings:
     path: Assets/Scenes/SortingWord.unity
     guid: fbf25cc6efca60b4483c45b38ee433a2
   - enabled: 1
-    path: Assets/Scenes/Chapter_1.unity
+    path: Assets/Scenes/ChapterScene.unity
     guid: 4254cdb0634f1104b87b43696792d2dc
-  - enabled: 1
-    path: Assets/Scenes/Chapter_2.unity
-    guid: e0efe79255b3bac4a90a290aea416104
   - enabled: 1
     path: Assets/Scenes/TestCh1.unity
     guid: ae421d2e6f3c1134084115ebaa5b930e

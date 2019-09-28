@@ -24,18 +24,8 @@ public class CharObjectOfChapter : MonoBehaviour
         return this;
     }
 
-    public void Select(int i)
+    public void Select()
     {
-        switch (i)
-        {
-            default:
-                break;
-            case (1):
-                Chapter_1.main.CheckAnswer(this);
-                break;
-            case (2):
-                Chapter_2.main.CheckAnswer(this);
-                break;
-        }
+        ChapterScene.main.CheckAnswer(this);
     }
 }

@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class DisplayLeaderBoard : MonoBehaviour
 {
-    public Text[] leaderBoardText1;
-    public Text[] leaderBoardText2;
+    public Text[] leaderBoardNameText1;
+    public Text[] leaderBoardScoreText1;
+    public Text[] leaderBoardNameText2;
+    public Text[] leaderBoardScoreText2;
     public GameObject scoreM;
     public GameObject scoreC;
     private GameObject Manager;
@@ -22,17 +24,16 @@ public class DisplayLeaderBoard : MonoBehaviour
         l1 = Manager.GetComponent<LeaderBoardManager>().leaderBoard1;
         l2 = Manager.GetComponent<LeaderBoardManager>().leaderBoard2;
 
-        for (int i = 0; i < leaderBoardText1.Length; i++)
+        for (int i = 0; i < leaderBoardNameText1.Length; i++)
         {
-            leaderBoardText1[i].text = i + 1 + ". Fetching...";
+            leaderBoardNameText1[i].text = i + 1 + ". Fetching...";
+            leaderBoardScoreText1[i].text = i + 1 + ". Fetching...";
         }
-        for (int i = 0; i < leaderBoardText2.Length; i++)
+        for (int i = 0; i < leaderBoardNameText1.Length; i++)
         {
-            leaderBoardText2[i].text = i + 1 + ". Fetching...";
+            leaderBoardNameText1[i].text = i + 1 + ". Fetching...";
+            leaderBoardScoreText1[i].text = i + 1 + ". Fetching...";
         }
-
-        Manager.GetComponent<LeaderBoardManager>().PullLeaderBoard1();
-        Manager.GetComponent<LeaderBoardManager>().PullLeaderBoard2();
     }
 
     private void Update()
@@ -54,25 +55,26 @@ public class DisplayLeaderBoard : MonoBehaviour
     {
         for (int i = 0; i < l1.Count && i < 10; i++)
         {
-            leaderBoardText1[i].text = i + 1 + ".  ";
             if (l1.Count > 0)
             {
-                leaderBoardText1[i].text += l1[i].Name + " - " + l1[i].Score;
+                leaderBoardNameText1[i].text = l1[i].Name;
+                leaderBoardScoreText1[i].text = l1[i].Score.ToString();
             }
         }
 
         for (int i = 0; i < l2.Count && i < 10; i++)
         {
-            leaderBoardText2[i].text = i + 1 + ".  ";
             if (l2.Count > 0)
             {
-                leaderBoardText2[i].text += l2[i].Name + " - " + l2[i].Score;
+                leaderBoardNameText2[i].text = l2[i].Name;
+                leaderBoardScoreText2[i].text = l2[i].Score.ToString();
             }
         }
     }
 
     public void SwitchLeaderBoard(int i)
     {
+        Effect.GetComponent<AudioSource>().Play();
         switch (i)
         {
             default:
@@ -80,10 +82,12 @@ public class DisplayLeaderBoard : MonoBehaviour
             case (0):
                 scoreC.SetActive(false);
                 scoreM.SetActive(true);
+                Manager.GetComponent<LeaderBoardManager>().PullLeaderBoard1();
                 break;
             case (1):
                 scoreM.SetActive(false);
                 scoreC.SetActive(true);
+                Manager.GetComponent<LeaderBoardManager>().PullLeaderBoard2();
                 break;
         }
     }

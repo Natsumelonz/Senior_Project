@@ -67,7 +67,10 @@ public class ChapterBehaviour : MonoBehaviour
                 {
                     Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh1;
                     Audio.GetComponent<AudioSource>().Play();
-                    SceneManager.LoadScene("Chapter_1");
+
+                    ChapterScene.dialogThis = Manager.GetComponent<ChapterManager>().dialog_ch1;
+                    ChapterScene.questionThis = Manager.GetComponent<ChapterManager>().question_ch1;
+                    SceneManager.LoadScene("ChapterScene");
                 }
                 break;
             case (2):
@@ -81,7 +84,10 @@ public class ChapterBehaviour : MonoBehaviour
                 {
                     Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh2;
                     Audio.GetComponent<AudioSource>().Play();
-                    SceneManager.LoadScene("Chapter_2");
+
+                    ChapterScene.dialogThis = Manager.GetComponent<ChapterManager>().dialog_ch2;
+                    ChapterScene.questionThis = Manager.GetComponent<ChapterManager>().question_ch2;
+                    SceneManager.LoadScene("ChapterScene");
                 }
                 break;
             case (3):

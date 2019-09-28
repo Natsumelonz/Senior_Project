@@ -75,9 +75,19 @@ public class LeaderBoardManager : MonoBehaviour
         {
             leaderBoard1[index1] = userScore1;
         }
-        else if(!leaderBoard1.Contains(userScore1))
+        else if (!leaderBoard1.Contains(userScore1))
         {
             leaderBoard1.Add(userScore1);
+        }
+
+        leaderBoard1.Sort(delegate (LeaderBoard l1, LeaderBoard l2)
+        {
+            return l2.Score.CompareTo(l1.Score);
+        });
+
+        if (leaderBoard1.Count > 10)
+        {
+            leaderBoard1.RemoveAt(10);
         }
 
         for (int i = 0; i < leaderBoard1.Count; i++)
@@ -98,6 +108,16 @@ public class LeaderBoardManager : MonoBehaviour
         else if (!leaderBoard2.Contains(userScore2))
         {
             leaderBoard2.Add(userScore2);
+        }
+
+        leaderBoard2.Sort(delegate (LeaderBoard l1, LeaderBoard l2)
+        {
+            return l2.Score.CompareTo(l1.Score);
+        });
+
+        if (leaderBoard2.Count > 10)
+        {
+            leaderBoard2.RemoveAt(10);
         }
 
         for (int i = 0; i < leaderBoard2.Count; i++)

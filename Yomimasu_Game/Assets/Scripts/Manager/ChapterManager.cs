@@ -11,6 +11,9 @@ public class RetrieveDialog
     public string script_role;
     public string script_desc;
     public bool script_event;
+    public string script_event_text;
+    public string script_sprite_path;
+    public bool script_question;
 
     public override string ToString()
     {
