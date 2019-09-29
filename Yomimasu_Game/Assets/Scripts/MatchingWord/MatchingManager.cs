@@ -27,7 +27,8 @@ public class UIObject
 [System.Serializable]
 public class MatchingManager : MonoBehaviour
 {
-    public AudioClip effectClip;
+    public AudioClip correctClip;
+    public AudioClip wrongClip;
     public AudioSource effectAudio;
 
     [Header("UIObject")]
@@ -49,6 +50,7 @@ public class MatchingManager : MonoBehaviour
     //private bool _initDB = false;
     private bool _initRAD = false;
     private int _correctWord = 0;
+    private int _wrongWord = 0;
     private int _wordIndex = 0;
     private float _pointShow;
     private int disabledHash = Animator.StringToHash("Disabled");
@@ -61,7 +63,6 @@ public class MatchingManager : MonoBehaviour
         Manager = GameObject.Find("GameData").gameObject;
         Audio = GameObject.Find("AudioManager").gameObject;
         Effect = GameObject.Find("EffectManager").gameObject;
-        effectAudio.clip = effectClip;
 
         StartCoroutine(RadWord(0f, level));
         uiObject.LevelText.text = level.ToString();
@@ -88,7 +89,7 @@ public class MatchingManager : MonoBehaviour
             checkCards();
         }
 
-        if (_timeLimit <= 0)
+        if (_timeLimit <= 0 || _wrongWord == 5)
         {
             ShowSummary();
         }
@@ -247,6 +248,7 @@ public class MatchingManager : MonoBehaviour
             x = 2;
 
             _correctWord++;
+            _wrongWord = 0;
             _point += Mathf.RoundToInt(_timeLimit);
             //Debug.Log("Correct Word: " + _correctWord);
             if (_correctWord % 12 == 0)
@@ -260,6 +262,12 @@ public class MatchingManager : MonoBehaviour
                 uiObject.allButton[t[i]].GetComponent<Button>().interactable = false;
                 uiObject.allButton[t[i]].GetComponent<Animator>().SetTrigger(disabledHash);
             }
+        }
+        else
+        {
+            _wrongWord++;
+            effectAudio.clip = wrongClip;
+            effectAudio.Play();
         }
 
         for (int i = 0; i < t.Count; i++)
@@ -340,6 +348,7 @@ public class MatchingManager : MonoBehaviour
     {
         uiObject.ScorePop.text = message;
         uiObject.ScorePop.enabled = true;
+        effectAudio.clip = correctClip;
         effectAudio.Play();
         yield return new WaitForSeconds(delay);
         uiObject.ScorePop.enabled = false;
@@ -389,7 +398,7 @@ public class MatchingManager : MonoBehaviour
                     else
                     {
                         Manager.GetComponent<UserManager>().user.LastScore1[x] = _point;
-                    }                    
+                    }
                 }
             }
 

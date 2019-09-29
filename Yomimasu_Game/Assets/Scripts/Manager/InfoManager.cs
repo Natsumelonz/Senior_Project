@@ -11,6 +11,8 @@ public class InfoManager : MonoBehaviour
     private GameObject Manager;
     private GameObject Audio;
     private GameObject Effect;
+    private RectTransform graphContainer1;
+    private RectTransform graphContainer2;
 
     public Text userName;
     public Text lastCh;
@@ -18,7 +20,14 @@ public class InfoManager : MonoBehaviour
     public Text score2;
     public List<Text> preScore;
     public List<Text> postScore;
-
+    public GameObject gC1;
+    public GameObject gC2;
+    public GameObject gC1Panel;
+    public GameObject gC2Panel;
+    public Text high1;
+    public Text high2;
+    public Text gameName;
+    public Sprite circleSprite;
 
     private void Start()
     {
@@ -39,6 +48,88 @@ public class InfoManager : MonoBehaviour
         for (int i = 0; i < Manager.GetComponent<UserManager>().user.Post.Length; i++)
         {
             postScore[i].text = "Ch." + (i + 1) + ": " + Manager.GetComponent<UserManager>().user.Post[i] + " pt.";
+        }
+
+        graphContainer1 = gC1.GetComponent<RectTransform>();
+        graphContainer2 = gC2.GetComponent<RectTransform>();
+
+        ShowGraph(Manager.GetComponent<UserManager>().user.LastScore1, Manager.GetComponent<UserManager>().user.Score1, graphContainer1);
+        high1.text = Manager.GetComponent<UserManager>().user.Score1.ToString();
+
+        ShowGraph(Manager.GetComponent<UserManager>().user.LastScore2, Manager.GetComponent<UserManager>().user.Score2, graphContainer2);
+        high2.text = Manager.GetComponent<UserManager>().user.Score2.ToString();
+        gameName.text = "Matching Game";
+
+    }
+
+    public GameObject CreateCircle(Vector2 anchorP, RectTransform graphContainer)
+    {
+        GameObject gameObject = new GameObject("circle", typeof(Image));
+        gameObject.transform.SetParent(graphContainer, false);
+        gameObject.GetComponent<Image>().sprite = circleSprite;
+        RectTransform rectTransform = gameObject.GetComponent<RectTransform>();
+        rectTransform.anchoredPosition = anchorP;
+        rectTransform.sizeDelta = new Vector2(11, 11);
+        rectTransform.anchorMin = new Vector2(0, 0);
+        rectTransform.anchorMax = new Vector2(0, 0);
+        return gameObject;
+    }
+
+    public void ShowGraph(List<int> valueList, float yMaximum, RectTransform graphContainer)
+    {
+        float graphHeight = graphContainer.sizeDelta.y;
+        float graphWeight = graphContainer.sizeDelta.x;
+
+        GameObject lastCircleGameObject = null;
+        for (int i = 0; i < valueList.Count; i++)
+        {
+            float xPosition = 20f + i * (graphWeight / 9.5f);
+            float yPosition = (valueList[i] / yMaximum) * graphHeight;
+            GameObject circleGameObject = CreateCircle(new Vector2(xPosition, yPosition), graphContainer);
+            if (lastCircleGameObject != null)
+            {
+                CreateDotConnection(lastCircleGameObject.GetComponent<RectTransform>().anchoredPosition, circleGameObject.GetComponent<RectTransform>().anchoredPosition, graphContainer);
+            }
+            lastCircleGameObject = circleGameObject;
+        }
+    }
+
+    public void CreateDotConnection(Vector2 dotA, Vector2 dotB, RectTransform graphContainer)
+    {
+        GameObject game = new GameObject("dotConnection", typeof(Image));
+        game.transform.SetParent(graphContainer, false);
+        game.GetComponent<Image>().color = new Color(1, 1, 1, .5f);
+        RectTransform transform = game.GetComponent<RectTransform>();
+        Vector2 dir = (dotB - dotA).normalized;
+        float dis = Vector2.Distance(dotA, dotB);
+        transform.anchorMin = new Vector2(0, 0);
+        transform.anchorMax = new Vector2(0, 0);
+        transform.sizeDelta = new Vector2(dis, 3f);
+        transform.anchoredPosition = dotA + dir * dis * .5f;
+        transform.localEulerAngles = new Vector3(0, 0, GetAngleFromVectorFloat(dir));
+    }
+    public float GetAngleFromVectorFloat(Vector3 dir)
+    {
+        dir = dir.normalized;
+        float n = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        if (n < 0) n += 360;
+
+        return n;
+    }
+
+    public void Switch()
+    {
+        if (gC1Panel.activeSelf)
+        {
+            gC1Panel.SetActive(false);
+            gC2Panel.SetActive(true);
+            gameName.text = "Scramble Game";
+        }
+        else
+        {
+            gC2Panel.SetActive(false);
+            gC1Panel.SetActive(true);
+            gameName.text = "Matching Game";
         }
     }
 

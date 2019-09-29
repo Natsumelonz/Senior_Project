@@ -241,7 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7e036483c565f49a3b8cb9034a7b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectClip: {fileID: 8300000, guid: cecec332ef782a448889a704d9c2cab7, type: 3}
+  correctClip: {fileID: 8300000, guid: cecec332ef782a448889a704d9c2cab7, type: 3}
+  wrongClip: {fileID: 8300000, guid: 1eecc512bcba55240b457140febb971f, type: 3}
   effectAudio: {fileID: 25840145}
   uiObject:
     pointText: {fileID: 34211732}

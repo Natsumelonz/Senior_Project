@@ -286,4 +286,17 @@ public class ChapterScene : MonoBehaviour
         index = Int32.Parse(skip.text) - 1;
         NextSentence();
     }
+
+    public void Mute()
+    {
+        Effect.GetComponent<AudioSource>().Play();
+        if (Audio.GetComponent<AudioSource>().mute)
+        {
+            Audio.GetComponent<AudioSource>().mute = false;
+        }
+        else
+        {
+            Audio.GetComponent<AudioSource>().mute = true;
+        }
+    }
 }
