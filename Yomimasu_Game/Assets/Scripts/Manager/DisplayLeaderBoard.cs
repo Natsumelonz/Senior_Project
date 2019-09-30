@@ -82,12 +82,10 @@ public class DisplayLeaderBoard : MonoBehaviour
             case (0):
                 scoreC.SetActive(false);
                 scoreM.SetActive(true);
-                Manager.GetComponent<LeaderBoardManager>().PullLeaderBoard1();
                 break;
             case (1):
                 scoreM.SetActive(false);
                 scoreC.SetActive(true);
-                Manager.GetComponent<LeaderBoardManager>().PullLeaderBoard2();
                 break;
         }
     }
