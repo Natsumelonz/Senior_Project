@@ -7,7 +7,7 @@ using TMPro;
 using System;
 using Proyecto26;
 
-public class TestCh1 : MonoBehaviour
+public class TestScene : MonoBehaviour
 {
     private GameObject Manager;
     private int tIndex = 0;
@@ -15,14 +15,15 @@ public class TestCh1 : MonoBehaviour
     public Text question;
     public Text score;
     public List<Text> answerT = new List<Text>();
-    public List<RetrieveTest> test = new List<RetrieveTest>();
     public List<AnswerChoice> answerChoice = new List<AnswerChoice>();
-    public static TestCh1 main;
+
+    public static TestScene main;
+    public static List<RetrieveTest> testhis;
+    public static int sindex;
 
     private void Start()
     {
         Manager = GameObject.Find("GameData").gameObject;
-        test = Manager.GetComponent<TestManager>().testCh1;
 
         NextQuestion();
         InitChoice();
@@ -30,13 +31,13 @@ public class TestCh1 : MonoBehaviour
 
     private void Update()
     {
-        if (!Manager.GetComponent<UserManager>().user.PassPre[0])
+        if (!Manager.GetComponent<UserManager>().user.PassPre[sindex])
         {
-            score.text = "Your score: " + Manager.GetComponent<UserManager>().user.Pre[0];
+            score.text = "Your score: " + Manager.GetComponent<UserManager>().user.Pre[sindex];
         }
         else
         {
-            score.text = "Your score: " + Manager.GetComponent<UserManager>().user.Post[0];
+            score.text = "Your score: " + Manager.GetComponent<UserManager>().user.Post[sindex];
         }        
     }
 
@@ -47,25 +48,25 @@ public class TestCh1 : MonoBehaviour
 
     public void NextQuestion()
     {
-        if (tIndex < test.Count)
+        if (tIndex < testhis.Count)
         {
-            question.text = test[tIndex].test_desc;
+            question.text = testhis[tIndex].test_desc;
             for (int i = 0; i < answerT.Count; i++)
             {
-                answerT[i].text = test[tIndex].test_choice[i];
+                answerT[i].text = testhis[tIndex].test_choice[i];
             }
         }
         else
         {
-            if (!Manager.GetComponent<UserManager>().user.PassPre[0])
+            if (!Manager.GetComponent<UserManager>().user.PassPre[sindex])
             {
-                Manager.GetComponent<UserManager>().user.PassPre[0] = true;
+                Manager.GetComponent<UserManager>().user.PassPre[sindex] = true;
                 Manager.GetComponent<UserManager>().Save();
                 SceneManager.LoadScene("ChapterScene");
             }
             else
             {
-                Manager.GetComponent<UserManager>().user.PassPost[0] = true;
+                Manager.GetComponent<UserManager>().user.PassPost[sindex] = true;
                 Manager.GetComponent<UserManager>().Save();
                 SceneManager.LoadScene("Chapter");
             }
@@ -74,15 +75,15 @@ public class TestCh1 : MonoBehaviour
 
     public void CheckAnswer(AnswerChoice ac)
     {
-        if (ac.index == test[tIndex].test_answer)
+        if (ac.index == testhis[tIndex].test_answer)
         {
-            if (!Manager.GetComponent<UserManager>().user.PassPre[0])
+            if (!Manager.GetComponent<UserManager>().user.PassPre[sindex])
             {
-                Manager.GetComponent<UserManager>().user.Pre[0] += 1;
+                Manager.GetComponent<UserManager>().user.Pre[sindex] += 1;
             }
             else
             {
-                Manager.GetComponent<UserManager>().user.Post[0] += 1;
+                Manager.GetComponent<UserManager>().user.Post[sindex] += 1;
             }
             tIndex++;
             NextQuestion();
@@ -97,9 +98,9 @@ public class TestCh1 : MonoBehaviour
 
     public void InitChoice()
     {
-        for (int i = 0; i < test[tIndex].test_choice.Count; i++)
+        for (int i = 0; i < testhis[tIndex].test_choice.Count; i++)
         {
-            answerChoice[i].Init(test[tIndex].test_choice[i], i);
+            answerChoice[i].Init(testhis[tIndex].test_choice[i], i);
         }
     }
 }

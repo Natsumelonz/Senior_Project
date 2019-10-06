@@ -1502,12 +1502,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1929102306}
-  - component: {fileID: 1929102308}
   - component: {fileID: 1929102305}
   - component: {fileID: 1929102309}
   - component: {fileID: 1929102304}
-  - component: {fileID: 1929102307}
   - component: {fileID: 1929102310}
+  - component: {fileID: 1929102311}
   m_Layer: 0
   m_Name: GameData
   m_TagString: Untagged
@@ -1567,35 +1566,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1929102307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929102303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 378e05e6f4a056c478b23875a68b4ea3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  testCh1: []
---- !u!114 &1929102308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929102303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71e27612033f84f4c9c4052c9c7c1463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog_ch1: []
-  dialog_ch2: []
-  question_ch1: []
-  question_ch2: []
 --- !u!114 &1929102309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1629,3 +1599,29 @@ MonoBehaviour:
   userScore2:
     Name: 
     Score: 0
+--- !u!114 &1929102311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929102303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1b3d668b9934f04fa1bb96dc49bb638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chapter1_info:
+    Name: 
+    Objective: 
+    Questions: []
+    Scripts: []
+    Tests: []
+    chap_id: 0
+  chapter2_info:
+    Name: 
+    Objective: 
+    Questions: []
+    Scripts: []
+    Tests: []
+    chap_id: 0

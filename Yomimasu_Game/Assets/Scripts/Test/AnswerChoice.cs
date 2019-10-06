@@ -18,6 +18,6 @@ public class AnswerChoice : MonoBehaviour
 
     public void CheckAnswer()
     {
-        TestCh1.main.CheckAnswer(this);
+        TestScene.main.CheckAnswer(this);
     }
 }

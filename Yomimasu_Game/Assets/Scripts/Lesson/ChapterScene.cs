@@ -118,7 +118,7 @@ public class ChapterScene : MonoBehaviour
 
             if (!Manager.GetComponent<UserManager>().user.PassPost[tindex])
             {
-                SceneManager.LoadScene("TestCh1");
+                SceneManager.LoadScene("TestScene");
             }
             else
             {

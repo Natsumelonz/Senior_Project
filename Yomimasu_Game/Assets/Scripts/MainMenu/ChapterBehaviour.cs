@@ -11,9 +11,15 @@ public class ChapterBehaviour : MonoBehaviour
     private GameObject Audio;
     private GameObject Effect;
 
-    public GameObject Panel;
+    public GameObject PreviousPanel;
+    public GameObject ObjectivePanel;
     public AudioClip effectClip;
     public AudioSource effectAudio;
+    public Text chapter;
+    public Text chapterName;
+    public Text objective;
+
+    private int chapterid;
 
     private void Start()
     {
@@ -25,29 +31,33 @@ public class ChapterBehaviour : MonoBehaviour
         Audio.GetComponent<AudioSource>().Play();
     }
 
+    private void Update()
+    {
+    }
+
     public void ClosePanel()
     {
         Effect.GetComponent<AudioSource>().Play();
-        Panel.SetActive(false);
+        PreviousPanel.SetActive(false);
+        ObjectivePanel.SetActive(false);
     }
 
-    public void TriggerChapterBehaviour(int i)
+    public void ChapterSelected(int i)
     {
+        Effect.GetComponent<AudioSource>().Play();
+
         switch (i)
         {
             default:
-                Effect.GetComponent<AudioSource>().Play();
                 Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;
                 Audio.GetComponent<AudioSource>().Play();
 
                 SceneManager.LoadScene("MainMenu");
                 break;
             case (0):
-                Effect.GetComponent<AudioSource>().Play();
-
                 if (Manager.GetComponent<UserManager>().user.LastCh < 4)
                 {
-                    Panel.SetActive(true);
+                    PreviousPanel.SetActive(true);
                 }
                 else
                 {
@@ -55,45 +65,126 @@ public class ChapterBehaviour : MonoBehaviour
                 }
                 break;
             case (1):
-                Effect.GetComponent<AudioSource>().Play();
+                ObjectivePanel.SetActive(true);
+                chapter.text = "Chapter 1";
+                chapterName.text = Manager.GetComponent<ContentManager>().chapter1_info.Name;
+                objective.text = Manager.GetComponent<ContentManager>().chapter1_info.Objective;
+
+                chapterid = 1;
+
                 Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh1;
                 Audio.GetComponent<AudioSource>().Play();
-                ChapterScene.dialogThis = Manager.GetComponent<ChapterManager>().dialog_ch1;
-                ChapterScene.questionThis = Manager.GetComponent<ChapterManager>().question_ch1;
+                ChapterScene.dialogThis = Manager.GetComponent<ContentManager>().chapter1_info.Scripts;
+                ChapterScene.questionThis = Manager.GetComponent<ContentManager>().chapter1_info.Questions;
                 ChapterScene.tindex = 0;
-
-                if (!Manager.GetComponent<UserManager>().user.PassPre[0])
+                TestScene.testhis = Manager.GetComponent<ContentManager>().chapter1_info.Tests;
+                TestScene.sindex = 0;
+                break;
+            case (2):
+                if (Manager.GetComponent<UserManager>().user.LastCh < 1)
                 {
-                    SceneManager.LoadScene("TestCh1");
+                    PreviousPanel.SetActive(true);
                 }
                 else
-                {                    
+                {
+                    ObjectivePanel.SetActive(true);
+                    chapter.text = "Chapter 2";
+                    chapterName.text = Manager.GetComponent<ContentManager>().chapter2_info.Name;
+                    objective.text = Manager.GetComponent<ContentManager>().chapter2_info.Objective;
+
+                    chapterid = 2;
+
+                    Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh2;
+                    Audio.GetComponent<AudioSource>().Play();
+                    ChapterScene.dialogThis = Manager.GetComponent<ContentManager>().chapter2_info.Scripts;
+                    ChapterScene.questionThis = Manager.GetComponent<ContentManager>().chapter2_info.Questions;
+                    ChapterScene.tindex = 1;
+                    TestScene.testhis = Manager.GetComponent<ContentManager>().chapter2_info.Tests;
+                    TestScene.sindex = 1;
+                }
+                break;
+            case (3):
+                if (Manager.GetComponent<UserManager>().user.LastCh < 2)
+                {
+                    PreviousPanel.SetActive(true);
+                }
+                else
+                {
+                    ObjectivePanel.SetActive(true);
+                    chapter.text = "Chapter 3";
+                    //chapterName.text = Manager.GetComponent<ContentManager>().chapter3_info.Name;
+                    //objective.text = Manager.GetComponent<ContentManager>().chapter3_info.Objective;
+
+                    chapterid = 3;
+                }
+                break;
+            case (4):
+                if (Manager.GetComponent<UserManager>().user.LastCh < 3)
+                {
+                    PreviousPanel.SetActive(true);
+                }
+                else
+                {
+                    ObjectivePanel.SetActive(true);
+                    chapter.text = "Chapter 4";
+                    //chapterName.text = Manager.GetComponent<ContentManager>().chapter4_info.Name;
+                    //objective.text = Manager.GetComponent<ContentManager>().chapter4_info.Objective;
+
+                    chapterid = 4;
+                }
+                break;
+            case (5):
+                if (Manager.GetComponent<UserManager>().user.LastCh < 4)
+                {
+                    PreviousPanel.SetActive(true);
+                }
+                else
+                {
+                    ObjectivePanel.SetActive(true);
+                    chapter.text = "Chapter 5";
+                    //chapterName.text = Manager.GetComponent<ContentManager>().chapter5_info.Name;
+                    //objective.text = Manager.GetComponent<ContentManager>().chapter5_info.Objective;
+
+                    chapterid = 5;
+                }
+                break;
+        }
+    }
+
+    public void ChapterPlay()
+    {
+        Effect.GetComponent<AudioSource>().Play();
+
+        switch (chapterid)
+        {
+            default:
+                break;
+            case (0):
+                break;
+            case (1):
+                if (!Manager.GetComponent<UserManager>().user.PassPre[0])
+                {
+                    SceneManager.LoadScene("TestScene");
+                }
+                else
+                {
                     SceneManager.LoadScene("ChapterScene");
                 }
                 break;
             case (2):
-                Effect.GetComponent<AudioSource>().Play();
-                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh2;
-                Audio.GetComponent<AudioSource>().Play();
-                ChapterScene.dialogThis = Manager.GetComponent<ChapterManager>().dialog_ch2;
-                ChapterScene.questionThis = Manager.GetComponent<ChapterManager>().question_ch2;
-                ChapterScene.tindex = 1;
-
-                if (Manager.GetComponent<UserManager>().user.LastCh < 1)
+                if (!Manager.GetComponent<UserManager>().user.PassPre[1])
                 {
-                    Panel.SetActive(true);
+                    SceneManager.LoadScene("TestScene");
                 }
                 else
-                {              
+                {
                     SceneManager.LoadScene("ChapterScene");
                 }
                 break;
             case (3):
-                Effect.GetComponent<AudioSource>().Play();
-
-                if (Manager.GetComponent<UserManager>().user.LastCh < 2)
+                if (!Manager.GetComponent<UserManager>().user.PassPre[2])
                 {
-                    Panel.SetActive(true);
+                    SceneManager.LoadScene("TestScene");
                 }
                 else
                 {
@@ -101,11 +192,9 @@ public class ChapterBehaviour : MonoBehaviour
                 }
                 break;
             case (4):
-                Effect.GetComponent<AudioSource>().Play();
-
-                if (Manager.GetComponent<UserManager>().user.LastCh < 3)
+                if (!Manager.GetComponent<UserManager>().user.PassPre[3])
                 {
-                    Panel.SetActive(true);
+                    SceneManager.LoadScene("TestScene");
                 }
                 else
                 {
@@ -113,11 +202,9 @@ public class ChapterBehaviour : MonoBehaviour
                 }
                 break;
             case (5):
-                Effect.GetComponent<AudioSource>().Play();
-
-                if (Manager.GetComponent<UserManager>().user.LastCh < 4)
+                if (!Manager.GetComponent<UserManager>().user.PassPre[4])
                 {
-                    Panel.SetActive(true);
+                    SceneManager.LoadScene("TestScene");
                 }
                 else
                 {
