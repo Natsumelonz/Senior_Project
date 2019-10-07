@@ -27,6 +27,7 @@ public class UserManager : MonoBehaviour
     public User user;
     public GameObject panel;
     public Text inputName;
+    public static bool fistTime;
 
     private void Awake()
     {
@@ -47,6 +48,7 @@ public class UserManager : MonoBehaviour
 
         Debug.Log("Save Complete!");
         Load();
+        fistTime = false;
     }
 
     public void Load()
@@ -60,6 +62,7 @@ public class UserManager : MonoBehaviour
         else
         {
             panel.SetActive(true);
+            fistTime = true;
 
             Debug.Log("No user found, create new one!");
         }

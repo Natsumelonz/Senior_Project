@@ -17,7 +17,8 @@ public class Preloader : MonoBehaviour
         if (Manager.GetComponent<AlpabetManager>().alphabetsHR.Count != 0 && Manager.GetComponent<AlpabetManager>().alphabetsKT.Count != 0 
             && Manager.GetComponent<WordManager>().words.Count != 0 && Manager.GetComponent<LeaderBoardManager>().leaderBoard1.Count != 0 
             && Manager.GetComponent<LeaderBoardManager>().leaderBoard2.Count != 0 && Manager.GetComponent<UserManager>().user.Name != ""
-            && Manager.GetComponent<ContentManager>().chapter1_info.chap_id != 0 && Manager.GetComponent<ContentManager>().chapter2_info.chap_id != 0)
+            && Manager.GetComponent<ContentManager>().chapter1_info.chap_id != 0 && Manager.GetComponent<ContentManager>().chapter2_info.chap_id != 0
+            && !UserManager.fistTime)
         {
             SceneManager.LoadScene("MainMenu");
         }
