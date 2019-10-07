@@ -49,6 +49,10 @@ public class ChapterScene : MonoBehaviour
     public AudioClip wrongClip;
     public AudioSource effectSource;
 
+    public GameObject canvas;
+    public GameObject panelFade;
+    public Text fadeText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +66,8 @@ public class ChapterScene : MonoBehaviour
             sentences.Add(item.script_desc);
         }
         speaker.text = dialogThis[index].script_role;
+
+        StartCoroutine(FadeIn(3f));
         StartCoroutine(Type());
     }
 
@@ -78,6 +84,19 @@ public class ChapterScene : MonoBehaviour
         {
             teacherPic.SetActive(false);
         }
+    }
+
+    public IEnumerator FadeIn(float i)
+    {
+        panelFade.SetActive(true);
+        canvas.SetActive(false);
+
+        fadeText.text = "Chapter " + (tindex + 1);
+
+        yield return new WaitForSeconds(i);
+
+        panelFade.SetActive(false);
+        canvas.SetActive(true);
     }
 
     public void NextSentence()
@@ -278,6 +297,17 @@ public class ChapterScene : MonoBehaviour
             case (1):
                 SceneManager.LoadScene("Chapter");
                 break;
+            case (2):
+                Effect.GetComponent<AudioSource>().Play();
+                if (Audio.GetComponent<AudioSource>().mute)
+                {
+                    Audio.GetComponent<AudioSource>().mute = false;
+                }
+                else
+                {
+                    Audio.GetComponent<AudioSource>().mute = true;
+                }
+                break;
         }
     }
 
@@ -285,18 +315,5 @@ public class ChapterScene : MonoBehaviour
     {
         index = Int32.Parse(skip.text) - 1;
         NextSentence();
-    }
-
-    public void Mute()
-    {
-        Effect.GetComponent<AudioSource>().Play();
-        if (Audio.GetComponent<AudioSource>().mute)
-        {
-            Audio.GetComponent<AudioSource>().mute = false;
-        }
-        else
-        {
-            Audio.GetComponent<AudioSource>().mute = true;
-        }
     }
 }

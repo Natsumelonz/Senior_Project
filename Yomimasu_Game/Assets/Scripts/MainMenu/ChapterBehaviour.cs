@@ -72,8 +72,6 @@ public class ChapterBehaviour : MonoBehaviour
 
                 chapterid = 1;
 
-                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh1;
-                Audio.GetComponent<AudioSource>().Play();
                 ChapterScene.dialogThis = Manager.GetComponent<ContentManager>().chapter1_info.Scripts;
                 ChapterScene.questionThis = Manager.GetComponent<ContentManager>().chapter1_info.Questions;
                 ChapterScene.tindex = 0;
@@ -94,8 +92,6 @@ public class ChapterBehaviour : MonoBehaviour
 
                     chapterid = 2;
 
-                    Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh2;
-                    Audio.GetComponent<AudioSource>().Play();
                     ChapterScene.dialogThis = Manager.GetComponent<ContentManager>().chapter2_info.Scripts;
                     ChapterScene.questionThis = Manager.GetComponent<ContentManager>().chapter2_info.Questions;
                     ChapterScene.tindex = 1;
@@ -164,6 +160,8 @@ public class ChapterBehaviour : MonoBehaviour
             case (1):
                 if (!Manager.GetComponent<UserManager>().user.PassPre[0])
                 {
+                    Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh1;
+                    Audio.GetComponent<AudioSource>().Play();
                     SceneManager.LoadScene("TestScene");
                 }
                 else
@@ -174,6 +172,8 @@ public class ChapterBehaviour : MonoBehaviour
             case (2):
                 if (!Manager.GetComponent<UserManager>().user.PassPre[1])
                 {
+                    Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh2;
+                    Audio.GetComponent<AudioSource>().Play();
                     SceneManager.LoadScene("TestScene");
                 }
                 else

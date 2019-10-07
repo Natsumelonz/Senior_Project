@@ -10,12 +10,18 @@ using Proyecto26;
 public class TestScene : MonoBehaviour
 {
     private GameObject Manager;
+    private GameObject Effect;
+    private GameObject Audio;
     private int tIndex = 0;
 
     public Text question;
     public Text score;
     public List<Text> answerT = new List<Text>();
     public List<AnswerChoice> answerChoice = new List<AnswerChoice>();
+    public GameObject pauseTab;
+    public GameObject canvas;
+    public GameObject panelFade;
+    public Text fadeText;
 
     public static TestScene main;
     public static List<RetrieveTest> testhis;
@@ -24,7 +30,10 @@ public class TestScene : MonoBehaviour
     private void Start()
     {
         Manager = GameObject.Find("GameData").gameObject;
+        Audio = GameObject.Find("AudioManager").gameObject;
+        Effect = GameObject.Find("EffectManager").gameObject;
 
+        StartCoroutine(FadeIn(3f));
         NextQuestion();
         InitChoice();
     }
@@ -44,6 +53,26 @@ public class TestScene : MonoBehaviour
     void Awake()
     {
         main = this;
+    }
+
+    public IEnumerator FadeIn(float i)
+    {
+        panelFade.SetActive(true);
+        canvas.SetActive(false);
+
+        if (!Manager.GetComponent<UserManager>().user.PassPre[sindex])
+        {
+            fadeText.text = "Pre-Test";
+        }
+        else
+        {
+            fadeText.text = "Post-Test";
+        }
+
+        yield return new WaitForSeconds(i);
+
+        panelFade.SetActive(false);
+        canvas.SetActive(true);
     }
 
     public void NextQuestion()
@@ -101,6 +130,49 @@ public class TestScene : MonoBehaviour
         for (int i = 0; i < testhis[tIndex].test_choice.Count; i++)
         {
             answerChoice[i].Init(testhis[tIndex].test_choice[i], i);
+        }
+    }
+    public void PauseButton()
+    {
+        Effect.GetComponent<AudioSource>().Play();
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+            pauseTab.SetActive(true);
+        }
+        else
+        {
+            Time.timeScale = 1;
+            pauseTab.SetActive(false);
+        }
+    }
+
+    public void PauseMenu(int i)
+    {
+        Time.timeScale = 1;
+        switch (i)
+        {
+            default:
+                break;
+            case (0):
+                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;
+                Audio.GetComponent<AudioSource>().Play();
+                SceneManager.LoadScene("MainMenu");
+                break;
+            case (1):
+                SceneManager.LoadScene("Chapter");
+                break;
+            case (2):
+                Effect.GetComponent<AudioSource>().Play();
+                if (Audio.GetComponent<AudioSource>().mute)
+                {
+                    Audio.GetComponent<AudioSource>().mute = false;
+                }
+                else
+                {
+                    Audio.GetComponent<AudioSource>().mute = true;
+                }
+                break;
         }
     }
 }

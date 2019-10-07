@@ -22,7 +22,8 @@ public class Alphabet
 public class AlpabetManager : MonoBehaviour
 {
     public static AlpabetManager Instance { set; get; }
-    public List<Alphabet> alphabets = new List<Alphabet>();
+    public List<Alphabet> alphabetsHR = new List<Alphabet>();
+    public List<Alphabet> alphabetsKT = new List<Alphabet>();
 
     private void Awake()
     {
@@ -36,9 +37,18 @@ public class AlpabetManager : MonoBehaviour
         //ดึงมาจาก DB เอามาเก็บไว้ใน ARRAY สองตัวที่แอดมา 
         RestClient.GetArray<Alphabet>("https://it59-28yomimasu.firebaseio.com/Alphabet.json").Then(response =>
         {
-            for (int i = 0; i <= 103; i++)
+            int id;
+            for (int i = 0; i <= response.Length; i++)
             {
-                alphabets.Add(response[i]);
+                id = Int32.Parse(response[i].alphabet_id);
+                if (id <= 104)
+                {
+                    alphabetsHR.Add(response[i]);
+                }
+                else
+                {
+                    alphabetsKT.Add(response[i]);
+                }
                 //Debug.Log(i);
                 //Debug.Log(alphabets[i].alphabetname_JP);
                 //Debug.Log(alphabets[i].alphabetname_romanji);

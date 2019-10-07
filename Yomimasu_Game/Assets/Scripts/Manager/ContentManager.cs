@@ -82,13 +82,13 @@ public class ContentManager : MonoBehaviour
         RestClient.Get<ContentInfo>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter1.json").Then(response =>
         {
             chapter1_info = response; 
-            Debug.Log(chapter1_info.Name + " | " + chapter1_info.Objective);
+            //Debug.Log(chapter1_info.Name + " | " + chapter1_info.Objective);
         });
         
         RestClient.Get<ContentInfo>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter2.json").Then(response =>
         {
             chapter2_info = response; 
-            Debug.Log(chapter2_info.Name + " | " + chapter2_info.Objective);
+            //Debug.Log(chapter2_info.Name + " | " + chapter2_info.Objective);
         });
 
         Debug.Log("Initial ContentInfo Complete!");
