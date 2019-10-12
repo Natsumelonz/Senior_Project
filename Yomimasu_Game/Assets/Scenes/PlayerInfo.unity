@@ -2408,8 +2408,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1829290357}
   m_HandleRect: {fileID: 1829290356}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.6579655
+  m_Value: 0.9999999
+  m_Size: 0.50603074
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2505,7 +2505,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bcfe1a2f6c0137f4fa210f536b0ff758, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 92f138b44be242a44b5bf1ee0a307533, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3552,7 +3552,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688f46b95f353a0479516238ba9980e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circleSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   userName: {fileID: 1654628348}
   lastCh: {fileID: 137673077}
   score1: {fileID: 997596979}
@@ -3586,6 +3585,7 @@ MonoBehaviour:
   high1: {fileID: 405206521}
   high2: {fileID: 123908048}
   gameName: {fileID: 1612076456}
+  circleSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1374958369
 GameObject:
   m_ObjectHideFlags: 0
@@ -4063,7 +4063,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1103841966}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.6644796
+  m_Size: 0.5110668
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
