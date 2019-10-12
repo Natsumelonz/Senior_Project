@@ -44,6 +44,7 @@ public class ChapterScene : MonoBehaviour
     public static List<RetrieveDialog> dialogThis;
     public static List<RetrieveQuestion> questionThis;
     public static int tindex;
+    public static string chName;
 
     public AudioClip correctClip;
     public AudioClip wrongClip;
@@ -91,7 +92,7 @@ public class ChapterScene : MonoBehaviour
         panelFade.SetActive(true);
         canvas.SetActive(false);
 
-        fadeText.text = "Chapter " + (tindex + 1);
+        fadeText.text = "Chapter " + (tindex + 1) + "\n" + chName;
 
         yield return new WaitForSeconds(i);
 

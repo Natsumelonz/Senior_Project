@@ -2871,8 +2871,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.638e-12, y: -0.0000038147}
-  m_SizeDelta: {x: 607.5, y: 158.8}
+  m_AnchoredPosition: {x: 5.7e-14, y: 0}
+  m_SizeDelta: {x: 893.4, y: 387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1475055974
 MonoBehaviour:
@@ -2894,7 +2894,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 120
+    m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2905,7 +2905,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pre-Test
+  m_Text: 'Chapter
+
+    Learn Hiragana'
 --- !u!222 &1475055975
 CanvasRenderer:
   m_ObjectHideFlags: 0

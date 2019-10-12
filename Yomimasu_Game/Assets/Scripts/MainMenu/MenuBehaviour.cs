@@ -86,6 +86,10 @@ public class MenuBehaviour : MonoBehaviour
                 break;
             case (4):
                 Effect.GetComponent<AudioSource>().Play();
+                Audio.GetComponent<AudioSource>().Stop();
+
+                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMChapterSelect;
+                Audio.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("Chapter");
                 break;
             case (5):

@@ -107,10 +107,10 @@ public class MatchingManager : MonoBehaviour
             while (alphabetListJP.Count < 12)
             {
                 _wordIndex = Random.Range(0, 46);
-                if (!alphabetListJP.Contains(Manager.GetComponent<AlpabetManager>().alphabetsHR[_wordIndex].alphabetname_JP))
+                if (!alphabetListJP.Contains(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_JP))
                 {
-                    alphabetListJP.Add(Manager.GetComponent<AlpabetManager>().alphabetsHR[_wordIndex].alphabetname_JP);
-                    alphabetListRJ.Add(Manager.GetComponent<AlpabetManager>().alphabetsHR[_wordIndex].alphabetname_romanji);
+                    alphabetListJP.Add(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_JP);
+                    alphabetListRJ.Add(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_romanji);
                 }
             }
         }
@@ -119,10 +119,10 @@ public class MatchingManager : MonoBehaviour
             while (alphabetListJP.Count < 12)
             {
                 _wordIndex = Random.Range(46, 104);
-                if (!alphabetListJP.Contains(Manager.GetComponent<AlpabetManager>().alphabetsHR[_wordIndex].alphabetname_JP))
+                if (!alphabetListJP.Contains(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_JP))
                 {
-                    alphabetListJP.Add(Manager.GetComponent<AlpabetManager>().alphabetsHR[_wordIndex].alphabetname_JP);
-                    alphabetListRJ.Add(Manager.GetComponent<AlpabetManager>().alphabetsHR[_wordIndex].alphabetname_romanji);
+                    alphabetListJP.Add(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_JP);
+                    alphabetListRJ.Add(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_romanji);
                 }
             }
         }
@@ -131,10 +131,10 @@ public class MatchingManager : MonoBehaviour
             while (alphabetListJP.Count < 12)
             {
                 _wordIndex = Random.Range(0, 104);
-                if (!alphabetListJP.Contains(Manager.GetComponent<AlpabetManager>().alphabetsHR[_wordIndex].alphabetname_JP))
+                if (!alphabetListJP.Contains(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_JP))
                 {
-                    alphabetListJP.Add(Manager.GetComponent<AlpabetManager>().alphabetsHR[_wordIndex].alphabetname_JP);
-                    alphabetListRJ.Add(Manager.GetComponent<AlpabetManager>().alphabetsHR[_wordIndex].alphabetname_romanji);
+                    alphabetListJP.Add(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_JP);
+                    alphabetListRJ.Add(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_romanji);
                 }
             }
         }

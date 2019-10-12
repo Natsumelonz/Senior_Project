@@ -19,9 +19,9 @@ public class Alphabet
 }
 
 [Serializable]
-public class AlpabetManager : MonoBehaviour
+public class AlphabetManager : MonoBehaviour
 {
-    public static AlpabetManager Instance { set; get; }
+    public static AlphabetManager Instance { set; get; }
     public List<Alphabet> alphabetsHR = new List<Alphabet>();
     public List<Alphabet> alphabetsKT = new List<Alphabet>();
 
