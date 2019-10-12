@@ -38,6 +38,19 @@ public class AlphabetsInfo : MonoBehaviour
         listenSource.PlayOneShot(listenClip[alphabet]);
     }
 
+    public void Mute()
+    {
+        Effect.GetComponent<AudioSource>().Play();
+        if (Audio.GetComponent<AudioSource>().mute)
+        {
+            Audio.GetComponent<AudioSource>().mute = false;
+        }
+        else
+        {
+            Audio.GetComponent<AudioSource>().mute = true;
+        }
+    }
+
     public void SwitchAlphabet(int i)
     {
         Effect.GetComponent<AudioSource>().Play();

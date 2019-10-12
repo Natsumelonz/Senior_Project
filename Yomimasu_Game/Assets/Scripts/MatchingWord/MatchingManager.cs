@@ -401,7 +401,7 @@ public class MatchingManager : MonoBehaviour
                 }
             }
 
-            Manager.GetComponent<UserManager>().Save();
+            Manager.GetComponent<UserManager>().SaveUser();
             Manager.GetComponent<LeaderBoardManager>().userScore1.Name = Manager.GetComponent<UserManager>().user.Name;
             Manager.GetComponent<LeaderBoardManager>().userScore1.Score = Manager.GetComponent<UserManager>().user.Score1;
             Manager.GetComponent<LeaderBoardManager>().PutLeaderBoard1();

@@ -37,8 +37,7 @@ public class Preloader : MonoBehaviour
             && Manager.GetComponent<ContentManager>().chapter1_info.chap_id != 0 && Manager.GetComponent<ContentManager>().chapter2_info.chap_id != 0
             && !UserManager.fistTime)
             {
-
-                yield return new WaitForSeconds(1f);
+                //yield return new WaitForSeconds(1f);
                 slider.value = 1f;
                 async.allowSceneActivation = true;
             }

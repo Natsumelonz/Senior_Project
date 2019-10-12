@@ -414,7 +414,7 @@ public class WordSorting : MonoBehaviour
                 }
             }
 
-            Manager.GetComponent<UserManager>().Save();
+            Manager.GetComponent<UserManager>().SaveUser();
             Manager.GetComponent<LeaderBoardManager>().userScore2.Name = Manager.GetComponent<UserManager>().user.Name;
             Manager.GetComponent<LeaderBoardManager>().userScore2.Score = Manager.GetComponent<UserManager>().user.Score2;
             Manager.GetComponent<LeaderBoardManager>().PutLeaderBoard2();

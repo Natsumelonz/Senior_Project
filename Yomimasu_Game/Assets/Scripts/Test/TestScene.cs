@@ -90,13 +90,13 @@ public class TestScene : MonoBehaviour
             if (!Manager.GetComponent<UserManager>().user.PassPre[sindex])
             {
                 Manager.GetComponent<UserManager>().user.PassPre[sindex] = true;
-                Manager.GetComponent<UserManager>().Save();
+                Manager.GetComponent<UserManager>().SaveUser();
                 SceneManager.LoadScene("ChapterScene");
             }
             else
             {
                 Manager.GetComponent<UserManager>().user.PassPost[sindex] = true;
-                Manager.GetComponent<UserManager>().Save();
+                Manager.GetComponent<UserManager>().SaveUser();
                 SceneManager.LoadScene("Chapter");
             }
         }

@@ -133,7 +133,7 @@ public class ChapterScene : MonoBehaviour
             if (Manager.GetComponent<UserManager>().user.LastCh < 1)
             {
                 Manager.GetComponent<UserManager>().user.LastCh = 1;
-                Manager.GetComponent<UserManager>().Save();
+                Manager.GetComponent<UserManager>().SaveUser();
             }
 
             if (!Manager.GetComponent<UserManager>().user.PassPost[tindex])
@@ -194,13 +194,13 @@ public class ChapterScene : MonoBehaviour
         if (dialogThis[index].script_id == "ch1_011")
         {
             Manager.GetComponent<UserManager>().user.alphabetChart = true;
-            Manager.GetComponent<UserManager>().Save();
+            Manager.GetComponent<UserManager>().SaveUser();
         }
 
         if (dialogThis[index].script_id == "ch1_012")
         {
             Manager.GetComponent<UserManager>().user.dictionary = true;
-            Manager.GetComponent<UserManager>().Save();
+            Manager.GetComponent<UserManager>().SaveUser();
         }
     }
 
@@ -306,14 +306,14 @@ public class ChapterScene : MonoBehaviour
                 Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;
                 Audio.GetComponent<AudioSource>().Play();
 
-                Manager.GetComponent<UserManager>().user.lastSentence = index;
-                Manager.GetComponent<UserManager>().Save();
+                Manager.GetComponent<UserManager>().user.LastSentence = index;
+                Manager.GetComponent<UserManager>().SaveUser();
 
                 SceneManager.LoadScene("MainMenu");
                 break;
             case (1):
-                Manager.GetComponent<UserManager>().user.lastSentence = index;
-                Manager.GetComponent<UserManager>().Save();
+                Manager.GetComponent<UserManager>().user.LastSentence = index;
+                Manager.GetComponent<UserManager>().SaveUser();
                 SceneManager.LoadScene("Chapter");
                 break;
             case (2):

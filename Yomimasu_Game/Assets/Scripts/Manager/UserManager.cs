@@ -5,13 +5,16 @@ using System;
 using Proyecto26;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+using System.Xml.Serialization;
 
 [Serializable]
 public class User
 {
     public string Name;
     public int LastCh;
-    public int lastSentence;
+    public int LastSentence;
     public int Score1;
     public int Score2;
     public int[] Pre = new int[10];
@@ -37,45 +40,56 @@ public class UserManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         Instance = this;
-        Load();
-
-        Debug.Log(Helper.Serialize<User>(user));
+        LoadUser();
     }
 
-    public void Save()
+    public void NewUser()
     {
-        PlayerPrefs.SetString("save", Helper.Serialize<User>(user));
+        user.Name = inputName.text;
+        Debug.Log("Create new save name: " + user.Name);
+
+        SaveUser();
+    }
+
+    public void SaveUser()
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/user.save";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
         if (user.Name != "")
         {
             RestClient.Put("https://it59-28yomimasu.firebaseio.com/User/" + user.Name + ".json", user);
         }
 
-        Debug.Log("Save Complete!");
-        Load();
-        fistTime = false;
+        //Debug.Log("Save path: " + path);
+        formatter.Serialize(stream, user);
+        stream.Close();
+
+        LoadUser();
     }
 
-    public void Load()
+    public void LoadUser()
     {
-        if (PlayerPrefs.HasKey("save"))
+        string path = Application.persistentDataPath + "/user.save";
+        if (File.Exists(path))
         {
-            user = Helper.Desrialize<User>(PlayerPrefs.GetString("save"));
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
 
-            Debug.Log("Load Complete!");
+
+            User userData = formatter.Deserialize(stream) as User;
+            stream.Close();
+
+            fistTime = false;
+
+            user = userData;
         }
         else
         {
+            Debug.Log("Save not found!");
             panel.SetActive(true);
             fistTime = true;
-
-            Debug.Log("No user found, create new one!");
         }
-    }
-
-    public void New()
-    {
-        user.Name = inputName.text;
-
-        Debug.Log("Create new save name: " + user.Name);
     }
 }

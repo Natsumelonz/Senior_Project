@@ -151,8 +151,8 @@ public class InfoManager : MonoBehaviour
         Manager.GetComponent<UserManager>().user.PassPost = new bool[10];
         Manager.GetComponent<UserManager>().user.LastScore1 = new List<int>();
         Manager.GetComponent<UserManager>().user.LastScore2 = new List<int>();
-        Manager.GetComponent<UserManager>().Save();
-        Manager.GetComponent<UserManager>().Load();
+        Manager.GetComponent<UserManager>().SaveUser();
+        Manager.GetComponent<UserManager>().LoadUser();
 
         SceneManager.LoadScene("MainMenu");
     }
