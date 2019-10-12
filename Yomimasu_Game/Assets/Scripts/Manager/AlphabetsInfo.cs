@@ -19,12 +19,18 @@ public class AlphabetsInfo : MonoBehaviour
     public GameObject writingImage;
     public GameObject hiraganaChart;
     public GameObject katakanaChart;
+    public Button katakanaButton;
 
     private void Start()
     {
-        //Manager = GameObject.Find("GameData").gameObject;
-        //Audio = GameObject.Find("AudioManager").gameObject;
-        //Effect = GameObject.Find("EffectManager").gameObject;
+        Manager = GameObject.Find("GameData").gameObject;
+        Audio = GameObject.Find("AudioManager").gameObject;
+        Effect = GameObject.Find("EffectManager").gameObject;
+
+        if (Manager.GetComponent<UserManager>().user.katakana)
+        {
+            katakanaButton.interactable = true;
+        }
     }    
 
     public void ListenSound()
@@ -34,6 +40,7 @@ public class AlphabetsInfo : MonoBehaviour
 
     public void SwitchAlphabet(int i)
     {
+        Effect.GetComponent<AudioSource>().Play();
         switch (i)
         {
             default:
@@ -59,22 +66,24 @@ public class AlphabetsInfo : MonoBehaviour
 
     public void MainMenu()
     {
+        Effect.GetComponent<AudioSource>().Play();
         SceneManager.LoadScene("Chapter");
     }
 
     public void SelectAlphabet(int i)
     {
+        Effect.GetComponent<AudioSource>().Play();
         if (hira)
         {
             alphabet = i;
             writingImage.GetComponent<Animator>().runtimeAnimatorController = controllers[i];
-            //alphabetText.text = Manager.GetComponent<AlphabetManager>().alphabetsHR[i].alphabetname_romanji;
+            alphabetText.text = Manager.GetComponent<AlphabetManager>().alphabetsHR[i].alphabetname_romanji;
         }
         else
         {
             alphabet = (i+46);
             writingImage.GetComponent<Animator>().runtimeAnimatorController = controllers[(i+46)];
-            //alphabetText.text = Manager.GetComponent<AlphabetManager>().alphabetsKT[i].alphabetname_romanji;
+            alphabetText.text = Manager.GetComponent<AlphabetManager>().alphabetsKT[i].alphabetname_romanji;
         }
     }
 }

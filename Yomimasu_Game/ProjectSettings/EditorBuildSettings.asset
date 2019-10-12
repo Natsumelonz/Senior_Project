@@ -36,6 +36,6 @@ EditorBuildSettings:
     path: Assets/Scenes/PlayerInfo.unity
     guid: 04dcf96b9daae8a4eb39dd4bf069e972
   - enabled: 1
-    path: Assets/Scenes/Alphabets Chart.unity
+    path: Assets/Scenes/AlphabetsChart.unity
     guid: 36d9ff683fb09b8468943d9f2c183ce1
   m_configObjects: {}

@@ -13,6 +13,7 @@ public class ChapterBehaviour : MonoBehaviour
 
     public GameObject PreviousPanel;
     public GameObject ObjectivePanel;
+    public Button alphabetChartButton;
     public AudioClip effectClip;
     public AudioSource effectAudio;
     public Text chapter;
@@ -26,6 +27,11 @@ public class ChapterBehaviour : MonoBehaviour
         Manager = GameObject.Find("GameData").gameObject;
         Audio = GameObject.Find("AudioManager").gameObject;
         Effect = GameObject.Find("EffectManager").gameObject;
+
+        if (Manager.GetComponent<UserManager>().user.alphabetChart)
+        {
+            alphabetChartButton.interactable = true;
+        }
     }
 
     private void Update()
@@ -52,7 +58,7 @@ public class ChapterBehaviour : MonoBehaviour
                 SceneManager.LoadScene("MainMenu");
                 break;
             case (-1):
-                SceneManager.LoadScene("Alphabets Chart");
+                SceneManager.LoadScene("AlphabetsChart");
                 break;
             case (0):
                 if (Manager.GetComponent<UserManager>().user.LastCh < 4)

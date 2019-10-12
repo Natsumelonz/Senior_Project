@@ -11,12 +11,16 @@ public class User
 {
     public string Name;
     public int LastCh;
+    public int lastSentence;
     public int Score1;
     public int Score2;
-    public int[] Post = new int[10];
     public int[] Pre = new int[10];
+    public int[] Post = new int[10];
     public bool[] PassPre = new bool[10];
     public bool[] PassPost = new bool[10];
+    public bool dictionary;
+    public bool alphabetChart;
+    public bool katakana;
     public List<int> LastScore1 = new List<int>();
     public List<int> LastScore2 = new List<int>();
 }

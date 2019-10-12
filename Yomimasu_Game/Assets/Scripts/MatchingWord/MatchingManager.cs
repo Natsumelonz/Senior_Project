@@ -58,6 +58,8 @@ public class MatchingManager : MonoBehaviour
     private GameObject Audio;
     private GameObject Effect;
 
+    public static bool hiragana;
+
     private void Start()
     {
         Manager = GameObject.Find("GameData").gameObject;
@@ -102,57 +104,54 @@ public class MatchingManager : MonoBehaviour
     {
         yield return new WaitForSeconds(Time);
 
-        if (level < 6)
+        if (hiragana)
         {
-            while (alphabetListJP.Count < 12)
+            if (level < 6)
             {
-                _wordIndex = Random.Range(0, 46);
-                if (!alphabetListJP.Contains(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_JP))
+                while (alphabetListJP.Count < 12)
                 {
-                    alphabetListJP.Add(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_JP);
-                    alphabetListRJ.Add(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_romanji);
+                    _wordIndex = Random.Range(0, 46);
+                    if (!alphabetListJP.Contains(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_JP))
+                    {
+                        alphabetListJP.Add(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_JP);
+                        alphabetListRJ.Add(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_romanji);
+                    }
                 }
             }
-        }
-        else if (level < 11)
-        {
-            while (alphabetListJP.Count < 12)
+            else if (level < 11)
             {
-                _wordIndex = Random.Range(46, 104);
-                if (!alphabetListJP.Contains(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_JP))
+                while (alphabetListJP.Count < 12)
                 {
-                    alphabetListJP.Add(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_JP);
-                    alphabetListRJ.Add(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_romanji);
+                    _wordIndex = Random.Range(46, 104);
+                    if (!alphabetListJP.Contains(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_JP))
+                    {
+                        alphabetListJP.Add(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_JP);
+                        alphabetListRJ.Add(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_romanji);
+                    }
                 }
+            }
+            else
+            {
+                while (alphabetListJP.Count < 12)
+                {
+                    _wordIndex = Random.Range(0, 104);
+                    if (!alphabetListJP.Contains(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_JP))
+                    {
+                        alphabetListJP.Add(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_JP);
+                        alphabetListRJ.Add(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_romanji);
+                    }
+                }
+            }
+
+            if (alphabetListJP.Count == 12)
+            {
+                _initRAD = true;
             }
         }
         else
         {
-            while (alphabetListJP.Count < 12)
-            {
-                _wordIndex = Random.Range(0, 104);
-                if (!alphabetListJP.Contains(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_JP))
-                {
-                    alphabetListJP.Add(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_JP);
-                    alphabetListRJ.Add(Manager.GetComponent<AlphabetManager>().alphabetsHR[_wordIndex].alphabetname_romanji);
-                }
-            }
+
         }
-
-        //foreach (string item in alphabetListJP)
-        //{
-        //    Debug.Log(item);
-        //}
-        //foreach (string item in alphabetListRJ)
-        //{
-        //    Debug.Log(item);
-        //}
-
-        if (alphabetListJP.Count == 12)
-        {
-            _initRAD = true;
-        }
-
     }
 
     //สุ่มค่าให้ปุ่ม กับกำหนด Text

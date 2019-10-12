@@ -13,6 +13,8 @@ public class MenuBehaviour : MonoBehaviour
 
     public Text playerName;
     public GameObject quitPanel;
+    public GameObject matchingPanel;
+    public Button kataLevel;
 
     void OnDisable()
     {
@@ -27,6 +29,11 @@ public class MenuBehaviour : MonoBehaviour
         playerName.text = Manager.GetComponent<UserManager>().user.Name;
 
         Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;
+
+        if (Manager.GetComponent<UserManager>().user.katakana)
+        {
+            kataLevel.interactable = true;
+        }
     }
 
     private void Update()
@@ -47,6 +54,23 @@ public class MenuBehaviour : MonoBehaviour
         else
         {
             Audio.GetComponent<AudioSource>().mute = true;
+        }
+    }
+
+    public void MatchingLevel(int i)
+    {
+        switch (i)
+        {
+            default:
+                break;
+            case (0):
+                MatchingManager.hiragana = true;
+                SceneManager.LoadScene("GameMatching");
+                break;
+            case (1):
+                MatchingManager.hiragana = false;
+                SceneManager.LoadScene("GameMatching");
+                break;
         }
     }
 
@@ -74,7 +98,8 @@ public class MenuBehaviour : MonoBehaviour
 
                 Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMatching;
                 Audio.GetComponent<AudioSource>().Play();
-                SceneManager.LoadScene("GameMatching");
+
+                matchingPanel.SetActive(true);                
                 break;
             case (3):
                 Effect.GetComponent<AudioSource>().Play();

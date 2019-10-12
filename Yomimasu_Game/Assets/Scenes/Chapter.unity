@@ -1477,7 +1477,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Highlighted
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1019226085}
   m_OnClick:
     m_PersistentCalls:
@@ -2795,6 +2795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PreviousPanel: {fileID: 671421231}
   ObjectivePanel: {fileID: 298217588}
+  alphabetChartButton: {fileID: 1019226084}
   effectClip: {fileID: 0}
   effectAudio: {fileID: 0}
   chapter: {fileID: 192042960}

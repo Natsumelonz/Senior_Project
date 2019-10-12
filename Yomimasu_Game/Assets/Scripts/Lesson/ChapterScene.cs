@@ -190,6 +190,18 @@ public class ChapterScene : MonoBehaviour
                 CloneChoice();
             }
         }
+
+        if (dialogThis[index].script_id == "ch1_011")
+        {
+            Manager.GetComponent<UserManager>().user.alphabetChart = true;
+            Manager.GetComponent<UserManager>().Save();
+        }
+
+        if (dialogThis[index].script_id == "ch1_012")
+        {
+            Manager.GetComponent<UserManager>().user.dictionary = true;
+            Manager.GetComponent<UserManager>().Save();
+        }
     }
 
     void EventImageCall()
@@ -293,9 +305,15 @@ public class ChapterScene : MonoBehaviour
             case (0):
                 Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;
                 Audio.GetComponent<AudioSource>().Play();
+
+                Manager.GetComponent<UserManager>().user.lastSentence = index;
+                Manager.GetComponent<UserManager>().Save();
+
                 SceneManager.LoadScene("MainMenu");
                 break;
             case (1):
+                Manager.GetComponent<UserManager>().user.lastSentence = index;
+                Manager.GetComponent<UserManager>().Save();
                 SceneManager.LoadScene("Chapter");
                 break;
             case (2):
