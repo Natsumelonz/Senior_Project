@@ -64,6 +64,7 @@ public class AlphabetsInfo : MonoBehaviour
                 hira = true;
 
                 alphabet = 0;
+                alphabetText.text = Manager.GetComponent<AlphabetManager>().alphabetsHR[0].alphabetname_romanji;
                 writingImage.GetComponent<Animator>().runtimeAnimatorController = controllers[0];
                 break;
             case (1):
@@ -72,6 +73,7 @@ public class AlphabetsInfo : MonoBehaviour
                 hira = false;
 
                 alphabet = (0 + 46);
+                alphabetText.text = Manager.GetComponent<AlphabetManager>().alphabetsHR[0].alphabetname_romanji;
                 writingImage.GetComponent<Animator>().runtimeAnimatorController = controllers[(0 + 46)];
                 break;
         }
