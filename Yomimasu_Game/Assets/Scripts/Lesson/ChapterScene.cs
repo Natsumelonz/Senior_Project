@@ -53,6 +53,7 @@ public class ChapterScene : MonoBehaviour
     public GameObject canvas;
     public GameObject panelFade;
     public Text fadeText;
+    public GameObject panelContinue;
 
     // Start is called before the first frame update
     void Start()
@@ -67,6 +68,11 @@ public class ChapterScene : MonoBehaviour
             sentences.Add(item.script_desc);
         }
         speaker.text = dialogThis[index].script_role;
+
+        if (Manager.GetComponent<UserManager>().user.LastSentence > 0)
+        {
+            panelContinue.SetActive(true);
+        }
 
         StartCoroutine(FadeIn(3f));
         StartCoroutine(Type());
@@ -312,6 +318,8 @@ public class ChapterScene : MonoBehaviour
                 SceneManager.LoadScene("MainMenu");
                 break;
             case (1):
+                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;
+                Audio.GetComponent<AudioSource>().Play();
                 Manager.GetComponent<UserManager>().user.LastSentence = index;
                 Manager.GetComponent<UserManager>().SaveUser();
                 SceneManager.LoadScene("Chapter");
@@ -334,5 +342,22 @@ public class ChapterScene : MonoBehaviour
     {
         index = Int32.Parse(skip.text) - 1;
         NextSentence();
+    }
+
+    public void Continue(int i)
+    {
+        switch (i)
+        {
+            default:
+                break;
+            case (0):
+                index = Manager.GetComponent<UserManager>().user.LastSentence - 1;
+                NextSentence();
+                panelContinue.SetActive(false);
+                break;
+            case (1):
+                panelContinue.SetActive(false);
+                break;
+        }
     }
 }
