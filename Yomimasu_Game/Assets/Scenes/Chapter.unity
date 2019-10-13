@@ -2796,6 +2796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PreviousPanel: {fileID: 671421231}
   ObjectivePanel: {fileID: 298217588}
+  alphabetChartButton: {fileID: 1019226084}
   effectClip: {fileID: 0}
   effectAudio: {fileID: 0}
   chapter: {fileID: 192042960}

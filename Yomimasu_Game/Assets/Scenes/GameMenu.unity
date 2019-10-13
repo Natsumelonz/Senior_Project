@@ -1118,7 +1118,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: {fileID: 814153300}
-  quitPanel: {fileID: 0}
+  matchingPanel: {fileID: 353733658}
+  quitPanel: {fileID: 1711286150}
+  kataLevel: {fileID: 1230965652}
 --- !u!4 &299602706
 Transform:
   m_ObjectHideFlags: 0
