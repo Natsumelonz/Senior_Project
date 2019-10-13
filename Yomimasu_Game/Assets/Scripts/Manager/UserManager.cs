@@ -14,9 +14,9 @@ public class User
 {
     public string Name;
     public int LastCh;
-    public int LastSentence;
     public int Score1;
     public int Score2;
+    public int[] LastIndex = new int[10];
     public int[] Pre = new int[10];
     public int[] Post = new int[10];
     public bool[] PassPre = new bool[10];
@@ -26,12 +26,30 @@ public class User
     public bool katakana;
     public List<int> LastScore1 = new List<int>();
     public List<int> LastScore2 = new List<int>();
+
+    public User()
+    {
+        Name = "";
+        LastCh = 0;
+        Score1 = 0;
+        Score2 = 0;
+        LastIndex = new int[10];
+        Pre = new int[10];
+        Post = new int[10];
+        PassPre = new bool[10];
+        PassPost = new bool[10];
+        dictionary = false;
+        alphabetChart = false;
+        katakana = false;
+        LastScore1 = new List<int>();
+        LastScore2 = new List<int>();
+    }
 }
 
 public class UserManager : MonoBehaviour
 {
     public static UserManager Instance { set; get; }
-    public User user;
+    public User user = new User();
     public GameObject panel;
     public Text inputName;
     public static bool fistTime;
@@ -77,7 +95,7 @@ public class UserManager : MonoBehaviour
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
 
-
+            //Debug.Log("Load path: " + path);
             User userData = formatter.Deserialize(stream) as User;
             stream.Close();
 

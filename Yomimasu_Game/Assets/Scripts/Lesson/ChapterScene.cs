@@ -69,7 +69,7 @@ public class ChapterScene : MonoBehaviour
         }
         speaker.text = dialogThis[index].script_role;
 
-        if (Manager.GetComponent<UserManager>().user.LastSentence > 0)
+        if (Manager.GetComponent<UserManager>().user.LastIndex[tindex] > 0)
         {
             panelContinue.SetActive(true);
         }
@@ -312,7 +312,7 @@ public class ChapterScene : MonoBehaviour
                 Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;
                 Audio.GetComponent<AudioSource>().Play();
 
-                Manager.GetComponent<UserManager>().user.LastSentence = index;
+                Manager.GetComponent<UserManager>().user.LastIndex[tindex] = index;
                 Manager.GetComponent<UserManager>().SaveUser();
 
                 SceneManager.LoadScene("MainMenu");
@@ -320,7 +320,7 @@ public class ChapterScene : MonoBehaviour
             case (1):
                 Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;
                 Audio.GetComponent<AudioSource>().Play();
-                Manager.GetComponent<UserManager>().user.LastSentence = index;
+                Manager.GetComponent<UserManager>().user.LastIndex[tindex] = index;
                 Manager.GetComponent<UserManager>().SaveUser();
                 SceneManager.LoadScene("Chapter");
                 break;
@@ -351,7 +351,7 @@ public class ChapterScene : MonoBehaviour
             default:
                 break;
             case (0):
-                index = Manager.GetComponent<UserManager>().user.LastSentence - 1;
+                index = Manager.GetComponent<UserManager>().user.LastIndex[tindex] - 1;
                 NextSentence();
                 panelContinue.SetActive(false);
                 break;
