@@ -35,6 +35,8 @@ public class Preloader : MonoBehaviour
             && Manager.GetComponent<WordManager>().words.Count != 0 && Manager.GetComponent<LeaderBoardManager>().leaderBoard1.Count != 0
             && Manager.GetComponent<LeaderBoardManager>().leaderBoard2.Count != 0 && Manager.GetComponent<UserManager>().user.Name != ""
             && Manager.GetComponent<ContentManager>().chapter1_info.chap_id != 0 && Manager.GetComponent<ContentManager>().chapter2_info.chap_id != 0
+            && Manager.GetComponent<ContentManager>().chapter3_info.chap_id != 0 && Manager.GetComponent<ContentManager>().chapter4_info.chap_id != 0
+            && Manager.GetComponent<ContentManager>().chapter5_info.chap_id != 0 && Manager.GetComponent<ContentManager>().chapter6_info.chap_id != 0
             && !UserManager.fistTime)
             {
                 //yield return new WaitForSeconds(1f);

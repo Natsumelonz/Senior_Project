@@ -71,6 +71,12 @@ public class ContentManager : MonoBehaviour
     public ContentInfo chapter2_info = new ContentInfo();
     public ContentInfo chapter3_info = new ContentInfo();
     public ContentInfo chapter4_info = new ContentInfo();
+    public ContentInfo chapter5_info = new ContentInfo();
+    public ContentInfo chapter6_info = new ContentInfo();
+    public ContentInfo chapter7_info = new ContentInfo();
+    public ContentInfo chapter8_info = new ContentInfo();
+    public ContentInfo chapter9_info = new ContentInfo();
+    public ContentInfo chapter10_info = new ContentInfo();
 
     private void Awake()
     {
@@ -99,6 +105,16 @@ public class ContentManager : MonoBehaviour
         RestClient.Get<ContentInfo>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter4.json").Then(response =>
         {
             chapter4_info = response;
+        });
+
+        RestClient.Get<ContentInfo>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter5.json").Then(response =>
+        {
+            chapter5_info = response;
+        });
+
+        RestClient.Get<ContentInfo>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter6.json").Then(response =>
+        {
+            chapter6_info = response;
         });
 
         Debug.Log("Initial ContentInfo Complete!");
