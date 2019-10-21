@@ -116,10 +116,17 @@ public class ChapterBehaviour : MonoBehaviour
                 {
                     ObjectivePanel.SetActive(true);
                     chapter.text = "Chapter 3";
-                    //chapterName.text = Manager.GetComponent<ContentManager>().chapter3_info.Name;
-                    //objective.text = Manager.GetComponent<ContentManager>().chapter3_info.Objective;
+                    chapterName.text = Manager.GetComponent<ContentManager>().chapter3_info.Name;
+                    objective.text = Manager.GetComponent<ContentManager>().chapter3_info.Objective;
 
                     chapterid = 3;
+
+                    ChapterScene.dialogThis = Manager.GetComponent<ContentManager>().chapter3_info.Scripts;
+                    ChapterScene.questionThis = Manager.GetComponent<ContentManager>().chapter3_info.Questions;
+                    ChapterScene.tindex = 2;
+                    ChapterScene.chName = Manager.GetComponent<ContentManager>().chapter3_info.Name;
+                    TestScene.testhis = Manager.GetComponent<ContentManager>().chapter3_info.Tests;
+                    TestScene.sindex = 2;
                 }
                 break;
             case (4):
@@ -131,10 +138,17 @@ public class ChapterBehaviour : MonoBehaviour
                 {
                     ObjectivePanel.SetActive(true);
                     chapter.text = "Chapter 4";
-                    //chapterName.text = Manager.GetComponent<ContentManager>().chapter4_info.Name;
-                    //objective.text = Manager.GetComponent<ContentManager>().chapter4_info.Objective;
+                    chapterName.text = Manager.GetComponent<ContentManager>().chapter4_info.Name;
+                    objective.text = Manager.GetComponent<ContentManager>().chapter4_info.Objective;
 
                     chapterid = 4;
+
+                    ChapterScene.dialogThis = Manager.GetComponent<ContentManager>().chapter4_info.Scripts;
+                    ChapterScene.questionThis = Manager.GetComponent<ContentManager>().chapter4_info.Questions;
+                    ChapterScene.tindex = 3;
+                    ChapterScene.chName = Manager.GetComponent<ContentManager>().chapter4_info.Name;
+                    TestScene.testhis = Manager.GetComponent<ContentManager>().chapter4_info.Tests;
+                    TestScene.sindex = 3;
                 }
                 break;
             case (5):
