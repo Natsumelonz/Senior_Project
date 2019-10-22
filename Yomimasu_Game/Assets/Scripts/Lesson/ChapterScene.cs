@@ -69,7 +69,7 @@ public class ChapterScene : MonoBehaviour
         }
         speaker.text = dialogThis[index].script_role;
 
-        if (Manager.GetComponent<UserManager>().user.LastIndex[tindex] > 0)
+        if (Manager.GetComponent<UserManager>().user.LastIndex[tindex] > 0 && Manager.GetComponent<UserManager>().user.LastIndex[tindex] != dialogThis.Count)
         {
             panelContinue.SetActive(true);
         }
@@ -106,6 +106,39 @@ public class ChapterScene : MonoBehaviour
         canvas.SetActive(true);
     }
 
+    public IEnumerator FadeOut(float i)
+    {
+        panelFade.SetActive(true);
+        canvas.SetActive(false);
+
+        fadeText.text = "End Chapter " + (tindex + 1);
+
+        yield return new WaitForSeconds(i);
+
+        if (Manager.GetComponent<UserManager>().user.LastCh < 1)
+        {
+            Manager.GetComponent<UserManager>().user.LastCh = 1;
+            Manager.GetComponent<UserManager>().SaveUser();
+        }
+
+        Manager.GetComponent<UserManager>().user.LastIndex[tindex] = dialogThis.Count;
+        Manager.GetComponent<UserManager>().SaveUser();
+
+        if (!Manager.GetComponent<UserManager>().user.PassPost[tindex])
+        {
+            SceneManager.LoadScene("TestScene");
+        }
+        else
+        {
+            if ((tindex + 1) == 3)
+            {
+                Manager.GetComponent<UserManager>().user.katakana = true;
+            }
+
+            SceneManager.LoadScene("Chapter");
+        }
+    }
+
     public void NextSentence()
     {
         //ปิดปุ่มContinue
@@ -129,27 +162,14 @@ public class ChapterScene : MonoBehaviour
         }
         else
         {
-            event_text.text = "End Chapter 1";
+            event_text.text = "";
             textDisplays.text = "";
             continueButton.SetActive(false);
             dialogBox.SetActive(false);
             nameDisplay.SetActive(false);
             teacherPic.SetActive(false);
 
-            if (Manager.GetComponent<UserManager>().user.LastCh < 1)
-            {
-                Manager.GetComponent<UserManager>().user.LastCh = 1;
-                Manager.GetComponent<UserManager>().SaveUser();
-            }
-
-            if (!Manager.GetComponent<UserManager>().user.PassPost[tindex])
-            {
-                SceneManager.LoadScene("TestScene");
-            }
-            else
-            {
-                SceneManager.LoadScene("Chapter");
-            }
+            StartCoroutine(FadeOut(3f));
         }
     }
 
@@ -312,16 +332,24 @@ public class ChapterScene : MonoBehaviour
                 Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;
                 Audio.GetComponent<AudioSource>().Play();
 
-                Manager.GetComponent<UserManager>().user.LastIndex[tindex] = index;
-                Manager.GetComponent<UserManager>().SaveUser();
+                if (Manager.GetComponent<UserManager>().user.LastIndex[tindex] != dialogThis.Count)
+                {
+                    Manager.GetComponent<UserManager>().user.LastIndex[tindex] = index;
+                    Manager.GetComponent<UserManager>().SaveUser();
+                }                
 
                 SceneManager.LoadScene("MainMenu");
                 break;
             case (1):
-                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;
+                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMChapterSelect;
                 Audio.GetComponent<AudioSource>().Play();
-                Manager.GetComponent<UserManager>().user.LastIndex[tindex] = index;
-                Manager.GetComponent<UserManager>().SaveUser();
+
+                if (Manager.GetComponent<UserManager>().user.LastIndex[tindex] != dialogThis.Count)
+                {
+                    Manager.GetComponent<UserManager>().user.LastIndex[tindex] = index;
+                    Manager.GetComponent<UserManager>().SaveUser();
+                }
+
                 SceneManager.LoadScene("Chapter");
                 break;
             case (2):
