@@ -40,6 +40,7 @@ public class RetrieveTest
     public int test_answer;
     public List<string> test_choice = new List<string>();
     public string test_desc;
+    public string test_sprite_path;
     public string test_id;
 
     public override string ToString()
