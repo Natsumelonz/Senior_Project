@@ -95,7 +95,7 @@ public class UserManager : MonoBehaviour
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
 
-            //Debug.Log("Load path: " + path);
+            Debug.Log("Load path: " + path);
             User userData = formatter.Deserialize(stream) as User;
             stream.Close();
 

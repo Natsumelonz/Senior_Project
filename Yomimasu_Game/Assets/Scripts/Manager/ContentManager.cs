@@ -57,6 +57,7 @@ public class ContentInfo
     public List<RetrieveDialog> Scripts;
     public List<RetrieveTest> Tests;
     public int chap_id;
+    public string chap_avg_time;
 
     public override string ToString()
     {
@@ -67,16 +68,7 @@ public class ContentInfo
 public class ContentManager : MonoBehaviour
 {
     public static ContentManager Instance { set; get; }
-    public ContentInfo chapter1_info = new ContentInfo();
-    public ContentInfo chapter2_info = new ContentInfo();
-    public ContentInfo chapter3_info = new ContentInfo();
-    public ContentInfo chapter4_info = new ContentInfo();
-    public ContentInfo chapter5_info = new ContentInfo();
-    public ContentInfo chapter6_info = new ContentInfo();
-    public ContentInfo chapter7_info = new ContentInfo();
-    public ContentInfo chapter8_info = new ContentInfo();
-    public ContentInfo chapter9_info = new ContentInfo();
-    public ContentInfo chapter10_info = new ContentInfo();
+    public ContentInfo[] chapters_info = new ContentInfo[10];
 
     private void Awake()
     {
@@ -89,32 +81,32 @@ public class ContentManager : MonoBehaviour
     {
         RestClient.Get<ContentInfo>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter1.json").Then(response =>
         {
-            chapter1_info = response;
+            chapters_info[0] = response;
         });
         
         RestClient.Get<ContentInfo>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter2.json").Then(response =>
         {
-            chapter2_info = response;
+            chapters_info[1] = response;
         });
 
         RestClient.Get<ContentInfo>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter3.json").Then(response =>
         {
-            chapter3_info = response;
+            chapters_info[2] = response;
         });
         
         RestClient.Get<ContentInfo>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter4.json").Then(response =>
         {
-            chapter4_info = response;
+            chapters_info[3] = response;
         });
 
         RestClient.Get<ContentInfo>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter5.json").Then(response =>
         {
-            chapter5_info = response;
+            chapters_info[4] = response;
         });
 
         RestClient.Get<ContentInfo>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter6.json").Then(response =>
         {
-            chapter6_info = response;
+            chapters_info[5] = response;
         });
 
         Debug.Log("Initial ContentInfo Complete!");
