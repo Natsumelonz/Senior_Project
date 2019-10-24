@@ -150,7 +150,47 @@ public class MatchingManager : MonoBehaviour
         }
         else
         {
+            if (level < 6)
+            {
+                while (alphabetListJP.Count < 12)
+                {
+                    _wordIndex = Random.Range(0, 46);
+                    if (!alphabetListJP.Contains(Manager.GetComponent<AlphabetManager>().alphabetsKT[_wordIndex].alphabetname_JP))
+                    {
+                        alphabetListJP.Add(Manager.GetComponent<AlphabetManager>().alphabetsKT[_wordIndex].alphabetname_JP);
+                        alphabetListRJ.Add(Manager.GetComponent<AlphabetManager>().alphabetsKT[_wordIndex].alphabetname_romanji);
+                    }
+                }
+            }
+            else if (level < 11)
+            {
+                while (alphabetListJP.Count < 12)
+                {
+                    _wordIndex = Random.Range(46, 104);
+                    if (!alphabetListJP.Contains(Manager.GetComponent<AlphabetManager>().alphabetsKT[_wordIndex].alphabetname_JP))
+                    {
+                        alphabetListJP.Add(Manager.GetComponent<AlphabetManager>().alphabetsKT[_wordIndex].alphabetname_JP);
+                        alphabetListRJ.Add(Manager.GetComponent<AlphabetManager>().alphabetsKT[_wordIndex].alphabetname_romanji);
+                    }
+                }
+            }
+            else
+            {
+                while (alphabetListJP.Count < 12)
+                {
+                    _wordIndex = Random.Range(0, 104);
+                    if (!alphabetListJP.Contains(Manager.GetComponent<AlphabetManager>().alphabetsKT[_wordIndex].alphabetname_JP))
+                    {
+                        alphabetListJP.Add(Manager.GetComponent<AlphabetManager>().alphabetsKT[_wordIndex].alphabetname_JP);
+                        alphabetListRJ.Add(Manager.GetComponent<AlphabetManager>().alphabetsKT[_wordIndex].alphabetname_romanji);
+                    }
+                }
+            }
 
+            if (alphabetListJP.Count == 12)
+            {
+                _initRAD = true;
+            }
         }
     }
 

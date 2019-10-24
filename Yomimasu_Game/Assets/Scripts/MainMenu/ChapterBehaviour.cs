@@ -261,7 +261,7 @@ public class ChapterBehaviour : MonoBehaviour
             ChapterButton[i].GetComponentInChildren<Slider>().value = ((float)Manager.GetComponent<UserManager>().user.LastIndex[i]
                 / (float)Manager.GetComponent<ContentManager>().chapters_info[i].Scripts.Count);
             ChapterButton[i].GetComponentInChildren<Slider>().GetComponentInChildren<Text>().text =
-                string.Format("{0:0.00}", (((float)Manager.GetComponent<UserManager>().user.LastIndex[i]
+                string.Format("{0:0}", (((float)Manager.GetComponent<UserManager>().user.LastIndex[i]
                 / (float)Manager.GetComponent<ContentManager>().chapters_info[i].Scripts.Count) * 100)) + "%";
         }
     }

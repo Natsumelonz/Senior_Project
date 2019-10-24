@@ -96,7 +96,7 @@ public class AlphabetsInfo : MonoBehaviour
         }
         else
         {
-            alphabet = (i+46);
+            alphabet = (i);
             writingImage.GetComponent<Animator>().runtimeAnimatorController = controllers[(i+46)];
             alphabetText.text = Manager.GetComponent<AlphabetManager>().alphabetsKT[i].alphabetname_romanji;
         }

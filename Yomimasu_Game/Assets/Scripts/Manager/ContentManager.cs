@@ -110,6 +110,26 @@ public class ContentManager : MonoBehaviour
             chapters_info[5] = response;
         });
 
+        //RestClient.Get<ContentInfo>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter7.json").Then(response =>
+        //{
+        //    chapters_info[6] = response;
+        //});
+
+        //RestClient.Get<ContentInfo>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter8.json").Then(response =>
+        //{
+        //    chapters_info[7] = response;
+        //});
+
+        //RestClient.Get<ContentInfo>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter9.json").Then(response =>
+        //{
+        //    chapters_info[8] = response;
+        //});
+
+        //RestClient.Get<ContentInfo>("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter10.json").Then(response =>
+        //{
+        //    chapters_info[9] = response;
+        //});
+
         Debug.Log("Initial ContentInfo Complete!");
     }
 }

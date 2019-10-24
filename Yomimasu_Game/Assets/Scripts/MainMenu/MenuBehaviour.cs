@@ -28,12 +28,7 @@ public class MenuBehaviour : MonoBehaviour
         Effect = GameObject.Find("EffectManager").gameObject;
         playerName.text = Manager.GetComponent<UserManager>().user.Name;
 
-        Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;
-
-        if (Manager.GetComponent<UserManager>().user.katakana)
-        {
-            kataLevel.interactable = true;
-        }
+        Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;        
     }
 
     private void Update()
@@ -60,6 +55,12 @@ public class MenuBehaviour : MonoBehaviour
     public void MatchingLevel(int i)
     {
         Effect.GetComponent<AudioSource>().Play();
+
+        if (Manager.GetComponent<UserManager>().user.katakana)
+        {
+            kataLevel.interactable = true;
+        }
+
         switch (i)
         {
             default:
