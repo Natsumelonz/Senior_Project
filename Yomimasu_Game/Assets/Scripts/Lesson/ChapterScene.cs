@@ -228,6 +228,12 @@ public class ChapterScene : MonoBehaviour
             Manager.GetComponent<UserManager>().user.dictionary = true;
             Manager.GetComponent<UserManager>().SaveUser();
         }
+
+        if (dialogThis[index].script_id == "ch1_027")
+        {
+            Manager.GetComponent<UserManager>().user.HiraganaChart[0] = true;
+            Manager.GetComponent<UserManager>().SaveUser();
+        }
     }
 
     void EventImageCall()

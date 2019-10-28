@@ -21,28 +21,17 @@ public class User
     public int[] Post = new int[10];
     public bool[] PassPre = new bool[10];
     public bool[] PassPost = new bool[10];
+    public bool[] HiraganaChart = new bool[11];
+    public bool[] KatakanaChart = new bool[11];
     public bool dictionary;
     public bool alphabetChart;
     public bool katakana;
     public List<int> LastScore1 = new List<int>();
     public List<int> LastScore2 = new List<int>();
 
-    public User()
+    public override string ToString()
     {
-        Name = "";
-        LastCh = 0;
-        Score1 = 0;
-        Score2 = 0;
-        LastIndex = new int[10];
-        Pre = new int[10];
-        Post = new int[10];
-        PassPre = new bool[10];
-        PassPost = new bool[10];
-        dictionary = false;
-        alphabetChart = false;
-        katakana = false;
-        LastScore1 = new List<int>();
-        LastScore2 = new List<int>();
+        return JsonUtility.ToJson(this, true);
     }
 }
 
@@ -64,9 +53,29 @@ public class UserManager : MonoBehaviour
     public void NewUser()
     {
         user.Name = inputName.text;
+
         Debug.Log("Create new save name: " + user.Name);
 
-        SaveUser();
+        RestClient.Get("https://it59-28yomimasu.firebaseio.com/User/" + user.Name + ".json").Then(response =>
+        {
+            if (response == null)
+            {
+                Debug.Log("User is null!");
+
+                SaveUser();
+            }
+            else
+            {
+                Debug.Log("User not null!");
+
+                RestClient.Get<User>("https://it59-28yomimasu.firebaseio.com/User/" + user.Name + ".json").Then(response1 =>
+                {
+                    user = response1;
+                });
+
+                SaveUser();
+            }
+        });
     }
 
     public void SaveUser()
@@ -90,6 +99,7 @@ public class UserManager : MonoBehaviour
     public void LoadUser()
     {
         string path = Application.persistentDataPath + "/user.save";
+
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
