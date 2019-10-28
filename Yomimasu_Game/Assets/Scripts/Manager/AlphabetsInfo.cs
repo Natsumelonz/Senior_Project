@@ -20,6 +20,8 @@ public class AlphabetsInfo : MonoBehaviour
     public GameObject hiraganaChart;
     public GameObject katakanaChart;
     public Button katakanaButton;
+    public List<Button> hiraganaAlphabets;
+    public List<Button> katakanaAlphabets;
 
     private void Start()
     {
