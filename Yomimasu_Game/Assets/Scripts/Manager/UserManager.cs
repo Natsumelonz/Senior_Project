@@ -89,7 +89,7 @@ public class UserManager : MonoBehaviour
             RestClient.Put("https://it59-28yomimasu.firebaseio.com/User/" + user.Name + ".json", user);
         }
 
-        //Debug.Log("Save path: " + path);
+        Debug.Log("Save path: " + path);
         formatter.Serialize(stream, user);
         stream.Close();
 
@@ -112,6 +112,23 @@ public class UserManager : MonoBehaviour
             fistTime = false;
 
             user = userData;
+
+            RestClient.Get("https://it59-28yomimasu.firebaseio.com/User/" + user.Name + ".json").Then(response =>
+            {
+                if (response == null)
+                {
+                    Debug.Log("User is null!");
+                }
+                else
+                {
+                    Debug.Log("User not null!");
+
+                    RestClient.Get<User>("https://it59-28yomimasu.firebaseio.com/User/" + user.Name + ".json").Then(response1 =>
+                    {
+                        user = response1;
+                    });
+                }
+            });
         }
         else
         {
