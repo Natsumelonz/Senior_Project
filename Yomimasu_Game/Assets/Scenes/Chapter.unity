@@ -7388,6 +7388,21 @@ MonoBehaviour:
   chapter: {fileID: 192042960}
   chapterName: {fileID: 1552359402}
   objective: {fileID: 1163591291}
+  avgTime: {fileID: 885208011}
+  ChapterButton:
+  - {fileID: 1121234715}
+  - {fileID: 1266649671}
+  - {fileID: 1951167725}
+  - {fileID: 1243532764}
+  - {fileID: 1032524215}
+  - {fileID: 375830428}
+  - {fileID: 1543208860}
+  - {fileID: 800394463}
+  - {fileID: 2073986998}
+  - {fileID: 1015987565}
+  NextBack:
+  - {fileID: 844467361}
+  - {fileID: 1798226988}
 --- !u!4 &1638295881
 Transform:
   m_ObjectHideFlags: 0
