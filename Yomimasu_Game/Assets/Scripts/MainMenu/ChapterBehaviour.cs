@@ -10,6 +10,7 @@ public class ChapterBehaviour : MonoBehaviour
     private GameObject Manager;
     private GameObject Audio;
     private GameObject Effect;
+    private int panelPage = 0;
 
     public GameObject PreviousPanel;
     public GameObject ObjectivePanel;
@@ -22,6 +23,10 @@ public class ChapterBehaviour : MonoBehaviour
     public Text avgTime;
     public List<GameObject> ChapterButton;
     public List<GameObject> NextBack;
+    public GameObject chap1_4;
+    public GameObject chap5_8;
+    public Button arrowLeft;
+    public Button arrowRight;
 
     private int chapterid;
 
@@ -38,9 +43,25 @@ public class ChapterBehaviour : MonoBehaviour
 
         SetProcess();
     }
-
-    private void Update()
+    public void Update()
     {
+        Reposition();
+        if (panelPage <= 0)
+        {
+            arrowLeft.interactable = false;
+        }
+        else
+        {
+            arrowLeft.interactable = true;
+        }
+        if (panelPage >= 1)
+        {
+            arrowRight.interactable = false;
+        }
+        else
+        {
+            arrowRight.interactable = true;
+        }
     }
 
     public void ClosePanel()
@@ -321,5 +342,36 @@ public class ChapterBehaviour : MonoBehaviour
         ChapterScene.questionThis = Manager.GetComponent<ContentManager>().chapters_info[i].Questions;
         ChapterScene.chName = Manager.GetComponent<ContentManager>().chapters_info[i].Name;
         TestScene.testhis = Manager.GetComponent<ContentManager>().chapters_info[i].Tests;
+    }
+
+    public void SwitchPanel(int i)
+    {
+        if (panelPage > -1 && panelPage < 3)
+        {
+            panelPage -= i;
+        }
+
+        //Debug.Log(panelPage);
+    }
+
+    public void Reposition()
+    {
+        RectTransform transform1 = chap1_4.GetComponent<RectTransform>();
+        RectTransform transform2 = chap5_8.GetComponent<RectTransform>();
+
+        switch (panelPage)
+        {
+            default:
+                break;
+            case (0):
+                transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(0, 0), 5 * Time.deltaTime);
+                transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(1100f, 0), 5 * Time.deltaTime);
+                break;
+            case (1):
+                transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(-1100f, 0), 5 * Time.deltaTime);
+                transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(0, 0), 5 * Time.deltaTime);
+                break;
+        }
+
     }
 }

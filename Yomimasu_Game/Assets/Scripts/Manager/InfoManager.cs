@@ -15,6 +15,7 @@ public class InfoManager : MonoBehaviour
     private RectTransform graphContainer2;
     private RectTransform graphContainer3;
     private RectTransform graphContainer4;
+    private int panelPage = 0;
 
     public List<int> userPost;
     public List<int> userPre;
@@ -30,11 +31,13 @@ public class InfoManager : MonoBehaviour
     public GameObject gC3Panel;
     public GameObject infoPanel;
     public GameObject statsPanel;
+    public GameObject graphPanel;
     public Text high1;
     public Text high2;
     public Text gameName;
     public Sprite circleSprite;
-    public GameObject statsButton;
+    public Button arrowLeft;
+    public Button arrowRight;
 
     private void Start()
     {
@@ -71,6 +74,27 @@ public class InfoManager : MonoBehaviour
                
         gameName.text = "Matching Game";
 
+    }
+
+    public void Update()
+    {
+        Reposition();
+        if (panelPage <= 0)
+        {
+            arrowLeft.interactable = false;
+        }
+        else
+        {
+            arrowLeft.interactable = true;
+        }
+        if (panelPage >= 2)
+        {
+            arrowRight.interactable = false;
+        }
+        else
+        {
+            arrowRight.interactable = true;
+        }
     }
 
     public GameObject CreateCircle(Vector2 anchorP, RectTransform graphContainer, bool post)
@@ -167,16 +191,51 @@ public class InfoManager : MonoBehaviour
         {
             infoPanel.SetActive(false);
             statsPanel.SetActive(true);
-            RectTransform transform = statsButton.GetComponent<RectTransform>();
-            transform.anchoredPosition = new Vector2(-114f, 558f);
         }
         else
         {
             statsPanel.SetActive(false);
             infoPanel.SetActive(true);
-            RectTransform transform = statsButton.GetComponent<RectTransform>();
-            transform.anchoredPosition = new Vector2(-486.9f, 269.7f);
         }
+    }
+
+    public void SwitchPanel(int i)
+    {
+        if (panelPage > -1 && panelPage < 3)
+        {
+            panelPage -= i;
+        }
+
+        //Debug.Log(panelPage);
+    }
+
+    public void Reposition()
+    {
+        RectTransform transform1 = infoPanel.GetComponent<RectTransform>();
+        RectTransform transform2 = graphPanel.GetComponent<RectTransform>();
+        RectTransform transform3 = statsPanel.GetComponent<RectTransform>();
+
+        switch (panelPage)
+        {
+            default:
+                break;
+            case (0):
+                transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(0, 0), 5 * Time.deltaTime);
+                transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(1100f, 0), 5 * Time.deltaTime);
+                transform3.anchoredPosition = Vector2.Lerp(transform3.anchoredPosition, new Vector2(2100f, 0), 5 * Time.deltaTime);
+                break;
+            case (1):
+                transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(-1100f, 0), 5 * Time.deltaTime);
+                transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(0, 0), 5 * Time.deltaTime);
+                transform3.anchoredPosition = Vector2.Lerp(transform3.anchoredPosition, new Vector2(1100f, 0), 5 * Time.deltaTime);
+                break;
+            case (2):
+                transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(-2100f, 0), 5 * Time.deltaTime);
+                transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(-1100f, 0), 5 * Time.deltaTime);
+                transform3.anchoredPosition = Vector2.Lerp(transform3.anchoredPosition, new Vector2(0f, 0), 5 * Time.deltaTime);
+                break;
+        }
+
     }
 
     public void MainMenu()
