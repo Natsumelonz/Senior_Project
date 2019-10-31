@@ -2050,13 +2050,15 @@ MonoBehaviour:
   user:
     Name: 
     LastCh: 0
-    LastSentence: 0
     Score1: 0
     Score2: 0
-    Pre: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-    Post: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-    PassPre: 00000000000000000000
-    PassPost: 00000000000000000000
+    LastIndex: 0000000000000000000000000000000000000000000000000000000000000000
+    Pre: 0000000000000000000000000000000000000000000000000000000000000000
+    Post: 0000000000000000000000000000000000000000000000000000000000000000
+    PassPre: 0000000000000000
+    PassPost: 0000000000000000
+    HiraganaChart: 0000000000000000000000
+    KatakanaChart: 0000000000000000000000
     dictionary: 0
     alphabetChart: 0
     katakana: 0
@@ -2151,20 +2153,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b3d668b9934f04fa1bb96dc49bb638, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapter1_info:
-    Name: 
+  chapters_info:
+  - Name: 
     Objective: 
     Questions: []
     Scripts: []
     Tests: []
     chap_id: 0
-  chapter2_info:
-    Name: 
+    chap_avg_time: 
+  - Name: 
     Objective: 
     Questions: []
     Scripts: []
     Tests: []
     chap_id: 0
+    chap_avg_time: 
+  - Name: 
+    Objective: 
+    Questions: []
+    Scripts: []
+    Tests: []
+    chap_id: 0
+    chap_avg_time: 
+  - Name: 
+    Objective: 
+    Questions: []
+    Scripts: []
+    Tests: []
+    chap_id: 0
+    chap_avg_time: 
+  - Name: 
+    Objective: 
+    Questions: []
+    Scripts: []
+    Tests: []
+    chap_id: 0
+    chap_avg_time: 
+  - Name: 
+    Objective: 
+    Questions: []
+    Scripts: []
+    Tests: []
+    chap_id: 0
+    chap_avg_time: 
+  - Name: 
+    Objective: 
+    Questions: []
+    Scripts: []
+    Tests: []
+    chap_id: 0
+    chap_avg_time: 
+  - Name: 
+    Objective: 
+    Questions: []
+    Scripts: []
+    Tests: []
+    chap_id: 0
+    chap_avg_time: 
 --- !u!1 &2102878915
 GameObject:
   m_ObjectHideFlags: 0

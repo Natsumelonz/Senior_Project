@@ -13,21 +13,28 @@ public class InfoManager : MonoBehaviour
     private GameObject Effect;
     private RectTransform graphContainer1;
     private RectTransform graphContainer2;
+    private RectTransform graphContainer3;
+    private RectTransform graphContainer4;
 
+    public List<int> userPost;
+    public List<int> userPre;
     public Text userName;
     public Text lastCh;
     public Text score1;
     public Text score2;
-    public List<Text> preScore;
-    public List<Text> postScore;
     public GameObject gC1;
     public GameObject gC2;
+    public GameObject gC3;
     public GameObject gC1Panel;
     public GameObject gC2Panel;
+    public GameObject gC3Panel;
+    public GameObject infoPanel;
+    public GameObject statsPanel;
     public Text high1;
     public Text high2;
     public Text gameName;
     public Sprite circleSprite;
+    public GameObject statsButton;
 
     private void Start()
     {
@@ -39,34 +46,46 @@ public class InfoManager : MonoBehaviour
         lastCh.text = Manager.GetComponent<UserManager>().user.LastCh.ToString();
         score1.text = Manager.GetComponent<UserManager>().user.Score1 + " pt.";
         score2.text = Manager.GetComponent<UserManager>().user.Score2 + " pt.";
+        
+        graphContainer1 = gC1.GetComponent<RectTransform>();
+        graphContainer2 = gC2.GetComponent<RectTransform>();
+        graphContainer3 = gC3.GetComponent<RectTransform>();
+        graphContainer4 = gC3.GetComponent<RectTransform>();
 
-        for (int i = 0; i < Manager.GetComponent<UserManager>().user.Pre.Length; i++)
-        {
-            preScore[i].text = "Ch." + (i + 1) + ": " + Manager.GetComponent<UserManager>().user.Pre[i] + " pt.";
-        }
+        ShowGraph(Manager.GetComponent<UserManager>().user.LastScore1, Manager.GetComponent<UserManager>().user.Score1, graphContainer1, 9.5f, false);
+        high1.text = Manager.GetComponent<UserManager>().user.Score1.ToString();
+
+        ShowGraph(Manager.GetComponent<UserManager>().user.LastScore2, Manager.GetComponent<UserManager>().user.Score2, graphContainer2, 9.5f, false);
+        high2.text = Manager.GetComponent<UserManager>().user.Score2.ToString();
 
         for (int i = 0; i < Manager.GetComponent<UserManager>().user.Post.Length; i++)
         {
-            postScore[i].text = "Ch." + (i + 1) + ": " + Manager.GetComponent<UserManager>().user.Post[i] + " pt.";
+            userPost.Add(Manager.GetComponent<UserManager>().user.Post[i]);
+            userPre.Add(Manager.GetComponent<UserManager>().user.Pre[i]);
+            //Debug.Log(userPre[i]);
         }
 
-        graphContainer1 = gC1.GetComponent<RectTransform>();
-        graphContainer2 = gC2.GetComponent<RectTransform>();
-
-        ShowGraph(Manager.GetComponent<UserManager>().user.LastScore1, Manager.GetComponent<UserManager>().user.Score1, graphContainer1);
-        high1.text = Manager.GetComponent<UserManager>().user.Score1.ToString();
-
-        ShowGraph(Manager.GetComponent<UserManager>().user.LastScore2, Manager.GetComponent<UserManager>().user.Score2, graphContainer2);
+        ShowGraph(userPost, 10f, graphContainer3, 7.5f, true);
+        ShowGraph(userPre, 10f, graphContainer4, 7.5f, false);
         high2.text = Manager.GetComponent<UserManager>().user.Score2.ToString();
+               
         gameName.text = "Matching Game";
 
     }
 
-    public GameObject CreateCircle(Vector2 anchorP, RectTransform graphContainer)
+    public GameObject CreateCircle(Vector2 anchorP, RectTransform graphContainer, bool post)
     {
         GameObject gameObject = new GameObject("circle", typeof(Image));
         gameObject.transform.SetParent(graphContainer, false);
         gameObject.GetComponent<Image>().sprite = circleSprite;
+        if (post)
+        {
+            gameObject.GetComponent<Image>().color = new Color32(91, 219, 0, 255);
+        }
+        else
+        {
+            gameObject.GetComponent<Image>().color = new Color(252, 255, 0, 255);
+        }
         RectTransform rectTransform = gameObject.GetComponent<RectTransform>();
         rectTransform.anchoredPosition = anchorP;
         rectTransform.sizeDelta = new Vector2(11, 11);
@@ -75,30 +94,18 @@ public class InfoManager : MonoBehaviour
         return gameObject;
     }
 
-    public void ShowGraph(List<int> valueList, float yMaximum, RectTransform graphContainer)
-    {
-        float graphHeight = graphContainer.sizeDelta.y;
-        float graphWeight = graphContainer.sizeDelta.x;
-
-        GameObject lastCircleGameObject = null;
-        for (int i = 0; i < valueList.Count; i++)
-        {
-            float xPosition = 20f + i * (graphWeight / 9.5f);
-            float yPosition = (valueList[i] / yMaximum) * graphHeight;
-            GameObject circleGameObject = CreateCircle(new Vector2(xPosition, yPosition), graphContainer);
-            if (lastCircleGameObject != null)
-            {
-                CreateDotConnection(lastCircleGameObject.GetComponent<RectTransform>().anchoredPosition, circleGameObject.GetComponent<RectTransform>().anchoredPosition, graphContainer);
-            }
-            lastCircleGameObject = circleGameObject;
-        }
-    }
-
-    public void CreateDotConnection(Vector2 dotA, Vector2 dotB, RectTransform graphContainer)
+    public void CreateDotConnection(Vector2 dotA, Vector2 dotB, RectTransform graphContainer, bool post)
     {
         GameObject game = new GameObject("dotConnection", typeof(Image));
         game.transform.SetParent(graphContainer, false);
-        game.GetComponent<Image>().color = new Color(1, 1, 1, .5f);
+        if (post)
+        {
+            game.GetComponent<Image>().color = new Color32(91, 219, 0, 255);
+        }
+        else
+        {
+            game.GetComponent<Image>().color = new Color(252, 255, 0, 255);
+        }
         RectTransform transform = game.GetComponent<RectTransform>();
         Vector2 dir = (dotB - dotA).normalized;
         float dis = Vector2.Distance(dotA, dotB);
@@ -108,6 +115,27 @@ public class InfoManager : MonoBehaviour
         transform.anchoredPosition = dotA + dir * dis * .5f;
         transform.localEulerAngles = new Vector3(0, 0, GetAngleFromVectorFloat(dir));
     }
+
+    public void ShowGraph(List<int> valueList, float yMaximum, RectTransform graphContainer, float x, bool post)
+    {
+        float graphHeight = graphContainer.sizeDelta.y;
+        float graphWeight = graphContainer.sizeDelta.x;
+
+        GameObject lastCircleGameObject = null;
+        for (int i = 0; i < valueList.Count; i++)
+        {
+            float xPosition = 20f + i * (graphWeight / x);
+            float yPosition = (valueList[i] / yMaximum) * graphHeight;
+            GameObject circleGameObject = CreateCircle(new Vector2(xPosition, yPosition), graphContainer, post);
+            if (lastCircleGameObject != null)
+            {
+                CreateDotConnection(lastCircleGameObject.GetComponent<RectTransform>().anchoredPosition,
+                    circleGameObject.GetComponent<RectTransform>().anchoredPosition, graphContainer, post);
+            }
+            lastCircleGameObject = circleGameObject;
+        }
+    }
+
     public float GetAngleFromVectorFloat(Vector3 dir)
     {
         dir = dir.normalized;
@@ -130,6 +158,24 @@ public class InfoManager : MonoBehaviour
             gC2Panel.SetActive(false);
             gC1Panel.SetActive(true);
             gameName.text = "Matching Game";
+        }
+    }
+
+    public void PrePostStats()
+    {
+        if (infoPanel.activeSelf)
+        {
+            infoPanel.SetActive(false);
+            statsPanel.SetActive(true);
+            RectTransform transform = statsButton.GetComponent<RectTransform>();
+            transform.anchoredPosition = new Vector2(-114f, 558f);
+        }
+        else
+        {
+            statsPanel.SetActive(false);
+            infoPanel.SetActive(true);
+            RectTransform transform = statsButton.GetComponent<RectTransform>();
+            transform.anchoredPosition = new Vector2(-486.9f, 269.7f);
         }
     }
 

@@ -71,9 +71,9 @@ public class ChapterBehaviour : MonoBehaviour
             case (-1):
                 NextBack[1].SetActive(false);
                 NextBack[0].SetActive(true);
-                for (int x = 0; x < 10; x++)
+                for (int x = 0; x < 8; x++)
                 {
-                    if (x > 4)
+                    if (x > 5)
                     {
 
                         ChapterButton[x].SetActive(false);
@@ -93,11 +93,10 @@ public class ChapterBehaviour : MonoBehaviour
                 {
                     NextBack[0].SetActive(false);
                     NextBack[1].SetActive(true);
-                    for (int x = 0; x < 10; x++)
+                    for (int x = 0; x < 8; x++)
                     {
-                        if (x < 4)
+                        if (x < 5)
                         {
-
                             ChapterButton[x].SetActive(false);
                         }
                         else
@@ -172,6 +171,30 @@ public class ChapterBehaviour : MonoBehaviour
                     SetChapter(i);
                 }
                 break;
+            case (7):
+                if (Manager.GetComponent<UserManager>().user.LastCh < 6)
+                {
+                    PreviousPanel.SetActive(true);
+                }
+                else
+                {
+                    ObjectivePanel.SetActive(true);
+                    chapter.text = "Chapter 7";
+                    SetChapter(i);
+                }
+                break;
+            case (8):
+                if (Manager.GetComponent<UserManager>().user.LastCh < 7)
+                {
+                    PreviousPanel.SetActive(true);
+                }
+                else
+                {
+                    ObjectivePanel.SetActive(true);
+                    chapter.text = "Chapter 8";
+                    SetChapter(i);
+                }
+                break;
         }
     }
 
@@ -243,6 +266,26 @@ public class ChapterBehaviour : MonoBehaviour
                 break;
             case (6):
                 if (!Manager.GetComponent<UserManager>().user.PassPre[5])
+                {
+                    SceneManager.LoadScene("TestScene");
+                }
+                else
+                {
+                    SceneManager.LoadScene("ChapterScene");
+                }
+                break;
+            case (7):
+                if (!Manager.GetComponent<UserManager>().user.PassPre[6])
+                {
+                    SceneManager.LoadScene("TestScene");
+                }
+                else
+                {
+                    SceneManager.LoadScene("ChapterScene");
+                }
+                break;
+            case (8):
+                if (!Manager.GetComponent<UserManager>().user.PassPre[7])
                 {
                     SceneManager.LoadScene("TestScene");
                 }
