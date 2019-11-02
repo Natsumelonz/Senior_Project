@@ -16,20 +16,16 @@ public class ChapterBehaviour : MonoBehaviour
     private int panelPage = 0;
 
     public GameObject PreviousPanel;
-    public GameObject ObjectivePanel;
     public Button alphabetChartButton;
     public AudioClip effectClip;
     public AudioSource effectAudio;
-    public Text chapter;
-    public Text chapterName;
-    public Text objective;
-    public Text avgTime;
-    public List<GameObject> ChapterButton;
-    public List<GameObject> NextBack;
-    public GameObject chap1_4;
-    public GameObject chap5_8;
     public Button arrowLeft;
     public Button arrowRight;
+    public List<GameObject> chapPanel;
+    public List<GameObject> chapTextPanel;
+    public List<GameObject> chapNTextPanel;
+    public List<GameObject> chapOTextPanel;
+    public List<GameObject> chapTTextPanel;
 
     private int chapterid;
 
@@ -46,6 +42,22 @@ public class ChapterBehaviour : MonoBehaviour
 
         dragDistance = Screen.height * 15 / 100; //dragDistance is 15% height of the screen
 
+        for (int i = 0; i < chapPanel.Count; i++)
+        {
+            chapTextPanel.Add(chapPanel[i].transform.Find("ChapText").gameObject);
+            chapNTextPanel.Add(chapPanel[i].transform.Find("ChapNText").gameObject);
+            chapOTextPanel.Add(chapPanel[i].transform.Find("ChapOText").gameObject);
+            chapTTextPanel.Add(chapPanel[i].transform.Find("ChapTText").gameObject);
+        }
+
+        for (int i = 0; i < chapPanel.Count; i++)
+        {
+            chapTextPanel[i].GetComponent<Text>().text = "Chapter " + (i+1);
+            chapNTextPanel[i].GetComponent<Text>().text = Manager.GetComponent<ContentManager>().chapters_info[i].Name;
+            chapOTextPanel[i].GetComponent<Text>().text = Manager.GetComponent<ContentManager>().chapters_info[i].Objective;
+            chapTTextPanel[i].GetComponent<Text>().text = Manager.GetComponent<ContentManager>().chapters_info[i].chap_avg_time;
+        }
+
         SetProcess();
     }
     public void Update()
@@ -59,7 +71,7 @@ public class ChapterBehaviour : MonoBehaviour
         {
             arrowLeft.interactable = true;
         }
-        if (panelPage >= 1)
+        if (panelPage >= 7)
         {
             arrowRight.interactable = false;
         }
@@ -131,7 +143,6 @@ public class ChapterBehaviour : MonoBehaviour
     {
         Effect.GetComponent<AudioSource>().Play();
         PreviousPanel.SetActive(false);
-        ObjectivePanel.SetActive(false);
     }
 
     public void ChapterSelected(int i)
@@ -152,48 +163,11 @@ public class ChapterBehaviour : MonoBehaviour
             case (-2):
                 SceneManager.LoadScene("AlphabetsChart");
                 break;
-            case (-1):
-                NextBack[1].SetActive(false);
-                NextBack[0].SetActive(true);
-                for (int x = 0; x < 8; x++)
-                {
-                    if (x > 5)
-                    {
-
-                        ChapterButton[x].SetActive(false);
-                    }
-                    else
-                    {
-                        ChapterButton[x].SetActive(true);
-                    }
-                }
-                break;
             case (0):
-                if (Manager.GetComponent<UserManager>().user.LastCh < 5)
-                {
-                    PreviousPanel.SetActive(true);
-                }
-                else
-                {
-                    NextBack[0].SetActive(false);
-                    NextBack[1].SetActive(true);
-                    for (int x = 0; x < 8; x++)
-                    {
-                        if (x < 5)
-                        {
-                            ChapterButton[x].SetActive(false);
-                        }
-                        else
-                        {
-                            ChapterButton[x].SetActive(true);
-                        }
-                    }
-                }
                 break;
             case (1):
-                ObjectivePanel.SetActive(true);
-                chapter.text = "Chapter 1";
                 SetChapter(i);
+                ChapterPlay();
                 break;
             case (2):
                 if (Manager.GetComponent<UserManager>().user.LastCh < 1)
@@ -202,9 +176,8 @@ public class ChapterBehaviour : MonoBehaviour
                 }
                 else
                 {
-                    ObjectivePanel.SetActive(true);
-                    chapter.text = "Chapter 2";
                     SetChapter(i);
+                    ChapterPlay();
                 }
                 break;
             case (3):
@@ -214,9 +187,8 @@ public class ChapterBehaviour : MonoBehaviour
                 }
                 else
                 {
-                    ObjectivePanel.SetActive(true);
-                    chapter.text = "Chapter 3";
                     SetChapter(i);
+                    ChapterPlay();
                 }
                 break;
             case (4):
@@ -226,9 +198,8 @@ public class ChapterBehaviour : MonoBehaviour
                 }
                 else
                 {
-                    ObjectivePanel.SetActive(true);
-                    chapter.text = "Chapter 4";
                     SetChapter(i);
+                    ChapterPlay();
                 }
                 break;
             case (5):
@@ -238,9 +209,8 @@ public class ChapterBehaviour : MonoBehaviour
                 }
                 else
                 {
-                    ObjectivePanel.SetActive(true);
-                    chapter.text = "Chapter 5";
                     SetChapter(i);
+                    ChapterPlay();
                 }
                 break;
             case (6):
@@ -250,9 +220,8 @@ public class ChapterBehaviour : MonoBehaviour
                 }
                 else
                 {
-                    ObjectivePanel.SetActive(true);
-                    chapter.text = "Chapter 6";
                     SetChapter(i);
+                    ChapterPlay();
                 }
                 break;
             case (7):
@@ -262,9 +231,8 @@ public class ChapterBehaviour : MonoBehaviour
                 }
                 else
                 {
-                    ObjectivePanel.SetActive(true);
-                    chapter.text = "Chapter 7";
                     SetChapter(i);
+                    ChapterPlay();
                 }
                 break;
             case (8):
@@ -274,9 +242,8 @@ public class ChapterBehaviour : MonoBehaviour
                 }
                 else
                 {
-                    ObjectivePanel.SetActive(true);
-                    chapter.text = "Chapter 8";
                     SetChapter(i);
+                    ChapterPlay();
                 }
                 break;
         }
@@ -319,6 +286,9 @@ public class ChapterBehaviour : MonoBehaviour
                 }
                 break;
             case (3):
+                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh2;
+                Audio.GetComponent<AudioSource>().Play();
+
                 if (!Manager.GetComponent<UserManager>().user.PassPre[2])
                 {
                     SceneManager.LoadScene("TestScene");
@@ -329,6 +299,9 @@ public class ChapterBehaviour : MonoBehaviour
                 }
                 break;
             case (4):
+                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh2;
+                Audio.GetComponent<AudioSource>().Play();
+
                 if (!Manager.GetComponent<UserManager>().user.PassPre[3])
                 {
                     SceneManager.LoadScene("TestScene");
@@ -339,6 +312,9 @@ public class ChapterBehaviour : MonoBehaviour
                 }
                 break;
             case (5):
+                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh2;
+                Audio.GetComponent<AudioSource>().Play();
+
                 if (!Manager.GetComponent<UserManager>().user.PassPre[4])
                 {
                     SceneManager.LoadScene("TestScene");
@@ -349,6 +325,9 @@ public class ChapterBehaviour : MonoBehaviour
                 }
                 break;
             case (6):
+                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh2;
+                Audio.GetComponent<AudioSource>().Play();
+
                 if (!Manager.GetComponent<UserManager>().user.PassPre[5])
                 {
                     SceneManager.LoadScene("TestScene");
@@ -359,6 +338,9 @@ public class ChapterBehaviour : MonoBehaviour
                 }
                 break;
             case (7):
+                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh2;
+                Audio.GetComponent<AudioSource>().Play();
+
                 if (!Manager.GetComponent<UserManager>().user.PassPre[6])
                 {
                     SceneManager.LoadScene("TestScene");
@@ -369,6 +351,9 @@ public class ChapterBehaviour : MonoBehaviour
                 }
                 break;
             case (8):
+                Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMCh2;
+                Audio.GetComponent<AudioSource>().Play();
+
                 if (!Manager.GetComponent<UserManager>().user.PassPre[7])
                 {
                     SceneManager.LoadScene("TestScene");
@@ -385,9 +370,9 @@ public class ChapterBehaviour : MonoBehaviour
     {
         for (int i = 0; i < Manager.GetComponent<ContentManager>().chapters_info.Length; i++)
         {
-            ChapterButton[i].GetComponentInChildren<Slider>().value = ((float)Manager.GetComponent<UserManager>().user.LastIndex[i]
+            chapPanel[i].GetComponentInChildren<Slider>().value = ((float)Manager.GetComponent<UserManager>().user.LastIndex[i]
                 / (float)Manager.GetComponent<ContentManager>().chapters_info[i].Scripts.Count);
-            ChapterButton[i].GetComponentInChildren<Slider>().GetComponentInChildren<Text>().text =
+            chapPanel[i].GetComponentInChildren<Slider>().GetComponentInChildren<Text>().text =
                 string.Format("{0:0}", (((float)Manager.GetComponent<UserManager>().user.LastIndex[i]
                 / (float)Manager.GetComponent<ContentManager>().chapters_info[i].Scripts.Count) * 100)) + "%";
         }
@@ -396,11 +381,6 @@ public class ChapterBehaviour : MonoBehaviour
     private void SetChapter(int i)
     {
         i -= 1;
-
-        chapterName.text = Manager.GetComponent<ContentManager>().chapters_info[i].Name;
-        objective.text = Manager.GetComponent<ContentManager>().chapters_info[i].Objective;
-        avgTime.text = Manager.GetComponent<ContentManager>().chapters_info[i].chap_avg_time;
-
         ChapterScene.dialogThis = Manager.GetComponent<ContentManager>().chapters_info[i].Scripts;
         ChapterScene.questionThis = Manager.GetComponent<ContentManager>().chapters_info[i].Questions;
         ChapterScene.chName = Manager.GetComponent<ContentManager>().chapters_info[i].Name;
@@ -409,7 +389,7 @@ public class ChapterBehaviour : MonoBehaviour
 
     public void SwitchPanel(int i)
     {
-        if (panelPage > -1 && panelPage < 3)
+        if (panelPage > -1 && panelPage < 8)
         {
             panelPage -= i;
         }
@@ -419,20 +399,104 @@ public class ChapterBehaviour : MonoBehaviour
 
     public void Reposition()
     {
-        RectTransform transform1 = chap1_4.GetComponent<RectTransform>();
-        RectTransform transform2 = chap5_8.GetComponent<RectTransform>();
+        //RectTransform transform1 = chap1_4.GetComponent<RectTransform>();
+        //RectTransform transform2 = chap5_8.GetComponent<RectTransform>();
+        RectTransform transform0 = chapPanel[0].GetComponent<RectTransform>();
+        RectTransform transform1 = chapPanel[1].GetComponent<RectTransform>();
+        RectTransform transform2 = chapPanel[2].GetComponent<RectTransform>();
+        RectTransform transform3 = chapPanel[3].GetComponent<RectTransform>();
+        RectTransform transform4 = chapPanel[4].GetComponent<RectTransform>();
+        RectTransform transform5 = chapPanel[5].GetComponent<RectTransform>();
+        RectTransform transform6 = chapPanel[6].GetComponent<RectTransform>();
+        RectTransform transform7 = chapPanel[7].GetComponent<RectTransform>();
 
         switch (panelPage)
         {
             default:
                 break;
             case (0):
-                transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(0, 0), 5 * Time.deltaTime);
-                transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(1100f, 0), 5 * Time.deltaTime);
+                //transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(0, 0), 5 * Time.deltaTime);
+                //transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(1100f, 0), 5 * Time.deltaTime);
+                transform0.anchoredPosition = Vector2.Lerp(transform0.anchoredPosition, new Vector2(0, 0), 5 * Time.deltaTime);
+                transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(1100f, 0), 5 * Time.deltaTime);
+                transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(2100f, 0), 5 * Time.deltaTime);
+                transform3.anchoredPosition = Vector2.Lerp(transform3.anchoredPosition, new Vector2(3100f, 0), 5 * Time.deltaTime);
+                transform4.anchoredPosition = Vector2.Lerp(transform4.anchoredPosition, new Vector2(4100f, 0), 5 * Time.deltaTime);
+                transform5.anchoredPosition = Vector2.Lerp(transform5.anchoredPosition, new Vector2(5100f, 0), 5 * Time.deltaTime);
+                transform6.anchoredPosition = Vector2.Lerp(transform6.anchoredPosition, new Vector2(6100f, 0), 5 * Time.deltaTime);
+                transform7.anchoredPosition = Vector2.Lerp(transform7.anchoredPosition, new Vector2(7100f, 0), 5 * Time.deltaTime);
                 break;
             case (1):
+                //transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(-1100f, 0), 5 * Time.deltaTime);
+                //transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(0, 0), 5 * Time.deltaTime);
+                transform0.anchoredPosition = Vector2.Lerp(transform0.anchoredPosition, new Vector2(-1100f, 0), 5 * Time.deltaTime);
+                transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(0f, 0), 5 * Time.deltaTime);
+                transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(1100f, 0), 5 * Time.deltaTime);
+                transform3.anchoredPosition = Vector2.Lerp(transform3.anchoredPosition, new Vector2(2100f, 0), 5 * Time.deltaTime);
+                transform4.anchoredPosition = Vector2.Lerp(transform4.anchoredPosition, new Vector2(3100f, 0), 5 * Time.deltaTime);
+                transform5.anchoredPosition = Vector2.Lerp(transform5.anchoredPosition, new Vector2(4100f, 0), 5 * Time.deltaTime);
+                transform6.anchoredPosition = Vector2.Lerp(transform6.anchoredPosition, new Vector2(5100f, 0), 5 * Time.deltaTime);
+                transform7.anchoredPosition = Vector2.Lerp(transform7.anchoredPosition, new Vector2(6100f, 0), 5 * Time.deltaTime);
+                break;
+            case (2):
+                transform0.anchoredPosition = Vector2.Lerp(transform0.anchoredPosition, new Vector2(-2100f, 0), 5 * Time.deltaTime);
                 transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(-1100f, 0), 5 * Time.deltaTime);
-                transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(0, 0), 5 * Time.deltaTime);
+                transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(0f, 0), 5 * Time.deltaTime);
+                transform3.anchoredPosition = Vector2.Lerp(transform3.anchoredPosition, new Vector2(1100f, 0), 5 * Time.deltaTime);
+                transform4.anchoredPosition = Vector2.Lerp(transform4.anchoredPosition, new Vector2(2100f, 0), 5 * Time.deltaTime);
+                transform5.anchoredPosition = Vector2.Lerp(transform5.anchoredPosition, new Vector2(3100f, 0), 5 * Time.deltaTime);
+                transform6.anchoredPosition = Vector2.Lerp(transform6.anchoredPosition, new Vector2(4100f, 0), 5 * Time.deltaTime);
+                transform7.anchoredPosition = Vector2.Lerp(transform7.anchoredPosition, new Vector2(5100f, 0), 5 * Time.deltaTime);
+                break;
+            case (3):
+                transform0.anchoredPosition = Vector2.Lerp(transform0.anchoredPosition, new Vector2(-3100f, 0), 5 * Time.deltaTime);
+                transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(-2100f, 0), 5 * Time.deltaTime);
+                transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(-1100f, 0), 5 * Time.deltaTime);
+                transform3.anchoredPosition = Vector2.Lerp(transform3.anchoredPosition, new Vector2(0f, 0), 5 * Time.deltaTime);
+                transform4.anchoredPosition = Vector2.Lerp(transform4.anchoredPosition, new Vector2(1100f, 0), 5 * Time.deltaTime);
+                transform5.anchoredPosition = Vector2.Lerp(transform5.anchoredPosition, new Vector2(2100f, 0), 5 * Time.deltaTime);
+                transform6.anchoredPosition = Vector2.Lerp(transform6.anchoredPosition, new Vector2(3100f, 0), 5 * Time.deltaTime);
+                transform7.anchoredPosition = Vector2.Lerp(transform7.anchoredPosition, new Vector2(4100f, 0), 5 * Time.deltaTime);
+                break;
+            case (4):
+                transform0.anchoredPosition = Vector2.Lerp(transform0.anchoredPosition, new Vector2(-4100f, 0), 5 * Time.deltaTime);
+                transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(-3100f, 0), 5 * Time.deltaTime);
+                transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(-2100f, 0), 5 * Time.deltaTime);
+                transform3.anchoredPosition = Vector2.Lerp(transform3.anchoredPosition, new Vector2(-1100f, 0), 5 * Time.deltaTime);
+                transform4.anchoredPosition = Vector2.Lerp(transform4.anchoredPosition, new Vector2(0f, 0), 5 * Time.deltaTime);
+                transform5.anchoredPosition = Vector2.Lerp(transform5.anchoredPosition, new Vector2(1100f, 0), 5 * Time.deltaTime);
+                transform6.anchoredPosition = Vector2.Lerp(transform6.anchoredPosition, new Vector2(2100f, 0), 5 * Time.deltaTime);
+                transform7.anchoredPosition = Vector2.Lerp(transform7.anchoredPosition, new Vector2(3100f, 0), 5 * Time.deltaTime);
+                break;
+            case (5):
+                transform0.anchoredPosition = Vector2.Lerp(transform0.anchoredPosition, new Vector2(-5100f, 0), 5 * Time.deltaTime);
+                transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(-4100f, 0), 5 * Time.deltaTime);
+                transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(-3100f, 0), 5 * Time.deltaTime);
+                transform3.anchoredPosition = Vector2.Lerp(transform3.anchoredPosition, new Vector2(-2100f, 0), 5 * Time.deltaTime);
+                transform4.anchoredPosition = Vector2.Lerp(transform4.anchoredPosition, new Vector2(-1100f, 0), 5 * Time.deltaTime);
+                transform5.anchoredPosition = Vector2.Lerp(transform5.anchoredPosition, new Vector2(0f, 0), 5 * Time.deltaTime);
+                transform6.anchoredPosition = Vector2.Lerp(transform6.anchoredPosition, new Vector2(1100f, 0), 5 * Time.deltaTime);
+                transform7.anchoredPosition = Vector2.Lerp(transform7.anchoredPosition, new Vector2(2100f, 0), 5 * Time.deltaTime);
+                break;
+            case (6):
+                transform0.anchoredPosition = Vector2.Lerp(transform0.anchoredPosition, new Vector2(-6100f, 0), 5 * Time.deltaTime);
+                transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(-5100f, 0), 5 * Time.deltaTime);
+                transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(-4100f, 0), 5 * Time.deltaTime);
+                transform3.anchoredPosition = Vector2.Lerp(transform3.anchoredPosition, new Vector2(-3100f, 0), 5 * Time.deltaTime);
+                transform4.anchoredPosition = Vector2.Lerp(transform4.anchoredPosition, new Vector2(-2100f, 0), 5 * Time.deltaTime);
+                transform5.anchoredPosition = Vector2.Lerp(transform5.anchoredPosition, new Vector2(-1100f, 0), 5 * Time.deltaTime);
+                transform6.anchoredPosition = Vector2.Lerp(transform6.anchoredPosition, new Vector2(0f, 0), 5 * Time.deltaTime);
+                transform7.anchoredPosition = Vector2.Lerp(transform7.anchoredPosition, new Vector2(1100f, 0), 5 * Time.deltaTime);
+                break;
+            case (7):
+                transform0.anchoredPosition = Vector2.Lerp(transform0.anchoredPosition, new Vector2(-7100f, 0), 5 * Time.deltaTime);
+                transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(-6100f, 0), 5 * Time.deltaTime);
+                transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(-5100f, 0), 5 * Time.deltaTime);
+                transform3.anchoredPosition = Vector2.Lerp(transform3.anchoredPosition, new Vector2(-4100f, 0), 5 * Time.deltaTime);
+                transform4.anchoredPosition = Vector2.Lerp(transform4.anchoredPosition, new Vector2(-3100f, 0), 5 * Time.deltaTime);
+                transform5.anchoredPosition = Vector2.Lerp(transform5.anchoredPosition, new Vector2(-2100f, 0), 5 * Time.deltaTime);
+                transform6.anchoredPosition = Vector2.Lerp(transform6.anchoredPosition, new Vector2(-1100f, 0), 5 * Time.deltaTime);
+                transform7.anchoredPosition = Vector2.Lerp(transform7.anchoredPosition, new Vector2(0f, 0), 5 * Time.deltaTime);
                 break;
         }
 
