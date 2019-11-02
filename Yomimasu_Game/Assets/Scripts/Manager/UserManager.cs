@@ -71,9 +71,11 @@ public class UserManager : MonoBehaviour
                 RestClient.Get<User>("https://it59-28yomimasu.firebaseio.com/User/" + user.Name + ".json").Then(response1 =>
                 {
                     user = response1;
+                    if (user.Name.Equals(response1.Name))
+                    {
+                        SaveUser();
+                    }
                 });
-
-                SaveUser();
             }
         });
     }
