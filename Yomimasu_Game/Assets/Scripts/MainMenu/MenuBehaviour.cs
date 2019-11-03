@@ -56,11 +56,6 @@ public class MenuBehaviour : MonoBehaviour
     {
         Effect.GetComponent<AudioSource>().Play();
 
-        if (Manager.GetComponent<UserManager>().user.katakana)
-        {
-            kataLevel.interactable = true;
-        }
-
         switch (i)
         {
             default:
@@ -105,7 +100,11 @@ public class MenuBehaviour : MonoBehaviour
                 break;
             case (2):
                 Effect.GetComponent<AudioSource>().Play();
-                matchingPanel.SetActive(true);                
+                matchingPanel.SetActive(true);
+                if (Manager.GetComponent<UserManager>().user.katakana)
+                {
+                    kataLevel.interactable = true;
+                }
                 break;
             case (3):
                 Effect.GetComponent<AudioSource>().Play();
