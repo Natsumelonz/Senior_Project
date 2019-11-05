@@ -22,6 +22,7 @@ public class TestScene : MonoBehaviour
     public GameObject canvas;
     public GameObject panelFade;
     public Text fadeText;
+    public GameObject event_image;
 
     public static TestScene main;
     public static List<RetrieveTest> testhis;
@@ -77,12 +78,21 @@ public class TestScene : MonoBehaviour
 
     public void NextQuestion()
     {
+        event_image.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+
         if (tIndex < testhis.Count)
         {
+            event_image.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+
             question.text = testhis[tIndex].test_desc;
             for (int i = 0; i < answerT.Count; i++)
             {
                 answerT[i].text = testhis[tIndex].test_choice[i];
+            }
+
+            if (testhis[tIndex].test_sprite_path != null)
+            {
+                EventImageCall(Resources.Load<Sprite>(testhis[tIndex].test_sprite_path));
             }
         }
         else
@@ -101,9 +111,17 @@ public class TestScene : MonoBehaviour
             }
         }
     }
+    private void EventImageCall(Sprite sprite_path)
+    {
+        event_image.GetComponent<Image>().sprite = sprite_path;
+        event_image.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+        event_image.GetComponent<Image>().preserveAspect = true;
+    }
 
     public void CheckAnswer(AnswerChoice ac)
     {
+        event_image.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+
         if (ac.index == testhis[tIndex].test_answer)
         {
             if (!Manager.GetComponent<UserManager>().user.PassPre[sindex])
