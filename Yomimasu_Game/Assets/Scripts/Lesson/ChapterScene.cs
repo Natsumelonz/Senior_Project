@@ -115,13 +115,25 @@ public class ChapterScene : MonoBehaviour
 
         yield return new WaitForSeconds(i);
 
-        if (Manager.GetComponent<UserManager>().user.LastCh < 1)
+        if (Manager.GetComponent<UserManager>().user.LastCh < (tindex + 1))
         {
-            Manager.GetComponent<UserManager>().user.LastCh = 1;
+            Manager.GetComponent<UserManager>().user.LastCh = (tindex + 1);
             Manager.GetComponent<UserManager>().SaveUser();
         }
 
         Manager.GetComponent<UserManager>().user.LastIndex[tindex] = dialogThis.Count;
+
+        if ((tindex + 1) == 3)
+        {
+            Manager.GetComponent<UserManager>().user.katakana = true;
+        }
+
+        if ((tindex + 1) == 1)
+        {
+
+            Manager.GetComponent<UserManager>().user.alphabetChart = true;
+        }
+
         Manager.GetComponent<UserManager>().SaveUser();
 
         if (!Manager.GetComponent<UserManager>().user.PassPost[tindex])
@@ -130,11 +142,6 @@ public class ChapterScene : MonoBehaviour
         }
         else
         {
-            if ((tindex + 1) == 3)
-            {
-                Manager.GetComponent<UserManager>().user.katakana = true;
-            }
-
             SceneManager.LoadScene("Chapter");
         }
     }
@@ -215,24 +222,6 @@ public class ChapterScene : MonoBehaviour
                 continueButton.SetActive(false);
                 CloneChoice();
             }
-        }
-
-        if (dialogThis[index].script_id == "ch1_011")
-        {
-            Manager.GetComponent<UserManager>().user.alphabetChart = true;
-            Manager.GetComponent<UserManager>().SaveUser();
-        }
-
-        if (dialogThis[index].script_id == "ch1_012")
-        {
-            Manager.GetComponent<UserManager>().user.dictionary = true;
-            Manager.GetComponent<UserManager>().SaveUser();
-        }
-
-        if (dialogThis[index].script_id == "ch1_027")
-        {
-            Manager.GetComponent<UserManager>().user.HiraganaChart[0] = true;
-            Manager.GetComponent<UserManager>().SaveUser();
         }
     }
 
@@ -342,7 +331,7 @@ public class ChapterScene : MonoBehaviour
                 {
                     Manager.GetComponent<UserManager>().user.LastIndex[tindex] = index;
                     Manager.GetComponent<UserManager>().SaveUser();
-                }                
+                }
 
                 SceneManager.LoadScene("MainMenu");
                 break;
