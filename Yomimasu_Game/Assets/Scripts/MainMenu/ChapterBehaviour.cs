@@ -52,7 +52,7 @@ public class ChapterBehaviour : MonoBehaviour
 
         for (int i = 0; i < chapPanel.Count; i++)
         {
-            chapTextPanel[i].GetComponent<Text>().text = "Chapter " + (i+1);
+            chapTextPanel[i].GetComponent<Text>().text = "Chapter " + (i + 1);
             chapNTextPanel[i].GetComponent<Text>().text = Manager.GetComponent<ContentManager>().chapters_info[i].Name;
             chapOTextPanel[i].GetComponent<Text>().text = Manager.GetComponent<ContentManager>().chapters_info[i].Objective;
             chapTTextPanel[i].GetComponent<Text>().text = Manager.GetComponent<ContentManager>().chapters_info[i].chap_avg_time;
@@ -399,8 +399,6 @@ public class ChapterBehaviour : MonoBehaviour
 
     public void Reposition()
     {
-        //RectTransform transform1 = chap1_4.GetComponent<RectTransform>();
-        //RectTransform transform2 = chap5_8.GetComponent<RectTransform>();
         RectTransform transform0 = chapPanel[0].GetComponent<RectTransform>();
         RectTransform transform1 = chapPanel[1].GetComponent<RectTransform>();
         RectTransform transform2 = chapPanel[2].GetComponent<RectTransform>();
@@ -415,8 +413,6 @@ public class ChapterBehaviour : MonoBehaviour
             default:
                 break;
             case (0):
-                //transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(0, 0), 5 * Time.deltaTime);
-                //transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(1100f, 0), 5 * Time.deltaTime);
                 transform0.anchoredPosition = Vector2.Lerp(transform0.anchoredPosition, new Vector2(0, 0), 5 * Time.deltaTime);
                 transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(1100f, 0), 5 * Time.deltaTime);
                 transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(2100f, 0), 5 * Time.deltaTime);
@@ -427,8 +423,6 @@ public class ChapterBehaviour : MonoBehaviour
                 transform7.anchoredPosition = Vector2.Lerp(transform7.anchoredPosition, new Vector2(7100f, 0), 5 * Time.deltaTime);
                 break;
             case (1):
-                //transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(-1100f, 0), 5 * Time.deltaTime);
-                //transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(0, 0), 5 * Time.deltaTime);
                 transform0.anchoredPosition = Vector2.Lerp(transform0.anchoredPosition, new Vector2(-1100f, 0), 5 * Time.deltaTime);
                 transform1.anchoredPosition = Vector2.Lerp(transform1.anchoredPosition, new Vector2(0f, 0), 5 * Time.deltaTime);
                 transform2.anchoredPosition = Vector2.Lerp(transform2.anchoredPosition, new Vector2(1100f, 0), 5 * Time.deltaTime);

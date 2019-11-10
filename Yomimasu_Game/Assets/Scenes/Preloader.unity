@@ -668,12 +668,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b59f7aeae5747f3488b72f19cfba63ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BGMMainMenu: {fileID: 8300000, guid: c9d932d3350e9f4489b6fefb38b473d3, type: 3}
-  BGMChapterSelect: {fileID: 8300000, guid: d2acb4b2e4912e8489c690f7a49ca2a3, type: 3}
-  BGMMatching: {fileID: 8300000, guid: 74451acac8452964ca7f551e88b8846f, type: 3}
-  BGMScramble: {fileID: 8300000, guid: 4fe61c43e36c95a4288ac91837aabdde, type: 3}
-  BGMCh1: {fileID: 8300000, guid: 4193a79326288264086216439770b623, type: 3}
-  BGMCh2: {fileID: 8300000, guid: 51a4abd550fb956409772d346167b32d, type: 3}
+  BGMMainMenu: {fileID: 8300000, guid: b5c87ed381200ad4d8d4b5a1bfd72c5e, type: 3}
+  BGMChapterSelect: {fileID: 8300000, guid: f44ba73e7e500614c8266e4e98ee592f, type: 3}
+  BGMMatching: {fileID: 8300000, guid: fe2dba60e1fa58e4d9d45fe5e1535e87, type: 3}
+  BGMScramble: {fileID: 8300000, guid: 5a1b8a2ca61a32842a53e5b5d6dba7bc, type: 3}
+  BGMCh1: {fileID: 8300000, guid: 0ea14bbd659af21439a2ee8866a0f0ff, type: 3}
+  BGMCh2: {fileID: 8300000, guid: 0ea14bbd659af21439a2ee8866a0f0ff, type: 3}
   BGMSource: {fileID: 476097942}
 --- !u!1 &530110627
 GameObject:
@@ -1974,7 +1974,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1}
+  m_AnchoredPosition: {x: 0, y: -1.000061}
   m_SizeDelta: {x: 0.00024414062, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1925731060
