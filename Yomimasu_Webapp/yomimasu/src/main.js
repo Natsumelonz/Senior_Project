@@ -14,13 +14,15 @@ import Home from './components/HelloWorld';
 import Menubar from './components/menubar';
 import Alphabet from './Pages/alphabet';
 import Word from './Pages/word'
+import Dialog from './Pages/dialog'
 
 const routes = [
   //path pattern eg.{ path: '/users' , component: User }
   { path: '/' , component: Home },
   { path: '/menu' , component: Menubar },
   { path: '/alphabet' , component: Alphabet },
-  { path: '/word' , component: Word}
+  { path: '/word' , component: Word},
+  { path: '/dialog' , component: Dialog}
 ]
 
 const router = new VueRouter({

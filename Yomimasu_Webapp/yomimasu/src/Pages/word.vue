@@ -2,8 +2,10 @@
     <v-app>
         
         <div class="dashboard ml-5 mt-2 ">
-            <v-layout row>
-            <h1 class="grey--text heder ">List of Words</h1>
+            
+            <v-container>
+                <v-layout row>
+                <h1 class="grey--text heder_word">List of Words</h1>
                     <v-dialog v-model="dialog" width="500">
                         <template v-slot:activator="{ on }">
                             <v-btn class="heder_btn" color="red lighten-2" dark v-on="on">Add Word</v-btn>
@@ -23,7 +25,10 @@
 
                         </v-card>
                     </v-dialog>
-            </v-layout>
+                </v-layout>
+            </v-container>
+            
+            
             <v-container class="card">
                 
                 <v-card flat class="pa-3" v-for="word in words" :key="word.word_id">
@@ -93,7 +98,8 @@ export default {
             }
             );
             this.dialog = false;
-            window.location.reload()
+
+            setTimeout(window.location.reload(),5000);
         }
     }
 }
@@ -101,14 +107,14 @@ export default {
 
 <style>
 
-.heder{
-    margin-left: 235px;
-    margin-top: 10px;
+.heder_word{
+    margin-left: 20px;
+    margin-top: 15px;
 }
 
 .heder_btn{
     margin-left: 25px;
-    margin-top: 18px;
+    margin-top: 20px;
 }
 
 .card{
@@ -117,7 +123,4 @@ export default {
     margin-top: 12px;
 }
 
-.pagefx{
-    position: fixed;
-}
 </style>
