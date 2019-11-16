@@ -13,6 +13,7 @@ public class TestScene : MonoBehaviour
     private GameObject Effect;
     private GameObject Audio;
     private int tIndex = 0;
+    private int scoreP = 0;
 
     public Text question;
     public Text score;
@@ -41,14 +42,7 @@ public class TestScene : MonoBehaviour
 
     private void Update()
     {
-        if (!Manager.GetComponent<UserManager>().user.PassPre[sindex])
-        {
-            score.text = "Your score: " + Manager.GetComponent<UserManager>().user.Pre[sindex];
-        }
-        else
-        {
-            score.text = "Your score: " + Manager.GetComponent<UserManager>().user.Post[sindex];
-        }        
+        score.text = "Your score: " + scoreP;
     }
 
     void Awake()
@@ -99,12 +93,14 @@ public class TestScene : MonoBehaviour
         {
             if (!Manager.GetComponent<UserManager>().user.PassPre[sindex])
             {
+                Manager.GetComponent<UserManager>().user.Pre[sindex] = scoreP;
                 Manager.GetComponent<UserManager>().user.PassPre[sindex] = true;
                 Manager.GetComponent<UserManager>().SaveUser();
                 SceneManager.LoadScene("ChapterScene");
             }
             else
             {
+                Manager.GetComponent<UserManager>().user.Post[sindex] = scoreP;
                 Manager.GetComponent<UserManager>().user.PassPost[sindex] = true;
                 Manager.GetComponent<UserManager>().SaveUser();
                 SceneManager.LoadScene("Chapter");
@@ -124,21 +120,15 @@ public class TestScene : MonoBehaviour
 
         if (ac.index == testhis[tIndex].test_answer)
         {
-            if (!Manager.GetComponent<UserManager>().user.PassPre[sindex])
-            {
-                Manager.GetComponent<UserManager>().user.Pre[sindex] += 1;
-            }
-            else
-            {
-                Manager.GetComponent<UserManager>().user.Post[sindex] += 1;
-            }
+            scoreP += 1;
             tIndex++;
             NextQuestion();
         }
         else
         {
-            tIndex++;
             Debug.Log("Worng!");
+            scoreP += 1;
+            tIndex++;
             NextQuestion();
         }
     }
@@ -176,9 +166,25 @@ public class TestScene : MonoBehaviour
                 Audio.GetComponent<AudioSource>().clip = Audio.GetComponent<AudioManager>().BGMMainMenu;
                 Audio.GetComponent<AudioSource>().Play();
                 SceneManager.LoadScene("MainMenu");
+                if (!Manager.GetComponent<UserManager>().user.PassPre[sindex])
+                {
+                    Manager.GetComponent<UserManager>().user.Pre[sindex] = 0;
+                }
+                else
+                {
+                    Manager.GetComponent<UserManager>().user.Post[sindex] = 0;
+                }
                 break;
             case (1):
                 SceneManager.LoadScene("Chapter");
+                if (!Manager.GetComponent<UserManager>().user.PassPre[sindex])
+                {
+                    Manager.GetComponent<UserManager>().user.Pre[sindex] = 0;
+                }
+                else
+                {
+                    Manager.GetComponent<UserManager>().user.Post[sindex] = 0;
+                }
                 break;
             case (2):
                 Effect.GetComponent<AudioSource>().Play();
