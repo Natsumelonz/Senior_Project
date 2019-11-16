@@ -9,13 +9,16 @@
                             <v-btn class="heder_btn" color="red lighten-2" dark v-on="on">Add Word</v-btn>
                         </template>
                         <v-card>
-                            <v-card-title class="headline grey lighten-2" primary-title>Add a New Word</v-card-title>
+                            <v-card-title class="headline orange white--text" primary-title>Add a New Word</v-card-title>
                                 <v-form class="px-3">
                                     <v-text-field label="Word(JP)" v-model="wordname_JP"></v-text-field>
                                     <v-text-field label="Word(Romaji)" v-model="wordname_romanji"></v-text-field>
                                     <v-text-field label="Meaning" v-model="word_meaning"></v-text-field>
                                     <v-text-field label="Number of Syllable (Ex. sakura is 3)" v-model="syllable_number"></v-text-field>
-                                    <v-btn @click="submit">Add click</v-btn>
+                                    <v-card-action>
+                                         <v-btn text class="orange white--text mb-3" @click="submit">Add</v-btn>
+                                    </v-card-action>
+                                   
                                 </v-form>
 
                         </v-card>
@@ -99,13 +102,13 @@ export default {
 <style>
 
 .heder{
-    margin-left: 105px;
-    margin-top: 5px;
+    margin-left: 235px;
+    margin-top: 10px;
 }
 
 .heder_btn{
     margin-left: 25px;
-    margin-top: 12px;
+    margin-top: 18px;
 }
 
 .card{
