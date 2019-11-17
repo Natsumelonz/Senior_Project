@@ -309,17 +309,12 @@ public class InfoManager : MonoBehaviour
     public void ResetInfo()
     {
         Effect.GetComponent<AudioSource>().Play();
-        Manager.GetComponent<UserManager>().user.LastCh = 0;
-        Manager.GetComponent<UserManager>().user.Score1 = 0;
-        Manager.GetComponent<UserManager>().user.Score2 = 0;
         Manager.GetComponent<UserManager>().user.Pre = new int[10];
         Manager.GetComponent<UserManager>().user.Post = new int[10];
         Manager.GetComponent<UserManager>().user.PassPre = new bool[10];
         Manager.GetComponent<UserManager>().user.PassPost = new bool[10];
-        Manager.GetComponent<UserManager>().user.LastScore1 = new List<int>();
-        Manager.GetComponent<UserManager>().user.LastScore2 = new List<int>();
+        Manager.GetComponent<UserManager>().user.LastIndex = new int[10];
         Manager.GetComponent<UserManager>().SaveUser();
-        Manager.GetComponent<UserManager>().LoadUser();
 
         SceneManager.LoadScene("MainMenu");
     }
