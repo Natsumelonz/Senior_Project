@@ -3,7 +3,7 @@
         <div class="dashboard ml-5 mt-2 ">
             <v-container>
                 <v-layout row wrap>
-                <h1 class="grey--text heder_apb">List of Dialog</h1>
+                <h1 class="grey--text heder_apb ml-5">List of Dialog</h1>
                 <v-col class="d-flex select">
         <v-select
           :items="items"
@@ -11,6 +11,7 @@
           label="Select Chapter"
           outlined
         ></v-select>
+        <v-btn class="loadbutton" @click="loadedScript">Loadscript</v-btn>
       </v-col>
                 </v-layout>
             </v-container>
@@ -49,15 +50,23 @@ export default {
     data() { 
         return {
             scripts: null,
-            chapter: '',
+            chapter: this.items,
             items: ['Chapter1', 'Chapter2', 'Chapter3', 'Chapter4', 'Chapter5', 'Chapter6', 'Chapter7', 'Chapter8'],
         }     
     },
     mounted() {
             axios
+            .get("https://it59-28yomimasu.firebaseio.com/Content/Chapter/Chapter1/Scripts.json").then(response =>{
+                this.scripts = response.data
+            })
+    },
+    methods: {
+        loadedScript() {
+            axios
             .get("https://it59-28yomimasu.firebaseio.com/Content/Chapter/"+this.chapter+"/Scripts.json").then(response =>{
                 this.scripts = response.data
             })
+        }
     }
 }
 </script>
@@ -65,7 +74,12 @@ export default {
 <style>
 .select {
     margin-left: 10px; 
-    max-width : 200px;
+    max-width : 400px;
+}
+
+.loadbutton {
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 .card_dialog {

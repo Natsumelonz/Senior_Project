@@ -98,8 +98,6 @@ export default {
             }
             );
             this.dialog = false;
-
-            setTimeout(window.location.reload(),5000);
         }
     }
 }
