@@ -10,6 +10,7 @@ public class AlphabetsInfo : MonoBehaviour
     private GameObject Effect;
     private GameObject Audio;
     private int alphabet = 0;
+    private int alphabetplus = 0;
     private bool hira = true;
 
     public List<AudioClip> listenClip;
@@ -17,11 +18,9 @@ public class AlphabetsInfo : MonoBehaviour
     public AudioSource listenSource;
     public Text alphabetText;
     public GameObject writingImage;
-    public GameObject hiraganaChart;
-    public GameObject katakanaChart;
-    public Button katakanaButton;
-    public List<Button> hiraganaAlphabets;
-    public List<Button> katakanaAlphabets;
+    public List<GameObject> alphabetChart;
+    public List<Button> switchButton;
+    public List<Sprite> imageSpirte;
 
     private void Start()
     {
@@ -31,9 +30,12 @@ public class AlphabetsInfo : MonoBehaviour
 
         if (Manager.GetComponent<UserManager>().user.katakana)
         {
-            katakanaButton.interactable = true;
+            for (int i = 0; i < switchButton.Count; i++)
+            {
+                switchButton[i].interactable = true;
+            }
         }
-    }    
+    }
 
     public void ListenSound()
     {
@@ -56,13 +58,24 @@ public class AlphabetsInfo : MonoBehaviour
     public void SwitchAlphabet(int i)
     {
         Effect.GetComponent<AudioSource>().Play();
+
+        for (int x = 0; x < alphabetChart.Count; x++)
+        {
+            if (x == i)
+            {
+                alphabetChart[x].SetActive(true);
+            }
+            else
+            {
+                alphabetChart[x].SetActive(false);
+            }
+        }
+
         switch (i)
         {
             default:
                 break;
-            case (0):
-                hiraganaChart.SetActive(true);
-                katakanaChart.SetActive(false);
+            case (0):                
                 hira = true;
 
                 alphabet = 0;
@@ -70,13 +83,43 @@ public class AlphabetsInfo : MonoBehaviour
                 writingImage.GetComponent<Animator>().runtimeAnimatorController = controllers[0];
                 break;
             case (1):
-                hiraganaChart.SetActive(false);
-                katakanaChart.SetActive(true);
                 hira = false;
 
-                alphabet = (0 + 46);
-                alphabetText.text = Manager.GetComponent<AlphabetManager>().alphabetsHR[0].alphabetname_romanji;
+                alphabet = 0;
+                alphabetText.text = Manager.GetComponent<AlphabetManager>().alphabetsKT[0].alphabetname_romanji;
                 writingImage.GetComponent<Animator>().runtimeAnimatorController = controllers[(0 + 46)];
+                break;
+            case (2):
+                hira = true;
+
+                alphabet = 46;
+                alphabetText.text = Manager.GetComponent<AlphabetManager>().alphabetsHR[46].alphabetname_romanji;
+                writingImage.GetComponent<Animator>().runtimeAnimatorController = null;
+                writingImage.GetComponent<Image>().sprite = imageSpirte[0];
+                break;
+            case (3):
+                hira = false;
+
+                alphabet = 46;
+                alphabetText.text = Manager.GetComponent<AlphabetManager>().alphabetsKT[46].alphabetname_romanji;
+                writingImage.GetComponent<Animator>().runtimeAnimatorController = null;
+                writingImage.GetComponent<Image>().sprite = imageSpirte[25];
+                break;
+            case (4):
+                hira = true;
+
+                alphabet = 71;
+                alphabetText.text = Manager.GetComponent<AlphabetManager>().alphabetsHR[71].alphabetname_romanji;
+                writingImage.GetComponent<Animator>().runtimeAnimatorController = null;
+                writingImage.GetComponent<Image>().sprite = imageSpirte[50];
+                break;
+            case (5):
+                hira = false;
+
+                alphabet = 71;
+                alphabetText.text = Manager.GetComponent<AlphabetManager>().alphabetsKT[71].alphabetname_romanji;
+                writingImage.GetComponent<Animator>().runtimeAnimatorController = null;
+                writingImage.GetComponent<Image>().sprite = imageSpirte[83];
                 break;
         }
     }
@@ -99,8 +142,50 @@ public class AlphabetsInfo : MonoBehaviour
         else
         {
             alphabet = (i);
-            writingImage.GetComponent<Animator>().runtimeAnimatorController = controllers[(i+46)];
+            writingImage.GetComponent<Animator>().runtimeAnimatorController = controllers[(i + 46)];
             alphabetText.text = Manager.GetComponent<AlphabetManager>().alphabetsKT[i].alphabetname_romanji;
+        }
+    }
+
+    public void SelectAlphabetPlus(int i)
+    {
+        Effect.GetComponent<AudioSource>().Play();
+        if (hira)
+        {
+            alphabet = i;
+            alphabetplus = i - 46;
+            alphabetText.text = Manager.GetComponent<AlphabetManager>().alphabetsHR[i].alphabetname_romanji;
+            writingImage.GetComponent<Image>().sprite = imageSpirte[alphabetplus];
+            writingImage.GetComponent<Animator>().runtimeAnimatorController = null;
+        }
+        else
+        {
+            alphabet = i;
+            alphabetplus = i - 46;
+            alphabetText.text = Manager.GetComponent<AlphabetManager>().alphabetsKT[i].alphabetname_romanji;
+            writingImage.GetComponent<Image>().sprite = imageSpirte[(alphabetplus + 25)];
+            writingImage.GetComponent<Animator>().runtimeAnimatorController = null;
+        }
+    }
+
+    public void SelectAlphabetPlusPlus(int i)
+    {
+        Effect.GetComponent<AudioSource>().Play();
+        if (hira)
+        {
+            alphabet = i;
+            alphabetplus = i - 46;
+            alphabetText.text = Manager.GetComponent<AlphabetManager>().alphabetsHR[i].alphabetname_romanji;
+            writingImage.GetComponent<Image>().sprite = imageSpirte[alphabetplus + 25];
+            writingImage.GetComponent<Animator>().runtimeAnimatorController = null;
+        }
+        else
+        {
+            alphabet = i;
+            alphabetplus = i - 46;
+            alphabetText.text = Manager.GetComponent<AlphabetManager>().alphabetsKT[i].alphabetname_romanji;
+            writingImage.GetComponent<Image>().sprite = imageSpirte[(alphabetplus + 58)];
+            writingImage.GetComponent<Animator>().runtimeAnimatorController = null;
         }
     }
 }

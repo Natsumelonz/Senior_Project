@@ -1,0 +1,5122 @@
+{
+  "Alphabet" : [ {
+    "alphabet_id" : 1,
+    "alphabetname_JP" : "あ",
+    "alphabetname_romanji" : "a"
+  }, {
+    "alphabet_id" : 2,
+    "alphabetname_JP" : "い",
+    "alphabetname_romanji" : "i"
+  }, {
+    "alphabet_id" : 3,
+    "alphabetname_JP" : "う",
+    "alphabetname_romanji" : "u"
+  }, {
+    "alphabet_id" : 4,
+    "alphabetname_JP" : "え",
+    "alphabetname_romanji" : "e"
+  }, {
+    "alphabet_id" : 5,
+    "alphabetname_JP" : "お",
+    "alphabetname_romanji" : "o"
+  }, {
+    "alphabet_id" : 6,
+    "alphabetname_JP" : "か",
+    "alphabetname_romanji" : "ka"
+  }, {
+    "alphabet_id" : 7,
+    "alphabetname_JP" : "き",
+    "alphabetname_romanji" : "ki"
+  }, {
+    "alphabet_id" : 8,
+    "alphabetname_JP" : "く",
+    "alphabetname_romanji" : "ku"
+  }, {
+    "alphabet_id" : 9,
+    "alphabetname_JP" : "け",
+    "alphabetname_romanji" : "ke"
+  }, {
+    "alphabet_id" : 10,
+    "alphabetname_JP" : "こ",
+    "alphabetname_romanji" : "ko"
+  }, {
+    "alphabet_id" : 11,
+    "alphabetname_JP" : "さ",
+    "alphabetname_romanji" : "sa"
+  }, {
+    "alphabet_id" : 12,
+    "alphabetname_JP" : "し",
+    "alphabetname_romanji" : "shi"
+  }, {
+    "alphabet_id" : 13,
+    "alphabetname_JP" : "す",
+    "alphabetname_romanji" : "su"
+  }, {
+    "alphabet_id" : 14,
+    "alphabetname_JP" : "せ",
+    "alphabetname_romanji" : "se"
+  }, {
+    "alphabet_id" : 15,
+    "alphabetname_JP" : "そ",
+    "alphabetname_romanji" : "so"
+  }, {
+    "alphabet_id" : 16,
+    "alphabetname_JP" : "た",
+    "alphabetname_romanji" : "ta"
+  }, {
+    "alphabet_id" : 17,
+    "alphabetname_JP" : "ち",
+    "alphabetname_romanji" : "chi"
+  }, {
+    "alphabet_id" : 18,
+    "alphabetname_JP" : "つ",
+    "alphabetname_romanji" : "tsu"
+  }, {
+    "alphabet_id" : 19,
+    "alphabetname_JP" : "て",
+    "alphabetname_romanji" : "te"
+  }, {
+    "alphabet_id" : 20,
+    "alphabetname_JP" : "と",
+    "alphabetname_romanji" : "to"
+  }, {
+    "alphabet_id" : 21,
+    "alphabetname_JP" : "な",
+    "alphabetname_romanji" : "na"
+  }, {
+    "alphabet_id" : 22,
+    "alphabetname_JP" : "に",
+    "alphabetname_romanji" : "ni"
+  }, {
+    "alphabet_id" : 23,
+    "alphabetname_JP" : "ぬ",
+    "alphabetname_romanji" : "nu"
+  }, {
+    "alphabet_id" : 24,
+    "alphabetname_JP" : "ね",
+    "alphabetname_romanji" : "ne"
+  }, {
+    "alphabet_id" : 25,
+    "alphabetname_JP" : "の",
+    "alphabetname_romanji" : "no"
+  }, {
+    "alphabet_id" : 26,
+    "alphabetname_JP" : "は",
+    "alphabetname_romanji" : "ha"
+  }, {
+    "alphabet_id" : 27,
+    "alphabetname_JP" : "ひ",
+    "alphabetname_romanji" : "hi"
+  }, {
+    "alphabet_id" : 28,
+    "alphabetname_JP" : "ふ",
+    "alphabetname_romanji" : "fu"
+  }, {
+    "alphabet_id" : 29,
+    "alphabetname_JP" : "へ",
+    "alphabetname_romanji" : "he"
+  }, {
+    "alphabet_id" : 30,
+    "alphabetname_JP" : "ほ",
+    "alphabetname_romanji" : "ho"
+  }, {
+    "alphabet_id" : 31,
+    "alphabetname_JP" : "ま",
+    "alphabetname_romanji" : "ma"
+  }, {
+    "alphabet_id" : 32,
+    "alphabetname_JP" : "み",
+    "alphabetname_romanji" : "mi"
+  }, {
+    "alphabet_id" : 33,
+    "alphabetname_JP" : "む",
+    "alphabetname_romanji" : "mu"
+  }, {
+    "alphabet_id" : 34,
+    "alphabetname_JP" : "め",
+    "alphabetname_romanji" : "me"
+  }, {
+    "alphabet_id" : 35,
+    "alphabetname_JP" : "も",
+    "alphabetname_romanji" : "mo"
+  }, {
+    "alphabet_id" : 36,
+    "alphabetname_JP" : "や",
+    "alphabetname_romanji" : "ya"
+  }, {
+    "alphabet_id" : 37,
+    "alphabetname_JP" : "ゆ",
+    "alphabetname_romanji" : "yu"
+  }, {
+    "alphabet_id" : 38,
+    "alphabetname_JP" : "よ",
+    "alphabetname_romanji" : "yo"
+  }, {
+    "alphabet_id" : 39,
+    "alphabetname_JP" : "ら",
+    "alphabetname_romanji" : "ra"
+  }, {
+    "alphabet_id" : 40,
+    "alphabetname_JP" : "り",
+    "alphabetname_romanji" : "ri"
+  }, {
+    "alphabet_id" : 41,
+    "alphabetname_JP" : "る",
+    "alphabetname_romanji" : "ru"
+  }, {
+    "alphabet_id" : 42,
+    "alphabetname_JP" : "れ",
+    "alphabetname_romanji" : "re"
+  }, {
+    "alphabet_id" : 43,
+    "alphabetname_JP" : "ろ",
+    "alphabetname_romanji" : "ro"
+  }, {
+    "alphabet_id" : 44,
+    "alphabetname_JP" : "わ",
+    "alphabetname_romanji" : "wa"
+  }, {
+    "alphabet_id" : 45,
+    "alphabetname_JP" : "を",
+    "alphabetname_romanji" : "wo"
+  }, {
+    "alphabet_id" : 46,
+    "alphabetname_JP" : "ん",
+    "alphabetname_romanji" : "n"
+  }, {
+    "alphabet_id" : 47,
+    "alphabetname_JP" : "が",
+    "alphabetname_romanji" : "ga"
+  }, {
+    "alphabet_id" : 48,
+    "alphabetname_JP" : "ぎ",
+    "alphabetname_romanji" : "gi"
+  }, {
+    "alphabet_id" : 49,
+    "alphabetname_JP" : "ぐ",
+    "alphabetname_romanji" : "gu"
+  }, {
+    "alphabet_id" : 50,
+    "alphabetname_JP" : "げ",
+    "alphabetname_romanji" : "ge"
+  }, {
+    "alphabet_id" : 51,
+    "alphabetname_JP" : "ご",
+    "alphabetname_romanji" : "go"
+  }, {
+    "alphabet_id" : 52,
+    "alphabetname_JP" : "ざ",
+    "alphabetname_romanji" : "za"
+  }, {
+    "alphabet_id" : 53,
+    "alphabetname_JP" : "じ",
+    "alphabetname_romanji" : "ji"
+  }, {
+    "alphabet_id" : 54,
+    "alphabetname_JP" : "ず",
+    "alphabetname_romanji" : "zu"
+  }, {
+    "alphabet_id" : 55,
+    "alphabetname_JP" : "ぜ",
+    "alphabetname_romanji" : "ze"
+  }, {
+    "alphabet_id" : 56,
+    "alphabetname_JP" : "ぞ",
+    "alphabetname_romanji" : "zo"
+  }, {
+    "alphabet_id" : 57,
+    "alphabetname_JP" : "だ",
+    "alphabetname_romanji" : "da"
+  }, {
+    "alphabet_id" : 58,
+    "alphabetname_JP" : "ぢ",
+    "alphabetname_romanji" : "ji"
+  }, {
+    "alphabet_id" : 59,
+    "alphabetname_JP" : "づ",
+    "alphabetname_romanji" : "zu"
+  }, {
+    "alphabet_id" : 60,
+    "alphabetname_JP" : "で",
+    "alphabetname_romanji" : "de"
+  }, {
+    "alphabet_id" : 61,
+    "alphabetname_JP" : "ど",
+    "alphabetname_romanji" : "do"
+  }, {
+    "alphabet_id" : 62,
+    "alphabetname_JP" : "ば",
+    "alphabetname_romanji" : "ba"
+  }, {
+    "alphabet_id" : 63,
+    "alphabetname_JP" : "び",
+    "alphabetname_romanji" : "bi"
+  }, {
+    "alphabet_id" : 64,
+    "alphabetname_JP" : "ぶ",
+    "alphabetname_romanji" : "bu"
+  }, {
+    "alphabet_id" : 65,
+    "alphabetname_JP" : "べ",
+    "alphabetname_romanji" : "be"
+  }, {
+    "alphabet_id" : 66,
+    "alphabetname_JP" : "ぼ",
+    "alphabetname_romanji" : "bo"
+  }, {
+    "alphabet_id" : 67,
+    "alphabetname_JP" : "ぱ",
+    "alphabetname_romanji" : "pa"
+  }, {
+    "alphabet_id" : 68,
+    "alphabetname_JP" : "ぴ",
+    "alphabetname_romanji" : "pi"
+  }, {
+    "alphabet_id" : 69,
+    "alphabetname_JP" : "ぷ",
+    "alphabetname_romanji" : "pu"
+  }, {
+    "alphabet_id" : 70,
+    "alphabetname_JP" : "ぺ",
+    "alphabetname_romanji" : "pe"
+  }, {
+    "alphabet_id" : 71,
+    "alphabetname_JP" : "ぽ",
+    "alphabetname_romanji" : "po"
+  }, {
+    "alphabet_id" : 72,
+    "alphabetname_JP" : "きゃ",
+    "alphabetname_romanji" : "kya"
+  }, {
+    "alphabet_id" : 73,
+    "alphabetname_JP" : "きゅ",
+    "alphabetname_romanji" : "kyu"
+  }, {
+    "alphabet_id" : 74,
+    "alphabetname_JP" : "きょ",
+    "alphabetname_romanji" : "kyo"
+  }, {
+    "alphabet_id" : 75,
+    "alphabetname_JP" : "ぎゃ",
+    "alphabetname_romanji" : "gya"
+  }, {
+    "alphabet_id" : 76,
+    "alphabetname_JP" : "ぎゅ",
+    "alphabetname_romanji" : "gyu"
+  }, {
+    "alphabet_id" : 77,
+    "alphabetname_JP" : "ぎょ",
+    "alphabetname_romanji" : "gyo"
+  }, {
+    "alphabet_id" : 78,
+    "alphabetname_JP" : "しゃ",
+    "alphabetname_romanji" : "sha"
+  }, {
+    "alphabet_id" : 79,
+    "alphabetname_JP" : "しゅ",
+    "alphabetname_romanji" : "shu"
+  }, {
+    "alphabet_id" : 80,
+    "alphabetname_JP" : "しょ",
+    "alphabetname_romanji" : "sho"
+  }, {
+    "alphabet_id" : 81,
+    "alphabetname_JP" : "じゃ",
+    "alphabetname_romanji" : "ja"
+  }, {
+    "alphabet_id" : 82,
+    "alphabetname_JP" : "じゅ",
+    "alphabetname_romanji" : "ju"
+  }, {
+    "alphabet_id" : 83,
+    "alphabetname_JP" : "じょ",
+    "alphabetname_romanji" : "jo"
+  }, {
+    "alphabet_id" : 84,
+    "alphabetname_JP" : "ちゃ",
+    "alphabetname_romanji" : "cha"
+  }, {
+    "alphabet_id" : 85,
+    "alphabetname_JP" : "ちゅ",
+    "alphabetname_romanji" : "chu"
+  }, {
+    "alphabet_id" : 86,
+    "alphabetname_JP" : "ちょ",
+    "alphabetname_romanji" : "cho"
+  }, {
+    "alphabet_id" : 87,
+    "alphabetname_JP" : "にゃ",
+    "alphabetname_romanji" : "nya"
+  }, {
+    "alphabet_id" : 88,
+    "alphabetname_JP" : "にゅ",
+    "alphabetname_romanji" : "nyu"
+  }, {
+    "alphabet_id" : 89,
+    "alphabetname_JP" : "にょ",
+    "alphabetname_romanji" : "nyo"
+  }, {
+    "alphabet_id" : 90,
+    "alphabetname_JP" : "ひゃ",
+    "alphabetname_romanji" : "hya"
+  }, {
+    "alphabet_id" : 91,
+    "alphabetname_JP" : "ひゅ",
+    "alphabetname_romanji" : "hyu"
+  }, {
+    "alphabet_id" : 92,
+    "alphabetname_JP" : "ひょ",
+    "alphabetname_romanji" : "hyo"
+  }, {
+    "alphabet_id" : 93,
+    "alphabetname_JP" : "びゃ",
+    "alphabetname_romanji" : "bya"
+  }, {
+    "alphabet_id" : 94,
+    "alphabetname_JP" : "びゅ",
+    "alphabetname_romanji" : "byu"
+  }, {
+    "alphabet_id" : 95,
+    "alphabetname_JP" : "びょ",
+    "alphabetname_romanji" : "byo"
+  }, {
+    "alphabet_id" : 96,
+    "alphabetname_JP" : "ぴゃ",
+    "alphabetname_romanji" : "pya"
+  }, {
+    "alphabet_id" : 97,
+    "alphabetname_JP" : "ぴゅ",
+    "alphabetname_romanji" : "pyu"
+  }, {
+    "alphabet_id" : 98,
+    "alphabetname_JP" : "ぴょ",
+    "alphabetname_romanji" : "pyo"
+  }, {
+    "alphabet_id" : 99,
+    "alphabetname_JP" : "みゃ",
+    "alphabetname_romanji" : "mya"
+  }, {
+    "alphabet_id" : 100,
+    "alphabetname_JP" : "みゅ",
+    "alphabetname_romanji" : "myu"
+  }, {
+    "alphabet_id" : 101,
+    "alphabetname_JP" : "みょ",
+    "alphabetname_romanji" : "myo"
+  }, {
+    "alphabet_id" : 102,
+    "alphabetname_JP" : "りゃ",
+    "alphabetname_romanji" : "rya"
+  }, {
+    "alphabet_id" : 103,
+    "alphabetname_JP" : "りゅ",
+    "alphabetname_romanji" : "ryu"
+  }, {
+    "alphabet_id" : 104,
+    "alphabetname_JP" : "りょ",
+    "alphabetname_romanji" : "ryo"
+  }, {
+    "alphabet_id" : 105,
+    "alphabetname_JP" : "ア",
+    "alphabetname_romanji" : "a"
+  }, {
+    "alphabet_id" : 106,
+    "alphabetname_JP" : "イ",
+    "alphabetname_romanji" : "i"
+  }, {
+    "alphabet_id" : 107,
+    "alphabetname_JP" : "ウ",
+    "alphabetname_romanji" : "u"
+  }, {
+    "alphabet_id" : 108,
+    "alphabetname_JP" : "エ",
+    "alphabetname_romanji" : "e"
+  }, {
+    "alphabet_id" : 109,
+    "alphabetname_JP" : "オ",
+    "alphabetname_romanji" : "o"
+  }, {
+    "alphabet_id" : 110,
+    "alphabetname_JP" : "カ",
+    "alphabetname_romanji" : "ka"
+  }, {
+    "alphabet_id" : 111,
+    "alphabetname_JP" : "キ",
+    "alphabetname_romanji" : "ki"
+  }, {
+    "alphabet_id" : 112,
+    "alphabetname_JP" : "ク",
+    "alphabetname_romanji" : "ku"
+  }, {
+    "alphabet_id" : 113,
+    "alphabetname_JP" : "ケ",
+    "alphabetname_romanji" : "ke"
+  }, {
+    "alphabet_id" : 114,
+    "alphabetname_JP" : "コ",
+    "alphabetname_romanji" : "ko"
+  }, {
+    "alphabet_id" : 115,
+    "alphabetname_JP" : "サ",
+    "alphabetname_romanji" : "sa"
+  }, {
+    "alphabet_id" : 116,
+    "alphabetname_JP" : "シ",
+    "alphabetname_romanji" : "shi"
+  }, {
+    "alphabet_id" : 117,
+    "alphabetname_JP" : "ス",
+    "alphabetname_romanji" : "su"
+  }, {
+    "alphabet_id" : 118,
+    "alphabetname_JP" : "セ",
+    "alphabetname_romanji" : "se"
+  }, {
+    "alphabet_id" : 119,
+    "alphabetname_JP" : "ソ",
+    "alphabetname_romanji" : "so"
+  }, {
+    "alphabet_id" : 120,
+    "alphabetname_JP" : "タ",
+    "alphabetname_romanji" : "ta"
+  }, {
+    "alphabet_id" : 121,
+    "alphabetname_JP" : "チ",
+    "alphabetname_romanji" : "chi"
+  }, {
+    "alphabet_id" : 122,
+    "alphabetname_JP" : "ツ",
+    "alphabetname_romanji" : "tsu"
+  }, {
+    "alphabet_id" : 123,
+    "alphabetname_JP" : "テ",
+    "alphabetname_romanji" : "te"
+  }, {
+    "alphabet_id" : 124,
+    "alphabetname_JP" : "ト",
+    "alphabetname_romanji" : "to"
+  }, {
+    "alphabet_id" : 125,
+    "alphabetname_JP" : "ナ",
+    "alphabetname_romanji" : "na"
+  }, {
+    "alphabet_id" : 126,
+    "alphabetname_JP" : "ニ",
+    "alphabetname_romanji" : "ni"
+  }, {
+    "alphabet_id" : 127,
+    "alphabetname_JP" : "ヌ",
+    "alphabetname_romanji" : "nu"
+  }, {
+    "alphabet_id" : 128,
+    "alphabetname_JP" : "ネ",
+    "alphabetname_romanji" : "ne"
+  }, {
+    "alphabet_id" : 129,
+    "alphabetname_JP" : "ノ",
+    "alphabetname_romanji" : "no"
+  }, {
+    "alphabet_id" : 130,
+    "alphabetname_JP" : "ハ",
+    "alphabetname_romanji" : "ha"
+  }, {
+    "alphabet_id" : 131,
+    "alphabetname_JP" : "ヒ",
+    "alphabetname_romanji" : "hi"
+  }, {
+    "alphabet_id" : 132,
+    "alphabetname_JP" : "フ",
+    "alphabetname_romanji" : "fu"
+  }, {
+    "alphabet_id" : 133,
+    "alphabetname_JP" : "ヘ",
+    "alphabetname_romanji" : "he"
+  }, {
+    "alphabet_id" : 134,
+    "alphabetname_JP" : "ホ",
+    "alphabetname_romanji" : "ho"
+  }, {
+    "alphabet_id" : 135,
+    "alphabetname_JP" : "マ",
+    "alphabetname_romanji" : "ma"
+  }, {
+    "alphabet_id" : 136,
+    "alphabetname_JP" : "ミ",
+    "alphabetname_romanji" : "mi"
+  }, {
+    "alphabet_id" : 137,
+    "alphabetname_JP" : "ム",
+    "alphabetname_romanji" : "mu"
+  }, {
+    "alphabet_id" : 138,
+    "alphabetname_JP" : "メ",
+    "alphabetname_romanji" : "me"
+  }, {
+    "alphabet_id" : 139,
+    "alphabetname_JP" : "モ",
+    "alphabetname_romanji" : "mo"
+  }, {
+    "alphabet_id" : 140,
+    "alphabetname_JP" : "ヤ",
+    "alphabetname_romanji" : "ya"
+  }, {
+    "alphabet_id" : 141,
+    "alphabetname_JP" : "ユ",
+    "alphabetname_romanji" : "yu"
+  }, {
+    "alphabet_id" : 142,
+    "alphabetname_JP" : "ヨ",
+    "alphabetname_romanji" : "yo"
+  }, {
+    "alphabet_id" : 143,
+    "alphabetname_JP" : "ラ",
+    "alphabetname_romanji" : "ra"
+  }, {
+    "alphabet_id" : 144,
+    "alphabetname_JP" : "リ",
+    "alphabetname_romanji" : "ri"
+  }, {
+    "alphabet_id" : 145,
+    "alphabetname_JP" : "ル",
+    "alphabetname_romanji" : "ru"
+  }, {
+    "alphabet_id" : 146,
+    "alphabetname_JP" : "レ",
+    "alphabetname_romanji" : "re"
+  }, {
+    "alphabet_id" : 147,
+    "alphabetname_JP" : "ロ",
+    "alphabetname_romanji" : "ro"
+  }, {
+    "alphabet_id" : 148,
+    "alphabetname_JP" : "ワ",
+    "alphabetname_romanji" : "wa"
+  }, {
+    "alphabet_id" : 149,
+    "alphabetname_JP" : "ヲ",
+    "alphabetname_romanji" : "wo"
+  }, {
+    "alphabet_id" : 150,
+    "alphabetname_JP" : "ン",
+    "alphabetname_romanji" : "n"
+  }, {
+    "alphabet_id" : 151,
+    "alphabetname_JP" : "ガ",
+    "alphabetname_romanji" : "ga"
+  }, {
+    "alphabet_id" : 152,
+    "alphabetname_JP" : "ギ",
+    "alphabetname_romanji" : "gi"
+  }, {
+    "alphabet_id" : 153,
+    "alphabetname_JP" : "グ",
+    "alphabetname_romanji" : "gu"
+  }, {
+    "alphabet_id" : 154,
+    "alphabetname_JP" : "ゲ",
+    "alphabetname_romanji" : "ge"
+  }, {
+    "alphabet_id" : 155,
+    "alphabetname_JP" : "ゴ",
+    "alphabetname_romanji" : "go"
+  }, {
+    "alphabet_id" : 156,
+    "alphabetname_JP" : "ザ",
+    "alphabetname_romanji" : "za"
+  }, {
+    "alphabet_id" : 157,
+    "alphabetname_JP" : "ジ",
+    "alphabetname_romanji" : "ji"
+  }, {
+    "alphabet_id" : 158,
+    "alphabetname_JP" : "ズ",
+    "alphabetname_romanji" : "zu"
+  }, {
+    "alphabet_id" : 159,
+    "alphabetname_JP" : "ゼ",
+    "alphabetname_romanji" : "ze"
+  }, {
+    "alphabet_id" : 160,
+    "alphabetname_JP" : "ゾ",
+    "alphabetname_romanji" : "zo"
+  }, {
+    "alphabet_id" : 161,
+    "alphabetname_JP" : "ダ",
+    "alphabetname_romanji" : "da"
+  }, {
+    "alphabet_id" : 162,
+    "alphabetname_JP" : "ヂ",
+    "alphabetname_romanji" : "ji"
+  }, {
+    "alphabet_id" : 163,
+    "alphabetname_JP" : "ヅ",
+    "alphabetname_romanji" : "zu"
+  }, {
+    "alphabet_id" : 164,
+    "alphabetname_JP" : "デ",
+    "alphabetname_romanji" : "de"
+  }, {
+    "alphabet_id" : 165,
+    "alphabetname_JP" : "ド",
+    "alphabetname_romanji" : "do"
+  }, {
+    "alphabet_id" : 166,
+    "alphabetname_JP" : "バ",
+    "alphabetname_romanji" : "ba"
+  }, {
+    "alphabet_id" : 167,
+    "alphabetname_JP" : "ビ",
+    "alphabetname_romanji" : "bi"
+  }, {
+    "alphabet_id" : 168,
+    "alphabetname_JP" : "ブ",
+    "alphabetname_romanji" : "bu"
+  }, {
+    "alphabet_id" : 169,
+    "alphabetname_JP" : "ベ",
+    "alphabetname_romanji" : "be"
+  }, {
+    "alphabet_id" : 170,
+    "alphabetname_JP" : "ボ",
+    "alphabetname_romanji" : "bo"
+  }, {
+    "alphabet_id" : 171,
+    "alphabetname_JP" : "パ",
+    "alphabetname_romanji" : "pa"
+  }, {
+    "alphabet_id" : 172,
+    "alphabetname_JP" : "ピ",
+    "alphabetname_romanji" : "pi"
+  }, {
+    "alphabet_id" : 173,
+    "alphabetname_JP" : "プ",
+    "alphabetname_romanji" : "pu"
+  }, {
+    "alphabet_id" : 174,
+    "alphabetname_JP" : "ペ",
+    "alphabetname_romanji" : "pe"
+  }, {
+    "alphabet_id" : 175,
+    "alphabetname_JP" : "ポ",
+    "alphabetname_romanji" : "po"
+  }, {
+    "alphabet_id" : 176,
+    "alphabetname_JP" : "キャ",
+    "alphabetname_romanji" : "kya"
+  }, {
+    "alphabet_id" : 177,
+    "alphabetname_JP" : "キュ",
+    "alphabetname_romanji" : "kyu"
+  }, {
+    "alphabet_id" : 178,
+    "alphabetname_JP" : "キョ",
+    "alphabetname_romanji" : "kyo"
+  }, {
+    "alphabet_id" : 179,
+    "alphabetname_JP" : "ギャ",
+    "alphabetname_romanji" : "gya"
+  }, {
+    "alphabet_id" : 180,
+    "alphabetname_JP" : "ギュ",
+    "alphabetname_romanji" : "gyu"
+  }, {
+    "alphabet_id" : 181,
+    "alphabetname_JP" : "ギョ",
+    "alphabetname_romanji" : "gyo"
+  }, {
+    "alphabet_id" : 182,
+    "alphabetname_JP" : "シャ",
+    "alphabetname_romanji" : "sha"
+  }, {
+    "alphabet_id" : 183,
+    "alphabetname_JP" : "シュ",
+    "alphabetname_romanji" : "shu"
+  }, {
+    "alphabet_id" : 184,
+    "alphabetname_JP" : "ショ",
+    "alphabetname_romanji" : "sho"
+  }, {
+    "alphabet_id" : 185,
+    "alphabetname_JP" : "ジャ",
+    "alphabetname_romanji" : "ja"
+  }, {
+    "alphabet_id" : 186,
+    "alphabetname_JP" : "ジュ",
+    "alphabetname_romanji" : "ju"
+  }, {
+    "alphabet_id" : 187,
+    "alphabetname_JP" : "ジョ",
+    "alphabetname_romanji" : "jo"
+  }, {
+    "alphabet_id" : 188,
+    "alphabetname_JP" : "チャ",
+    "alphabetname_romanji" : "cha"
+  }, {
+    "alphabet_id" : 189,
+    "alphabetname_JP" : "チュ",
+    "alphabetname_romanji" : "chu"
+  }, {
+    "alphabet_id" : 190,
+    "alphabetname_JP" : "チョ",
+    "alphabetname_romanji" : "cho"
+  }, {
+    "alphabet_id" : 191,
+    "alphabetname_JP" : "ニャ",
+    "alphabetname_romanji" : "nya"
+  }, {
+    "alphabet_id" : 192,
+    "alphabetname_JP" : "ニュ",
+    "alphabetname_romanji" : "nyu"
+  }, {
+    "alphabet_id" : 193,
+    "alphabetname_JP" : "ニョ",
+    "alphabetname_romanji" : "nyo"
+  }, {
+    "alphabet_id" : 194,
+    "alphabetname_JP" : "ヒャ",
+    "alphabetname_romanji" : "hya"
+  }, {
+    "alphabet_id" : 195,
+    "alphabetname_JP" : "ヒュ",
+    "alphabetname_romanji" : "hyu"
+  }, {
+    "alphabet_id" : 196,
+    "alphabetname_JP" : "ヒョ",
+    "alphabetname_romanji" : "hyo"
+  }, {
+    "alphabet_id" : 197,
+    "alphabetname_JP" : "ビャ",
+    "alphabetname_romanji" : "bya"
+  }, {
+    "alphabet_id" : 198,
+    "alphabetname_JP" : "ビュ",
+    "alphabetname_romanji" : "byu"
+  }, {
+    "alphabet_id" : 199,
+    "alphabetname_JP" : "ビョ",
+    "alphabetname_romanji" : "byo"
+  }, {
+    "alphabet_id" : 200,
+    "alphabetname_JP" : "ピャ",
+    "alphabetname_romanji" : "pya"
+  }, {
+    "alphabet_id" : 201,
+    "alphabetname_JP" : "ピュ",
+    "alphabetname_romanji" : "pyu"
+  }, {
+    "alphabet_id" : 202,
+    "alphabetname_JP" : "ピョ",
+    "alphabetname_romanji" : "pyo"
+  }, {
+    "alphabet_id" : 203,
+    "alphabetname_JP" : "ミャ",
+    "alphabetname_romanji" : "mya"
+  }, {
+    "alphabet_id" : 204,
+    "alphabetname_JP" : "ミュ",
+    "alphabetname_romanji" : "myu"
+  }, {
+    "alphabet_id" : 205,
+    "alphabetname_JP" : "ミョ",
+    "alphabetname_romanji" : "myo"
+  }, {
+    "alphabet_id" : 206,
+    "alphabetname_JP" : "リャ",
+    "alphabetname_romanji" : "rya"
+  }, {
+    "alphabet_id" : 207,
+    "alphabetname_JP" : "リュ",
+    "alphabetname_romanji" : "ryu"
+  }, {
+    "alphabet_id" : 208,
+    "alphabetname_JP" : "リョ",
+    "alphabetname_romanji" : "ryo"
+  }, {
+    "alphabet_id" : 209,
+    "alphabetname_JP" : "ファ",
+    "alphabetname_romanji" : "fa"
+  }, {
+    "alphabet_id" : 210,
+    "alphabetname_JP" : "ウィ",
+    "alphabetname_romanji" : "wi"
+  }, {
+    "alphabet_id" : 211,
+    "alphabetname_JP" : "ティ",
+    "alphabetname_romanji" : "ti"
+  }, {
+    "alphabet_id" : 212,
+    "alphabetname_JP" : "ディ",
+    "alphabetname_romanji" : "di"
+  }, {
+    "alphabet_id" : 213,
+    "alphabetname_JP" : "トゥ",
+    "alphabetname_romanji" : "tu"
+  }, {
+    "alphabet_id" : 214,
+    "alphabetname_JP" : "ドゥ",
+    "alphabetname_romanji" : "du"
+  }, {
+    "alphabet_id" : 215,
+    "alphabetname_JP" : "ウェ",
+    "alphabetname_romanji" : "we"
+  }, {
+    "alphabet_id" : 216,
+    "alphabetname_JP" : "シェ",
+    "alphabetname_romanji" : "she"
+  }, {
+    "alphabet_id" : 217,
+    "alphabetname_JP" : "ジェ",
+    "alphabetname_romanji" : "je"
+  }, {
+    "alphabet_id" : 218,
+    "alphabetname_JP" : "チェ",
+    "alphabetname_romanji" : "che"
+  }, {
+    "alphabet_id" : 219,
+    "alphabetname_JP" : "フェ",
+    "alphabetname_romanji" : "fe"
+  }, {
+    "alphabet_id" : 220,
+    "alphabetname_JP" : "ウォ",
+    "alphabetname_romanji" : "wo"
+  }, {
+    "alphabet_id" : 221,
+    "alphabetname_JP" : "フォ",
+    "alphabetname_romanji" : "fo"
+  }, {
+    "alphabet_id" : 222,
+    "alphabetname_JP" : "チュ",
+    "alphabetname_romanji" : "tyu"
+  }, {
+    "alphabet_id" : 223,
+    "alphabetname_JP" : "ヂュ",
+    "alphabetname_romanji" : "dyu"
+  }, {
+    "alphabet_id" : 224,
+    "alphabetname_JP" : "フュ",
+    "alphabetname_romanji" : "fyu"
+  } ],
+  "Content" : {
+    "Chapter" : {
+      "Chapter1" : {
+        "Name" : "Hiragana Alphabet",
+        "Objective" : "Learn About Japanese Alphabet: Hiragana.",
+        "Questions" : [ {
+          "correct_answer" : 1,
+          "question_choice" : [ "a", "i", "u" ],
+          "script_id" : "ch1_021"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "あ", "え", "お" ],
+          "script_id" : "ch1_022"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "i", "u", "o" ],
+          "script_id" : "ch1_023"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "ai", "ui", "ue" ],
+          "script_id" : "ch1_024"
+        }, {
+          "correct_answer" : 0,
+          "question_choice" : [ "ki", "sa" ],
+          "script_id" : "ch1_046"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "si", "shi", "se" ],
+          "script_id" : "ch1_047"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "そ", "こ", "お" ],
+          "script_id" : "ch1_048"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "きし", "しす", "すし" ],
+          "script_id" : "ch1_049"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "kara", "kasa", "kisa" ],
+          "script_id" : "ch1_050"
+        }, {
+          "correct_answer" : 0,
+          "question_choice" : [ "ta", "na", "chi" ],
+          "script_id" : "ch1_072"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "ti", "chi", "shi" ],
+          "script_id" : "ch1_073"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "tu", "su", "tsu" ],
+          "script_id" : "ch1_074"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "te", "ni", "ne" ],
+          "script_id" : "ch1_075"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "ta", "sa", "na" ],
+          "script_id" : "ch1_076"
+        }, {
+          "correct_answer" : 0,
+          "question_choice" : [ "mo", "no", "so" ],
+          "script_id" : "ch1_098"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "hu", "nu", "fu" ],
+          "script_id" : "ch1_099"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "いへい", "へいし", "へしい" ],
+          "script_id" : "ch1_100"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "なは", "なな", "はな" ],
+          "script_id" : "ch1_101"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "no", "(w)o", "mo" ],
+          "script_id" : "ch1_127"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "ya", "yu", "yo" ],
+          "script_id" : "ch1_128"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "ra", "ri", "ru" ],
+          "script_id" : "ch1_129"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "rakusa", "saraku", "sakura" ],
+          "script_id" : "ch1_130"
+        } ],
+        "Scripts" : [ {
+          "script_desc" : "Good morning everyone ~",
+          "script_event" : false,
+          "script_id" : "ch1_001",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Alright, welcome to Yomimasu Japanese class!!",
+          "script_event" : false,
+          "script_id" : "ch1_002",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Before you learn Japanese you should to know about Japanese alphabets.",
+          "script_event" : false,
+          "script_id" : "ch1_003",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "In Japanese has three type of alphabets",
+          "script_event" : false,
+          "script_id" : "ch1_004",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Hiragana",
+          "script_event" : true,
+          "script_id" : "ch1_005",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/Hiragana"
+        }, {
+          "script_desc" : "Katakana",
+          "script_event" : true,
+          "script_id" : "ch1_006",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/Katakana"
+        }, {
+          "script_desc" : "and Kanji.",
+          "script_event" : true,
+          "script_id" : "ch1_007",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/Kanji"
+        }, {
+          "script_desc" : "and in each alphabet have Romaji.",
+          "script_event" : false,
+          "script_id" : "ch1_008",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Romaji will translate the consonant in each alphabet into English form.",
+          "script_event" : false,
+          "script_id" : "ch1_009",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "It can help you to read Japanese alphabets easily.",
+          "script_event" : false,
+          "script_id" : "ch1_010",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Let’s start with Hiragana.",
+          "script_event" : false,
+          "script_id" : "ch1_011",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Hiragana has 46 alphabets.",
+          "script_event" : false,
+          "script_id" : "ch1_012",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "It devided into each line by the consonant that end with the a i u e o sound.",
+          "script_event" : false,
+          "script_id" : "ch1_013",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "In first line is the single sound that consists of...",
+          "script_event" : false,
+          "script_id" : "ch1_014",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「あ」　(a)",
+          "script_event" : true,
+          "script_id" : "ch1_015",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/a"
+        }, {
+          "script_desc" : "「い」　(i)",
+          "script_event" : true,
+          "script_id" : "ch1_016",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/i"
+        }, {
+          "script_desc" : "「う」　(u)",
+          "script_event" : true,
+          "script_id" : "ch1_017",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/u"
+        }, {
+          "script_desc" : "「え」　(e)",
+          "script_event" : true,
+          "script_id" : "ch1_018",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/e"
+        }, {
+          "script_desc" : "「お」　(o)",
+          "script_event" : true,
+          "script_id" : "ch1_019",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/o"
+        }, {
+          "script_desc" : "Alright, Let me ask you a little question.",
+          "script_event" : false,
+          "script_id" : "ch1_020",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the romaji of this alphabet ?",
+          "script_event" : true,
+          "script_event_text" : "い",
+          "script_id" : "ch1_021",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Hiragana alphabet of this romaji ?",
+          "script_event" : true,
+          "script_event_text" : "e",
+          "script_id" : "ch1_022",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the 「お」's sound ?",
+          "script_event" : true,
+          "script_event_text" : "お",
+          "script_id" : "ch1_023",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the pronunciation of this word ?",
+          "script_event" : true,
+          "script_id" : "ch1_024",
+          "script_question" : true,
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/ue"
+        }, {
+          "script_desc" : "Good job!!",
+          "script_event" : false,
+          "script_id" : "ch1_025",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Great!",
+          "script_event" : false,
+          "script_id" : "ch1_026",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Ok, let's move to the K-line.",
+          "script_event" : false,
+          "script_id" : "ch1_027",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "K-line is combining between 「k」 sound and 「a i u e o」 sound.",
+          "script_event" : false,
+          "script_id" : "ch1_028",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "These are alphabets of K-line.",
+          "script_event" : false,
+          "script_id" : "ch1_029",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「か」　ka",
+          "script_event" : true,
+          "script_id" : "ch1_030",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/ka"
+        }, {
+          "script_desc" : "「き」　ki",
+          "script_event" : true,
+          "script_id" : "ch1_031",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/ki"
+        }, {
+          "script_desc" : "「く」　ku",
+          "script_event" : true,
+          "script_id" : "ch1_032",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/ku"
+        }, {
+          "script_desc" : "「け」　ke",
+          "script_event" : true,
+          "script_id" : "ch1_033",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/ke"
+        }, {
+          "script_desc" : "「こ」　ko",
+          "script_event" : true,
+          "script_id" : "ch1_034",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/ko"
+        }, {
+          "script_desc" : "The next line is S-line",
+          "script_event" : false,
+          "script_id" : "ch1_035",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "S-line is pronouncing 「s」 sound and 「a i u e o」 sound together.",
+          "script_event" : false,
+          "script_id" : "ch1_036",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "In S-line has some special sound that you have to read carefully.",
+          "script_event" : false,
+          "script_id" : "ch1_037",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "These are alphabets of S-line",
+          "script_event" : false,
+          "script_id" : "ch1_038",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「さ」　sa",
+          "script_event" : true,
+          "script_id" : "ch1_039",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/sa"
+        }, {
+          "script_desc" : "「し」　shi",
+          "script_event" : true,
+          "script_id" : "ch1_040",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/shi"
+        }, {
+          "script_desc" : "This alphabet called 「shi」 not 「si」.",
+          "script_event" : true,
+          "script_id" : "ch1_041",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「す」　su",
+          "script_event" : true,
+          "script_id" : "ch1_042",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/su"
+        }, {
+          "script_desc" : "「せ」　se",
+          "script_event" : true,
+          "script_id" : "ch1_043",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/se"
+        }, {
+          "script_desc" : "「そ」　so",
+          "script_event" : true,
+          "script_id" : "ch1_044",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/so"
+        }, {
+          "script_desc" : "Alright, I want to know that you can remember K-line and S-line.",
+          "script_event" : false,
+          "script_id" : "ch1_045",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this alphabet ?",
+          "script_event" : true,
+          "script_event_text" : "き",
+          "script_id" : "ch1_046",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of 「し」 ?",
+          "script_event" : true,
+          "script_event_text" : "し",
+          "script_id" : "ch1_047",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Hiragana of this Romaji ?",
+          "script_event" : true,
+          "script_event_text" : "ko",
+          "script_id" : "ch1_048",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is a Hiragana of 「sushi」 ?",
+          "script_event" : true,
+          "script_id" : "ch1_049",
+          "script_question" : true,
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/sushi"
+        }, {
+          "script_desc" : "What is a Hiragana of 「kasa」 ?",
+          "script_event" : true,
+          "script_id" : "ch1_050",
+          "script_question" : true,
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/kasa"
+        }, {
+          "script_desc" : "Great job!!! You have passed the K-line and S-line.",
+          "script_event" : false,
+          "script_id" : "ch1_051",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "I think you are ready to go to the next line.",
+          "script_event" : false,
+          "script_id" : "ch1_052",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "The next line is T-line",
+          "script_event" : false,
+          "script_id" : "ch1_053",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "T-line is combining between 「t」 and 「a i u e o」",
+          "script_event" : false,
+          "script_id" : "ch1_054",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "In this line has two special alphabets that you need to remember.",
+          "script_event" : false,
+          "script_id" : "ch1_055",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "These are alphabets of T-line.",
+          "script_event" : false,
+          "script_id" : "ch1_056",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「た」　ta",
+          "script_event" : true,
+          "script_id" : "ch1_057",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/ta"
+        }, {
+          "script_desc" : "「ち」　chi",
+          "script_event" : true,
+          "script_id" : "ch1_058",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/chi"
+        }, {
+          "script_desc" : "This alphabet called 「chi」 not 「shi」 or 「ti」.",
+          "script_event" : false,
+          "script_id" : "ch1_059",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「つ」　tsu",
+          "script_event" : true,
+          "script_id" : "ch1_060",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/tsu"
+        }, {
+          "script_desc" : "This alphabet called 「tsu」 not 「su」 or 「tu」",
+          "script_event" : false,
+          "script_id" : "ch1_061",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「て」　te",
+          "script_event" : true,
+          "script_id" : "ch1_062",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/te"
+        }, {
+          "script_desc" : "「と」　to",
+          "script_event" : true,
+          "script_id" : "ch1_063",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/to"
+        }, {
+          "script_desc" : "The next line is N-line",
+          "script_event" : false,
+          "script_id" : "ch1_064",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "N-line is combining between 「n」 and 「a i u e o」",
+          "script_event" : false,
+          "script_id" : "ch1_065",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Here are alphabets of N-line",
+          "script_event" : false,
+          "script_id" : "ch1_066",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「な」　na",
+          "script_event" : true,
+          "script_id" : "ch1_067",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/na"
+        }, {
+          "script_desc" : "「に」　ni",
+          "script_event" : true,
+          "script_id" : "ch1_068",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/ni"
+        }, {
+          "script_desc" : "「ぬ」　nu",
+          "script_event" : true,
+          "script_id" : "ch1_069",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/nu"
+        }, {
+          "script_desc" : "「ね」　ne",
+          "script_event" : true,
+          "script_id" : "ch1_070",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/ne"
+        }, {
+          "script_desc" : "「の」　no",
+          "script_event" : true,
+          "script_id" : "ch1_071",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/no"
+        }, {
+          "script_desc" : "What is the Romaji of this alphabet ?",
+          "script_event" : true,
+          "script_event_text" : "た",
+          "script_id" : "ch1_072",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this alphabet ?",
+          "script_event" : true,
+          "script_event_text" : "ち",
+          "script_id" : "ch1_073",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this alphabet ?",
+          "script_event" : true,
+          "script_event_text" : "つ",
+          "script_id" : "ch1_074",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this alphabet ?",
+          "script_event" : true,
+          "script_event_text" : "ね",
+          "script_id" : "ch1_075",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this alphabet ?",
+          "script_event" : true,
+          "script_event_text" : "な",
+          "script_id" : "ch1_076",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Great!",
+          "script_event" : false,
+          "script_id" : "ch1_077",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Try to be better in Japanese.",
+          "script_event" : false,
+          "script_id" : "ch1_078",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "I believe in you!",
+          "script_event" : false,
+          "script_id" : "ch1_079",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "The next line is H-line",
+          "script_event" : false,
+          "script_id" : "ch1_080",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "H-line is combining between 「h」 and 「a i u e o」",
+          "script_event" : false,
+          "script_id" : "ch1_081",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Here are alphabets of H-line",
+          "script_event" : false,
+          "script_id" : "ch1_082",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「は」　ha",
+          "script_event" : true,
+          "script_id" : "ch1_083",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/ha"
+        }, {
+          "script_desc" : "「ひ」　hi",
+          "script_event" : true,
+          "script_id" : "ch1_084",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/hi"
+        }, {
+          "script_desc" : "「ふ」　fu",
+          "script_event" : true,
+          "script_id" : "ch1_085",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/fu"
+        }, {
+          "script_desc" : "「へ」　he",
+          "script_event" : true,
+          "script_id" : "ch1_086",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/he"
+        }, {
+          "script_desc" : "「ほ」　ho",
+          "script_event" : true,
+          "script_id" : "ch1_087",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/ho"
+        }, {
+          "script_desc" : "The next line is M-line",
+          "script_event" : false,
+          "script_id" : "ch1_088",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "M-line is combining between 「m」 and 「a i u e o」",
+          "script_event" : false,
+          "script_id" : "ch1_089",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Here are alphabets of M-line",
+          "script_event" : false,
+          "script_id" : "ch1_090",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「ま」　ma",
+          "script_event" : true,
+          "script_id" : "ch1_091",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/ma"
+        }, {
+          "script_desc" : "「み」　mi",
+          "script_event" : true,
+          "script_id" : "ch1_092",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/mi"
+        }, {
+          "script_desc" : "「む」　mu",
+          "script_event" : true,
+          "script_id" : "ch1_093",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/mu"
+        }, {
+          "script_desc" : "「め」　me",
+          "script_event" : true,
+          "script_id" : "ch1_094",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/me"
+        }, {
+          "script_desc" : "「も」　mo",
+          "script_event" : true,
+          "script_id" : "ch1_095",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/mo"
+        }, {
+          "script_desc" : "I will ask you all in the past...",
+          "script_event" : false,
+          "script_id" : "ch1_096",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Can you remember all of these hehehe ?",
+          "script_event" : false,
+          "script_id" : "ch1_097",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this alphabet ?",
+          "script_event" : true,
+          "script_event_text" : "も",
+          "script_id" : "ch1_098",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this alphabet ?",
+          "script_event" : true,
+          "script_event_text" : "ふ",
+          "script_id" : "ch1_099",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Hiragana of this picture ?",
+          "script_event" : true,
+          "script_id" : "ch1_100",
+          "script_question" : true,
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/heishi"
+        }, {
+          "script_desc" : "What is the Romaji of this picture ?",
+          "script_event" : true,
+          "script_id" : "ch1_101",
+          "script_question" : true,
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/hana"
+        }, {
+          "script_desc" : "Oh cool!!",
+          "script_event" : false,
+          "script_id" : "ch1_102",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Ok I know you are great, let's go 'til the end!!!",
+          "script_event" : false,
+          "script_id" : "ch1_103",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "The next line is Y-line",
+          "script_event" : false,
+          "script_id" : "ch1_104",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Y-line is combining between 「y」 and 「a u o」",
+          "script_event" : false,
+          "script_id" : "ch1_105",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Here are alphabets of Y-line",
+          "script_event" : false,
+          "script_id" : "ch1_106",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「や」　ya",
+          "script_event" : true,
+          "script_id" : "ch1_107",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/ya"
+        }, {
+          "script_desc" : "「ゆ」　yu",
+          "script_event" : true,
+          "script_id" : "ch1_108",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/yu"
+        }, {
+          "script_desc" : "「よ」　yo",
+          "script_event" : true,
+          "script_id" : "ch1_109",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/yo"
+        }, {
+          "script_desc" : "The next line is R-line",
+          "script_event" : false,
+          "script_id" : "ch1_110",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "R-line is combining between 「r」 and 「a i u e o」",
+          "script_event" : false,
+          "script_id" : "ch1_111",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Here are alphabets of R-line",
+          "script_event" : false,
+          "script_id" : "ch1_112",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「ら」　ra",
+          "script_event" : true,
+          "script_id" : "ch1_113",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/ra"
+        }, {
+          "script_desc" : "「り」　ri",
+          "script_event" : true,
+          "script_id" : "ch1_114",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/ri"
+        }, {
+          "script_desc" : "「る」　ru",
+          "script_event" : true,
+          "script_id" : "ch1_115",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/ru"
+        }, {
+          "script_desc" : "「れ」　re",
+          "script_event" : true,
+          "script_id" : "ch1_116",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/re"
+        }, {
+          "script_desc" : "「ろ」　ro",
+          "script_event" : true,
+          "script_id" : "ch1_117",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/ro"
+        }, {
+          "script_desc" : "The next line is W-line",
+          "script_event" : false,
+          "script_id" : "ch1_118",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "W-line is combining between 「w」 and 「a o」",
+          "script_event" : false,
+          "script_id" : "ch1_119",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Here are alphabets of W-line",
+          "script_event" : false,
+          "script_id" : "ch1_120",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「わ」　wa",
+          "script_event" : true,
+          "script_id" : "ch1_121",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/wa"
+        }, {
+          "script_desc" : "「を」　(w)o",
+          "script_event" : true,
+          "script_id" : "ch1_122",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/wo"
+        }, {
+          "script_desc" : "and the last alphabet is 「ん」 n",
+          "script_event" : true,
+          "script_id" : "ch1_123",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/n"
+        }, {
+          "script_desc" : "You are finish in Hiragana.",
+          "script_event" : false,
+          "script_id" : "ch1_124",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Before you will do the post-test.",
+          "script_event" : false,
+          "script_id" : "ch1_125",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "I want to take some little test with you!",
+          "script_event" : false,
+          "script_id" : "ch1_126",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this alphabet ?",
+          "script_event" : true,
+          "script_event_text" : "を",
+          "script_id" : "ch1_127",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this alphabet ?",
+          "script_event" : true,
+          "script_event_text" : "よ",
+          "script_id" : "ch1_128",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this alphabet ?",
+          "script_event" : true,
+          "script_event_text" : "る",
+          "script_id" : "ch1_129",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this picture ?",
+          "script_event" : true,
+          "script_id" : "ch1_130",
+          "script_question" : true,
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch01/sakura"
+        }, {
+          "script_desc" : "Great!",
+          "script_event" : false,
+          "script_id" : "ch1_131",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "YOU HAVE PASSED 'HIRAGANA LESSON'",
+          "script_event" : false,
+          "script_id" : "ch1_132",
+          "script_role" : "System"
+        }, {
+          "script_desc" : "YOU HAVE UNLOCKED 'ALPHABET CHART'",
+          "script_event" : false,
+          "script_id" : "ch1_133",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "See you next chapter, bye ^-^.",
+          "script_event" : false,
+          "script_id" : "ch1_134",
+          "script_role" : "Teacher"
+        } ],
+        "Tests" : [ {
+          "test_answer" : 1,
+          "test_choice" : [ "Chinese", "Japanese", "Thai", "English" ],
+          "test_desc" : "What is the official language of Japan?",
+          "test_id" : "ch01_test01"
+        }, {
+          "test_answer" : 2,
+          "test_choice" : [ "2 Types (Hiragana and Katakana)", "2 Types (Hiragana and Kanji)", "3 Types (Hiragana, Katakana and Kanji)", "4 Types (Hiragana, Katakana, Kanji and Japanglish)" ],
+          "test_desc" : "How many type of Japanese?",
+          "test_id" : "ch01_test02"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "The representation of written Japanese into English alphabets.", "The representation of written English into Japanese alphabets.", "The representation of written Japanese into Chinese alphabets.", "None of the above." ],
+          "test_desc" : "What is the Romaji?",
+          "test_id" : "ch01_test03"
+        }, {
+          "test_answer" : 3,
+          "test_choice" : [ "You can remember Japanese alphabets easily.", "You can read Japanese correctly.", "For writing the reading of Japanese alphabets.", "All of the above." ],
+          "test_desc" : "What is the useful Romaji?",
+          "test_id" : "ch01_test04"
+        }, {
+          "test_answer" : 2,
+          "test_choice" : [ "「か」 is the alphabet in K-Line.", "「た」 is the alphabet in T-Line.", "The Romaji of 「し」 is si.", "The Romaji of 「の」 is no." ],
+          "test_desc" : "Which one is not correct?",
+          "test_id" : "ch01_test05"
+        }, {
+          "test_answer" : 1,
+          "test_choice" : [ "te", "tsu", "to", "ta" ],
+          "test_desc" : "What is the Romaji of 「つ」?",
+          "test_id" : "ch01_test06"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "fu", "ku", "hu", "su" ],
+          "test_desc" : "What is the Romaji of 「ふ」?",
+          "test_id" : "ch01_test07"
+        }, {
+          "test_answer" : 1,
+          "test_choice" : [ "ゆめ", "めゆ", "ゆき", "ゆみ" ],
+          "test_desc" : "Which one is the writing of yume in Hiragana?",
+          "test_id" : "ch01_test08",
+          "test_sprite_path" : "Ch01/yume"
+        }, {
+          "test_answer" : 2,
+          "test_choice" : [ "こども", "おとな", "にほん", "あひる" ],
+          "test_desc" : "Which one means Japan in Japanese?",
+          "test_id" : "ch01_test09"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "N-Line", "Y-Line", "S-Line", "K-Line" ],
+          "test_desc" : "Which line in Japanese have only three alphabets?",
+          "test_id" : "ch01_test10"
+        } ],
+        "chap_avg_time" : "15-20 Minutes",
+        "chap_id" : 1
+      },
+      "Chapter2" : {
+        "Name" : "Additional Sound in Hiragana Part 1",
+        "Objective" : "Learn About Additional Sounds: Voice and Semi-Voice Consonants.",
+        "Questions" : [ {
+          "correct_answer" : 0,
+          "question_choice" : [ "あ", "い", "う" ],
+          "script_id" : "ch2_039"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "あ", "い", "う" ],
+          "script_id" : "ch2_040"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "あ", "い", "う" ],
+          "script_id" : "ch2_041"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "い", "え", "Both are correct." ],
+          "script_id" : "ch2_042"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "う", "い", "う and お" ],
+          "script_id" : "ch2_055"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "Combining between alphabets end up with a-sound and alphabet in Y-line.", "Combining between alphabets end up with i-sound and alphabet in Y-line.", "Greeting Phrase." ],
+          "script_id" : "ch2_056"
+        }, {
+          "correct_answer" : 0,
+          "question_choice" : [ "Only H-Line.", "Only K-Line.", "K-Line and H-Line." ],
+          "script_id" : "ch2_057"
+        } ],
+        "Scripts" : [ {
+          "script_desc" : "Hi everyone ~",
+          "script_event" : false,
+          "script_id" : "ch2_001",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "The next, we gonna learn about the additional sounds.",
+          "script_event" : false,
+          "script_id" : "ch2_002",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Japanese has four additional sounds.",
+          "script_event" : false,
+          "script_id" : "ch2_003",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Voice consonant",
+          "script_event" : true,
+          "script_id" : "ch2_004",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/dakuon"
+        }, {
+          "script_desc" : "Semi-voice consonant",
+          "script_event" : true,
+          "script_id" : "ch2_005",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/handakuon"
+        }, {
+          "script_desc" : "Long vowel",
+          "script_event" : true,
+          "script_id" : "ch2_006",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/chuu-on"
+        }, {
+          "script_desc" : "Yo-on sound",
+          "script_event" : true,
+          "script_id" : "ch2_007",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/yoon"
+        }, {
+          "script_desc" : "and Hard consonant.",
+          "script_event" : true,
+          "script_id" : "ch2_008",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/sokuon"
+        }, {
+          "script_desc" : "In this chapter we will learn about the voice and semi-voice consonant.",
+          "script_event" : false,
+          "script_id" : "ch2_009",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Voice consonant is the consonant that you take a breath out less than normal alphabets.",
+          "script_event" : false,
+          "script_id" : "ch2_010",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "In Japanese uses 「〃」 (tenten) for voice consonant alphabets.",
+          "script_event" : true,
+          "script_event_text" : "「〃」　てんてん",
+          "script_id" : "ch2_011",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "The alphabet line that can do the voice consonant.",
+          "script_event" : false,
+          "script_id" : "ch2_012",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "K-line, S-line, T-line, H-line",
+          "script_event" : false,
+          "script_id" : "ch2_013",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "K-line will turn into G-line.",
+          "script_event" : false,
+          "script_id" : "ch2_014",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「か」　ka → 「が」　ga",
+          "script_event" : true,
+          "script_id" : "ch2_015",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/ka_ga"
+        }, {
+          "script_desc" : "「き」　ki → 「ぎ」　gi",
+          "script_event" : true,
+          "script_id" : "ch2_016",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/ki_gi"
+        }, {
+          "script_desc" : "「く」　ku → 「ぐ」　gu",
+          "script_event" : true,
+          "script_id" : "ch2_017",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/ku_gu"
+        }, {
+          "script_desc" : "「け」　ke → 「げ」　ge",
+          "script_event" : true,
+          "script_id" : "ch2_018",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/ke_ge"
+        }, {
+          "script_desc" : "「こ」　ko → 「ご」　go",
+          "script_event" : true,
+          "script_id" : "ch2_019",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/ko_go"
+        }, {
+          "script_desc" : "S-line will turn into Z-line.",
+          "script_event" : false,
+          "script_id" : "ch2_020",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「さ」　sa → 「ざ」　za",
+          "script_event" : true,
+          "script_id" : "ch2_021",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/sa_za"
+        }, {
+          "script_desc" : "「し」　shi → 「じ」　ji",
+          "script_event" : true,
+          "script_id" : "ch2_022",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/shi_ji"
+        }, {
+          "script_desc" : "「す」　su → 「ず」　zu",
+          "script_event" : true,
+          "script_id" : "ch2_023",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/su_zu"
+        }, {
+          "script_desc" : "「せ」　se → 「ぜ」　ze",
+          "script_event" : true,
+          "script_id" : "ch2_024",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/se_ze"
+        }, {
+          "script_desc" : "「そ」　so → 「ぞ」　zo",
+          "script_event" : true,
+          "script_id" : "ch2_025",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/so_zo"
+        }, {
+          "script_desc" : "T-line will turn into D-line.",
+          "script_event" : true,
+          "script_id" : "ch2_026",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「た」　ta → 「だ」　da",
+          "script_event" : true,
+          "script_id" : "ch2_027",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/ta_da"
+        }, {
+          "script_desc" : "「ち」　chi → 「ぢ」　ji",
+          "script_event" : true,
+          "script_id" : "ch2_028",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/chi_ji"
+        }, {
+          "script_desc" : "「つ」　tsu → 「づ」　zu",
+          "script_event" : true,
+          "script_id" : "ch2_029",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/tsu_zu"
+        }, {
+          "script_desc" : "「て」　te → 「で」　de",
+          "script_event" : true,
+          "script_id" : "ch2_030",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/te_de"
+        }, {
+          "script_desc" : "「と」　to → 「ど」　do",
+          "script_event" : true,
+          "script_id" : "ch2_031",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/to_do"
+        }, {
+          "script_desc" : "H-line will turn into B-line.",
+          "script_event" : false,
+          "script_id" : "ch2_032",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「は」　ha → 「ば」　ba",
+          "script_event" : true,
+          "script_id" : "ch2_033",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/ha_ba"
+        }, {
+          "script_desc" : "「ひ」　hi → 「び」　bi",
+          "script_event" : true,
+          "script_id" : "ch2_034",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/hi_bi"
+        }, {
+          "script_desc" : "「ふ」　fu → 「ぶ」　bu",
+          "script_event" : false,
+          "script_id" : "ch2_035",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/fu_bu"
+        }, {
+          "script_desc" : "「へ」　he → 「べ」　be",
+          "script_event" : true,
+          "script_id" : "ch2_036",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/he_be"
+        }, {
+          "script_desc" : "「ほ」　ho → 「ぼ」　bo",
+          "script_event" : true,
+          "script_id" : "ch2_037",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/ho_bo"
+        }, {
+          "script_desc" : "Before we go to semi-voice consonant, let's do some quiz ^-^.",
+          "script_event" : true,
+          "script_id" : "ch2_038",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is a voice consonant?",
+          "script_event" : true,
+          "script_id" : "ch2_039",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What will happen if you put tenten 「〃」 on alphabets in K-line?",
+          "script_event" : true,
+          "script_id" : "ch2_040",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What will happen if you put tenten 「〃」 on alphabets in S-line?",
+          "script_event" : true,
+          "script_id" : "ch2_041",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What will happen if you put tenten 「〃」 on alphabets in H-line?",
+          "script_event" : true,
+          "script_id" : "ch2_042",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "YOU HAVE PASSED THE LESSON : 'VOICE CONSONANT'.",
+          "script_event" : false,
+          "script_id" : "ch2_043",
+          "script_role" : "System"
+        }, {
+          "script_desc" : "I'm proud of you. Let's go to the next lesson!!!",
+          "script_event" : false,
+          "script_id" : "ch2_044",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Semi-voice consonant is the consonant that you take a breath out more than normal alphabets.",
+          "script_event" : false,
+          "script_id" : "ch2_045",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Japanese uses 「○」 (maru) for semi-voice consonants.",
+          "script_event" : true,
+          "script_event_text" : "「〃」　てんてん",
+          "script_id" : "ch2_046",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Semi-voice consonant can use with H-line only.",
+          "script_event" : false,
+          "script_id" : "ch1_047",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "H-line will turn into P-line.",
+          "script_event" : false,
+          "script_id" : "ch2_048",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/h_p"
+        }, {
+          "script_desc" : "「は」　ha → 「ぱ」　pa",
+          "script_event" : true,
+          "script_id" : "ch2_049",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/ha_pa"
+        }, {
+          "script_desc" : "「ひ」　hi → 「ぴ」　pi",
+          "script_event" : true,
+          "script_id" : "ch2_050",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/hi_pi"
+        }, {
+          "script_desc" : "「ふ」　fu → 「ぷ」　pu",
+          "script_event" : true,
+          "script_id" : "ch2_051",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/fu_pu"
+        }, {
+          "script_desc" : "「へ」　he → 「ぺ」　pe",
+          "script_event" : true,
+          "script_id" : "ch2_052",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/he_pe"
+        }, {
+          "script_desc" : "「ほ」　ho → 「ぽ」　po",
+          "script_event" : true,
+          "script_id" : "ch2_053",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch02/ho_po"
+        }, {
+          "script_desc" : "I have some question...",
+          "script_event" : false,
+          "script_id" : "ch2_054",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is semi-voice consonant?",
+          "script_event" : true,
+          "script_id" : "ch2_055",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What will happen if you put maru 「○」 on H-line?",
+          "script_event" : true,
+          "script_id" : "ch2_056",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Which alphabet line can be a semi-voice consonant?",
+          "script_event" : true,
+          "script_id" : "ch2_057",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "YOU HAVE PASSED THE LESSON : 'SEMI-VOICE CONSONANT'.",
+          "script_event" : false,
+          "script_id" : "ch2_058",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Good luck for your post-test!! Bye bye.",
+          "script_event" : false,
+          "script_id" : "ch2_059",
+          "script_role" : "Teacher"
+        } ],
+        "Tests" : [ {
+          "test_answer" : 1,
+          "test_choice" : [ "Alphabets that take more breathe to speak.", "Alphabets that take less breathe to speak.", "Alphabets that hard to write.", "None of the above." ],
+          "test_desc" : "What is a voice consonant?",
+          "test_id" : "ch02_test01"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "Alphabets that take more breathe to speak.", "Alphabets that take less breathe to speak.", "Alphabets that hard to write.", "None of the above." ],
+          "test_desc" : "What is a semi-voice consonant?",
+          "test_id" : "ch02_test02"
+        }, {
+          "test_answer" : 3,
+          "test_choice" : [ "K-Line", "T-Line", "H-Line", "N-Line" ],
+          "test_desc" : "Which alphabet line can't be a voice consonant?",
+          "test_id" : "ch02_test03"
+        }, {
+          "test_answer" : 3,
+          "test_choice" : [ "K-Line, S-Line", "S-Line, H-Line", "T-Line, H-Line.", "Only H-Line" ],
+          "test_desc" : "Which alphabet line can be a semi-voice consonant?",
+          "test_id" : "ch02_test04"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "てんてん　「〃」", "まる 「○」", "Both are correct.", "Both are not correct." ],
+          "test_desc" : "What is a symbol of voice consonant?",
+          "test_id" : "ch02_test05"
+        }, {
+          "test_answer" : 1,
+          "test_choice" : [ "てんてん　「〃」", "まる 「○」", "Both are correct.", "Both are not correct." ],
+          "test_desc" : "What is a symbol of semi-voice consonant?",
+          "test_id" : "ch02_test06"
+        }, {
+          "test_answer" : "ge",
+          "test_choice" : [ "tsu", "ku", "ke", "ge" ],
+          "test_desc" : "What is the Romaji of 「げ」?",
+          "test_id" : "ch02_test07"
+        }, {
+          "test_answer" : "pu",
+          "test_choice" : [ "bu", "hu", "fu", "pu" ],
+          "test_desc" : "What is the Romaji of 「ぷ」?",
+          "test_id" : "ch02_test08"
+        }, {
+          "test_answer" : 2,
+          "test_choice" : [ "ふた", "ぷた", "ぶた", "ぶて" ],
+          "test_desc" : "Which one is correct word of this picture ?",
+          "test_id" : "ch02_test09",
+          "test_sprite_path" : "Ch02/pig"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "かばん", "かはん", "はばん", "ばんか" ],
+          "test_desc" : "Which one is correct word of this picture ?",
+          "test_id" : "ch02_test10",
+          "test_sprite_path" : "Ch02/bag"
+        } ],
+        "chap_avg_time" : "10-15 Minutes",
+        "chap_id" : 2
+      },
+      "Chapter3" : {
+        "Name" : "Additional Sound in Hiragana Part 2",
+        "Objective" : "Learn About Additional Sounds: Long Vowel and Yo-on.",
+        "Questions" : [ {
+          "correct_answer" : 0,
+          "question_choice" : [ "あ", "い", "う" ],
+          "script_id" : "ch3_032"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "あ", "い", "う" ],
+          "script_id" : "ch3_033"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "あ", "い", "う" ],
+          "script_id" : "ch3_034"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "い", "え", "Both are correct." ],
+          "script_id" : "ch3_035"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "う", "い", "う and お" ],
+          "script_id" : "ch3_036"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "Combining between alphabets end up with a-sound and alphabet in Y-line.", "Combining between alphabets end up with i-sound and alphabet in Y-line.", "Greeting Phrase." ],
+          "script_id" : "ch3_063"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "き", "け", "ち" ],
+          "script_id" : "ch3_064"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "gyunyu", "gyuunyuu", "nyuugyuu" ],
+          "script_id" : "ch3_065"
+        } ],
+        "Scripts" : [ {
+          "script_desc" : "After we learn about Voice and Semi-voice consonants...",
+          "script_event" : false,
+          "script_id" : "ch3_001",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Today we will learn about the next type of additional sounds in Japanese.",
+          "script_event" : false,
+          "script_id" : "ch3_002",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Long vowel",
+          "script_event" : true,
+          "script_id" : "ch3_003",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/chuu-on"
+        }, {
+          "script_desc" : "In japanese, every alphabet is short sound.",
+          "script_event" : false,
+          "script_id" : "ch3_004",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Long vowel sound helps to make the alphabet into a long sound.",
+          "script_event" : false,
+          "script_id" : "ch3_005",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Long vowel will using like this.",
+          "script_event" : false,
+          "script_id" : "ch3_006",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "1. use 「あ」 to make the long sound with alphabets that end with a-sound.",
+          "script_event" : true,
+          "script_id" : "ch3_007",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/end_with_a"
+        }, {
+          "script_desc" : "おかあさん (okaasan) Mother",
+          "script_event" : true,
+          "script_id" : "ch3_008",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/mother"
+        }, {
+          "script_desc" : "おばあさん (obaasan) Grandmother",
+          "script_event" : true,
+          "script_id" : "ch3_009",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/grandmother"
+        }, {
+          "script_desc" : "2. use 「い」 to make the long sound with alphabets that end with i-sound.",
+          "script_event" : true,
+          "script_id" : "ch3_010",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/end_with_i"
+        }, {
+          "script_desc" : "おにいさん (oniisan) Brother",
+          "script_event" : true,
+          "script_id" : "ch3_011",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/brother"
+        }, {
+          "script_desc" : "しいたけ (shiitake) Mushroom",
+          "script_event" : true,
+          "script_id" : "ch3_012",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/mushroom"
+        }, {
+          "script_desc" : "3. use 「う」 to make the long sound with alphabets that end with u-sound.",
+          "script_event" : true,
+          "script_id" : "ch3_013",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/end_with_u"
+        }, {
+          "script_desc" : "くうき (kuuki) Air",
+          "script_event" : true,
+          "script_id" : "ch3_014",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/air"
+        }, {
+          "script_desc" : "ふうせん (fuusen) Balloon",
+          "script_event" : true,
+          "script_id" : "ch3_015",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/balloon"
+        }, {
+          "script_desc" : "Okay, this is easy to remember because it is the same alphabet.",
+          "script_event" : false,
+          "script_id" : "ch3_016",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "But next, you must use your memory.",
+          "script_event" : false,
+          "script_id" : "ch3_017",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Are you ready?",
+          "script_event" : false,
+          "script_id" : "ch3_018",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "4. use 「い」 to make the long sound with alphabets that end with e-sound.",
+          "script_event" : true,
+          "script_id" : "ch3_019",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/end_with_e"
+        }, {
+          "script_desc" : "とけい (tokei) Clock",
+          "script_event" : true,
+          "script_id" : "ch3_020",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/clock"
+        }, {
+          "script_desc" : "せんせい (sensei) Teacher",
+          "script_event" : true,
+          "script_id" : "ch3_021",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/teacher"
+        }, {
+          "script_desc" : "Be careful! some word use 「え」 to make the long sound.",
+          "script_event" : false,
+          "script_id" : "ch3_022",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "おねえさん (oneesan) Sister.",
+          "script_event" : true,
+          "script_id" : "ch3_023",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/sister"
+        }, {
+          "script_desc" : "5. use 「う」 to make the long sound with alphabets that end with o-sound.",
+          "script_event" : true,
+          "script_id" : "ch3_024",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/end_with_o"
+        }, {
+          "script_desc" : "こうえん (kouen) Park",
+          "script_event" : true,
+          "script_id" : "ch3_025",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/park"
+        }, {
+          "script_desc" : "がっこう (gakkou) School",
+          "script_event" : true,
+          "script_id" : "ch3_026",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/school"
+        }, {
+          "script_desc" : "Be careful! some word use 「お」 to make the long sound.",
+          "script_event" : false,
+          "script_id" : "ch3_027",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "こおり (koori) Ice",
+          "script_event" : true,
+          "script_id" : "ch3_028",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/ice"
+        }, {
+          "script_desc" : "おおかみ (ookami) Wolf",
+          "script_event" : true,
+          "script_id" : "ch3_029",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/wolf"
+        }, {
+          "script_desc" : "Okay, that is the Long vowel sound.",
+          "script_event" : false,
+          "script_id" : "ch3_030",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "This is a question before you go to the Yo-on sound.",
+          "script_event" : false,
+          "script_id" : "ch3_031",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What alphabet that use to make a-sound longer.",
+          "script_event" : true,
+          "script_id" : "ch3_032",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What alphabet that use to make i-sound longer.",
+          "script_event" : true,
+          "script_id" : "ch3_033",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What alphabet that use to make u-sound longer.",
+          "script_event" : true,
+          "script_id" : "ch3_034",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What alphabet that use to make e-sound longer.",
+          "script_event" : true,
+          "script_id" : "ch3_035",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What alphabet that use to make o-sound longer.",
+          "script_event" : true,
+          "script_id" : "ch3_036",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "YOU HAVE PASSED THE LESSON : 'LONG VOWEL'.",
+          "script_event" : false,
+          "script_id" : "ch3_037",
+          "script_role" : "System"
+        }, {
+          "script_desc" : "Great everyone!",
+          "script_event" : false,
+          "script_id" : "ch3_038",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Practice everyday to be the best!!",
+          "script_event" : false,
+          "script_id" : "ch1_039",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "And the fourth lesson of addtion sounds in Hiragana!!",
+          "script_event" : false,
+          "script_id" : "ch3_040",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Yo-on",
+          "script_event" : true,
+          "script_id" : "ch3_041",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/yoon"
+        }, {
+          "script_desc" : "Yo-on sound is the combining between the alphabets the end with i-sound and the alphabets in Y-Line.",
+          "script_event" : true,
+          "script_id" : "ch3_042",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/yo-onchart"
+        }, {
+          "script_desc" : "In Japanese has written alphabets in Y-Line into a small form for identifying the Yo-on sound.",
+          "script_event" : true,
+          "script_id" : "ch3_043",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/small_y"
+        }, {
+          "script_desc" : "Every line has the similar pattern that end with ya-sound, yu-sound and yo-sound. The beginning sound depends on each alphabet line.",
+          "script_event" : false,
+          "script_id" : "ch3_044",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "K-Line き (ki) → 「 きゃ (kya), きゅ (kyu), きょ (kyo) 」",
+          "script_event" : true,
+          "script_id" : "ch3_045",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/k_yoon"
+        }, {
+          "script_desc" : "G-Line ぎ (gi) → 「 ぎゃ (gya), ぎゅ (gyu), ぎょ (gyo) 」",
+          "script_event" : true,
+          "script_id" : "ch3_046",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/g_yoon"
+        }, {
+          "script_desc" : "S-Line さ (shi) → 「 さゃ (sha), さゅ (shu), さょ (sho) 」",
+          "script_event" : true,
+          "script_id" : "ch3_047",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/s_yoon"
+        }, {
+          "script_desc" : "Z-Line ざ (ji) → 「 ざゃ (ja), ざゅ (ju), ざょ (jo) 」",
+          "script_event" : true,
+          "script_id" : "ch3_048",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/z_yoon"
+        }, {
+          "script_desc" : "T-Line ち (chi) → 「 ちゃ (cha), ちゅ (chu), ちょ (cho) 」",
+          "script_event" : true,
+          "script_id" : "ch3_049",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/t_yoon"
+        }, {
+          "script_desc" : "N-Line に (ni) → 「 にゃ (nya), にゅ (nyu), にょ (nyo) 」",
+          "script_event" : true,
+          "script_id" : "ch3_050",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/n_yoon"
+        }, {
+          "script_desc" : "H-Line ひ (hi) → 「 ひゃ (hya), ひゅ (hyu), ひょ (hyo) 」",
+          "script_event" : true,
+          "script_id" : "ch3_051",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/h_yoon"
+        }, {
+          "script_desc" : "B-Line び (bi) → 「 びゃ (bya), びゅ (byu), びょ (byo) 」",
+          "script_event" : true,
+          "script_id" : "ch3_052",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/b_yoon"
+        }, {
+          "script_desc" : "P-Line ぴ (pi) → 「 ぴゃ (pya), ぴゅ (pyu), ぴょ (pyo) 」",
+          "script_event" : true,
+          "script_id" : "ch3_053",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/p_yoon"
+        }, {
+          "script_desc" : "M-Line み (mi) → 「 みゃ (mya), みゅ (myu), みょ (myo) 」",
+          "script_event" : true,
+          "script_id" : "ch3_054",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/m_yoon"
+        }, {
+          "script_desc" : "R-Line り (ri) → 「 りゃ (mya), り (myu), りょ (myo) 」",
+          "script_event" : true,
+          "script_id" : "ch3_055",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/r_yoon"
+        }, {
+          "script_desc" : "Don't worry, if you can't remember I will put it in alphabet chart.",
+          "script_event" : false,
+          "script_id" : "ch3_056",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "But be careful!",
+          "script_event" : false,
+          "script_id" : "ch3_057",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "the meaning of Yo-on sound and normal sound is different.",
+          "script_event" : false,
+          "script_id" : "ch3_058",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "びょういん (byouin) Hospital.",
+          "script_event" : true,
+          "script_id" : "ch3_059",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/hospital"
+        }, {
+          "script_desc" : "びよういん (biyouin) Salon",
+          "script_event" : true,
+          "script_id" : "ch3_060",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/salon"
+        }, {
+          "script_desc" : "So please look carefully ^-^.",
+          "script_event" : false,
+          "script_id" : "ch3_061",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "I will test you with my Yo-on questions. Are you ready?",
+          "script_event" : false,
+          "script_id" : "ch3_062",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is Yo-on.",
+          "script_event" : true,
+          "script_id" : "ch3_063",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Which alphabet cannot be the Yo-on sound.",
+          "script_event" : true,
+          "script_id" : "ch3_064",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of 「ぎゅうにゅう」.",
+          "script_event" : true,
+          "script_id" : "ch3_065",
+          "script_question" : true,
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch03/milk"
+        }, {
+          "script_desc" : "YOU HAVE UNLOCK THE LESSON : 'YO-ON'.",
+          "script_event" : true,
+          "script_id" : "ch3_066",
+          "script_role" : "System"
+        }, {
+          "script_desc" : "Congratulation!! You have passed Long vowel and Yo-on sound lessons.",
+          "script_event" : false,
+          "script_id" : "ch3_067",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "You do the best. See you next lesson, bye ^-^.",
+          "script_event" : false,
+          "script_id" : "ch3_068",
+          "script_role" : "Teacher"
+        } ],
+        "Tests" : [ {
+          "test_answer" : 0,
+          "test_choice" : [ "Making alphabet's sound longer.", "Making alphabet's sound shorter.", "Making Kanji easier.", "None of the above." ],
+          "test_desc" : "What is long vowel?",
+          "test_id" : "ch03_test01"
+        }, {
+          "test_answer" : 1,
+          "test_choice" : [ "Japanese alphabets always long sound.", "Japanese alphabets always short sound.", "Kanji is very hard.", "Kanji is very easy." ],
+          "test_desc" : "Why do Japanese have long vowel?",
+          "test_id" : "ch03_test02"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "あ", "い", "う", "え" ],
+          "test_desc" : "What alphabet that make alphabet 'a-sound' longer?",
+          "test_id" : "ch03_test03"
+        }, {
+          "test_answer" : 2,
+          "test_choice" : [ "い and う", "う and え", "い and え", "う and お" ],
+          "test_desc" : "What alphabet that make alphabet 'e-sound' longer?",
+          "test_id" : "ch03_test04"
+        }, {
+          "test_answer" : 3,
+          "test_choice" : [ "あ and い", "い and う", "え and お", "う and お" ],
+          "test_desc" : "What alphabet that make alphabet 'o-sound' longer?",
+          "test_id" : "ch03_test05"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "Combining between alphabets end up with i-sound and alphabet in Y-line.", "Combining between alphabets end up with i-sound and alphabet in R-line.", "Greeting Phrase.", "Name of anime." ],
+          "test_desc" : "What is Yo-on",
+          "test_id" : "ch03_test06"
+        }, {
+          "test_answer" : 1,
+          "test_choice" : [ "small 「つ」", "small 「や ゆ よ」", "small 「の」", "small 「と」" ],
+          "test_desc" : "What alphabet is represent to Yo-on?",
+          "test_id" : "ch03_test07"
+        }, {
+          "test_answer" : 2,
+          "test_choice" : [ "byuuin", "biyuuin", "byouin", "biyouin" ],
+          "test_desc" : "What is the Romaji of this word?",
+          "test_id" : "ch03_test08",
+          "test_sprite_path" : "Ch03/test_hospital"
+        }, {
+          "test_answer" : 2,
+          "test_choice" : [ "jiyuu", "jiyu", "jyuu", "jyu" ],
+          "test_desc" : "What is the Romaji of this word?",
+          "test_id" : "ch03_test09",
+          "test_sprite_path" : "Ch03/ten"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "きょう", "きよう", "きゃう", "きやう" ],
+          "test_desc" : "What is the Hiragana of this word?",
+          "test_id" : "ch03_test10",
+          "test_sprite_path" : "Ch03/today"
+        } ],
+        "chap_avg_time" : "10-15 Minutes",
+        "chap_id" : 3
+      },
+      "Chapter4" : {
+        "Name" : "Additional Sound in Hiragana Part 3",
+        "Objective" : "Learn About Additional Sound: Hard Consonant.",
+        "Questions" : [ {
+          "correct_answer" : 1,
+          "question_choice" : [ "Small 「と」", "Small 「つ」", "Small 「や　ゆ　よ」" ],
+          "script_id" : "ch4_014"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "t", "k", "Depends on next alphabet." ],
+          "script_id" : "ch4_015"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "kitsaten", "kissaten", "kittaten" ],
+          "script_id" : "ch4_016"
+        }, {
+          "correct_answer" : 0,
+          "question_choice" : [ "はっぱ", "はった", "はっさ" ],
+          "script_id" : "ch4_017"
+        }, {
+          "correct_answer" : 0,
+          "question_choice" : [ "k", "s", "t" ],
+          "script_id" : "ch4_018"
+        } ],
+        "Scripts" : [ {
+          "script_desc" : "Hi~ everyone.",
+          "script_event" : false,
+          "script_id" : "ch4_001",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "This is the last lesson of additional sounds in Hiragana.",
+          "script_event" : false,
+          "script_id" : "ch4_002",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Hard consonant.",
+          "script_event" : true,
+          "script_id" : "ch4_003",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch04/sokuon"
+        }, {
+          "script_desc" : "Hard consonant is crating hard stop before you say next alphabet by using small 「つ」 to represent.",
+          "script_event" : false,
+          "script_id" : "ch4_004",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "The sound of small 「つ」 is depends on the following alphabets.",
+          "script_event" : false,
+          "script_id" : "ch4_005",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "This sound can do only the alphabets in K-Line, S-Line, T-Line, and P-Line.",
+          "script_event" : false,
+          "script_id" : "ch4_006",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "For examples.",
+          "script_event" : false,
+          "script_id" : "ch4_007",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "せっけん : small 「つ」 is in front of 「け」. So, the Romaji is 「sekken」.",
+          "script_event" : true,
+          "script_id" : "ch4_008",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch04/soap"
+        }, {
+          "script_desc" : "ざっし : small 「つ」 is in front of 「し」. So, the Romaji is 「zasshi」.",
+          "script_event" : true,
+          "script_id" : "ch4_009",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch04/magazine"
+        }, {
+          "script_desc" : "きって : small 「つ」 is in front of 「て」. So, the Romaji is 「kitte」.",
+          "script_event" : true,
+          "script_id" : "ch4_010",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch04/stamp"
+        }, {
+          "script_desc" : "きっぷ : small 「つ」 is in front of 「ぷ」. So, the Romaji is 「kippu」.",
+          "script_event" : true,
+          "script_id" : "ch4_011",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch04/ticket"
+        }, {
+          "script_desc" : "Hard consonant is very easy, isn't it?",
+          "script_event" : false,
+          "script_id" : "ch4_012",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Haha Let's take some test from me!!!",
+          "script_event" : false,
+          "script_id" : "ch4_013",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Which alphabet that we use in hard consonant?",
+          "script_event" : true,
+          "script_id" : "ch4_014",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the sound of small 「つ」",
+          "script_event" : true,
+          "script_id" : "ch4_015",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this word?",
+          "script_event" : true,
+          "script_id" : "ch4_016",
+          "script_question" : true,
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch04/coffeeshop"
+        }, {
+          "script_desc" : "What is the Hiragana of this word?",
+          "script_event" : true,
+          "script_id" : "ch4_017",
+          "script_question" : true,
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch04/leaf"
+        }, {
+          "script_desc" : "What is the sound of this small 「つ」",
+          "script_event" : true,
+          "script_id" : "ch4_018",
+          "script_question" : true,
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch04/musicinstru"
+        }, {
+          "script_desc" : "YOU HAVE PASSED THE LESSON : 'HARD CONSONANT'.",
+          "script_event" : false,
+          "script_id" : "ch4_019",
+          "script_role" : "System"
+        }, {
+          "script_desc" : "Try to practice everyday, you will be great!",
+          "script_event" : false,
+          "script_id" : "ch4_020",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "I have no lesson in Hiragana to teach you.",
+          "script_event" : false,
+          "script_id" : "ch4_021",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Congratulation, you have passed all lesson in Hiragana!",
+          "script_event" : false,
+          "script_id" : "ch4_022",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Good luck in post-test and see you in Katakana lesson ^-^.",
+          "script_event" : false,
+          "script_id" : "ch4_023",
+          "script_role" : "Teacher"
+        } ],
+        "Tests" : [ {
+          "test_answer" : 0,
+          "test_choice" : [ "Crate hard stop before you say next alphabet.", "Crate hard stop after you say next alphabet.", "Alphabets that very hard.", "Alphabets that very easy." ],
+          "test_desc" : "What is hard consonant?",
+          "test_id" : "ch04_test01"
+        }, {
+          "test_answer" : 3,
+          "test_choice" : [ "K-Line", "S-Line", "T-Line", "All is correct." ],
+          "test_desc" : "Which alphabet line can do hard consonant?",
+          "test_id" : "ch04_test02"
+        }, {
+          "test_answer" : 3,
+          "test_choice" : [ "K-Line", "S-Line", "P-Line", "Y-Line" ],
+          "test_desc" : "Which alphabet line cannot do hard consonant?",
+          "test_id" : "ch04_test03"
+        }, {
+          "test_answer" : 1,
+          "test_choice" : [ "small 「あ」", "small 「つ」", "small 「や ゆ よ」", "None of the above." ],
+          "test_desc" : "Which alphabet is representing to hard consonant?",
+          "test_id" : "ch04_test04"
+        }, {
+          "test_answer" : 2,
+          "test_choice" : [ "せっけん (seppen) Soap", "はっぱ　(hatta) Leaf", "きっぷ　(kippu) Ticket", "ざっし　(sasshi) Magazines" ],
+          "test_desc" : "Which word is correct?",
+          "test_id" : "ch04_test05"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "けっこん", "けっけん.", "こっこん", "こっけん" ],
+          "test_desc" : "What is a Hiragana of this word?",
+          "test_id" : "ch04_test06",
+          "test_sprite_path" : "Ch04/marriage"
+        }, {
+          "test_answer" : 3,
+          "test_choice" : [ "k", "s", "t", "Depends on the next alphabet." ],
+          "test_desc" : "What is a sound of small 「つ」?",
+          "test_id" : "ch04_test07"
+        } ],
+        "chap_avg_time" : "5-10 Minutes",
+        "chap_id" : 4
+      },
+      "Chapter5" : {
+        "Name" : "Katakana Alphabet",
+        "Objective" : "Learn About Japanese Alphabet: Katakana.",
+        "Questions" : [ {
+          "correct_answer" : 2,
+          "question_choice" : [ "ka", "u", "a" ],
+          "script_id" : "ch5_025"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "e", "ke", "ki" ],
+          "script_id" : "ch5_026"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "エ", "キ", "オ" ],
+          "script_id" : "ch5_027"
+        }, {
+          "correct_answer" : 0,
+          "question_choice" : [ "カ", "イ", "ク" ],
+          "script_id" : "ch5_028"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "け", "う", "く" ],
+          "script_id" : "ch5_029"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "shi", "sa", "te" ],
+          "script_id" : "ch5_047"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "ta", "te", "to" ],
+          "script_id" : "ch5_048"
+        }, {
+          "correct_answer" : 0,
+          "question_choice" : [ "セ", "ソ", "ト" ],
+          "script_id" : "ch5_049"
+        }, {
+          "correct_answer" : 0,
+          "question_choice" : [ "シ", "ツ", "ト" ],
+          "script_id" : "ch5_050"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "ち", "て", "そ" ],
+          "script_id" : "ch5_051"
+        }, {
+          "correct_answer" : 0,
+          "question_choice" : [ "ni", "hi", "mi" ],
+          "script_id" : "ch5_083"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "ma", "mu", "me" ],
+          "script_id" : "ch5_084"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "ノ", "ホ", "モ" ],
+          "script_id" : "ch5_085"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "ム", "フ", "ネ" ],
+          "script_id" : "ch5_086"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "な", "に", "の" ],
+          "script_id" : "ch5_087"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "ya", "yu", "yo" ],
+          "script_id" : "ch5_114"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "so", "u", "n" ],
+          "script_id" : "ch5_115"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "ラ", "リ", "レ" ],
+          "script_id" : "ch5_116"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "フ", "ラ", "ワ" ],
+          "script_id" : "ch5_117"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "る", "そ", "ろ" ],
+          "script_id" : "ch5_118"
+        } ],
+        "Scripts" : [ {
+          "script_desc" : "Hi everyone!~",
+          "script_event" : false,
+          "script_id" : "ch5_001",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Congratulation again! You have passed all Hiragana lesson.",
+          "script_event" : false,
+          "script_id" : "ch5_002",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "And welcome to Katakana lesson.",
+          "script_event" : false,
+          "script_id" : "ch5_003",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "So, this is the first class of Katakana lesson.",
+          "script_event" : false,
+          "script_id" : "ch5_004",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Let me introduce Katakana.",
+          "script_event" : false,
+          "script_id" : "ch5_005",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Katakana this a type of alphabet that uses for ...",
+          "script_event" : false,
+          "script_id" : "ch5_006",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "1. for writing the foreign words.",
+          "script_event" : true,
+          "script_id" : "ch5_007",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/foreign"
+        }, {
+          "script_desc" : "2. for writing the foreigner name.",
+          "script_event" : true,
+          "script_id" : "ch5_008",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/foreign2"
+        }, {
+          "script_desc" : "3. for writing the natural sounds.",
+          "script_event" : true,
+          "script_id" : "ch5_009",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/dogbark"
+        }, {
+          "script_desc" : "The pattern is like Hiragana alphabets. Let's look in each line together!",
+          "script_event" : false,
+          "script_id" : "ch5_010",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "In first line is the single sound that consists of...",
+          "script_event" : false,
+          "script_id" : "ch5_011",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「ア」　(a)",
+          "script_event" : true,
+          "script_id" : "ch5_012",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/a"
+        }, {
+          "script_desc" : "「イ」　(i)",
+          "script_event" : true,
+          "script_id" : "ch5_013",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/i"
+        }, {
+          "script_desc" : "「ウ」　(u)",
+          "script_event" : true,
+          "script_id" : "ch5_014",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/u"
+        }, {
+          "script_desc" : "「エ」　(e)",
+          "script_event" : true,
+          "script_id" : "ch5_015",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/e"
+        }, {
+          "script_desc" : "「オ」　(o)",
+          "script_event" : true,
+          "script_id" : "ch5_016",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/o"
+        }, {
+          "script_desc" : "K-line is combining between 「k」 and 「a i u e o」.",
+          "script_event" : false,
+          "script_id" : "ch5_017",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Here are alphabets of K-line.",
+          "script_event" : false,
+          "script_id" : "ch5_018",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「カ」　ka",
+          "script_event" : true,
+          "script_id" : "ch5_019",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/ka"
+        }, {
+          "script_desc" : "「キ」　ki",
+          "script_event" : true,
+          "script_id" : "ch5_020",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/ki"
+        }, {
+          "script_desc" : "「ク」　ku",
+          "script_event" : true,
+          "script_id" : "ch5_021",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/ku"
+        }, {
+          "script_desc" : "「ケ」　ke",
+          "script_event" : true,
+          "script_id" : "ch5_022",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/ke"
+        }, {
+          "script_desc" : "「コ」　ko",
+          "script_event" : true,
+          "script_id" : "ch5_023",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/ko"
+        }, {
+          "script_desc" : "I will ask you some question and you can take a break anytime.",
+          "script_event" : false,
+          "script_id" : "ch5_024",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "ア",
+          "script_id" : "ch5_025",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "ケ",
+          "script_id" : "ch5_026",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Katakana of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "o",
+          "script_id" : "ch5_027",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Katakana of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "ka",
+          "script_id" : "ch5_028",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Hiragana of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "ク",
+          "script_id" : "ch5_029",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "YOU HAVE PASSED THE FIRST LINE AND K-LINE OF KATAKANA.",
+          "script_event" : false,
+          "script_id" : "ch5_030",
+          "script_role" : "System"
+        }, {
+          "script_desc" : "S-line is combining between 「s」 and 「a i u e o」.",
+          "script_event" : false,
+          "script_id" : "ch5_031",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Here are alphabets of S-line.",
+          "script_event" : false,
+          "script_id" : "ch5_032",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「サ」　sa",
+          "script_event" : true,
+          "script_id" : "ch5_033",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/sa"
+        }, {
+          "script_desc" : "「シ」　shi",
+          "script_event" : true,
+          "script_id" : "ch5_034",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/shi"
+        }, {
+          "script_desc" : "「ス」　su",
+          "script_event" : true,
+          "script_id" : "ch5_035",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/su"
+        }, {
+          "script_desc" : "「セ」　se",
+          "script_event" : true,
+          "script_id" : "ch5_036",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/se"
+        }, {
+          "script_desc" : "「ソ」　so",
+          "script_event" : true,
+          "script_id" : "ch5_037",
+          "script_role" : "System",
+          "script_sprite_path" : "Ch05/so"
+        }, {
+          "script_desc" : "The next line before a break questions is T-line.",
+          "script_event" : false,
+          "script_id" : "ch5_038",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "T-line is combining between 「t」 and 「a i u e o」.",
+          "script_event" : false,
+          "script_id" : "ch1_039",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Here are alphabets of T-line.",
+          "script_event" : false,
+          "script_id" : "ch5_040",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「タ」　ta",
+          "script_event" : true,
+          "script_id" : "ch5_041",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/ta"
+        }, {
+          "script_desc" : "「チ」　chi",
+          "script_event" : true,
+          "script_id" : "ch5_042",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/chi"
+        }, {
+          "script_desc" : "「ツ」　tsu",
+          "script_event" : true,
+          "script_id" : "ch5_043",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/tsu"
+        }, {
+          "script_desc" : "「テ」　te",
+          "script_event" : true,
+          "script_id" : "ch5_044",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/te"
+        }, {
+          "script_desc" : "「ト」　to",
+          "script_event" : true,
+          "script_id" : "ch5_045",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/to"
+        }, {
+          "script_desc" : "Okay if you pass my questions, you can take a break.",
+          "script_event" : false,
+          "script_id" : "ch5_046",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "サ",
+          "script_id" : "ch5_047",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "テ",
+          "script_id" : "ch5_048",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Katakana of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "se",
+          "script_id" : "ch5_049",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Katakana of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "shi",
+          "script_id" : "ch5_050",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Hiragana of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "ソ",
+          "script_id" : "ch5_051",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Great!!",
+          "script_event" : false,
+          "script_id" : "ch5_052",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Be careful, Some Katakana alphabet is very familar.",
+          "script_event" : false,
+          "script_id" : "ch5_053",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「シ」　shi and 「ツ」　tsu.",
+          "script_event" : true,
+          "script_id" : "ch5_054",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/shi_tsu"
+        }, {
+          "script_desc" : "「チ」　chi　and 「テ」　te.",
+          "script_event" : true,
+          "script_id" : "ch5_055",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/chi_te"
+        }, {
+          "script_desc" : "YOU HAVE PASSED S-LINE AND T-LINE OF KATAKANA.",
+          "script_event" : false,
+          "script_id" : "ch5_056",
+          "script_role" : "System"
+        }, {
+          "script_desc" : "Keep focus on next line!!",
+          "script_event" : false,
+          "script_id" : "ch5_057",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "The next line is N-line.",
+          "script_event" : false,
+          "script_id" : "ch5_058",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "N-line is combining between 「n」 and 「a i u e o」.",
+          "script_event" : false,
+          "script_id" : "ch5_059",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Here are alphabets of N-line.",
+          "script_event" : false,
+          "script_id" : "ch5_060",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「ナ」　na",
+          "script_event" : true,
+          "script_id" : "ch5_061",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/na"
+        }, {
+          "script_desc" : "「ニ」　ni",
+          "script_event" : true,
+          "script_id" : "ch5_062",
+          "script_role" : "System",
+          "script_sprite_path" : "Ch05/ni"
+        }, {
+          "script_desc" : "「ヌ」　nu",
+          "script_event" : true,
+          "script_id" : "ch5_063",
+          "script_role" : "System",
+          "script_sprite_path" : "Ch05/nu"
+        }, {
+          "script_desc" : "「ネ」　ne",
+          "script_event" : true,
+          "script_id" : "ch5_064",
+          "script_role" : "System",
+          "script_sprite_path" : "Ch05/ne"
+        }, {
+          "script_desc" : "「ノ」　no",
+          "script_event" : true,
+          "script_id" : "ch5_065",
+          "script_role" : "System",
+          "script_sprite_path" : "Ch05/no"
+        }, {
+          "script_desc" : "The next line is H-line",
+          "script_event" : false,
+          "script_id" : "ch5_066",
+          "script_role" : "System"
+        }, {
+          "script_desc" : "H-line is combining between 「h」 and 「a i u e o」.",
+          "script_event" : false,
+          "script_id" : "ch5_067",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Here are alphabets of H-line.",
+          "script_event" : false,
+          "script_id" : "ch5_068",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「ハ」　ha",
+          "script_event" : true,
+          "script_id" : "ch5_069",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/ha"
+        }, {
+          "script_desc" : "「ニ」　hi",
+          "script_event" : true,
+          "script_id" : "ch5_070",
+          "script_role" : "System",
+          "script_sprite_path" : "Ch05/hi"
+        }, {
+          "script_desc" : "「フ」　hu",
+          "script_event" : true,
+          "script_id" : "ch5_071",
+          "script_role" : "System",
+          "script_sprite_path" : "Ch05/fu"
+        }, {
+          "script_desc" : "「ヘ」　he",
+          "script_event" : true,
+          "script_id" : "ch5_072",
+          "script_role" : "System",
+          "script_sprite_path" : "Ch05/he"
+        }, {
+          "script_desc" : "「ホ」　ho",
+          "script_event" : true,
+          "script_id" : "ch5_073",
+          "script_role" : "System",
+          "script_sprite_path" : "Ch05/ho"
+        }, {
+          "script_desc" : "The next line is M-line",
+          "script_event" : false,
+          "script_id" : "ch5_074",
+          "script_role" : "System"
+        }, {
+          "script_desc" : "M-line is combining between 「m」 and 「a i u e o」.",
+          "script_event" : false,
+          "script_id" : "ch5_075",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Here are alphabets of M-line.",
+          "script_event" : false,
+          "script_id" : "ch5_076",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「マ」　ma",
+          "script_event" : true,
+          "script_id" : "ch5_077",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/ma"
+        }, {
+          "script_desc" : "「ミ」　mi",
+          "script_event" : true,
+          "script_id" : "ch5_078",
+          "script_role" : "System",
+          "script_sprite_path" : "Ch05/mi"
+        }, {
+          "script_desc" : "「ム」　mu",
+          "script_event" : true,
+          "script_id" : "ch5_079",
+          "script_role" : "System",
+          "script_sprite_path" : "Ch05/mu"
+        }, {
+          "script_desc" : "「メ」　me",
+          "script_event" : true,
+          "script_id" : "ch5_082",
+          "script_role" : "System",
+          "script_sprite_path" : "Ch05/me"
+        }, {
+          "script_desc" : "「モ」　mo",
+          "script_event" : true,
+          "script_id" : "ch5_081",
+          "script_role" : "System",
+          "script_sprite_path" : "Ch05/mo"
+        }, {
+          "script_desc" : "Hoho, my question is harder Are you ready ?",
+          "script_event" : false,
+          "script_id" : "ch5_082",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "ニ",
+          "script_id" : "ch5_083",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "ム",
+          "script_id" : "ch5_084",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Katakana of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "mo",
+          "script_id" : "ch5_085",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Katakana of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "fu",
+          "script_id" : "ch5_086",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Hiragana of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "ノ",
+          "script_id" : "ch5_087",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "YOU HAVE PASSED N-LINE, H-LINE AND M-LINE OF KATAKANA.",
+          "script_event" : false,
+          "script_id" : "ch5_088",
+          "script_role" : "System"
+        }, {
+          "script_desc" : "Fighting!! You're almost done.",
+          "script_event" : false,
+          "script_id" : "ch5_089",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "If you are tired, You can break.",
+          "script_event" : false,
+          "script_id" : "ch5_090",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "The system will track your progress.",
+          "script_event" : false,
+          "script_id" : "ch5_091",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "And welcome back anytime!",
+          "script_event" : false,
+          "script_id" : "ch5_092",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Fighting again!",
+          "script_event" : false,
+          "script_id" : "ch5_093",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "The next line is Y-line",
+          "script_event" : false,
+          "script_id" : "ch5_094",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "There are only three alphabets in this line.",
+          "script_event" : false,
+          "script_id" : "ch5_095",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Y-line is combining between 「y」 and 「a u o」.",
+          "script_event" : false,
+          "script_id" : "ch5_096",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Here are alphabets of Y-line.",
+          "script_event" : false,
+          "script_id" : "ch5_097",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「ヤ」　ya",
+          "script_event" : true,
+          "script_id" : "ch5_098",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/ya"
+        }, {
+          "script_desc" : "「ユ」　yu",
+          "script_event" : true,
+          "script_id" : "ch5_099",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/yu"
+        }, {
+          "script_desc" : "「ヨ」　yo",
+          "script_event" : true,
+          "script_id" : "ch5_100",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/yo"
+        }, {
+          "script_desc" : "The next line is R-line",
+          "script_event" : false,
+          "script_id" : "ch5_101",
+          "script_role" : "System"
+        }, {
+          "script_desc" : "R-line is combining between 「r」 and 「a i u e o」.",
+          "script_event" : false,
+          "script_id" : "ch5_102",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Here are alphabets of R-line.",
+          "script_event" : false,
+          "script_id" : "ch5_103",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「ラ」　ra",
+          "script_event" : true,
+          "script_id" : "ch5_104",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/ra"
+        }, {
+          "script_desc" : "「リ」　ri",
+          "script_event" : true,
+          "script_id" : "ch5_105",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/ri"
+        }, {
+          "script_desc" : "「ル」　ru",
+          "script_event" : true,
+          "script_id" : "ch5_106",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/ru"
+        }, {
+          "script_desc" : "「レ」　re",
+          "script_event" : true,
+          "script_id" : "ch5_107",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/re"
+        }, {
+          "script_desc" : "「ロ」　ro",
+          "script_event" : true,
+          "script_id" : "ch5_108",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/ro"
+        }, {
+          "script_desc" : "And the last three alphabets are.....",
+          "script_event" : false,
+          "script_id" : "ch5_109",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「ワ」　wa",
+          "script_event" : true,
+          "script_id" : "ch5_110",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/wa"
+        }, {
+          "script_desc" : "「ヲ」　(w)o",
+          "script_event" : true,
+          "script_id" : "ch5_111",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/wo"
+        }, {
+          "script_desc" : "「ン」　n",
+          "script_event" : true,
+          "script_id" : "ch5_112",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/n"
+        }, {
+          "script_desc" : "Ehh, Can you remember that I have teached?",
+          "script_event" : false,
+          "script_id" : "ch5_113",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "ヨ",
+          "script_id" : "ch5_114",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Romaji of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "ン",
+          "script_id" : "ch5_115",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Katakana of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "re",
+          "script_id" : "ch5_116",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the Katakana of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "wa",
+          "script_id" : "ch5_117",
+          "script_question" : true
+        }, {
+          "script_desc" : "What is the Hiragana of this alphabet?",
+          "script_event" : true,
+          "script_event_text" : "ロ",
+          "script_id" : "ch5_118",
+          "script_question" : true
+        }, {
+          "script_desc" : "YOU HAVE PASSED Y-LINE, R-LINE, W-LINE AND N.",
+          "script_event" : false,
+          "script_id" : "ch5_119",
+          "script_role" : "System"
+        }, {
+          "script_desc" : "Wow!! You did the best.",
+          "script_event" : false,
+          "script_id" : "ch5_120",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Don't forget! Some alphabet is similar.",
+          "script_event" : false,
+          "script_id" : "ch5_121",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「メ」　me 　and　「ノ」　no",
+          "script_event" : false,
+          "script_id" : "ch5_122",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/me_ro"
+        }, {
+          "script_desc" : "「ソ」　so　and　「ン」　n",
+          "script_event" : false,
+          "script_id" : "ch5_123",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/so_n"
+        }, {
+          "script_desc" : "「ウ」　u, 「フ」　fu, 「ワ」　wa　and　「ヲ」　n",
+          "script_event" : false,
+          "script_id" : "ch5_124",
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch05/u_fu_n"
+        }, {
+          "script_desc" : "You're good in remembering. I believe that you can do the post-test.",
+          "script_event" : false,
+          "script_id" : "ch5_125",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Good luck.",
+          "script_event" : false,
+          "script_id" : "ch5_126",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "YOU HAVE PASSED KATAKANA LESSON.",
+          "script_event" : false,
+          "script_id" : "ch5_127",
+          "script_role" : "System"
+        }, {
+          "script_desc" : "YOU HAVE UNLOCKED KATAKANA CHART.",
+          "script_event" : false,
+          "script_id" : "ch5_128",
+          "script_role" : "System"
+        } ],
+        "Tests" : [ {
+          "test_answer" : 1,
+          "test_choice" : [ "A type of Knife", "A type of Japanese alphabet", "An anime name", "A type of weapon." ],
+          "test_desc" : "What is Katakana?",
+          "test_id" : "ch05_test01"
+        }, {
+          "test_answer" : 3,
+          "test_choice" : [ "Writing the foreign word.", "Writing the foreign name.", "Writing the natural sound.", "All is correct." ],
+          "test_desc" : "What does Katakana use for?",
+          "test_id" : "ch05_test02"
+        }, {
+          "test_answer" : 3,
+          "test_choice" : [ "ひ", "ふ", "へ", "ほ" ],
+          "test_desc" : "What is a Hiragana of this Katakana?",
+          "test_id" : "ch05_test03",
+          "test_sprite_path" : "Ch05/test_ho"
+        }, {
+          "test_answer" : 1,
+          "test_choice" : [ "ka", "sa", "ta", "na" ],
+          "test_desc" : "What is a Romaji of this Katakana?",
+          "test_id" : "ch05_test04",
+          "test_sprite_path" : "Ch05/test_sa"
+        }, {
+          "test_answer" : 2,
+          "test_choice" : [ "ア", "ム", "え", "ヲ" ],
+          "test_desc" : "Which alphabet is not Katakana?",
+          "test_id" : "ch05_test05"
+        }, {
+          "test_answer" : 3,
+          "test_choice" : [ "ツ", "シ", "ハ", "へ" ],
+          "test_desc" : "Which alphabet is the same form in Hiragana and Katakana?",
+          "test_id" : "ch05_test06"
+        }, {
+          "test_answer" : 3,
+          "test_choice" : [ "サッカ", "アイスクリーム", "ミルク", "ホテル" ],
+          "test_desc" : "Which word means 'Hotel'?",
+          "test_id" : "ch05_test07",
+          "test_sprite_path" : "Ch05/test_hotel"
+        }, {
+          "test_answer" : 1,
+          "test_choice" : [ "サッカ", "アイスクリーム", "ミルク", "ホテル" ],
+          "test_desc" : "Which word means 'Ice cream'?",
+          "test_id" : "ch05_test08",
+          "test_sprite_path" : "Ch05/test_icecream"
+        }, {
+          "test_answer" : 2,
+          "test_choice" : [ "サッカ", "アイスクリーム", "ミルク", "ホテル" ],
+          "test_desc" : "Which word means 'Milk'?",
+          "test_id" : "ch05_test09",
+          "test_sprite_path" : "Ch05/test_milk"
+        }, {
+          "test_answer" : 1,
+          "test_choice" : [ "エスカレーター", "コンピューター", "エレベーター", "サンダー" ],
+          "test_desc" : "What is the word of this picture?",
+          "test_id" : "ch05_test10",
+          "test_sprite_path" : "ch05/computer"
+        } ],
+        "chap_avg_time" : "15-20 Minutes",
+        "chap_id" : 5
+      },
+      "Chapter6" : {
+        "Name" : "Additional Sounds in Katakana",
+        "Objective" : "Learn About Long Vowel Form of Katakana",
+        "Questions" : [ {
+          "correct_answer" : 0,
+          "question_choice" : [ "Dash Symbol 「―」", "Small 「ツ」", "Small　「ヤ　ユ　ヨ」" ],
+          "script_id" : "ch6_032"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "センター", "クロバー", "クリスマス" ],
+          "script_id" : "ch6_033"
+        }, {
+          "correct_answer" : 0,
+          "question_choice" : [ "cake", "cookie", "cream" ],
+          "script_id" : "ch6_034"
+        } ],
+        "Scripts" : [ {
+          "script_desc" : "Hi.",
+          "script_event" : false,
+          "script_id" : "ch6_001",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "After you have passed Katakana.",
+          "script_event" : false,
+          "script_id" : "ch6_002",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "You must know the additional sounds in Katakana.",
+          "script_event" : false,
+          "script_id" : "ch6_003",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Katakana has the five additional sounds like Hiragana.",
+          "script_event" : false,
+          "script_id" : "ch6_004",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Voice consonant",
+          "script_event" : false,
+          "script_id" : "ch6_005",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Semi-voice consonant",
+          "script_event" : false,
+          "script_id" : "ch6_006",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Yo-on sound",
+          "script_event" : false,
+          "script_id" : "ch6_007",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Hard consonant",
+          "script_event" : false,
+          "script_id" : "ch6_008",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Long vowel",
+          "script_event" : false,
+          "script_id" : "ch6_009",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Okay! Let me explain in each additional sound.",
+          "script_event" : false,
+          "script_id" : "ch6_010",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Voice consonant, semi-voice consonant, Yo-on, and Hard consonant are the same form with Hiragana.",
+          "script_event" : false,
+          "script_id" : "ch6_011",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Voice consonant is the consonant that you take a breath out less than normal alphabets.",
+          "script_event" : false,
+          "script_id" : "ch6_012",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "If you want to learn this consonant again, you can play in Yomimasu Chapter 2.",
+          "script_event" : false,
+          "script_id" : "ch6_013",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Semi-voice consonant is the consonant that you take a breath out more than normal alphabets.",
+          "script_event" : false,
+          "script_id" : "ch6_014",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "If you want to learn this consonant again, you can play in Yomimasu Chapter 2.",
+          "script_event" : false,
+          "script_id" : "ch6_015",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Yo-on sound is the combining between the alphabets the end with i-sound and the alphabets in Y-Line.",
+          "script_event" : false,
+          "script_id" : "ch6_016",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "If you want to learn this consonant again, you can play in Yomimasu Chapter 3.",
+          "script_event" : false,
+          "script_id" : "ch6_017",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Hard consonant is crating hard stop before you say next alphabet by using small 「ツ」 to represent.",
+          "script_event" : false,
+          "script_id" : "ch6_018",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "If you want to learn this consonant again, you can play in Yomimasu Chapter 4.",
+          "script_event" : false,
+          "script_id" : "ch6_019",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "But, the different is long vowel.",
+          "script_event" : false,
+          "script_id" : "ch6_020",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "According to long vowel in Hiragana, The Doing of long vowel is use 「あ　い　う　え　お」 to make the sound longer.",
+          "script_event" : false,
+          "script_id" : "ch6_021",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "But in Katakana is a piece of cake!!",
+          "script_event" : false,
+          "script_id" : "ch6_022",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "You just put the dash 「―」 after the alphabets.",
+          "script_event" : false,
+          "script_id" : "ch6_023",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "I have a few example.",
+          "script_event" : false,
+          "script_id" : "ch6_024",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "コンピューター　(konpyūtā) Computer",
+          "script_event" : false,
+          "script_id" : "ch6_025",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "コーヒー　(kōhī) Coffee ",
+          "script_event" : false,
+          "script_id" : "ch6_026",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "エレベーター　(erebētā) Elevator",
+          "script_event" : false,
+          "script_id" : "ch6_027",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "In Romaji, we use (ā, ī, ū, ē, ō) to represent the long vowel.",
+          "script_event" : false,
+          "script_id" : "ch6_028",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "It's easier that Hiragana, isn't it ?",
+          "script_event" : false,
+          "script_id" : "ch6_029",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "So, let's answer my question!",
+          "script_event" : false,
+          "script_id" : "ch6_030",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What consonant that is not familar pattern with Hiragana?",
+          "script_event" : true,
+          "script_id" : "ch6_031",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the represent of long vowel in Katakana?",
+          "script_event" : true,
+          "script_id" : "ch6_032",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Which word is not a long vowel word?",
+          "script_event" : true,
+          "script_id" : "ch6_033",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is the meaning of this word? (I think you can guess)",
+          "script_event" : true,
+          "script_id" : "ch6_034",
+          "script_question" : true,
+          "script_role" : "Teacher",
+          "script_sprite_path" : "Ch06/test_cake"
+        }, {
+          "script_desc" : "Great! you can answer all of my question",
+          "script_event" : false,
+          "script_id" : "ch6_035",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "I think you can do the post-test well.",
+          "script_event" : false,
+          "script_id" : "ch6_036",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "See you next time, good luck for your post-test ^-^.",
+          "script_event" : false,
+          "script_id" : "ch6_037",
+          "script_role" : "Teacher"
+        } ],
+        "Tests" : [ {
+          "test_answer" : 3,
+          "test_choice" : [ "Hard consonant", "Yo-on", "Voice and Semi-voice consonant", "All is correct" ],
+          "test_desc" : "Which additional sound is available in Katakana?",
+          "test_id" : "ch06_test01"
+        }, {
+          "test_answer" : 3,
+          "test_choice" : [ "Hard consonant", "Yo-on", "Voice and Semi-voice consonant", "Long vowel" ],
+          "test_desc" : "Which additional sound has different form from Hiragana?",
+          "test_id" : "ch06_test02"
+        }, {
+          "test_answer" : 3,
+          "test_choice" : [ "Small 「ツ」", "Small 「ヤ　ユ　ヨ」", "Small 「ア　イ　ウ　エ　オ」", "A dash symbol 「―」" ],
+          "test_desc" : "What is the represent of long vowel in Katakana?",
+          "test_id" : "ch06_test03"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "Small 「ツ」", "Small 「ヤ　ユ　ヨ」", "Small 「ア　イ　ウ　エ　オ」", "A dash symbol 「―」" ],
+          "test_desc" : "What is the represent of hard consonant in Katakana?",
+          "test_id" : "ch06_test04"
+        }, {
+          "test_answer" : 1,
+          "test_choice" : [ "Small 「ツ」", "Small 「ヤ　ユ　ヨ」", "Small 「ア　イ　ウ　エ　オ」", "A dash symbol 「―」" ],
+          "test_desc" : "What is the represent of yo-on in Katakana?",
+          "test_id" : "ch06_test05"
+        }, {
+          "test_answer" : 1,
+          "test_choice" : [ "サッカー", "テニス", "ゴルフ", "バスケットボール" ],
+          "test_desc" : "What is Katakana of this word?",
+          "test_id" : "ch06_test06",
+          "test_sprite_path" : "Ch06/tennis"
+        }, {
+          "test_answer" : 3,
+          "test_choice" : [ "キャプチャー", "カッパ", "カラオケ", "クリスマス" ],
+          "test_desc" : "What is Katakana of this word?",
+          "test_id" : "ch06_test07",
+          "test_sprite_path" : "Ch06/christmas"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "キャプチャー", "カッパ", "カラオケ", "クリスマス" ],
+          "test_desc" : "Which word has yo-on?",
+          "test_id" : "ch06_test08"
+        }, {
+          "test_answer" : 3,
+          "test_choice" : [ "スーパー", "デザート", "デパート", "All is correct" ],
+          "test_desc" : "Which word has long vowel?",
+          "test_id" : "ch06_test09"
+        }, {
+          "test_answer" : 2,
+          "test_choice" : [ "バカ", "アエコン", "トラック ", "レモン" ],
+          "test_desc" : "Which word has hard consonant?",
+          "test_id" : "ch06_test10"
+        } ],
+        "chap_avg_time" : "5-10 Minutes",
+        "chap_id" : 6
+      },
+      "Chapter7" : {
+        "Name" : "Wi Aru Foreinā",
+        "Objective" : "Learn About How To Writing Foreigner Words.",
+        "Questions" : [ {
+          "correct_answer" : 0,
+          "question_choice" : [ "ti", "chi", "du" ],
+          "script_id" : "ch7_028"
+        }, {
+          "correct_answer" : 0,
+          "question_choice" : [ "fa", "fe", "fo" ],
+          "script_id" : "ch7_026"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "je", "we", "wo" ],
+          "script_id" : "ch7_027"
+        }, {
+          "correct_answer" : 0,
+          "question_choice" : [ "disuko", "deisuko", "disco" ],
+          "script_id" : "ch7_028"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "パーチィー", "パーティー", "パーフィー" ],
+          "script_id" : "ch7_029"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "プーフ", "プール", "プーレ" ],
+          "script_id" : "ch7_047"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "ペッド", "ヘッド", "ベッド" ],
+          "script_id" : "ch7_048"
+        }, {
+          "correct_answer" : 0,
+          "question_choice" : [ "デザート", "デサート", "デザード" ],
+          "script_id" : "ch7_049"
+        }, {
+          "correct_answer" : 0,
+          "question_choice" : [ "pēji", "pōji", "pūji" ],
+          "script_id" : "ch7_050"
+        }, {
+          "correct_answer" : 0,
+          "question_choice" : [ "rasshu", "ratchu", "rajju" ],
+          "script_id" : "ch7_051"
+        } ],
+        "Scripts" : [ {
+          "script_desc" : "Hi everyone!~",
+          "script_event" : false,
+          "script_id" : "ch7_001",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "According to Yomimasu Chapter 5...",
+          "script_event" : false,
+          "script_id" : "ch7_002",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Katakana has used for writing common foreign words and name of foreigner.",
+          "script_event" : false,
+          "script_id" : "ch7_003",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "But every Japanese alphabets always end with 「a i u e o」 sounds.",
+          "script_event" : false,
+          "script_id" : "ch7_004",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "So, because of this, new sounds have been created using katakana...",
+          "script_event" : false,
+          "script_id" : "ch7_005",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "to help allow words to be made into Japanese.",
+          "script_event" : false,
+          "script_id" : "ch7_006",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Here they are all new sounds, in order of 「a i u e o」 sounds.",
+          "script_event" : false,
+          "script_id" : "ch7_007",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "New sounds that end with 'a'.",
+          "script_event" : false,
+          "script_id" : "ch7_008",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「ファ」　fa",
+          "script_event" : false,
+          "script_id" : "ch7_009",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "New sounds that end with 'i'.",
+          "script_event" : false,
+          "script_id" : "ch7_010",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「ウィ」　wi",
+          "script_event" : false,
+          "script_id" : "ch7_011",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「ティ」　ti",
+          "script_event" : false,
+          "script_id" : "ch7_012",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「ディ」　di",
+          "script_event" : false,
+          "script_id" : "ch7_013",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「フィ」　fi",
+          "script_event" : false,
+          "script_id" : "ch7_014",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "New sounds that end with 'u'.",
+          "script_event" : false,
+          "script_id" : "ch7_015",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「トゥ」　tu",
+          "script_event" : false,
+          "script_id" : "ch7_016",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「ドゥ」　du",
+          "script_event" : false,
+          "script_id" : "ch7_017",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "New sounds that end with 'e'.",
+          "script_event" : false,
+          "script_id" : "ch7_018",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「ウェ」　we",
+          "script_event" : false,
+          "script_id" : "ch7_019",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「シェ」　she",
+          "script_event" : false,
+          "script_id" : "ch7_020",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「ジェ」　je",
+          "script_event" : false,
+          "script_id" : "ch7_021",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「チェ」　che",
+          "script_event" : false,
+          "script_id" : "ch7_022",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「フェ」　fe",
+          "script_event" : false,
+          "script_id" : "ch7_023",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "New sounds that end with 'o'.",
+          "script_event" : false,
+          "script_id" : "ch7_024",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「ウォ」　wo",
+          "script_event" : false,
+          "script_id" : "ch7_025",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「フォ」　fo",
+          "script_event" : false,
+          "script_id" : "ch7_026",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Ok, let me test your understanding!!",
+          "script_event" : false,
+          "script_id" : "ch7_027",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is a Romaji of this Katakana?",
+          "script_event" : true,
+          "script_id" : "ch7_028",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is a Romaji of this Katakana?",
+          "script_event" : true,
+          "script_id" : "ch7_029",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is a Romaji of this Katakana?",
+          "script_event" : true,
+          "script_id" : "ch7_030",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is a Romaji of this word?",
+          "script_event" : true,
+          "script_id" : "ch7_031",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is a Katakana of this Romaji?",
+          "script_event" : true,
+          "script_id" : "ch7_032",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "YOU HAVE UNLOCK 'NEW SOUNDS' IN ALPHABET CHART.",
+          "script_event" : false,
+          "script_id" : "ch7_033",
+          "script_role" : "systemr"
+        }, {
+          "script_desc" : "Ok, The next is the last lesson of this chapter and Katakana.",
+          "script_event" : true,
+          "script_id" : "ch7_034",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "When you know about the new sounds, you must know how to end up the foreign words in Katakana form.",
+          "script_event" : false,
+          "script_id" : "ch7_035",
+          "script_role" : "System"
+        }, {
+          "script_desc" : "In Japanese the words always end with 「a i u e o」 sound following by alphabets.",
+          "script_event" : false,
+          "script_id" : "ch7_036",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "But, some foreign words end up with many alphabets.",
+          "script_event" : false,
+          "script_id" : "ch7_037",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "So, this is how to end up the foreign words in Katakana for making a nearly close sounds with the original.",
+          "script_event" : false,
+          "script_id" : "ch7_038",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "1. If the sound doesn't end with 「a i u e o」 sound, use the alphabet u-sound.",
+          "script_event" : false,
+          "script_id" : "ch7_039",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "But, except Brake and Cake.",
+          "script_event" : false,
+          "script_id" : "ch7_040",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "2. If the sound end with 't', use '「ト」　to'. ",
+          "script_event" : false,
+          "script_id" : "ch7_041",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "3. If the sound end with 'd', use '「ド」　do'. ",
+          "script_event" : false,
+          "script_id" : "ch7_042",
+          "script_role" : "System"
+        }, {
+          "script_desc" : "4. If the sound end with 'ch', use '「チ」　chi'. ",
+          "script_event" : false,
+          "script_id" : "ch7_043",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "5. If the sound end with 'ge', use '「ジ」　ji'. ",
+          "script_event" : false,
+          "script_id" : "ch1_044",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "6. If the sound end with 'sh', use '「シュ」 shu'. ",
+          "script_event" : false,
+          "script_id" : "ch7_045",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Ok that is my test for improving your understanding.",
+          "script_event" : false,
+          "script_id" : "ch7_046",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "How I can write this word in Katakana?",
+          "script_event" : true,
+          "script_id" : "ch7_047",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "How I can write this word in Katakana?",
+          "script_event" : true,
+          "script_id" : "ch7_048",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "How I can write this word in Katakana?",
+          "script_event" : true,
+          "script_id" : "ch7_049",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "How I can write this word in Romaji?",
+          "script_event" : true,
+          "script_id" : "ch7_050",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "How I can write this word in Romaji?",
+          "script_event" : true,
+          "script_id" : "ch7_051",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "YOU HAVE PASSED ALL KATAKANA LESSON.",
+          "script_event" : false,
+          "script_id" : "ch7_052",
+          "script_role" : "System"
+        }, {
+          "script_desc" : "Yay!!! You have passed all Katakana test.",
+          "script_event" : false,
+          "script_id" : "ch7_053",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "I'm happy with you.^^",
+          "script_event" : false,
+          "script_id" : "ch7_054",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "From the beginning, now you have many knowledge in Japanese.",
+          "script_event" : false,
+          "script_id" : "ch7_055",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Don't stop learning, you will be a professional in Japanese!",
+          "script_event" : false,
+          "script_id" : "ch7_056",
+          "script_role" : "Teacher"
+        } ],
+        "Tests" : [ {
+          "test_answer" : 0,
+          "test_choice" : [ "Sounds that don't have in Japanese.", "Sounds of music.", "Sounds that you can't hear.", "A type of Japanese alphabets." ],
+          "test_desc" : "What is the new sound?",
+          "test_id" : "ch07_test01"
+        }, {
+          "test_answer" : 1,
+          "test_choice" : [ "For making foreigner words nearly.", "For making personal language.", "For making a project.", "For speaking Japanglish." ],
+          "test_desc" : "Why Japanese must have the new sound?",
+          "test_id" : "ch07_test02"
+        }, {
+          "test_answer" : 1,
+          "test_choice" : [ "ファ", "ウィ", "フェ", "ウェ" ],
+          "test_desc" : "What is the Katakana form of the new sound 'wi'?",
+          "test_id" : "ch07_test03"
+        }, {
+          "test_answer" : 1,
+          "test_choice" : [ "チュ", "チェ", "ジェ", "トゥ" ],
+          "test_desc" : "What is the Katakana form of the new sound 'che'?",
+          "test_id" : "ch07_test04"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "ディ", "ティ", "ドィ", "トィ" ],
+          "test_desc" : "What is the Katakana form of the new sound 'di'?",
+          "test_id" : "ch07_test05"
+        }, {
+          "test_answer" : 1,
+          "test_choice" : [ "シュ", "ト", "ド", "チ" ],
+          "test_desc" : "Which Japanese alphabet that you should use if the foreigner word ends with 't' sound?",
+          "test_id" : "ch07_test06"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "シュ", "ト", "ド", "チ" ],
+          "test_desc" : "Which Japanese alphabet that you should use if the foreigner word ends with 'sh' sound?",
+          "test_id" : "ch07_test07"
+        }, {
+          "test_answer" : 3,
+          "test_choice" : [ "シュ", "ト", "ド", "チ" ],
+          "test_desc" : "Which Japanese alphabet that you should use if the foreigner word ends with 'ch' sound?",
+          "test_id" : "ch07_test08"
+        }, {
+          "test_answer" : 2,
+          "test_choice" : [ "シュ", "ト", "ド", "チ" ],
+          "test_desc" : "Which Japanese alphabet that you should use if the foreigner word ends with 'd' sound?",
+          "test_id" : "ch07_test09"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "パーティー", "ファッション", "ビルド", "ラッシュ" ],
+          "test_desc" : "What is the Katakana of this picture?",
+          "test_id" : "ch07_test10"
+        } ],
+        "chap_avg_time" : "10-15 Minutes",
+        "chap_id" : 7
+      },
+      "Chapter8" : {
+        "Name" : "Ichi Ni San Yon!!",
+        "Objective" : "Learn About Japanese Number",
+        "Questions" : [ {
+          "correct_answer" : 1,
+          "question_choice" : [ "1", "2", "3" ],
+          "script_id" : "ch8_018"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "1", "3", "4" ],
+          "script_id" : "ch8_019"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "3", "4", "5" ],
+          "script_id" : "ch8_020"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "ご", "ろく", "きゅう" ],
+          "script_id" : "ch8_021"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "しち or なな", "れい or ゼロ", "じゅう" ],
+          "script_id" : "ch8_022"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "75", "49", "58" ],
+          "script_id" : "ch8_033"
+        }, {
+          "correct_answer" : 2,
+          "question_choice" : [ "24", "25", "26" ],
+          "script_id" : "ch8_034"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "よんじゅういち", "はちじゅうさん", "きゅうじゅうきゅう" ],
+          "script_id" : "ch8_035"
+        }, {
+          "correct_answer" : 1,
+          "question_choice" : [ "さんじゅう", "じゅうさん", "さんじゅうさん" ],
+          "script_id" : "ch8_036"
+        } ],
+        "Scripts" : [ {
+          "script_desc" : "Hi everyone!~",
+          "script_event" : false,
+          "script_id" : "ch8_001",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "This is some special lesson from Yomimasu!!",
+          "script_event" : false,
+          "script_id" : "ch8_002",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "When you know about Hiragana and Katakana alphabets.",
+          "script_event" : false,
+          "script_id" : "ch8_003",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "The important lesson that you should know is.....",
+          "script_event" : false,
+          "script_id" : "ch8_004",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Number!!!",
+          "script_event" : false,
+          "script_id" : "ch8_005",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Let's see how to count a number in Japanese.",
+          "script_event" : false,
+          "script_id" : "ch8_006",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「　いち ichi　」 or 「　ゼロ zero　」　1",
+          "script_event" : false,
+          "script_id" : "ch8_007",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「　に　ni　」 2",
+          "script_event" : false,
+          "script_id" : "ch8_008",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「　さん　san　」　3",
+          "script_event" : false,
+          "script_id" : "ch8_009",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「　よん yon　」 or 「　し shi　」　4",
+          "script_event" : false,
+          "script_id" : "ch8_010",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「　ご go　」　5",
+          "script_event" : false,
+          "script_id" : "ch8_011",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「　ろく roku　」　6",
+          "script_event" : false,
+          "script_id" : "ch8_012",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「　しち shichi　」 or 「　なな nana　」 7",
+          "script_event" : false,
+          "script_id" : "ch8_013",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「　はち　hachi　」 8",
+          "script_event" : false,
+          "script_id" : "ch8_014",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「　きゅう kyuu　」 9",
+          "script_event" : false,
+          "script_id" : "ch8_015",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "「　じゅう jyuu　」 10",
+          "script_event" : false,
+          "script_id" : "ch8_016",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Do you remember ? Answer my questions～",
+          "script_event" : false,
+          "script_id" : "ch8_017",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is this number?",
+          "script_event" : true,
+          "script_id" : "ch8_018",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is this number?",
+          "script_event" : true,
+          "script_id" : "ch8_019",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is this number?",
+          "script_event" : true,
+          "script_id" : "ch8_020",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is this number?",
+          "script_event" : true,
+          "script_id" : "ch8_021",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is this number?",
+          "script_event" : true,
+          "script_id" : "ch8_022",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Ok I see, You're good remember.",
+          "script_event" : false,
+          "script_id" : "ch8_023",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Next number (11-99) if you can remember 1 to 10.",
+          "script_event" : false,
+          "script_id" : "ch8_024",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "You can use this pattern that I give you",
+          "script_event" : false,
+          "script_id" : "ch8_025",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "This pattern can help you.",
+          "script_event" : false,
+          "script_id" : "ch8_026",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Ok, I will give an example.",
+          "script_event" : false,
+          "script_id" : "ch8_027",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "This is how to say 43 in Japanese.",
+          "script_event" : false,
+          "script_id" : "ch8_028",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "This is how to say 84 in Japanese.",
+          "script_event" : false,
+          "script_id" : "ch8_029",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "This is how to say 13 in Japanese.?",
+          "script_event" : false,
+          "script_id" : "ch8_030",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "This is how to say 78 in Japanese.",
+          "script_event" : false,
+          "script_id" : "ch8_031",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Ok can you tell the number that I give you?",
+          "script_event" : false,
+          "script_id" : "ch8_032",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is this number?",
+          "script_event" : false,
+          "script_id" : "ch8_033",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is this number?",
+          "script_event" : true,
+          "script_id" : "ch8_034",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is this number?",
+          "script_event" : true,
+          "script_id" : "ch8_035",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "What is this number?",
+          "script_event" : true,
+          "script_id" : "ch8_036",
+          "script_question" : true,
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "Oh!! Great.",
+          "script_event" : false,
+          "script_id" : "ch8_037",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "I don't have anything to teach you.",
+          "script_event" : false,
+          "script_id" : "ch8_038",
+          "script_role" : "Teacher"
+        }, {
+          "script_desc" : "See you again, lucky~",
+          "script_event" : false,
+          "script_id" : "ch8_039",
+          "script_role" : "Teacher"
+        } ],
+        "Tests" : [ {
+          "test_answer" : 1,
+          "test_choice" : [ "0", "1", "2", "3" ],
+          "test_desc" : "What is this number?",
+          "test_id" : "ch08_test01"
+        }, {
+          "test_answer" : "5",
+          "test_choice" : [ "5", "6", "7", "8" ],
+          "test_desc" : "What is this number?",
+          "test_id" : "ch08_test02"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "0", "1", "2", "3" ],
+          "test_desc" : "What is this number?",
+          "test_id" : "ch08_test03"
+        }, {
+          "test_answer" : 3,
+          "test_choice" : [ "ろく", "ご", "きゅう", "じゅう" ],
+          "test_desc" : "What is this number?",
+          "test_id" : "ch08_test04"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "はち", "なな or しち", "よん or し", "さん" ],
+          "test_desc" : "What is this number?",
+          "test_id" : "ch08_test05"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "12", "22", "32", "42" ],
+          "test_desc" : "What is this number?",
+          "test_id" : "ch08_test06"
+        }, {
+          "test_answer" : 3,
+          "test_choice" : [ "50", "52", "53", "54" ],
+          "test_desc" : "What is this number?",
+          "test_id" : "ch08_test07"
+        }, {
+          "test_answer" : 1,
+          "test_choice" : [ "きゅうじゅうに", "きゅうじゅうさん", "きゅうじゅうよん", "きゅうじゅうご" ],
+          "test_desc" : "What is this number?",
+          "test_id" : "ch08_test08"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "ななじゅうきゅう", "ななじゅうなな", "ななじゅうはち", "ななじゅうろく" ],
+          "test_desc" : "What is this number?",
+          "test_id" : "ch08_test09"
+        }, {
+          "test_answer" : 0,
+          "test_choice" : [ "さんじゅう", "よんじゅう", "ごじゅう", "ろくじゅう" ],
+          "test_desc" : "What is this number?",
+          "test_id" : "ch08_test10"
+        } ],
+        "chap_avg_time" : "10-15 Minutes",
+        "chap_id" : 8
+      }
+    }
+  },
+  "Score" : {
+    "Matching" : [ {
+      "Name" : "Luluse",
+      "Score" : 921
+    }, {
+      "Name" : "Arthur",
+      "Score" : 882
+    }, {
+      "Name" : "Jotaro",
+      "Score" : 602
+    }, {
+      "Name" : "Jolyne",
+      "Score" : 520
+    }, {
+      "Name" : "Dodo",
+      "Score" : 520
+    }, {
+      "Name" : "Rohan",
+      "Score" : 444
+    }, {
+      "Name" : "Lala",
+      "Score" : 423
+    }, {
+      "Name" : "BounceGem",
+      "Score" : 210
+    }, {
+      "Name" : "Jojo",
+      "Score" : 120
+    }, {
+      "Name" : "YareYare",
+      "Score" : 38
+    } ],
+    "Scramble" : [ {
+      "Name" : "Yamata",
+      "Score" : 887
+    }, {
+      "Name" : "Lala",
+      "Score" : 755
+    }, {
+      "Name" : "Arthur",
+      "Score" : 701
+    }, {
+      "Name" : "Dodo",
+      "Score" : 610
+    }, {
+      "Name" : "Nutto",
+      "Score" : 243
+    }, {
+      "Name" : "BounceGem",
+      "Score" : 110
+    }, {
+      "Name" : "Yare Yare",
+      "Score" : 42
+    }, {
+      "Name" : "sqwitz",
+      "Score" : 35
+    }, {
+      "Name" : "YareYare",
+      "Score" : 13
+    }, {
+      "Name" : "Sqwitz",
+      "Score" : 12
+    } ]
+  },
+  "User" : {
+    "BounceGem" : {
+      "HiraganaChart" : [ false, false, false, false, false, false, false, false, false, false, false ],
+      "KatakanaChart" : [ false, false, false, false, false, false, false, false, false, false, false ],
+      "LastCh" : 3,
+      "LastIndex" : [ 134, 59, 68, 0, 0, 0, 0, 0 ],
+      "LastScore1" : [ 114, 156, 110, 0, 0, 0, 109, 6, 0, 0 ],
+      "LastScore2" : [ 44, 65, 82, 99, 10, 35, 12, 34, 37, 11 ],
+      "Name" : "BounceGem",
+      "PassPost" : [ true, true, true, false, false, false, false, false ],
+      "PassPre" : [ true, true, true, false, false, false, false, false ],
+      "Post" : [ 10, 8, 9, 9, 8, 7, 9, 10 ],
+      "Pre" : [ 10, 2, 2, 4, 3, 4, 7, 6 ],
+      "Score1" : 210,
+      "Score2" : 110,
+      "alphabetChart" : true,
+      "dictionary" : true,
+      "katakana" : true
+    }
+  },
+  "Word" : [ {
+    "word_id" : 1,
+    "word_meaning" : "Duck",
+    "word_syllable" : 3,
+    "wordname_JP" : "あひる",
+    "wordname_romanji" : "ahiru"
+  }, {
+    "syllable_number" : 2,
+    "word_id" : 2,
+    "word_meaning" : "Snow",
+    "wordname_JP" : "ゆき",
+    "wordname_romanji" : "yuki"
+  }, {
+    "syllable_number" : 2,
+    "word_id" : 3,
+    "word_meaning" : "Dream",
+    "wordname_JP" : "ゆめ",
+    "wordname_romanji" : "yume"
+  }, {
+    "syllable_number" : 2,
+    "word_id" : 4,
+    "word_meaning" : "Cat",
+    "wordname_JP" : "ねこ",
+    "wordname_romanji" : "neko"
+  }, {
+    "syllable_number" : 2,
+    "word_id" : 5,
+    "word_meaning" : "Dog",
+    "wordname_JP" : "いぬ",
+    "wordname_romanji" : "inu"
+  }, {
+    "syllable_number" : 3,
+    "word_id" : 6,
+    "word_meaning" : "Cherry Blossom",
+    "wordname_JP" : "さくら",
+    "wordname_romanji" : "sakura"
+  }, {
+    "syllable_number" : 4,
+    "word_id" : 7,
+    "word_meaning" : "Coffee",
+    "wordname_JP" : "コーヒー",
+    "wordname_romanji" : "kōhī"
+  }, {
+    "syllable_number" : 3,
+    "word_id" : 8,
+    "word_meaning" : "Vegetable",
+    "wordname_JP" : "やさい",
+    "wordname_romanji" : "yasai"
+  }, {
+    "syllable_number" : 2,
+    "word_id" : 9,
+    "word_meaning" : "Tea",
+    "wordname_JP" : "おちゃ",
+    "wordname_romanji" : "ocha"
+  }, {
+    "syllable_number" : 4,
+    "word_id" : 10,
+    "word_meaning" : "Beverage",
+    "wordname_JP" : "のみもの",
+    "wordname_romanji" : "nomimono"
+  }, {
+    "syllable_number" : 4,
+    "word_id" : 11,
+    "word_meaning" : "Teacher",
+    "wordname_JP" : "せんせい",
+    "wordname_romanji" : "sensei"
+  }, {
+    "syllable_number" : 4,
+    "word_id" : 12,
+    "word_meaning" : "Student",
+    "wordname_JP" : "がくせい",
+    "wordname_romanji" : "gakusei"
+  }, {
+    "syllable_number" : 2,
+    "word_id" : 13,
+    "word_meaning" : "Umbrella",
+    "wordname_JP" : "かさ",
+    "wordname_romanji" : "kasa"
+  }, {
+    "syllable_number" : 3,
+    "word_id" : 14,
+    "word_meaning" : "Car",
+    "wordname_JP" : "くるま",
+    "wordname_romanji" : "kuruma"
+  }, {
+    "syllable_number" : 4,
+    "word_id" : 15,
+    "word_meaning" : "Supermarket",
+    "wordname_JP" : "スーパー",
+    "wordname_romanji" : "sūpā"
+  }, {
+    "syllable_number" : 3,
+    "word_id" : 16,
+    "word_meaning" : "Copy",
+    "wordname_JP" : "コピー",
+    "wordname_romanji" : "kopī"
+  }, {
+    "syllable_number" : 3,
+    "word_id" : 17,
+    "word_meaning" : "I",
+    "wordname_JP" : "わたし",
+    "wordname_romanji" : "watashi"
+  }, {
+    "syllable_number" : 2,
+    "word_id" : 18,
+    "word_meaning" : "Doctor",
+    "wordname_JP" : "いしゃ",
+    "wordname_romanji" : "isha"
+  }, {
+    "syllable_number" : 4,
+    "word_id" : 19,
+    "word_meaning" : "Hospital",
+    "wordname_JP" : "びょういん",
+    "wordname_romanji" : "byouin"
+  }, {
+    "syllable_number" : 3,
+    "word_id" : 20,
+    "word_meaning" : "Letter",
+    "wordname_JP" : "てがみ",
+    "wordname_romanji" : "tegami"
+  }, {
+    "syllable_number" : 2,
+    "word_id" : 21,
+    "word_meaning" : "garden",
+    "wordname_JP" : "にわ",
+    "wordname_romanji" : "niwa"
+  }, {
+    "syllable_number" : 4,
+    "word_id" : 22,
+    "word_meaning" : "America",
+    "wordname_JP" : "アメリカ",
+    "wordname_romanji" : "amerika"
+  }, {
+    "syllable_number" : 2,
+    "word_id" : 23,
+    "word_meaning" : "Sea",
+    "wordname_JP" : "うみ",
+    "wordname_romanji" : "umi"
+  }, {
+    "syllable_number" : 3,
+    "word_id" : 24,
+    "word_meaning" : "Head",
+    "wordname_JP" : "あたま",
+    "wordname_romanji" : "atama"
+  }, {
+    "syllable_number" : 2,
+    "word_id" : 25,
+    "word_meaning" : "Brain",
+    "wordname_JP" : "のう",
+    "wordname_romanji" : "nou"
+  }, {
+    "syllable_number" : 3,
+    "word_id" : 26,
+    "word_meaning" : "banana",
+    "wordname_JP" : "バナナ",
+    "wordname_romanji" : "banana"
+  }, {
+    "syllable_number" : 4,
+    "word_id" : 27,
+    "word_meaning" : "Mango",
+    "wordname_JP" : "マンゴー",
+    "wordname_romanji" : "mangō"
+  }, {
+    "syllable_number" : 4,
+    "word_id" : 28,
+    "word_meaning" : "Durianr",
+    "wordname_JP" : "ドリアン",
+    "wordname_romanji" : "dorian"
+  }, {
+    "syllable_number" : 5,
+    "word_id" : 29,
+    "word_meaning" : "Custard Apple",
+    "wordname_JP" : "ノーイナー",
+    "wordname_romanji" : "nōinā"
+  }, {
+    "syllable_number" : 3,
+    "word_id" : 30,
+    "word_meaning" : "Apple",
+    "wordname_JP" : "りんご",
+    "wordname_romanji" : "ringo"
+  }, {
+    "syllable_number" : 3,
+    "word_id" : 31,
+    "word_meaning" : "Grape",
+    "wordname_JP" : "ぶどう",
+    "wordname_romanji" : "budou"
+  }, {
+    "syllable_number" : 4,
+    "word_id" : 32,
+    "word_meaning" : "Orange",
+    "wordname_JP" : "オレンジ",
+    "wordname_romanji" : "orenji"
+  }, {
+    "syllable_number" : 3,
+    "word_id" : 33,
+    "word_meaning" : "Melon",
+    "wordname_JP" : "メロン",
+    "wordname_romanji" : "meron"
+  }, {
+    "syllable_number" : 4,
+    "word_id" : 34,
+    "word_meaning" : "Garlic",
+    "wordname_JP" : "ニンニク",
+    "wordname_romanji" : "ninniku"
+  }, {
+    "syllable_number" : 3,
+    "word_id" : 35,
+    "word_meaning" : "Egg",
+    "wordname_JP" : "たまご",
+    "wordname_romanji" : "tamago"
+  }, {
+    "syllable_number" : 3,
+    "word_id" : 36,
+    "word_meaning" : "Fish",
+    "wordname_JP" : "さかな",
+    "wordname_romanji" : "sakana"
+  }, {
+    "syllable_number" : 2,
+    "word_id" : 37,
+    "word_meaning" : "Shark",
+    "wordname_JP" : "さえ",
+    "wordname_romanji" : "same"
+  }, {
+    "syllable_number" : 2,
+    "word_id" : 38,
+    "word_meaning" : "Water",
+    "wordname_JP" : "みず",
+    "wordname_romanji" : "mizu"
+  }, {
+    "syllable_number" : 3,
+    "word_id" : 39,
+    "word_meaning" : "Pool",
+    "wordname_JP" : "プール",
+    "wordname_romanji" : "pūru"
+  }, {
+    "syllable_number" : 2,
+    "word_id" : 40,
+    "word_meaning" : "Turtle",
+    "wordname_JP" : "かめ",
+    "wordname_romanji" : "kame"
+  }, {
+    "syllable_number" : 2,
+    "word_id" : 41,
+    "word_meaning" : "Monkey",
+    "wordname_JP" : "さる",
+    "wordname_romanji" : "saru"
+  }, {
+    "syllable_number" : 2,
+    "word_id" : 42,
+    "word_meaning" : "Bee",
+    "wordname_JP" : "はち",
+    "wordname_romanji" : "hachi"
+  }, {
+    "syllable_number" : 3,
+    "word_id" : 43,
+    "word_meaning" : "Japan",
+    "wordname_JP" : "にほん",
+    "wordname_romanji" : "nihon"
+  }, {
+    "syllable_number" : 4,
+    "word_id" : 44,
+    "word_meaning" : "Pen",
+    "wordname_JP" : "えんぴつ",
+    "wordname_romanji" : "enpitsu"
+  }, {
+    "syllable_number" : 3,
+    "word_id" : 45,
+    "word_meaning" : "Note",
+    "wordname_JP" : "ノート",
+    "wordname_romanji" : "nōto"
+  }, {
+    "syllable_number" : 4,
+    "word_id" : 46,
+    "word_meaning" : "Welcome",
+    "wordname_JP" : "ようこそ",
+    "wordname_romanji" : "youkoso"
+  }, {
+    "syllable_number" : 3,
+    "word_id" : 47,
+    "word_meaning" : "You",
+    "wordname_JP" : "あなた",
+    "wordname_romanji" : "anata"
+  }, {
+    "syllable_number" : 5,
+    "word_id" : 48,
+    "word_meaning" : "Goodbye",
+    "wordname_JP" : "さようなら",
+    "wordname_romanji" : "sayounara"
+  }, {
+    "syllable_number" : 5,
+    "word_id" : 49,
+    "word_meaning" : "Excuse me",
+    "wordname_JP" : "すみません",
+    "wordname_romanji" : "sumimasen"
+  }, {
+    "syllable_number" : 2,
+    "word_id" : 50,
+    "word_meaning" : "Yes",
+    "wordname_JP" : "はい",
+    "wordname_romanji" : "hai"
+  } ]
+}

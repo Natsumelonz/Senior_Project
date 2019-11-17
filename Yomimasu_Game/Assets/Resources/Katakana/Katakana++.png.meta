@@ -1,0 +1,928 @@
+fileFormatVersion: 2
+guid: 6faaaf531d76a474b85a007c605b044d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2935191425766478261
+    second: Katakana++_0
+  - first:
+      213: 490134983540052657
+    second: Katakana++_1
+  - first:
+      213: -678263680014869503
+    second: Katakana++_2
+  - first:
+      213: -6136180413683540899
+    second: Katakana++_3
+  - first:
+      213: 6447447361288061810
+    second: Katakana++_4
+  - first:
+      213: -2838493903434738352
+    second: Katakana++_5
+  - first:
+      213: 183444396356943263
+    second: Katakana++_6
+  - first:
+      213: 4448735481763363326
+    second: Katakana++_7
+  - first:
+      213: -8398745566018280309
+    second: Katakana++_8
+  - first:
+      213: -7497261377926668053
+    second: Katakana++_9
+  - first:
+      213: 7451595044105667212
+    second: Katakana++_10
+  - first:
+      213: -3637034923865207029
+    second: Katakana++_11
+  - first:
+      213: 2493553710213259174
+    second: Katakana++_12
+  - first:
+      213: -7494997926530311915
+    second: Katakana++_13
+  - first:
+      213: -241627792696823548
+    second: Katakana++_14
+  - first:
+      213: 9058456332183135796
+    second: Katakana++_15
+  - first:
+      213: 4438108407989939854
+    second: Katakana++_16
+  - first:
+      213: 7926573965946014702
+    second: Katakana++_17
+  - first:
+      213: -4761467877322974355
+    second: Katakana++_18
+  - first:
+      213: -8382531815524846778
+    second: Katakana++_19
+  - first:
+      213: 662405103286387092
+    second: Katakana++_20
+  - first:
+      213: 4667838665533111656
+    second: Katakana++_21
+  - first:
+      213: -4436802786175222856
+    second: Katakana++_22
+  - first:
+      213: 4715714384227750021
+    second: Katakana++_23
+  - first:
+      213: -3585718708815480720
+    second: Katakana++_24
+  - first:
+      213: -7912995601975131628
+    second: Katakana++_25
+  - first:
+      213: 1215832408845852328
+    second: Katakana++_26
+  - first:
+      213: 7497529461284288529
+    second: Katakana++_27
+  - first:
+      213: -6928701601840343424
+    second: Katakana++_28
+  - first:
+      213: 71060941232602161
+    second: Katakana++_29
+  - first:
+      213: -837994260313488969
+    second: Katakana++_30
+  - first:
+      213: 152228208116435386
+    second: Katakana++_31
+  - first:
+      213: 3213350361541193368
+    second: Katakana++_32
+  - first:
+      213: -6253864405567980208
+    second: Katakana++_33
+  - first:
+      213: 1910416851417400293
+    second: Katakana++_34
+  - first:
+      213: 5378708978282137605
+    second: Katakana++_35
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Katakana++_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512.7273
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1506ae8302fd9a4692b45f3b57b7ef9
+      internalID: 2935191425766478261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 512.7273
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3371fcf9067d4a418b50fb64e02661d
+      internalID: 490134983540052657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_2
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 512.7273
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc86f7641ff8bb4b878090c87d42d9d
+      internalID: -678263680014869503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 461.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f93246c10b0da4db15401927341184
+      internalID: -6136180413683540899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_4
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 461.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c569b4c56239fea418a51b1f520bf22c
+      internalID: 6447447361288061810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_5
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 461.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92496ce5ceed26648bb0dde3dc607f11
+      internalID: -2838493903434738352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 410.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23e02815639f844cbda3206114e7766
+      internalID: 183444396356943263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_7
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 410.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39da5d2ddc60ef14289fbb672dd8162d
+      internalID: 4448735481763363326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_8
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 410.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca877679a12204f45a77b147aec088df
+      internalID: -8398745566018280309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 359.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4543d70dc47e114ca817861f85504de
+      internalID: -7497261377926668053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_10
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 359.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed582bcbfd3b7942ae2aedb0884451c
+      internalID: 7451595044105667212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_11
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 359.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec595e99202d8d47bb4dcdad04b61a4
+      internalID: -3637034923865207029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 308.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62994b96e892a184da535b2455bc492d
+      internalID: 2493553710213259174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_13
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 308.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2245813903e3db84699cb4a02c9c60c4
+      internalID: -7494997926530311915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_14
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 308.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b9678c486dd4a429318b62c707edf7
+      internalID: -241627792696823548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 257.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37977e07f0290f14e84760577f3d9169
+      internalID: 9058456332183135796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_16
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 257.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d0ffeed8acb8e4f93ebec595d9156f
+      internalID: 4438108407989939854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_17
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 257.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f4d6864f3af9b44ab7e3d971ec6c3f
+      internalID: 7926573965946014702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 206.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d44e6d1dc7d31c4e9140616359db80f
+      internalID: -4761467877322974355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_19
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 206.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81796a2e4fbb8b449cde99b8f6a6eb5
+      internalID: -8382531815524846778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_20
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 206.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd77cbbdaa334d4ca3e8d647d315943
+      internalID: 662405103286387092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 155.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe627daca81d164fa55085f57f394b3
+      internalID: 4667838665533111656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_22
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 155.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002e31457ba181941ab764b032df0741
+      internalID: -4436802786175222856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_23
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 155.72726
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3486a468eb78ddc41be261f2a0c3466b
+      internalID: 4715714384227750021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 104.72727
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c03b572e44049274998ab9c3ad56cca5
+      internalID: -3585718708815480720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_25
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 104.72727
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d724e4fc84fdda04d8b5252d2d4d25c8
+      internalID: -7912995601975131628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_26
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 104.72727
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9103710bf3ddf194eb611e4e13cca701
+      internalID: 1215832408845852328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 53.727272
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e0b3480e46da1645b586848c4248a6e
+      internalID: 7497529461284288529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_28
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 53.727272
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 928080b927c4e89498407de91b41b39a
+      internalID: -6928701601840343424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_29
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 53.727272
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69dcc306994b0a241b8dbea7d507b119
+      internalID: 71060941232602161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2.727272
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfda519b67dac5d4bb6733c8aa87fb03
+      internalID: -837994260313488969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_31
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 2.727272
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb649e1c5596c24d90cbd34978db2e7
+      internalID: 152228208116435386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana++_32
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 2.727272
+        width: 85
+        height: 51.272728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bb7cb3aced7a85448567f300fc28f8a
+      internalID: 3213350361541193368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

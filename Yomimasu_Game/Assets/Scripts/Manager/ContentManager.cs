@@ -24,7 +24,7 @@ public class RetrieveDialog
 [Serializable]
 public class RetrieveQuestion
 {
-    public string correct_answer;
+    public int correct_answer;
     public List<string> question_choice;
     public string script_id;
 

@@ -1,0 +1,727 @@
+fileFormatVersion: 2
+guid: abc7853a553a20f4ca541386c8029279
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4555048250672736617
+    second: Katakana+_0
+  - first:
+      213: 2586159356555564515
+    second: Katakana+_1
+  - first:
+      213: -3725960535712357020
+    second: Katakana+_2
+  - first:
+      213: -6125037116366828437
+    second: Katakana+_3
+  - first:
+      213: -131827897916129255
+    second: Katakana+_4
+  - first:
+      213: -4711037743806774674
+    second: Katakana+_5
+  - first:
+      213: -1348509262344878443
+    second: Katakana+_6
+  - first:
+      213: 957905085897642873
+    second: Katakana+_7
+  - first:
+      213: -4292189780148117103
+    second: Katakana+_8
+  - first:
+      213: 3097646251332193017
+    second: Katakana+_9
+  - first:
+      213: 1020585580047389977
+    second: Katakana+_10
+  - first:
+      213: 8116849239073674464
+    second: Katakana+_11
+  - first:
+      213: 9170350154780109077
+    second: Katakana+_12
+  - first:
+      213: -7194320169397660813
+    second: Katakana+_13
+  - first:
+      213: -6715242201151346897
+    second: Katakana+_14
+  - first:
+      213: 8934792903029990176
+    second: Katakana+_15
+  - first:
+      213: -6678592210037547844
+    second: Katakana+_16
+  - first:
+      213: 2474958137706338378
+    second: Katakana+_17
+  - first:
+      213: -5077122057688154571
+    second: Katakana+_18
+  - first:
+      213: 7852640478851880222
+    second: Katakana+_19
+  - first:
+      213: -1732053395858033514
+    second: Katakana+_20
+  - first:
+      213: 3310044446860122094
+    second: Katakana+_21
+  - first:
+      213: -3341185428603815020
+    second: Katakana+_22
+  - first:
+      213: -7583287891956972070
+    second: Katakana+_23
+  - first:
+      213: 3785975034960820723
+    second: Katakana+_24
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Katakana+_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 233.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409ab608a58c7ea4e84290173d6a7516
+      internalID: -4555048250672736617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 233.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539635248e0b0754195648fea8582e1d
+      internalID: 2586159356555564515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 233.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1fc49b29e5f4a4d81376ae634b4238
+      internalID: -3725960535712357020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 233.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bab98d23ba9f0c48b68b48be2131640
+      internalID: -6125037116366828437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 233.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40aa30c0c81f6754d86d07d879984a5b
+      internalID: -131827897916129255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 175.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd12ff20b1dc3014883416f58f25fa45
+      internalID: -4711037743806774674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_6
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 175.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2fa5a5aef420547bf63a01cfbf2f15
+      internalID: -1348509262344878443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_7
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 175.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4981ba4fd9514439a5f51a58472b2e
+      internalID: 957905085897642873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_8
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 175.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1e76d82a9fb734e97158c8d490a2ee
+      internalID: -4292189780148117103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_9
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 175.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78e558de6c42c54394ccea5fdc0fc91
+      internalID: 3097646251332193017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 117.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d92df70c013887459897105febbcbd2
+      internalID: 1020585580047389977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_11
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 117.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61fdabbde1bed224783fa14d6bd4f4ac
+      internalID: 8116849239073674464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_12
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 117.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6925645da694da2458ca6aa12e4fd529
+      internalID: 9170350154780109077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_13
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 117.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a39bb20768f8c408448be17da42a51
+      internalID: -7194320169397660813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_14
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 117.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec63320345cbaef4284173c5d9bb646f
+      internalID: -6715242201151346897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 59.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a591f8dfd33c8d644956d981b18f189d
+      internalID: 8934792903029990176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_16
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 59.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddca752efbf6f3429c9e8c9b9f6d8db
+      internalID: -6678592210037547844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_17
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 59.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6704363b6545247b90dd28c9036416
+      internalID: 2474958137706338378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_18
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 59.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed9f5cab272eef4aa1122799d5d44d7
+      internalID: -5077122057688154571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_19
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 59.6
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313fb0c2030a07b4aafeb98811e7ad72
+      internalID: 7852640478851880222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.5999985
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34afd7e4ba9840d4c9aceea8269a60f7
+      internalID: -1732053395858033514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_21
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1.5999985
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 210e85633b06be549a87485c0c292180
+      internalID: 3310044446860122094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_22
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1.5999985
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62a0525392ed1844a813a7fce471e04
+      internalID: -3341185428603815020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_23
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1.5999985
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339903998f4fbcb49ad4387224d4f0e3
+      internalID: -7583287891956972070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katakana+_24
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1.5999985
+        width: 50.2
+        height: 58.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 009a25fd348225d47b15fb13000a05c5
+      internalID: 3785975034960820723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

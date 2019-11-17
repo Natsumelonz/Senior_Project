@@ -268,7 +268,7 @@ public class ChapterScene : MonoBehaviour
 
     public void CheckAnswer(CharObjectOfChapter charObjectOfChapters)
     {
-        if (charObjectOfChapters.sentence == questionThis[qindex].correct_answer)
+        if (charObjectOfChapters.index == questionThis[qindex].correct_answer)
         {
             charObjectOfChapter.Clear();
             foreach (Transform child in container)

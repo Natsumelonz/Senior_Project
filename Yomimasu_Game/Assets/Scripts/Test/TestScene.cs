@@ -127,7 +127,6 @@ public class TestScene : MonoBehaviour
         else
         {
             Debug.Log("Worng!");
-            scoreP += 1;
             tIndex++;
             NextQuestion();
         }

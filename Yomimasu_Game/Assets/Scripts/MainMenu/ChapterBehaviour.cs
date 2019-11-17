@@ -57,11 +57,10 @@ public class ChapterBehaviour : MonoBehaviour
             chapOTextPanel[i].GetComponent<Text>().text = Manager.GetComponent<ContentManager>().chapters_info[i].Objective;
             chapTTextPanel[i].GetComponent<Text>().text = Manager.GetComponent<ContentManager>().chapters_info[i].chap_avg_time;
         }
-
-        SetProcess();
     }
     public void Update()
     {
+        SetProcess();
         Reposition();
         if (panelPage <= 0)
         {
