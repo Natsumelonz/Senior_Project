@@ -11,7 +11,7 @@
           label="Select Chapter"
           outlined
         ></v-select>
-        <v-btn class="loadbutton" @click="loadedScript">Loadscript</v-btn>
+        <v-btn class="loadbutton orange white--text" @click="loadedScript">Load Scripts</v-btn>
       </v-col>
                 </v-layout>
             </v-container>
