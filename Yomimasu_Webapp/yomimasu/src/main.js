@@ -10,16 +10,13 @@ Vue.config.productionTip = false
 
 /*Path*/
 //import path eg. import User from './Users.vue';
-import Home from './components/HelloWorld';
-import Menubar from './components/menubar';
 import Alphabet from './Pages/alphabet';
 import Word from './Pages/word'
 import Dialog from './Pages/dialog'
 
 const routes = [
   //path pattern eg.{ path: '/users' , component: User }
-  { path: '/' , component: Home },
-  { path: '/menu' , component: Menubar },
+  { path: '/' , redirect: '/dialog' },
   { path: '/alphabet' , component: Alphabet },
   { path: '/word' , component: Word},
   { path: '/dialog' , component: Dialog}

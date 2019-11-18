@@ -30,9 +30,9 @@ export default {
       drawer: false,
       links: [
         { icon: "home", text: "Home", route: "/" },
-        { icon: "folder_open", text: "Dialog Manager", route: "/dialog" },
-        { icon: "folder_open", text: "Word Manager", route: "/word" },
-        { icon: "folder_open", text: "Alphabet Manager", route: "/alphabet" }
+        { icon: "folder_open", text: "Dialogs List", route: "/dialog" },
+        { icon: "folder_open", text: "Alphabets List", route: "/alphabet" },
+        { icon: "folder_open", text: "Words Manager", route: "/word" }
       ]
     };
   }
